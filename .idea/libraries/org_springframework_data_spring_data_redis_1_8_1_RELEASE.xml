@@ -1,0 +1,28 @@
+<component name="libraryTable">
+  <library name="org.springframework.data:spring-data-redis:1.8.1.RELEASE" type="repository">
+    <properties maven-id="org.springframework.data:spring-data-redis:1.8.1.RELEASE" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-data-redis-1.8.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-data-keyvalue-1.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-data-commons-1.13.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-core-4.3.7.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-beans-4.3.7.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/slf4j-api-1.7.24.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/jcl-over-slf4j-1.7.24.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-context-4.3.7.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-aop-4.3.7.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-expression-4.3.7.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-tx-4.3.7.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-oxm-4.3.7.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-context-support-4.3.7.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-data-redis-1.8.1.RELEASE-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-data-redis-1.8.1.RELEASE-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/slf4j-api-1.7.24-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

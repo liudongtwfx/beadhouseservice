@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>养老服务网站会员中心</title>
+    <link rel="stylesheet" href="../../cssfiles/vipuser/usercenter.css" type="text/css">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../cssfiles/user/common.css">
+    <link rel="stylesheet" type="text/css" href="../../cssfiles/theme.css">
+    <link rel="stylesheet" type="text/css" href="../../cssfiles/premium.css">
+    <link rel="stylesheet" href="../../cssfiles/font-awesome/css/font-awesome.css">
+    <script src="../../jsfiles/jquery-3.1.1.js"></script>
+    <script src="../../bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+<div id="page1"></div>
+<script>
+    $("#page1").load("../../views/user/commontop.html");
+</script>
+<div class="sidebar-nav" id="sidebar">
+    <ul>
+        <li><a href="#" data-target=".premium-menu" class="nav-header"><i class="fa fa-fw fa-male"></i>用户中心</a></li>
+        <li>
+            <ul class="premium-menu nav nav-list collapse in">
+                <li><a href="index"><span class="fa"></span>修改用户信息</a></li>
+                <li><a href="#"><span class="fa"></span>修改密码</a></li>
+            </ul>
+        </li>
+        <li><a href="#" data-target=".premium-menu" class="nav-header"><i class="fa fa-fw fa-building"></i>
+
+            老人中心</a></li>
+        <li>
+            <ul class="premium-menu nav nav-list">
+                <li><a href="#elder_registerdiv" role="button" data-toggle="modal"><span
+                        class="fa"></span> 添加老人</a>
+                </li>
+                <li><a href=""><span class="fa"></span> 修改老人信息</a></li>
+                <li><a href=""><span class="fa"></span> 查看老人信息</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="modal small fade" id="elder_registerdiv" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" style="width:600px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">添加老人</h3>
+            </div>
+            <div class="modal-body">
+                <div id="elder_register" style="display: block">
+                    <form action="/user/usercenter/elderRegister">
+                        <div class="elder_register_group form-group">
+                            <label for="elderName">真实姓名：</label>
+                            <input id="elderName" type="text" name="elderName" required>
+                        </div>
+                        <div class="elder_register_group">
+                            <label for="elderIdNumber">身份证号：</label>
+                            <input id="elderIdNumber" type="text" required>
+                        </div>
+                        <div class="elder_register_group">
+                            <label for="male">性别：</label>
+                            <input type="radio" name="gender" id="male" value="男">男
+                            <input type="radio" name="gender" id="female" value="女">女
+                        </div>
+                        <div class="elder_register_group">
+                            <label for="province">户籍所在地：</label>
+                            <select id="province" name="province" onchange="doProvAndCityRelation();">　
+                                <option id="choosePro" value="-1">请选择省份</option>
+                            </select>
+                            <select id="citys" name="city" onchange="doCityAndCountyRelation();">
+                                <option id='chooseCity' value='-1'>请选择城市</option>
+                            </select>
+                            <select id="county" name="county">
+                                <option id='chooseCounty' value='-1'>请选择区/县</option>
+                            </select>
+                            <!--<script src="../../jsfiles/location.js" type="application/javascript"></script>-->
+                        </div>
+                        <div class="elder_register_group">
+                            <label for="birthdate_year">出生年月：</label>
+                            <select id="birthdate_year"></select>
+                            <select id="birthdate_month"></select>
+                            <select id="birthdate_day"></select>
+                        </div>
+                        <div class="elder_register_group">
+                            <label for="contact">联系方式：</label>
+                            <input id="contact" type="text">
+                        </div>
+
+                        <div id="elder_register_extra">
+                            <label for="extra_content">备注：</label>
+                            <textarea id="extra_content" cols="30" rows="5"></textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">取消</button>
+                <button class="btn btn-danger" data-dismiss="modal" onclick=" return elderRegister()">增加</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../jsfiles/jquery-3.1.1.js" type="application/javascript"></script>
+<script src="../../jsfiles/angular.js" type="application/javascript"></script>
+<script src="../../jsfiles/location.js" type="application/javascript"></script>
+<script src="../../jsfiles/user/common.js"></script>
+<script src="../../jsfiles/vipuser/usercenter.js" type="application/javascript"></script>
+</html>

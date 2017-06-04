@@ -1,0 +1,86 @@
+.main-content {
+    position: relative;
+    left: 20%;
+    right: 20%;
+}
+
+.carousel-inner img {
+    height: 300px;
+    width: 400px;
+}
+
+#top {
+    display: block;
+    width: 100%;
+    height: 350px;
+    flex-wrap: wrap;
+}
+
+#register_login {
+    display: block;
+    position: absolute;
+    height: 20px;
+    left: 80%;
+    float: right;
+}
+
+#middle {
+    position: absolute;
+    top: 100px;
+}
+
+#register_login {
+    font-size: 14px;
+}
+
+#register_login a:link {
+    text-decoration: none;
+}
+
+#register_login a:visited {
+    text-decoration: #ff1a41;
+}
+
+#myCarousel {
+    display: block;
+    position: relative;
+    left: 20%;
+    width: 400px;
+    height: 200px;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.navigation {
+    background: #96b97d;
+}
+
+#pc_nav {
+    display: inline;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+#pc_nav li {
+    width: 25%;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+nav {
+    background: grey;
+}
+
+.navbar-header a {
+    color: white;
+}
+
+#pc_nav a {
+    font-size: 16px;
+}
+
+#cy_tp_ul ul {
+    padding: 15px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../cssfiles/users.css" type="text/css">
+    <script src="https://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="customersCtrl">
+
+    <table>
+        <tr ng-repeat="x in vipusers">
+            <td>{{ x.userName }}</td>
+            <td>{{ x.emailAddress }}</td>
+        </tr>
+    </table>
+
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('customersCtrl', function ($scope, $http) {
+        $http.get("/users")
+            .success(function (response) {
+                alert(response);
+                $scope.vipusers = response.vipusersmap;
+            });
+    });
+</script>
+<script src="../jsfiles/jquery-3.1.1.js"></script>
+<script src="../jsfiles/vipuser/users.js"></script>
+</body>
+</html>
+alter table beadhouseeldercheckin add foreign key (operatorMan) references beadhouseadmininfo(id) on DELETE CASCADE;

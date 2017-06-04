@@ -1,0 +1,9 @@
+#admin_register {
+    position: relative;
+    left: 25%;
+    top: 100px;
+}
+div[id^=img] {
+    width: 30px;
+    height: 15px;
+}

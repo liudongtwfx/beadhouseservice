@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="redis.clients:jedis:2.9.0" type="repository">
+    <properties maven-id="redis.clients:jedis:2.9.0" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/jedis-2.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/commons-pool2-2.4.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/jedis-2.9.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/jedis-2.9.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

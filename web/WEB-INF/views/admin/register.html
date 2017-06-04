@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>养老服务中心管理员注册</title>
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap-theme.css">
+    <style type="text/css">
+        div[id^=img] {
+            width: 30px;
+            height: 15px;
+        }
+
+        #pwd_image {
+            display: inline-flex;
+            flex-wrap: nowrap;
+            position: relative;
+            left: 10%;
+        }
+    </style>
+</head>
+<body style="background-image: url('../../jpgfiles/beadhouseback.jpg')">
+<div id="admin_register"
+     style="position: relative;top:100px;left: 25%;">
+    <!--<link rel="stylesheet" href="../../cssfiles/admin/register.css">-->
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="employId" class="col-sm-2 control-label">请输出员工编号：</label>
+            <div class="col-sm-2">
+                <input class="form-control" id="employId" type="text">
+            </div>
+            <div class="col-sm-1" id="employId_info"></div>
+        </div>
+        <div class="form-group">
+            <label for="realName" class="col-sm-2 control-label">请输出真实姓名：</label>
+            <div class="col-sm-2">
+                <input class="form-control" id="realName" type="text">
+            </div>
+            <div class="col-sm-1" id="realName_info"></div>
+        </div>
+        <div class="form-group">
+            <label for="adminUserName" class="col-sm-2 control-label">请输出用户名：</label>
+            <div class="col-sm-2">
+                <input class="form-control" id="adminUserName" type="text">
+            </div>
+            <div class="col-sm-1" id="name_info"></div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2 control-label">请输入密码：</label>
+            <div class="col-sm-2">
+                <input class="form-control" id="password" type="password">
+            </div>
+            <div class="popover fade right in" style="positon:relative;top: 34%; left: 650px; display: none;"
+                 id="password_fade">
+                <div class="arrow" style="top: 21.831%;"></div>
+                <h3 class="popover-title" style="display: none;"></h3>
+                <div class="popover-content">
+                    <div id='passwordinfo'>
+                        <p>密码必须在8位以上</p>
+                        <p>必须包含数字和密码</p>
+                        <p>不能包含空格</p></div>
+                </div>
+            </div>
+            <div class="col-sm-1" id='password_info'></div>
+        </div>
+        <div class="form-group">
+            <label for="repassword" class="col-sm-2 control-label">请再次输入密码：</label>
+            <div class="col-sm-2">
+                <input class="form-control" id="repassword" type="password">
+            </div>
+            <div class="col-sm-1" id="repassword_info"></div>
+        </div>
+        <div class="form-group">
+            <label for="emailAddress" class="col-sm-2 control-label">请输入邮箱：</label>
+            <div class="col-sm-2">
+                <input class="form-control" id="emailAddress" type="text">
+            </div>
+            <div class="col-sm-1" id="emailAddress_info"></div>
+        </div>
+        <div class="form-group">
+            <label for="telephoneNumber" class="col-sm-2 control-label">请输入手机号：</label>
+            <div class="col-sm-2">
+                <input class="form-control" id="telephoneNumber" type="text">
+            </div>
+            <div class="col-sm-1" id="telephoneNumber_info"></div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2"></label>
+            <label for="cb" class="pure-checkbox">
+                <input id="cb" type="checkbox"> 我已阅读并同意协定
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2"></label>
+            <button class="col-sm-1 btn btn-primary" onclick="return canBeRegister()">提交</button>
+        </div>
+    </form>
+</div>
+</body>
+<script src="../../jsfiles/jquery-3.1.1.js"></script>
+<script src="../../jsfiles/admin/register.js"></script>
+</html>

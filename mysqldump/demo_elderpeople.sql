@@ -1,0 +1,59 @@
+-- MySQL dump 10.13  Distrib 5.7.12, for Win64 (x86_64)
+--
+-- Host: localhost    Database: demo
+-- ------------------------------------------------------
+-- Server version	5.7.17-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `elderpeople`
+--
+
+DROP TABLE IF EXISTS `elderpeople`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `elderpeople` (
+  `id` int(11) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `gender` varchar(5) NOT NULL,
+  `idNumber` varchar(18) NOT NULL,
+  `birthDate` date NOT NULL,
+  `addTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `vipuserid` bigint(20) unsigned NOT NULL,
+  `locationId` int(11) NOT NULL,
+  `contact` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `idNumber` (`idNumber`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `elderpeople`
+--
+
+LOCK TABLES `elderpeople` WRITE;
+/*!40000 ALTER TABLE `elderpeople` DISABLE KEYS */;
+INSERT INTO `elderpeople` VALUES (2,'李丽','女','410581199009159038','1957-01-06','2017-01-12 16:00:00',1,410581,NULL),(3,'章数','男','410581192309159038','1946-01-03','2017-01-12 16:00:00',1,110108,NULL),(7,'李丽华','女','410581198009159038','1981-01-12','2017-01-15 16:00:00',1,130321,NULL),(9,'李丽','女','410581194509159038','1949-01-10','2017-01-16 00:31:10',1,210504,NULL),(10,'杨世锦','女','410521198909156034','2006-01-05','2017-03-02 03:17:58',3,120103,NULL),(11,'陈时辰','男','410581199009159011','1921-01-02','2017-03-02 03:34:21',3,350524,NULL);
+/*!40000 ALTER TABLE `elderpeople` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2017-06-04 20:25:57

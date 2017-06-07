@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class BeadhouseInfo implements Serializable {
     private int id;
     private String fullName;
-    private int locationId;
+    private String locationId;
     private double lng;
     private double lat;
     private String fullLocation;
@@ -37,11 +37,11 @@ public class BeadhouseInfo implements Serializable {
         this.fullName = fullName;
     }
 
-    public int getLocationId() {
+    public String getLocationId() {
         return locationId;
     }
 
-    public void setLocationId(int locationId) {
+    public void setLocationId(String locationId) {
         this.locationId = locationId;
     }
 

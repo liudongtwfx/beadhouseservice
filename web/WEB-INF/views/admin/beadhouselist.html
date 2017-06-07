@@ -103,7 +103,24 @@
     </div>
     <script src="../../jsfiles/admin/pageturning.js"></script>
     <script src="../../jsfiles/admin/beadhouselist.js"></script>
-
+    <script src="../../jsfiles/location.js"></script>
+    <div class="inner_content">
+        <div id="area_choose" class="col-lg-6">
+            <select id="province" name="province">　
+                <option id="choosePro" value="-1">请选择省份</option>
+            </select>
+            <select id="citys" name="city" onchange="doCityAndCountyRelation();">
+                <option id='chooseCity' value='-1'>请选择城市</option>
+            </select>
+            <select id="country" name="country">
+                <option id='chooseCounty' value='-1'>请选择区/县</option>
+            </select>
+        </div>
+        <div class="col-lg-6">
+            <input type="text" id="search_region">
+            <button class="btn-primary" onclick="searchByName()">搜索</button>
+        </div>
+    </div>
     <div class="inner_content tab_content">
         <table class="tablesorter">
             <thead>
@@ -116,7 +133,7 @@
                 <th>添加日期</th>
             </tr>
             </thead>
-            <tbody id="elderpeople">
+            <tbody id="beadhouselist">
 
             </tbody>
         </table>
@@ -139,5 +156,28 @@
 <script src="../../jsfiles/admin/common.js"></script>
 <script type="application/javascript">
     adminAuthority();
+    $("#province").change(
+        function () {
+            doProvAndCityRelation();
+            urlSuffix = "locationlist";
+            getList(1, $("#province").find("option:selected").val(), 2)
+        }
+    );
+    $("#citys").change(
+        function () {
+            $("#country").html("");
+            $("#country").append("<option id='chooseCounty' value='-1'>请选择区/县</option>");
+            doCityAndCountyRelation();
+            urlSuffix = "locationlist";
+            getList(1, $("#citys").find("option:selected").val(), 4)
+        }
+    );
+    $("#country").change(
+        function () {
+            doProvAndCityRelation();
+            urlSuffix = "locationlist";
+            getList(1, $("#country").find("option:selected").val(), 6)
+        }
+    );
 </script>
 </html>

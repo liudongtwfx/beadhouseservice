@@ -56,4 +56,33 @@ public class AdminBeadhouseController {
         res.put("imageList", imagelist);
         return res;
     }
+
+    @RequestMapping(value = "locationlist", method = RequestMethod.GET)
+    @ResponseBody
+    public Page<BeadhouseInfo> getProvinceId(HttpServletRequest request) {
+        String provinceId = request.getParameter("provinceOrCityOrArea");
+        if (provinceId == null || provinceId.length() != 6) {
+            return null;
+        }
+        int page = request.getParameter("page") != null ? Integer.parseInt(request.getParameter("page")) : 0;
+        int size = request.getParameter("size") != null ? Integer.parseInt(request.getParameter("size")) : 25;
+        int endIndex = Integer.parseInt(request.getParameter("endIndex"));
+        Sort sort = new Sort(Sort.Direction.DESC, "id");
+        Pageable pageable = new PageRequest(page, size, sort);
+        return this.baseinfo.findByLocationIdStartingWith(provinceId.substring(0, endIndex), pageable);
+    }
+
+    @RequestMapping(value = "beadhousename", method = RequestMethod.GET)
+    @ResponseBody
+    public Page<BeadhouseInfo> getByNameLike(HttpServletRequest request) {
+        String content = request.getParameter("searchContent");
+        if (content == null || content.length() == 0) {
+            return null;
+        }
+        int page = request.getParameter("page") != null ? Integer.parseInt(request.getParameter("page")) : 0;
+        int size = request.getParameter("size") != null ? Integer.parseInt(request.getParameter("size")) : 25;
+        Sort sort = new Sort(Sort.Direction.DESC, "id");
+        Pageable pageable = new PageRequest(page, size, sort);
+        return this.baseinfo.findByFullNameContains(content, pageable);
+    }
 }

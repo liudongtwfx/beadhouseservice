@@ -4,18 +4,32 @@
 
 var currPage;
 var pageNumber;
+var urlSuffix;
 $(document).ready(
     function () {
+        urlSuffix = 'list'
         changePage(1);
     }
 );
-function getList(page, size) {
+function getList(page, args, endIndex) {
+    $("#beadhouselist").html("");
+    var postData = {};
+    if (urlSuffix === "beadhousename") {
+        var searchcontent = $("#search_region").val();
+        if (searchcontent === null || searchcontent.length == 0) {
+            return;
+        }
+        postData['searchContent'] = searchcontent;
+    }
+    else if (urlSuffix === "locationlist") {
+        postData['provinceOrCityOrArea'] = args;
+        postData['endIndex'] = endIndex;
+    }
+    postData['page'] = page - 1;
+    postData["size"] = $("#page_size").find("option:selected").val();
     $.get(
-        "/admin/beadhouse/list",
-        {
-            page: page - 1,
-            size: size
-        },
+        "/admin/beadhouse/" + urlSuffix,
+        eval(postData),
         function (data) {
             displayData(data, page);
         }
@@ -44,7 +58,7 @@ function changePage(expectPage) {
     var id = "page" + currPage;
     $("#" + id).removeClass();
     currPage = expectPage;
-    getList(expectPage, $("#page_size").find("option:selected").val());
+    getList(expectPage);
 }
 
 function prevPage() {
@@ -69,16 +83,8 @@ function displayData(data, page) {
     $("#page_turning_list").html("");
     changePageCommon(currPage, pageNumber);
 }
-$("#province").change(
-    function () {
-        $.get(
-            "/admin/beadhouse/provincelist",
-            {
-                provinceId: $("#province").find("option:selected").val()
-            },
-            function (data) {
-                displayData(data);
-            }
-        )
-    }
-);
+
+function searchByName() {
+    urlSuffix = "beadhousename";
+    getList(1, "", "");
+}

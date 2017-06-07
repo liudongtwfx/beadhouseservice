@@ -10,8 +10,6 @@ $(document).ready(
     }
 );
 function getList(page, size) {
-    console.log("page:" + page);
-    console.log("size:" + size);
     $.get(
         "/admin/beadhouse/list",
         {
@@ -19,14 +17,7 @@ function getList(page, size) {
             size: size
         },
         function (data) {
-            currPage = 1;
-            console.log(data);
-            display(data);
-            $("#page_number").val(data['totalPages']);
-            $("#log_number").val(data['totalElements']);
-            pageNumber = data['totalPages'];
-            $(".tablesorter").tablesorter();
-
+            displayData(data, page);
         }
     )
 }
@@ -45,16 +36,15 @@ function display(originaldatas) {
             '</tr>';
         nodes += node;
     }
-    $("#elderpeople").append(nodes);
+    $("#beadhouselist").append(nodes);
 }
 
 function changePage(expectPage) {
+    $("#beadhouselist").html("");
     var id = "page" + currPage;
     $("#" + id).removeClass();
     currPage = expectPage;
-    getList(expectPage, $("#page_size:selected").val());
-    $("#page_turning_list").html("");
-    changePageCommon(currPage, pageNumber);
+    getList(expectPage, $("#page_size").find("option:selected").val());
 }
 
 function prevPage() {
@@ -68,3 +58,27 @@ function nextPage() {
         changePage(currPage + 1);
     }
 }
+
+function displayData(data, page) {
+    currPage = page;
+    display(data);
+    $("#page_number").text(data['totalPages']);
+    $("#log_number").text(data['totalElements']);
+    pageNumber = data['totalPages'];
+    $(".tablesorter").tablesorter();
+    $("#page_turning_list").html("");
+    changePageCommon(currPage, pageNumber);
+}
+$("#province").change(
+    function () {
+        $.get(
+            "/admin/beadhouse/provincelist",
+            {
+                provinceId: $("#province").find("option:selected").val()
+            },
+            function (data) {
+                displayData(data);
+            }
+        )
+    }
+);

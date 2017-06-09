@@ -45,7 +45,7 @@ public class AdminBeadhouseController {
     @RequestMapping(value = "single", method = RequestMethod.GET)
     @ResponseBody
     public Map<String, Object> getOneSingleInfo(HttpServletRequest request) {
-        String id = request.getParameter("beadhouseId");
+        String id = (String) request.getSession().getAttribute("beadhouseId");
         if (id == null || id.length() == 0) {
             return null;
         }
@@ -54,6 +54,7 @@ public class AdminBeadhouseController {
         Map<String, Object> res = new HashMap<>();
         res.put("baseInfo", info);
         res.put("imageList", imagelist);
+        res.put("imageBasePath", BeadhouseImageManage.imageUrl);
         return res;
     }
 

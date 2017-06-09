@@ -54,6 +54,12 @@ public class AdminIndexPage {
         return "admin/beadhouselist";
     }
 
+    @RequestMapping(value = "beadhouse/singlepage", method = RequestMethod.GET)
+    public String beadhouseSinglePage(HttpServletRequest request) {
+        request.getSession().setAttribute("beadhouseId", request.getParameter("beadhouseId"));
+        return "admin/beadhousesingle";
+    }
+
     @RequestMapping(value = "register/administratorInfo", method = RequestMethod.GET)
     @ResponseBody
     public boolean ifExist(HttpServletRequest request) {

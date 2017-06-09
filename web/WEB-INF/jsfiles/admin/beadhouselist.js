@@ -45,7 +45,7 @@ function display(originaldatas) {
         //var addTime = new Date(log['addTime']).format("yyyy-MM-dd");
         var node = '<tr id="log' + log["id"] + '">' +
             '<td>' + (i + 1) + '</td>' +
-            '<td><a href="beadhouse/single?beadhouseId=' + log['id'] + '">' + fullname + '</a></td>' +
+            '<td><a href="beadhouse/singlepage?beadhouseId=' + log['id'] + '">' + fullname + '</a></td>' +
             '<td>' + location + '</td>' +
             '</tr>';
         nodes += node;

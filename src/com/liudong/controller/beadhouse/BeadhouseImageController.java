@@ -28,9 +28,6 @@ public class BeadhouseImageController {
     @Inject
     BeadhouseImageManageRepository imageManageRepository;
 
-    private static String imagePath = "http://localhost:8088/imagefiles/beadhouseimagefiles";
-    private static String realPath = "E:\\Users\\liudong\\IdeaProjects\\login\\web\\WEB-INF\\imagefiles\\beadhouseimagefiles";
-
     @RequestMapping(value = "uploadimage", method = RequestMethod.POST)
     @ResponseBody
     public Boolean upload(HttpServletRequest request) throws IOException {
@@ -73,7 +70,7 @@ public class BeadhouseImageController {
         List<BeadhouseImageManage> imageManageList = this.imageManageRepository.findByBeadhouseid(Integer.parseInt(beadhouseId));
         Map<String, Object> values = new HashMap<>();
         values.put("imageManageList", imageManageList);
-        values.put("imagePath", imagePath + "/" + beadhouseId);
+        values.put("imagePath", BeadhouseImageManage.imageUrl + "/" + beadhouseId);
         return values;
     }
 
@@ -89,7 +86,7 @@ public class BeadhouseImageController {
         if (file == null) {
             return;
         }
-        File imagefolder = new File(realPath + "\\" + request.getSession().getAttribute("beadhouseId"));
+        File imagefolder = new File(BeadhouseImageManage.realPath + "\\" + request.getSession().getAttribute("beadhouseId"));
         if (!imagefolder.exists()) {
             imagefolder.mkdir();
         }
@@ -132,7 +129,7 @@ public class BeadhouseImageController {
     }
 
     private void deleteImage(BeadhouseImageManage imageManage) {
-        String deleteFilePath = realPath + "\\" + imageManage.getBeadhouseid() + "\\" + imageManage.getImagePath();
+        String deleteFilePath = BeadhouseImageManage.realPath + "\\" + imageManage.getBeadhouseid() + "\\" + imageManage.getImagePath();
         System.out.println(deleteFilePath);
         File file = new File(deleteFilePath);
         if (file.exists()) {

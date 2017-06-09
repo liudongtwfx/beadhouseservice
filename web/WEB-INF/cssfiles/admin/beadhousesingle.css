@@ -1,0 +1,12 @@
+label {
+    font-size: 20px;
+}
+
+#main {
+    left: 2%;
+}
+
+.inner_content {
+    width: 100%;
+    margin: 20px 3% 20px 3%;
+}

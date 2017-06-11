@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="jackson-core-2.8.5">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../demo/lib/jackson-core-2.8.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/jackson-core-2.8.5.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

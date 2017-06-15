@@ -44,7 +44,7 @@ function display(originaldatas) {
         var location = log['fullLocation'];
         //var addTime = new Date(log['addTime']).format("yyyy-MM-dd");
         var node = '<tr id="log' + log["id"] + '">' +
-            '<td>' + (i + 1) + '</td>' +
+            '<td>' + ((currPage - 1) * $("#page_size").find("option:selected").val() + i + 1) + '</td>' +
             '<td><a href="beadhouse/singlepage?beadhouseId=' + log['id'] + '">' + fullname + '</a></td>' +
             '<td>' + location + '</td>' +
             '</tr>';

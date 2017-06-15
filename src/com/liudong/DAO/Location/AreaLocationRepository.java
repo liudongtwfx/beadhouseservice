@@ -11,5 +11,5 @@ import java.util.List;
 public interface AreaLocationRepository extends JpaRepository<Area, Integer> {
     List<Area> findByCityId(int cityId);
 
-    Area findByAreaId(int areaId);
+    Area findByAreaId(String areaId);
 }

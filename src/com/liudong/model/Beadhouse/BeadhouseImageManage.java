@@ -11,7 +11,15 @@ import javax.persistence.Table;
 @Table(name = "beadhouseimageinfo")
 public class BeadhouseImageManage {
     public static final String imageUrl = "http://localhost:8088/imagefiles/beadhouseimagefiles";
-    public static final String realPath = "E:\\Users\\liudong\\IdeaProjects\\login\\web\\WEB-INF\\imagefiles\\beadhouseimagefiles";
+    public static final String realPath;
+
+    static {
+        if (System.getProperty("os.name").contains("Window")) {
+            realPath = "E:\\Users\\liudong\\IdeaProjects\\login\\web\\WEB-INF\\imagefiles\\beadhouseimagefiles";
+        } else {
+            realPath = "/home/liudong/ideaProject/beadhouseservice/web/WEB-INF/imagefiles/beadhouseimagefiles";
+        }
+    }
 
     private long id;
     private String imageDescription;

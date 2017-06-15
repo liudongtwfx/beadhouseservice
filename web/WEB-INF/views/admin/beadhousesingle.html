@@ -77,7 +77,7 @@
     </ul>
     <h3>养老院中心</h3>
     <ul class="toggle">
-        <li class="icn_add_user"><a href="#">养老院基本信息</a></li>
+        <li class="icn_add_user"><a href="/admin/beadhouse">养老院基本信息</a></li>
         <li class="icn_view_users"><a href="#">养老院评论</a></li>
     </ul>
     <h3>养老攻略中心</h3>
@@ -93,6 +93,8 @@
 </aside><!-- end of sidebar -->
 <section id="main">
     <link rel="stylesheet" href="../../cssfiles/admin/beadhousesingle.css">
+    <script type="text/javascript"
+            src="https://api.map.baidu.com/api?v=2.0&ak=MzhXZRHdq4bg6CdQP9VmYxNQhbhdd6ho"></script>
     <script src="../../jsfiles/admin/beadhousesingle.js"></script>
     <div class="header inner_content">
         <h1 class="page-title">养老服务中心后台管理</h1>
@@ -101,37 +103,59 @@
             <li class="active">养老院基本管理</li>
         </ul>
     </div>
-    <div class="row inner_content">
-        <div class="col-lg-5">
-            <label for="beadhouse_name"><i>养老院名称:</i></label>
-            <span id="beadhouse_name"></span>
+    <div class="panel panel-primary inner_content">
+        <div class="panel-heading">
+            <h2 class="panel-title">基本信息</h2>
         </div>
-        <div class="col-lg-5">
-            <label for="location"><i>养老院位置:</i></label>
-            <span id="location"></span>
+        <div class="panel-body">
+            <div class="col-lg-5">
+                <label for="beadhouse_name">养老院名称:</label>
+                <span id="beadhouse_name"></span>
+            </div>
+            <div class="col-lg-5">
+                <label for="location">养老院位置:</label>
+                <a href="#showmap" role="button" data-toggle="modal"
+                   onclick="mapFunction()" id="location">
+                </a>
+                <span class="coordinates" id="lng"></span>
+                <span class="coordinates" id="lat"></span>
+            </div>
+            <div class="col-lg-4">
+                <label for="scale">养老院规格:</label>
+                <span id="scale"></span>
+            </div>
+            <div class="col-lg-4"><i></i>
+                <label for="roomNumber">房间数:</label>
+                <span id="roomNumber"></span>
+            </div>
+            <div class="col-lg-4"><i></i>
+                <label for="extra">备注:</label>
+                <span id="extra"></span>
+            </div>
+        </div>
+
+    </div>
+    <div class="panel panel-primary inner_content">
+        <div class="panel-heading">
+            <h2 class="panel-title">养老院简介</h2>
+        </div>
+        <div class="panel-body" id="description_body">
+            <div id="description"></div>
         </div>
     </div>
-    <div class="row inner_content">
-        <div class="col-lg-4">
-            <label for="scale"><i>养老院规格:</i></label>
-            <span id="scale"></span>
+    <div class="panel panel-primary inner_content">
+        <div class="panel-heading">
+            <h2 class="panel-title">养老院图片</h2>
         </div>
-        <div class="col-lg-4"><i></i>
-            <label for="roomNumber"><i>房间数:</i></label>
-            <span id="roomNumber"></span>
-        </div>
-        <div class="col-lg-4"><i></i>
-            <label for="extra"><i>备注:</i></label>
-            <span id="extra"></span>
+        <div class="panel-body" id="beadhouse_images">
         </div>
     </div>
-    <div class="row inner_content">
-        <label for="description">养老院简介:</label>
-        <div id="description"></div>
-    </div>
-    <div class="row inner_content">
-        <span><i>养老院照片</i></span>
-        <div class="inner_content" id="beadhouse_images">
+    <div class="modal fade" id="showmap" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1"
+         aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div id="allmap"></div>
+            </div>
         </div>
     </div>
 </section>

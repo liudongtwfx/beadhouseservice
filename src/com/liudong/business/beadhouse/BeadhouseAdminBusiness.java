@@ -32,9 +32,14 @@ public class BeadhouseAdminBusiness {
 
     @Transactional(readOnly = true)
     public String getLocationByArea(int areaid) {
-        Area area = this.areasLocationRepository.findByAreaId(areaid);
-        City city = this.cityRepository.findByCityId(area.getCityId());
-        Province province = this.provinceRepository.findByProvinceId(city.getProvinceId());
-        return province.getProvince() + city.getCity() + area.getArea();
+        try {
+            Area area = this.areasLocationRepository.findByAreaId(String.valueOf(areaid));
+            City city = this.cityRepository.findByCityId(area.getCityId());
+            Province province = this.provinceRepository.findByProvinceId(city.getProvinceId());
+            return province.getProvince() + city.getCity() + area.getArea();
+        } catch (Exception e) {
+            System.out.println(e);
+            return "";
+        }
     }
 }

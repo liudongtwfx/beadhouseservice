@@ -2,12 +2,14 @@ package com.liudong.model.admin;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
 
 /**
  * Created by liudong on 2017/5/25.
  */
 @Entity
+@Table(name = "admininfo")
 public class AdminInfo {
     private int id;
     private String employeeId;

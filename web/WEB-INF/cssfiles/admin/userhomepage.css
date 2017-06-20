@@ -1,0 +1,16 @@
+#add_new_carousel {
+    position: relative;
+    width: 40%;
+}
+
+#add_new_carousel div {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+}
+
+#add_image {
+    width: 40%;
+    height: 40%;
+    margin: 10%;
+}

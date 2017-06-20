@@ -5,7 +5,7 @@ import com.liudong.DAO.BeadHouse.BeadhouseInfoRepository;
 import com.liudong.DAO.Generiac.DefaultAuthenticationService;
 import com.liudong.DAO.User.ElderPeople.ElderPeopleRepository;
 import com.liudong.DAO.User.VipUser.VipUserRepository;
-import com.liudong.business.beadhouse.BeadhouseAdminBusiness;
+import com.liudong.business.BeadhouseAdminBusiness;
 import com.liudong.model.Beadhouse.BeadhouseAdministrator;
 import com.liudong.model.Beadhouse.BeadhouseInfo;
 import com.liudong.model.User.ElderPeople;

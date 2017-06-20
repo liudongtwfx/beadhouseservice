@@ -1,6 +1,7 @@
 package com.liudong.controller.beadhouse;
 
 import com.liudong.DAO.BeadHouse.BeadhouseImageManageRepository;
+import com.liudong.business.filehandle.FileHandler;
 import com.liudong.model.Beadhouse.BeadhouseImageManage;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,10 +12,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -86,54 +84,15 @@ public class BeadhouseImageController {
         if (file == null) {
             return;
         }
-        File imagefolder = new File(BeadhouseImageManage.realPath + "\\" + request.getSession().getAttribute("beadhouseId"));
-        if (!imagefolder.exists()) {
-            imagefolder.mkdir();
-        }
-        String[] filenamesplit = file.getOriginalFilename().split("\\.");
-        String newFileName = getRandomName() + "." + filenamesplit[filenamesplit.length - 1];
-        File newImageFile = new File(imagefolder + "\\" + newFileName);
-        while (newImageFile.exists()) {
-            newFileName = getRandomName() + "." + filenamesplit[filenamesplit.length - 1];
-            newImageFile = new File(imagefolder + "\\" + newFileName);
-        }
-        try {
-            newImageFile.createNewFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        InputStream in = file.getInputStream();
-        FileOutputStream out = new FileOutputStream(newImageFile);
-
-        byte[] bytes = new byte[1024];
-        int len = 0;
-        while ((len = in.read(bytes)) != -1) {
-            out.write(bytes, 0, len);
-        }
-        in.close();
-        out.flush();
-        out.close();
+        String des = BeadhouseImageManage.realPath + "\\" + request.getSession().getAttribute("beadhouseId");
+        String newFileName = FileHandler.save(file, des);
         imageManage.setImagePath(newFileName);
         byte[] change = request.getParameter("description").getBytes("iso-8859-1");
         imageManage.setImageDescription(new String(change, "utf-8"));
     }
 
-    private String getRandomName() {
-        String base = "abcdefghijklmnopqrstuvwxyz0123456789";
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < 10; i++) {
-            sb.append(base.charAt((int) (Math.random() * base.length())));
-        }
-        return sb.toString();
-    }
-
     private void deleteImage(BeadhouseImageManage imageManage) {
         String deleteFilePath = BeadhouseImageManage.realPath + "\\" + imageManage.getBeadhouseid() + "\\" + imageManage.getImagePath();
-        System.out.println(deleteFilePath);
-        File file = new File(deleteFilePath);
-        if (file.exists()) {
-            file.delete();
-        }
+        FileHandler.deleteFile(deleteFilePath);
     }
 }

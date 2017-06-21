@@ -16,26 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `strategytype`
+-- Table structure for table `carousels`
 --
 
-DROP TABLE IF EXISTS `strategytype`;
+DROP TABLE IF EXISTS `carousels`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `strategytype` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `typename` varchar(20) NOT NULL,
+CREATE TABLE `carousels` (
+  `id` tinyint(4) NOT NULL AUTO_INCREMENT,
+  `path` varchar(15) NOT NULL,
+  `description` varchar(100) NOT NULL,
+  `location` varchar(15) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `strategytype`
+-- Dumping data for table `carousels`
 --
 
-LOCK TABLES `strategytype` WRITE;
-/*!40000 ALTER TABLE `strategytype` DISABLE KEYS */;
-/*!40000 ALTER TABLE `strategytype` ENABLE KEYS */;
+LOCK TABLES `carousels` WRITE;
+/*!40000 ALTER TABLE `carousels` DISABLE KEYS */;
+/*!40000 ALTER TABLE `carousels` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -47,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-06-21 11:09:19
+-- Dump completed on 2017-06-21 11:09:18

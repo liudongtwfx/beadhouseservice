@@ -60,6 +60,11 @@ public class AdminIndexPage {
         return "admin/beadhousesingle";
     }
 
+    @RequestMapping(value = "homepage", method = RequestMethod.GET)
+    public String homePageSetting() {
+        return "admin/userhomepage";
+    }
+
     @RequestMapping(value = "register/administratorInfo", method = RequestMethod.GET)
     @ResponseBody
     public boolean ifExist(HttpServletRequest request) {

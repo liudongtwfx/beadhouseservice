@@ -4,6 +4,8 @@
       <root url="jar://$PROJECT_DIR$/../maven dependencies/slf4j-log4j12-1.7.24.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/slf4j-log4j12-1.7.24-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

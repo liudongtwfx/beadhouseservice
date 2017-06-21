@@ -11,26 +11,7 @@
     <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/views/vipuser/usercenter.html" line="15" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91eeda8f-699d-45e3-b1b0-6a9d3821c79f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysqldump/demo_admininfo.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysqldump/demo_areas.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysqldump/demo_beadhouseadmininfo.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysqldump/demo_beadhouseelderaccident.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysqldump/demo_beadhouseeldercheckin.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysqldump/demo_beadhouseeldergoout.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysqldump/demo_beadhouseelderhealth.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysqldump/demo_beadhouseimageinfo.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysqldump/demo_beadhouseinfo.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysqldump/demo_cities.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysqldump/demo_elderpeople.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysqldump/demo_globlesequence.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysqldump/demo_hibernate_sequence.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysqldump/demo_person.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysqldump/demo_provinces.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysqldump/demo_strategyforelder.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysqldump/demo_strategytype.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysqldump/demo_vipusers.sql" afterPath="" />
-    </list>
+    <list default="true" id="91eeda8f-699d-45e3-b1b0-6a9d3821c79f" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -492,6 +473,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beadhouseservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beadhouseservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mysqldump" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1408,7 +1403,7 @@
       <workItem from="1497833948268" duration="504000" />
       <workItem from="1497863477295" duration="2266000" />
       <workItem from="1497866248355" duration="14186000" />
-      <workItem from="1498010108981" duration="1683000" />
+      <workItem from="1498010108981" duration="2055000" />
     </task>
     <servers />
   </component>
@@ -1445,7 +1440,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="868864000" />
+    <option name="totallyTimeSpent" value="869236000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1458,7 +1453,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="34" width="1366" height="734" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1484,7 +1478,7 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.193265" sideWeight="0.4940978" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.193265" sideWeight="0.4940978" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23851775" sideWeight="0.5059022" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />

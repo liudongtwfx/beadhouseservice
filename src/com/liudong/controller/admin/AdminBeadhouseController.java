@@ -2,6 +2,7 @@ package com.liudong.controller.admin;
 
 import com.liudong.DAO.BeadHouse.BeadhouseImageManageRepository;
 import com.liudong.DAO.BeadHouse.BeadhouseInfoRepository;
+import com.liudong.System.Log;
 import com.liudong.model.Beadhouse.BeadhouseImageManage;
 import com.liudong.model.Beadhouse.BeadhouseInfo;
 import org.springframework.data.domain.Page;
@@ -34,6 +35,7 @@ public class AdminBeadhouseController {
     BeadhouseImageManageRepository imageManageRepository;
 
     @RequestMapping(value = "list", method = RequestMethod.GET)
+    @Log(operationType = "add", operationName = "list")
     @ResponseBody
     public Page<BeadhouseInfo> getList(@RequestParam(value = "page", defaultValue = "0") Integer page,
                                        @RequestParam(value = "size", defaultValue = "15") Integer size) {

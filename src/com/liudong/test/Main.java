@@ -1,7 +1,7 @@
 package com.liudong.test;
 
-import com.liudong.DAO.User.ElderPeople.ElderPeopleRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.text.ParseException;
 
@@ -10,11 +10,12 @@ import java.text.ParseException;
  */
 
 public class Main {
-    @Autowired
-    ElderPeopleRepository elderPeopleRepository;
+
+    private static final Logger LOGGER = LogManager.getLogger(Main.class);
 
     public static void main(String[] args) throws ParseException {
         String s;
+        LOGGER.error("this is class main");
         if ((s = "123").length() == 3) {
             System.out.println("true");
         } else {

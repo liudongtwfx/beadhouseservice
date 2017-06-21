@@ -53,6 +53,7 @@ public class AdminCarouselController {
     @RequestMapping(value = "userIndexPage/list", method = RequestMethod.GET)
     @ResponseBody
     public Map<String, Object> getUserIndexCarousel(HttpServletRequest request) {
+        log.info("{}{}", request.getRemoteUser(), request);
         Map<String, Object> res = new HashMap<>();
         try {
             res.put("imageList", this.carouselRepository.findByLocation("userIndexPage"));

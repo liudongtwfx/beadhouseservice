@@ -9,7 +9,7 @@ import java.util.List;
  * Created by liudong on 2017/5/6.
  */
 public interface BeadhouseElderGoOutRepository extends JpaRepository<BeadhouseElderGoOut, Long> {
-    List<BeadhouseElderGoOut> findByElderIdNumber(int elderId);
+    List<BeadhouseElderGoOut> findByElderIdNumber(String elderId);
 
     List<BeadhouseElderGoOut> findByBeadhouseId(int beadhouseId);
 }

@@ -1,7 +1,7 @@
 package com.liudong.controller.admin;
 
 import com.liudong.DAO.User.ElderPeople.ElderPeopleRepository;
-import com.liudong.business.BeadhouseAdminBusiness;
+import com.liudong.business.beadhousebusiness.BeadhouseAdminBusiness;
 import com.liudong.model.User.ElderPeople;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Controller;

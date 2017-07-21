@@ -1,0 +1,8 @@
+.article_line {
+    margin: 10px;
+    height: 30px;
+}
+
+#articles_list {
+    width: 70%;
+}

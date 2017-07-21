@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>养老服务中心养老院列表</title>
+    <link rel="stylesheet" href="../../cssfiles/vipuser/usercenter.css" type="text/css">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../cssfiles/user/common.css">
+    <link rel="stylesheet" type="text/css" href="../../cssfiles/theme.css">
+    <link rel="stylesheet" type="text/css" href="../../cssfiles/premium.css">
+    <link rel="stylesheet" href="../../cssfiles/font-awesome/css/font-awesome.css">
+    <script src="../../jsfiles/jquery-3.1.1.js"></script>
+    <script src="../../bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+<div id="pagetop"></div>
+<script>
+    $("#pagetop").load("../../views/user/commontop.html");
+</script>
+<link href="../../cssfiles/user/common.css" rel="stylesheet">
+<link href="../../cssfiles/user/articles.css" rel="stylesheet">
+<script src="../../jsfiles/user/articles.js" type="application/javascript"></script>
+<div id="mypos" class="container">
+    <span>我的位置:</span>
+    <span><a href="/index">首页</a>>><a href="#">养老攻略</a> </span>
+</div>
+<div class="container">
+    <div id="articles_area">
+        <div id="articles_list">
+        </div>
+    </div>
+    <div id="page_turning">
+        <ul class="pagination" id="page_turning_list">
+        </ul>
+    </div>
+</div>
+</body>
+<script src="../../jsfiles/user/common.js" type="application/javascript"></script>
+<script src="../../jsfiles/pageturning.js" type="application/javascript"></script>
+<script type="application/javascript">
+    getUserName(false);
+</script>
+</html>

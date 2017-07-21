@@ -25,15 +25,19 @@ import java.util.Map;
 @Controller
 @RequestMapping("admin/carousel")
 public class AdminCarouselController {
-    private static final Logger log = LogManager.getLogger(AdminCarouselController.class);
+    private static final Logger log = LogManager.getLogger("controller");
+
     @Inject
     CarouselRepository carouselRepository;
 
     @RequestMapping(value = "userIndexPage/upload", method = RequestMethod.POST)
     @ResponseBody
-    public boolean userIndexCarousel(HttpServletRequest request) {
-        log.debug(request);
-        if (request.getParameter("upload") == null) return false;
+    public boolean userIndexCarousel(MultipartHttpServletRequest request) {
+        log.debug(request.getRequestURL());
+        for (Object entry : request.getParameterMap().entrySet()) {
+            System.out.println(entry);
+        }
+        //if (request.getParameter("upload") == null) return false;
         Carousel carousel = new Carousel();
         if (!handleImageRequest(request, carousel, "userIndexPage")) {
             return false;
@@ -53,6 +57,7 @@ public class AdminCarouselController {
     @RequestMapping(value = "userIndexPage/list", method = RequestMethod.GET)
     @ResponseBody
     public Map<String, Object> getUserIndexCarousel(HttpServletRequest request) {
+        log.debug(request.getRequestURI());
         Map<String, Object> res = new HashMap<>();
         try {
             res.put("imageList", this.carouselRepository.findByLocation("userIndexPage"));
@@ -67,7 +72,8 @@ public class AdminCarouselController {
     private boolean handleImageRequest(HttpServletRequest request, Carousel carousel, String location) {
         MultipartHttpServletRequest multirequest = (MultipartHttpServletRequest) request;
         MultipartFile file = multirequest.getFile("upload");
-        String des = Carousel.imageUrl + "\\" + location;
+        String des = Carousel.realPath + FileHandler.slash + location;
+        log.debug(des);
         try {
             String newFileName = FileHandler.save(file, des);
             carousel.setPath(newFileName);

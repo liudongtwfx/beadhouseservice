@@ -10,4 +10,5 @@ import java.util.List;
  */
 public interface BeadhouseImageManageRepository extends JpaRepository<BeadhouseImageManage, Long> {
     List<BeadhouseImageManage> findByBeadhouseid(int beadhouseid);
+    List<BeadhouseImageManage> findByBeadhouseidOrderByImagePriorityAsc(int beadhouseid);
 }

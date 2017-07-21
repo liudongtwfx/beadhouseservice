@@ -95,6 +95,7 @@
 <section id="main">
     <link rel="stylesheet" href="../../cssfiles/admin/contentcommon.css">
     <link rel="stylesheet" href="../../cssfiles/admin/userhomepage.css">
+    <script type="application/javascript" src="../../jsfiles/admin/common.js"></script>
     <script type="application/javascript" src="../../jsfiles/admin/userhomepage.js"></script>
     <div class="header inner_content">
         <h1 class="page-title">养老服务中心后台管理</h1>
@@ -113,11 +114,12 @@
                     <form class="square_image" id="image_manage" enctype="multipart/form-data">
                         <a href="#user_index_page_carousel" style="width: 100%;height: 100%" onclick="addNewCarousel()"
                            id="add_new_carousel">
-                            <img src="../../jpgfiles/beadhouseback.jpg" alt="图片加载失败" id="add_image" name="upload">
+                            <img src="../../jpgfiles/beadhouseback.jpg" alt="图片加载失败" id="add_image">
                             <div class="plus">
                             </div>
                         </a>
-                        <input type="file" id="image_choose" style="display: none" onchange="displayPic(this.id)">
+                        <input type="file" id="image_choose" name="upload" style="display: none"
+                               onchange="displayPic(this.id)">
                         <input id="description" type="text" class="input-sm" style="width:60%">
                         <button class="btn btn-default btn-success" onclick="submitNewCarousel(this)">提交</button>
                     </form>
@@ -128,4 +130,7 @@
 </section>
 </body>
 <script src="../../jsfiles/admin/common.js"></script>
+<script type="application/javascript">
+    adminAuthority()
+</script>
 </html>

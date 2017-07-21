@@ -38,7 +38,7 @@ function authenticLogin(url) {
                 if (url === '/beadhouse/login') {
                     window.location.href = "/beadhouse/index";
                 }
-                if (url = '/admin/login') {
+                if (url === '/admin/login') {
                     window.location.href = "/admin/index";
                 }
                 return true;

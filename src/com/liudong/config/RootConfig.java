@@ -5,17 +5,18 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.aspectj.lang.annotation.Aspect;
+import org.hibernate.jpa.HibernatePersistenceProvider;
+import org.springframework.aop.framework.AopProxy;
 import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
 import org.springframework.context.MessageSource;
-import org.springframework.context.annotation.AdviceMode;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.*;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.core.Ordered;
 import org.springframework.jdbc.datasource.lookup.JndiDataSourceLookup;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.scheduling.TaskScheduler;
@@ -26,11 +27,11 @@ import org.springframework.scheduling.annotation.SchedulingConfigurer;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 import org.springframework.scheduling.config.ScheduledTaskRegistrar;
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.validation.beanvalidation.MethodValidationPostProcessor;
 import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import javax.persistence.SharedCacheMode;
 import javax.persistence.ValidationMode;
@@ -47,14 +48,16 @@ import java.util.concurrent.Executor;
 @EnableScheduling
 @EnableAsync(mode = AdviceMode.PROXY, proxyTargetClass = false, order = Ordered.HIGHEST_PRECEDENCE)
 @EnableTransactionManagement(mode = AdviceMode.PROXY, proxyTargetClass = false, order = Ordered.LOWEST_PRECEDENCE)
-@ComponentScan(basePackages = "com.liudong", excludeFilters = @ComponentScan.Filter({Controller.class, ControllerAdvice.class}))
+@ComponentScan(basePackages = "com.liudong", excludeFilters = @ComponentScan.Filter({Controller.class,
+        ControllerAdvice.class,Aspect.class, EnableWebMvc.class, EnableAspectJAutoProxy.class}))
 public class RootConfig implements AsyncConfigurer, SchedulingConfigurer {
-    private static final Logger logger = LogManager.getLogger();
+    private static final Logger logger = LogManager.getLogger("service_log");
     private static final Logger schedulingLogger = LogManager.getLogger(logger.getName() + ".[scheduling]");
 
     @Bean
-    public PlatformTransactionManager jpaTransactionManager() {
-        return new JpaTransactionManager(this.entityManagerFactoryBean().getObject());
+    public JpaTransactionManager jpaTransactionManager() {
+        JpaTransactionManager manager = new JpaTransactionManager(this.entityManagerFactoryBean().getObject());
+        return manager;
     }
 
     @Bean
@@ -103,6 +106,9 @@ public class RootConfig implements AsyncConfigurer, SchedulingConfigurer {
         propeties.put("javax.persistence.schema-generation.database.action", "none");
         HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
         adapter.setDatabasePlatform("org.hibernate.dialect.MySQL5InnoDBDialect");
+        adapter.setDatabase(Database.MYSQL);
+        adapter.setShowSql(true);
+        adapter.setGenerateDdl(false);
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setJpaVendorAdapter(adapter);
         factory.setPackagesToScan("com.liudong.model");
@@ -110,6 +116,8 @@ public class RootConfig implements AsyncConfigurer, SchedulingConfigurer {
         factory.setSharedCacheMode(SharedCacheMode.ENABLE_SELECTIVE);
         factory.setValidationMode(ValidationMode.NONE);
         factory.setJpaPropertyMap(propeties);
+        factory.setPersistenceProvider(new HibernatePersistenceProvider());
+
         return factory;
     }
 

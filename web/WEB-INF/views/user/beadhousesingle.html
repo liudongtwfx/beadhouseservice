@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎光临养老服务中心</title>
+    <link rel="stylesheet" href="../../cssfiles/vipuser/usercenter.css" type="text/css">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../cssfiles/user/common.css">
+    <link rel="stylesheet" type="text/css" href="../../cssfiles/theme.css">
+    <link rel="stylesheet" type="text/css" href="../../cssfiles/premium.css">
+    <link rel="stylesheet" href="../../cssfiles/font-awesome/css/font-awesome.css">
+    <script src="../../jsfiles/jquery-3.1.1.js"></script>
+    <script src="../../bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+<div id="pagetop"></div>
+<script>
+    $("#pagetop").load("../../views/user/commontop.html");
+</script>
+<link href="../../cssfiles/user/common.css" rel="stylesheet">
+<link href="../../cssfiles/user/beadhousesingle.css" rel="stylesheet">
+<script src="../../jsfiles/user/beadhousesingle.js" type="application/javascript"></script>
+<div id="mypos" class="container">
+    <span>我的位置:</span>
+    <span><a href="/index">首页</a>>><a href="/beadhouselist/list">养老院列表</a></span>>><a href="#"><span
+        id="mypos_name"></span></a>
+</div>
+<div class="container" id="base_content">
+    <div class="area">
+        <div class="modal-title"><h3 class="title">养老院基本信息</h3>
+        </div>
+        <div class="base_line"><span class="base_title">名称：</span><span id="beadhouse_name"></span></div>
+        <div class="base_line"><span class="base_title">位置：</span><a href="#map_area"><span
+                id="beadhouse_location"></span></a></div>
+        <div class="base_line"><span class="base_title">评价：</span>
+            <link href="../../cssfiles/user/star-rating.min.css" rel="stylesheet">
+            <script src="../../jsfiles/user/star-rating.min.js" type="application/javascript"></script>
+            <input id="input-21e" value="4" active='false' type="number" class="rating" min=0 max=5 step=0.1
+                   data-size="xs" disabled><br>
+            <script src="../../jsfiles/jquery.cookie.js" type="application/javascript"></script>
+            <script type="application/javascript">
+                var score = $.cookie("beadhousescore");
+                if (score !== null && score !== undefined && score.length !== 0) {
+                    $("#input-21e").attr("value", score);
+                }
+            </script>
+        </div>
+    </div>
+    <div class="base_line"><span class="base_title">简介：</span><span id="beadhouse_brief"></span></div>
+</div>
+</div>
+<div class="container">
+    <div class="area">
+        <h3 class="title">图片一览</h3>
+        <div id="images_area">
+            <table align="center" cellpadding="1" cellspacing="1" cellspace="0" id="image_table">
+                <tr>
+                    <td id="demo1" valign="top" bgcolor="ffffff">
+                        <!-- 特别注意，下面的图片总宽度必须大于上面定义的demo的宽度，如上面demo的宽度为500px,则下面图片总宽度必须大于500,否则会出现些问题！ -->
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tr align="center" id='images_tr'>
+                            </tr>
+                        </table>
+                    </td>
+                    <td id="demo2" valign="top">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="area">
+        <h3 class="title">位置信息</h3>
+        <script type="text/javascript"
+                src="https://api.map.baidu.com/api?v=2.0&ak=MzhXZRHdq4bg6CdQP9VmYxNQhbhdd6ho"></script>
+        <div id="map_area">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="area">
+        <h3 class="title">养老院评价</h3>
+        <div id="comment_area">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="area">
+        <h3 class="title">发表评论</h3>
+
+        <div id="add_comment">
+            <div class="col-lg-11">
+                <input id="input-21ee" value="0" type="number" class="rating" min=0
+                       max=5 step=0.1
+                       data-size="xs"><br></div>
+            <div class="col-lg-1" style="display: block" id="comment_login" onclick="authticLogin()">登录</div>
+            <textarea class="col-lg-12" id="comment_content"></textarea>
+            <div class="col-lg-8"></div>
+            <div class="col-lg-2"><input type="checkbox" id="is_anonymous">匿名</div>
+        </div>
+        <div class="col-lg-2"><span><button class="btn-success" onclick="addComment()">发表</button></span></div>
+    </div>
+</div>
+</body>
+<script src="../../jsfiles/user/common.js" type="application/javascript"></script>
+<script type="application/javascript">
+    getUserName(false);
+</script>
+</html>

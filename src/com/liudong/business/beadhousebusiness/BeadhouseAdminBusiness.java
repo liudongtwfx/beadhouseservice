@@ -1,4 +1,4 @@
-package com.liudong.business;
+package com.liudong.business.beadhousebusiness;
 
 import com.liudong.DAO.Location.AreaLocationRepository;
 import com.liudong.DAO.Location.CityLocationRepository;

@@ -18,12 +18,13 @@ function getCarouseList() {
     )
 }
 function displayImageList(data) {
-    var node;
+    var node = "";
     for (var i = 0; i < data.length; i++) {
-        var tempNode = "<div class='col-lg-4' id='userhome" + data['id'] + "'>" +
-            "<img src='" + (prefixUrl + "/" + data[i][path]) + "' alt='图片加载失败' class='square_image'>" +
-            "<span>" + data['description'] + "</span></div>";
+        var tempNode = "<div class='col-lg-3 text-center' id='userhome" + data[i]['id'] + "'>" +
+            "<img src='" + (prefixUrl + "/" + data[i]['location'] + '/' + data[i]['path']) + "' alt='图片加载失败' class='square_image' onresize='carouselImageCSS()'>" +
+            "<span>" + data[i]['description'] + "</span></div>";
         node += tempNode;
+        console.log(node);
     }
     $("#add_image_div").before(node);
     carouselImageCSS();
@@ -56,6 +57,10 @@ function displayPic(id) {
 
 function submitNewCarousel() {
     var formData = new FormData($("#image_manage")[0]);
+    for (var pair in formData.entries()) {
+        console.log(pair[0] + ',' + pair[1]);
+    }
+    console.log(formData);
     formData.append("description", $("#description").val());
     $.ajax({
         url: '/admin/carousel/userIndexPage/upload',
@@ -81,3 +86,10 @@ function submitNewCarousel() {
         }
     });
 }
+
+$(".square_image").resize(
+    function () {
+        var width = $(".square_image").css("width");
+        $(".square_image").css("height", width);
+    }
+);

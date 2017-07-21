@@ -35,7 +35,7 @@ function authticLogin() {
         function (data) {
             console.log(data);
             if (data == true) {
-                window.location.href = "/";
+                window.location.href = '/';
                 return true;
             } else {
                 alert("用户名和密码不正确");

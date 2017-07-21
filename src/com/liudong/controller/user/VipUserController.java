@@ -1,4 +1,4 @@
-package com.liudong.controller;
+package com.liudong.controller.user;
 
 import com.liudong.DAO.Generiac.DefaultAuthenticationService;
 import com.liudong.DAO.User.VipUser.VipUserRepository;
@@ -95,6 +95,7 @@ public class VipUserController {
         }
         String pwd = request.getParameter("password");
         if (this.authenticationService.authenticateVipUser(user.getUserName(), pwd) != null) {
+            request.getSession().setAttribute("userId", String.valueOf(user.getId()));
             request.getSession().setAttribute("userName", user.getUserName());
             return true;
         }

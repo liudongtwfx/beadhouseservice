@@ -23,6 +23,16 @@ import java.util.Map;
 @Controller
 @RequestMapping(value = "/beadhouse/imagemanage")
 public class BeadhouseImageController {
+    public static final String slash;
+
+    static {
+        if (System.getProperty("os.name").contains("Window")) {
+            slash = "\\";
+        } else {
+            slash = "/";
+        }
+    }
+
     @Inject
     BeadhouseImageManageRepository imageManageRepository;
 
@@ -84,7 +94,7 @@ public class BeadhouseImageController {
         if (file == null) {
             return;
         }
-        String des = BeadhouseImageManage.realPath + "\\" + request.getSession().getAttribute("beadhouseId");
+        String des = BeadhouseImageManage.realPath + slash + request.getSession().getAttribute("beadhouseId");
         String newFileName = FileHandler.save(file, des);
         imageManage.setImagePath(newFileName);
         byte[] change = request.getParameter("description").getBytes("iso-8859-1");
@@ -92,7 +102,7 @@ public class BeadhouseImageController {
     }
 
     private void deleteImage(BeadhouseImageManage imageManage) {
-        String deleteFilePath = BeadhouseImageManage.realPath + "\\" + imageManage.getBeadhouseid() + "\\" + imageManage.getImagePath();
+        String deleteFilePath = BeadhouseImageManage.realPath + slash + imageManage.getBeadhouseid() + slash + imageManage.getImagePath();
         FileHandler.deleteFile(deleteFilePath);
     }
 }

@@ -1,7 +1,8 @@
-package com.liudong.controller;
+package com.liudong.controller.user;
 
 import com.liudong.DAO.User.ElderPeople.ElderPeopleRepository;
 import com.liudong.DAO.User.VipUser.VipUserRepository;
+import com.liudong.business.beadhousebusiness.BeadhouseElderInfoBusiness;
 import com.liudong.model.User.ElderPeople;
 import com.liudong.model.User.VipUser;
 import org.springframework.stereotype.Controller;
@@ -17,6 +18,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -27,8 +29,12 @@ import java.util.Map;
 public class UserCenterController {
     @Inject
     ElderPeopleRepository elderPeopleRepository;
+
     @Inject
     VipUserRepository vipUserManager;
+
+    @Inject
+    BeadhouseElderInfoBusiness beadhouseElderInfoBusiness;
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String userCenter() {
@@ -74,8 +80,23 @@ public class UserCenterController {
         if (username == null) {
             return null;
         }
-        Map<String, Object> map = new HashMap<>();
-        map.put("list", this.elderPeopleRepository.findByVipuserId(user.getId()));
-        return map;
+        Map<String, Object> resMap = new HashMap<>();
+        List<ElderPeople> elderList = this.elderPeopleRepository.findByVipuserId(user.getId());
+        if (elderList == null) {
+            return resMap;
+        }
+        resMap.put("list", elderList);
+        resMap.put("elderInfo", this.beadhouseElderInfoBusiness.getElderInfo(elderList.get(0)));
+        return resMap;
+    }
+
+    @RequestMapping(value = "checkinId", method = RequestMethod.GET)
+    @ResponseBody
+    public Object getOtherInfosBasedOnCheckin(HttpServletRequest request) {
+        String checkinId = request.getParameter("id");
+        if (checkinId == null || checkinId.length() == 0) {
+            return null;
+        }
+        return this.beadhouseElderInfoBusiness.getInfosBasedOnCheckinId(Integer.valueOf(checkinId));
     }
 }

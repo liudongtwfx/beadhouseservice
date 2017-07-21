@@ -2,6 +2,7 @@ package com.liudong.model.admin;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
 
 /**
@@ -9,7 +10,8 @@ import java.util.Date;
  */
 
 @Entity
-public class StrategyForElder {
+@Table(name = "articleforelder")
+public class ArticleForElder {
     private int id;
     private String title;
     private String content;
@@ -18,6 +20,16 @@ public class StrategyForElder {
     private Date addtime;
     private Date updatetime;
     private int operator;
+
+    public String getArticletag() {
+        return articletag;
+    }
+
+    public void setArticletag(String articletag) {
+        this.articletag = articletag;
+    }
+
+    private String articletag;
 
     @Id
     public int getId() {

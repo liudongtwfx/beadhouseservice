@@ -19,6 +19,7 @@ public class BeadhouseInfo implements Serializable {
     private double lat;
     private String fullLocation;
     private String description;
+    private float score;
 
     @Id
     public int getId() {
@@ -77,5 +78,13 @@ public class BeadhouseInfo implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public float getScore() {
+        return score;
+    }
+
+    public void setScore(float score) {
+        this.score = score;
     }
 }

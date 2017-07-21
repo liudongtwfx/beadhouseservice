@@ -81,7 +81,7 @@ public class AdminIndexPage {
         return false;
     }
 
-    @RequestMapping(value = "getAdminUerName", method = RequestMethod.GET)
+    @RequestMapping(value = "getAdminUserName", method = RequestMethod.GET)
     @ResponseBody
     public String forKeepAlive(HttpServletRequest request) {
         String name = (String) request.getSession().getAttribute("adminName");

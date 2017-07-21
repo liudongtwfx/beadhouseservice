@@ -1,6 +1,5 @@
 package com.liudong.business.filehandle;
 
-import com.liudong.model.Beadhouse.BeadhouseImageManage;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -12,6 +11,16 @@ import java.io.InputStream;
  * Created by liudong on 17-6-19.
  */
 public class FileHandler {
+    public static final String slash;
+
+    static {
+        if (System.getProperty("os.name").contains("Window")) {
+            slash = "\\";
+        } else {
+            slash = "/";
+        }
+    }
+
     public static String save(MultipartFile file, String des) throws IOException {
         if (file == null) {
             return "";
@@ -22,17 +31,17 @@ public class FileHandler {
         }
         String[] filenamesplit = file.getOriginalFilename().split("\\.");
         String newFileName = getRandomName() + "." + filenamesplit[filenamesplit.length - 1];
-        File newImageFile = new File(imagefolder + "\\" + newFileName);
+        File newImageFile = new File(imagefolder + slash + newFileName);
         while (newImageFile.exists()) {
             newFileName = getRandomName() + "." + filenamesplit[filenamesplit.length - 1];
-            newImageFile = new File(imagefolder + "\\" + newFileName);
+            newImageFile = new File(imagefolder + slash + newFileName);
         }
         try {
             newImageFile.createNewFile();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        System.out.println(newImageFile.getAbsolutePath());
         InputStream in = file.getInputStream();
         FileOutputStream out = new FileOutputStream(newImageFile);
 

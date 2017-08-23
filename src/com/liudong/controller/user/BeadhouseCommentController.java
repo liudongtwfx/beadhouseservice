@@ -1,6 +1,6 @@
 package com.liudong.controller.user;
 
-import com.liudong.business.beadhousebusiness.BeadhouseCommentBusiness;
+import com.liudong.business.beadhousebusiness.BeadhouseCommentBuisiness.BeadhouseCommentBusiness;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

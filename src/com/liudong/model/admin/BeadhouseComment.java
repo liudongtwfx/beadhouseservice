@@ -18,7 +18,7 @@ public class BeadhouseComment {
     private int id;
     private String content;
     private Date addtime;
-    private int beadhosueid;
+    private int beadhouseid;
     private int beadhousereply;
     private int commentor;
     private boolean anonymous;

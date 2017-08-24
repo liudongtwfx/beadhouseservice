@@ -3,7 +3,6 @@ package com.liudong.business.kafkabusiness.kafkaConsumer;
 import com.liudong.business.kafkabusiness.KafkaConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
-import org.apache.kafka.common.TopicPartition;
 
 import java.util.Arrays;
 
@@ -23,7 +22,7 @@ public class BeadhouseConsumer implements Runnable {
             }
         } finally {
             consumer.close();
-        }-
+        }
     }
 
     public ConsumerRecords<String, String> getRecords() {

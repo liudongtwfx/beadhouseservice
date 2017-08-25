@@ -7,3 +7,27 @@
 2017-08-24 17:08:55.742 INFO  com.liudong.config.RootConfig 126 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
 2017-08-24 17:08:55.774 INFO  com.liudong.config.RootConfig 147 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@20b907dc.
 2017-08-24 17:09:03.714 INFO  com.liudong.config.RootConfig 159 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@20b907dc.
+2017-08-24 17:11:04.388 INFO  com.liudong.config.RootConfig 126 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-08-24 17:11:04.418 INFO  com.liudong.config.RootConfig 147 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@44f9ac6.
+2017-08-24 17:11:11.257 INFO  com.liudong.config.RootConfig 159 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@44f9ac6.
+2017-08-24 17:30:47.324 INFO  com.liudong.config.RootConfig 126 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-08-24 17:30:47.357 INFO  com.liudong.config.RootConfig 147 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@51966f4c.
+2017-08-24 17:30:53.899 INFO  com.liudong.config.RootConfig 159 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@51966f4c.
+2017-08-24 17:31:54.718 INFO  com.liudong.config.RootConfig 126 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-08-24 17:31:54.777 INFO  com.liudong.config.RootConfig 147 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@8767d6b.
+2017-08-24 17:32:01.912 INFO  com.liudong.config.RootConfig 159 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@8767d6b.
+2017-08-24 17:35:11.332 INFO  com.liudong.config.RootConfig 126 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-08-24 17:35:11.360 INFO  com.liudong.config.RootConfig 147 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@386c30ae.
+2017-08-24 17:35:17.328 INFO  com.liudong.config.RootConfig 159 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@386c30ae.
+2017-08-24 17:51:59.180 INFO  com.liudong.config.RootConfig 126 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-08-24 17:51:59.215 INFO  com.liudong.config.RootConfig 147 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@38a20018.
+2017-08-24 17:52:05.191 INFO  com.liudong.config.RootConfig 159 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@38a20018.
+2017-08-24 17:55:19.546 INFO  com.liudong.config.RootConfig 126 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-08-24 17:55:19.578 INFO  com.liudong.config.RootConfig 147 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@4cbf1bf8.
+2017-08-24 17:55:27.259 INFO  com.liudong.config.RootConfig 159 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@4cbf1bf8.
+2017-08-24 19:29:49.358 INFO  com.liudong.config.RootConfig 126 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-08-24 19:29:49.389 INFO  com.liudong.config.RootConfig 147 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@4f522308.
+2017-08-24 19:29:56.361 INFO  com.liudong.config.RootConfig 159 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@4f522308.
+2017-08-24 19:37:45.720 INFO  com.liudong.config.RootConfig 126 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-08-24 19:37:45.750 INFO  com.liudong.config.RootConfig 147 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@58e957.
+2017-08-24 19:37:52.312 INFO  com.liudong.config.RootConfig 159 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@58e957.

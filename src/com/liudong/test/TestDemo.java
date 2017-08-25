@@ -1,6 +1,5 @@
 package com.liudong.test;
 
-import com.liudong.DAO.User.VipUser.VipUserRepository;
 import com.liudong.System.SystemLogAspect;
 import com.liudong.controller.admin.AdminCarouselController;
 import org.junit.Test;

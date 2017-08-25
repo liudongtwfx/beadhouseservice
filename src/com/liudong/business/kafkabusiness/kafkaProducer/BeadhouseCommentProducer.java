@@ -1,8 +1,7 @@
 package com.liudong.business.kafkabusiness.kafkaProducer;
 
-import org.apache.kafka.clients.producer.Callback;
-import org.apache.kafka.clients.producer.ProducerRecord;
-import org.apache.kafka.clients.producer.RecordMetadata;
+import com.liudong.business.kafkabusiness.kafkaconfig.KafkaProducerConfig;
+import org.apache.kafka.clients.producer.*;
 
 public class BeadhouseCommentProducer {
     class BeadhouseCommentCallback implements Callback {
@@ -10,7 +9,7 @@ public class BeadhouseCommentProducer {
         private String value;
         private long start;
 
-        public BeadhouseCommentCallback(int beadhouseid, String value) {
+        BeadhouseCommentCallback(int beadhouseid, String value) {
             this.beadhouseid = beadhouseid;
             this.value = value;
             this.start = System.currentTimeMillis();
@@ -28,12 +27,16 @@ public class BeadhouseCommentProducer {
         }
     }
 
-    private final DatabaseProducer databaseProducer = new DatabaseProducer();
+    public Producer<String, String> getProducer() {
+        return producer;
+    }
+
+    private final Producer<String, String> producer = new KafkaProducer<>(KafkaProducerConfig.getInstance().getProperties());
     private static final String topic = "beadhousecomment";
 
 
     public void produceMessage(int beadhouseid, String value) {
-        this.databaseProducer.getProducer().send(new ProducerRecord<>(topic, String.valueOf(beadhouseid), value),
+        this.producer.send(new ProducerRecord<>(topic, String.valueOf(beadhouseid), value),
                 new BeadhouseCommentCallback(beadhouseid, value));
     }
 }

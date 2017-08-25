@@ -19,6 +19,8 @@
       <root url="jar://$PROJECT_DIR$/lib/hibernate-core-5.2.3.Final.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/javax.inject-1-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

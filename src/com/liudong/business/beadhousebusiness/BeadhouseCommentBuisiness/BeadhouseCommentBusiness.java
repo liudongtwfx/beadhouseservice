@@ -1,6 +1,7 @@
 package com.liudong.business.beadhousebusiness.BeadhouseCommentBuisiness;
 
 import com.liudong.DAO.Admin.BeadhouseCommentRepository;
+import com.liudong.business.kafkabusiness.kafkaProducer.BeadhouseCommentProducer;
 import com.liudong.model.admin.BeadhouseComment;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.inject.Inject;
+import javax.persistence.criteria.CriteriaBuilder;
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
 import java.net.*;
@@ -21,7 +23,6 @@ import java.util.Date;
 public class BeadhouseCommentBusiness {
 
     private final static Logger LOGGER = LogManager.getLogger("exception");
-    private static final String GET_SCORE = "http://127.0.0.1:8000/getcommentscore?sentence=";
     @Inject
     BeadhouseCommentRepository commentRepository;
 

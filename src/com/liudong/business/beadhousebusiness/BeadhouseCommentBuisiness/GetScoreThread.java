@@ -1,6 +1,7 @@
 package com.liudong.business.beadhousebusiness.BeadhouseCommentBuisiness;
 
 import com.liudong.DAO.Admin.BeadhouseCommentRepository;
+import com.liudong.business.kafkabusiness.kafkaProducer.BeadhouseCommentProducer;
 import com.liudong.model.admin.BeadhouseComment;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -26,6 +27,8 @@ public class GetScoreThread implements Runnable {
 
     @Override
     public void run() {
+        BeadhouseCommentProducer producer = new BeadhouseCommentProducer();
+        producer.produceMessage(comment.getBeadhouseid(), comment.toString());
         float score = 0;
         try {
             score = getCommentScore(content);

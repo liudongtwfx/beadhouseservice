@@ -56,7 +56,7 @@ public class FileHandler {
         return newFileName;
     }
 
-    private static String getRandomName() {
+    public static String getRandomName() {
         String base = "abcdefghijklmnopqrstuvwxyz0123456789";
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < 10; i++) {

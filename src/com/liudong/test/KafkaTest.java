@@ -1,5 +1,6 @@
 package com.liudong.test;
 
+import com.liudong.business.databaseBusiness.SaveToDataBase;
 import com.liudong.business.kafkabusiness.kafkaConsumer.BeadhouseConsumer;
 import com.liudong.business.kafkabusiness.kafkaProducer.BeadhouseCommentProducer;
 import com.liudong.model.admin.BeadhouseComment;
@@ -9,6 +10,9 @@ import org.apache.kafka.clients.producer.Producer;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
 public class KafkaTest {
 
     @Test
@@ -17,7 +21,8 @@ public class KafkaTest {
     }
 
     @Test
-    public void BeadhouseCommentTest() throws InterruptedException {
+    public void BeadhouseCommentTest()
+            throws InterruptedException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, NoSuchFieldException {
         BeadhouseConsumer consumer = new BeadhouseConsumer("beadhousecomment");
         Thread thread = new Thread(consumer);
         thread.start();
@@ -26,15 +31,22 @@ public class KafkaTest {
         comment.setId(108);
         comment.setAnonymous(false);
         BeadhouseCommentProducer producer = new BeadhouseCommentProducer();
-        producer.produceMessage(comment.getBeadhouseid(), comment.toString());
-        Thread.sleep(1000);
+        producer.produceMessage(String.valueOf(comment.getBeadhouseid()), comment.toString());
+        Thread.sleep(500);
+        BeadhouseComment comment1 = null;
         ConsumerRecords<String, String> res = consumer.getRecords();
         if (res != null) {
             for (ConsumerRecord record : res) {
-                System.out.println(record.key() + " " + record.value());
+                comment1 = DeserialBeadhouseComment((String) record.value());
             }
         }
-        System.out.println();
-        Assert.assertEquals("123", "123");
+        assert res != null;
+        Assert.assertEquals(comment.toString(), comment1.toString());
+    }
+
+    private BeadhouseComment DeserialBeadhouseComment(String content)
+            throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, NoSuchFieldException {
+        System.out.println(content);
+        return SaveToDataBase.getBeadhouesCommentByValue(content);
     }
 }

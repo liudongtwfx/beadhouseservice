@@ -2,9 +2,12 @@ package com.liudong.controller.user;
 
 import com.liudong.DAO.User.ElderPeople.ElderPeopleRepository;
 import com.liudong.DAO.User.VipUser.VipUserRepository;
+import com.liudong.business.beadhousebusiness.BeadhouseAdminBusiness;
 import com.liudong.business.beadhousebusiness.BeadhouseElderInfoBusiness;
+import com.liudong.model.Location.Area;
 import com.liudong.model.User.ElderPeople;
 import com.liudong.model.User.VipUser;
+import com.liudong.test.IdCardGenerator;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,12 +17,11 @@ import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.UnsupportedEncodingException;
+import java.text.NumberFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by liudong on 2017/3/2.
@@ -32,6 +34,8 @@ public class UserCenterController {
 
     @Inject
     VipUserRepository vipUserManager;
+    @Inject
+    BeadhouseAdminBusiness business;
 
     @Inject
     BeadhouseElderInfoBusiness beadhouseElderInfoBusiness;
@@ -98,5 +102,45 @@ public class UserCenterController {
             return null;
         }
         return this.beadhouseElderInfoBusiness.getInfosBasedOnCheckinId(Integer.valueOf(checkinId));
+    }
+
+    @RequestMapping(value = "elderRegisterTest", method = RequestMethod.GET)
+    @ResponseBody
+    public String elderRegisterRandom(HttpServletRequest request, HttpServletResponse response) {
+        List<VipUser> vipUsers = this.vipUserManager.findAll();
+        List<Area> areas = this.business.getAllAreas();
+        String[] gender = {"男", "女"};
+        NumberFormat format = NumberFormat.getInstance();
+        format.setMinimumIntegerDigits(2);
+        int added = 0;
+        for (VipUser user : vipUsers) {
+            for (int i = 0; i < 2; i++) {
+                ElderPeople elderPeople = new ElderPeople();
+                elderPeople.setName(IdCardGenerator.getRandomChineseName());
+                elderPeople.setVipuserId(user.getId());
+                while (true) {
+                    try {
+                        Area a = areas.get((int) (Math.random() * areas.size()));
+                        elderPeople.setGender(gender[(int) (Math.random() * 2)]);
+                        String year = String.valueOf((int) (1930 + Math.random() * 35));
+                        String month = format.format((int) Math.random() * 11 + 1);
+                        String day = format.format((int) Math.random() * 29 + 1);
+                        elderPeople.setIdNumber(IdCardGenerator.generate(a.getArea(), year + month + day));
+                        elderPeople.setLocationId(a.getAreaId());
+                        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
+                        Date date;
+                        date = sdf.parse(year + "-" + month + "-" + day);
+                        elderPeople.setBirthDate(date);
+                        break;
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+                }
+                elderPeople.setVipuserId(user.getId());
+                this.elderPeopleRepository.save(elderPeople);
+                added++;
+            }
+        }
+        return "added:" + added;
     }
 }

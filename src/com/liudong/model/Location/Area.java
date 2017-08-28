@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Table(name = "areas")
 public class Area {
     private int id;
-    private String areaId;
+    private int areaId;
     private String area;
     private int cityId;
 
@@ -23,11 +23,11 @@ public class Area {
     }
 
     @Column(name = "areaid")
-    public String getAreaId() {
+    public int getAreaId() {
         return areaId;
     }
 
-    public void setAreaId(String areaId) {
+    public void setAreaId(int areaId) {
         this.areaId = areaId;
     }
 

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.inject.Inject;
+import java.util.List;
 
 /**
  * Created by liudong on 2017/3/23.
@@ -41,5 +42,10 @@ public class BeadhouseAdminBusiness {
             System.out.println(e);
             return "";
         }
+    }
+
+    @Transactional
+    public List<Area> getAllAreas() {
+        return this.areasLocationRepository.findAll();
     }
 }

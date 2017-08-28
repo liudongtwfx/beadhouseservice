@@ -2,8 +2,10 @@ package com.liudong.controller.beadhouse;
 
 import com.liudong.DAO.BeadHouse.BeadhouseAdministratorRepository;
 import com.liudong.DAO.BeadHouse.BeadhouseElderCheckinRepository;
+import com.liudong.DAO.BeadHouse.BeadhouseInfoRepository;
 import com.liudong.DAO.User.ElderPeople.ElderPeopleRepository;
 import com.liudong.model.Beadhouse.BeadhouseElderCheckin;
+import com.liudong.model.Beadhouse.BeadhouseInfo;
 import com.liudong.model.User.ElderPeople;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,6 +35,8 @@ public class BeadhouseElderCheckinController {
 
     @Inject
     ElderPeopleRepository elderPeopleRepository;
+    @Inject
+    BeadhouseInfoRepository beadhouseInfoRepository;
 
     @RequestMapping(value = "add", method = RequestMethod.POST)
     @ResponseBody
@@ -105,9 +109,24 @@ public class BeadhouseElderCheckinController {
         long checkinEnd = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").parse("01/01/2017 00:00:00").getTime();
         //long leaveEnd = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").parse("01/01/2018 00:00:00").getTime();
         long now = new Date().getTime();
-        int[] ids = {2, 3, 7, 9, 10, 11};
-        for (int i = 0; i < 200; i++) {
-            ElderPeople elder = this.elderPeopleRepository.findByid(ids[(int) (Math.random() * 6)]);
+        List<ElderPeople> elderPeoplelist = this.elderPeopleRepository.findAll();
+        List<BeadhouseInfo> beadhouseInfos = this.beadhouseInfoRepository.findAll();
+        for (int i = 0; i < 2000; i++) {
+            ElderPeople elder = elderPeoplelist.get((int) (Math.random() * elderPeoplelist.size()));
+            BeadhouseElderCheckin checkin = new BeadhouseElderCheckin();
+            long timemins = (long) (Math.random() * (checkinEnd - epoch));
+            Date checkinDate = new Date(epoch + timemins);
+            long end = (long) (epoch + timemins + Math.random() * 1000 * 60 * 60 * 24 * 60 + 1000 * 60 * 60 * 24 * 63);
+            Date leaveDate = new Date(end);
+            checkin.setElderIdNumber(elder.getIdNumber());
+            checkin.setCheckinTime(format.parse(format.format(checkinDate)));
+            checkin.setLeaveTime(format.parse(format.format(leaveDate)));
+            checkin.setBeadhouseId(beadhouseInfos.get((int) (Math.random() * beadhouseInfos.size())).getId());
+            checkin.setPrincipleMan("liu6891333");
+            this.beadhouseElderCheckinRepository.save(checkin);
+        }
+        for (int i = 0; i < 100; i++) {
+            ElderPeople elder = elderPeoplelist.get((int) (Math.random() * elderPeoplelist.size()));
             BeadhouseElderCheckin checkin = new BeadhouseElderCheckin();
             long timemins = (long) (Math.random() * (checkinEnd - epoch));
             Date checkinDate = new Date(epoch + timemins);

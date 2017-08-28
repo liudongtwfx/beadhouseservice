@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# mysql 
+service mysql start
+
 # tomcat_image start
 sh ~/program_files/apache-image/bin/startup.sh
 

@@ -1,13 +1,23 @@
 package com.liudong.business.elasticsearchbusiness;
 
-import org.elasticsearch.client.transport.TransportClient;
+import org.elasticsearch.common.settings.Settings;
 
-public class ElasticSearchInsert implements Runnable {
+public class ElasticSearchInsert extends ElasticsearchBase implements Runnable {
     private String Index;
-    private static final ElasticsearchBase elasticsearchBase = new ElasticsearchBase();
+
+    ElasticSearchInsert(String host, int port) {
+        super(host, port);
+    }
+
+    ElasticSearchInsert(Settings settings, String host, int port) {
+        super(settings, host, port);
+    }
+
+    ElasticSearchInsert(String index, String type) {
+        super(index, type);
+    }
 
     @Override
     public void run() {
-        TransportClient client = elasticsearchBase.getClient();
     }
 }

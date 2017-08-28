@@ -14,6 +14,13 @@ import java.util.*;
 import java.util.concurrent.ExecutionException;
 
 public class BeadhouseSearch extends ElasticsearchBase {
+    @Data
+    class BeadhouseBriefInfo implements Serializable {
+        private int id;
+        private String fullname;
+        private String description;
+    }
+
     private static final Set<String> responceKey = new HashSet<>();
 
     static {
@@ -62,9 +69,3 @@ public class BeadhouseSearch extends ElasticsearchBase {
     }
 }
 
-@Data
-class BeadhouseBriefInfo implements Serializable {
-    private int id;
-    private String fullname;
-    private String description;
-}

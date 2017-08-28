@@ -3,7 +3,7 @@ package com.liudong.business.kafkabusiness.kafkaconfig;
 import java.util.Properties;
 
 public class KafkaProducerConfig extends KafkaConfig {
-    private static KafkaProducerConfig instance;
+    private volatile static KafkaProducerConfig instance;
 
     private KafkaProducerConfig() {
         super();

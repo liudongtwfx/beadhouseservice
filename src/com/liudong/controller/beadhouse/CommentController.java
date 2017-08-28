@@ -1,36 +1,46 @@
 package com.liudong.controller.beadhouse;
 
 
-import com.liudong.business.kafkabusiness.kafkaConsumer.BeadhouseConsumer;
-import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.apache.kafka.clients.consumer.ConsumerRecords;
+import com.liudong.business.beadhousebusiness.BeadhouseCommentBuisiness.BeadhouseCommentBusiness;
+import org.elasticsearch.search.SearchHit;
+import org.elasticsearch.search.SearchHits;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 @Controller
 @RequestMapping(value = "beadhouse/comment")
 public class CommentController {
+    @Inject
+    BeadhouseCommentBusiness business;
+
     @RequestMapping(value = "get", method = RequestMethod.GET)
-    public Map<String, Object> getCommentData(HttpServletRequest request) {
+    @ResponseBody
+    public List<Map<String, Object>> getCommentData(HttpServletRequest request) {
         String beadhouseId = String.valueOf(request.getSession().getAttribute("beadhouseId"));
         if (beadhouseId == null) {
             return null;
         }
-        Map<String, Object> res = new HashMap<>();
-        Map<String, Object> content = new HashMap<>();
-        ConsumerRecords<String, String> records = new BeadhouseConsumer().getRecords();
-        for (ConsumerRecord<String, String> record : records) {
-            if (beadhouseId.equals(record.key())) {
-                content.put(record.key(), record.value());
+        List<Map<String, Object>> res = new ArrayList<>();
+        try {
+            SearchHits comments = this.business.getCommentNotReply(Integer.valueOf(beadhouseId));
+            for (SearchHit hit : comments) {
+                Map<String, Object> source = hit.getSource();
+                if (source.containsKey("anoymous") && source.get("anoymous").equals(false)) {
+                    source.remove("commentor");
+                }
+                res.add(source);
             }
+        } catch (Exception ignored) {
+
         }
-        res.put("num", content.size());
-        res.put("content", content);
         return res;
     }
 }

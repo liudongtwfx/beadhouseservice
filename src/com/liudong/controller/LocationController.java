@@ -51,7 +51,7 @@ public class LocationController {
             String beadhouseName = province.getProvince() + city.getCity() + area.getArea() + beadhouse[beadhouseFirst] + beadhouse[beadhousesecond] + beadhousesuffix[suffix];
             BeadhouseInfo beadHouseInfo = new BeadhouseInfo();
             beadHouseInfo.setFullName(beadhouseName);
-            beadHouseInfo.setLocationId(area.getAreaId());
+            beadHouseInfo.setLocationId(String.valueOf(area.getAreaId()));
             this.beadHouseInfoRepository.save(beadHouseInfo);
             //System.out.println(beadhouseName);
         }

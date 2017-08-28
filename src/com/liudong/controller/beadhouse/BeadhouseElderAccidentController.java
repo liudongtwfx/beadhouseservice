@@ -1,9 +1,14 @@
 package com.liudong.controller.beadhouse;
 
+import com.liudong.DAO.Admin.ArticleForElderRepository;
 import com.liudong.DAO.BeadHouse.BeadhouseAdministratorRepository;
 import com.liudong.DAO.BeadHouse.BeadhouseElderAccidentRepository;
+import com.liudong.DAO.BeadHouse.BeadhouseInfoRepository;
 import com.liudong.DAO.User.ElderPeople.ElderPeopleRepository;
 import com.liudong.model.Beadhouse.BeadhouseElderAccident;
+import com.liudong.model.Beadhouse.BeadhouseInfo;
+import com.liudong.model.User.ElderPeople;
+import org.elasticsearch.index.engine.Engine;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -32,6 +37,8 @@ public class BeadhouseElderAccidentController {
 
     @Inject
     ElderPeopleRepository elderPeopleRepository;
+    @Inject
+    BeadhouseInfoRepository inRepository;
 
     @RequestMapping(value = "add", method = RequestMethod.POST)
     @ResponseBody
@@ -40,7 +47,6 @@ public class BeadhouseElderAccidentController {
         updateLog(request, accident);
         return this.accidentRepository.save(accident) != null;
     }
-
 
     @RequestMapping(value = "update", method = RequestMethod.POST)
     @ResponseBody
@@ -85,5 +91,34 @@ public class BeadhouseElderAccidentController {
         accident.setHappenTime(format.parse(request.getParameter("elderAccidentTime")));
         accident.setUpdateTime(format.parse(format.format(new Date())));
         accident.setBeadhouseId((Integer) request.getSession().getAttribute("beadhouseId"));
+    }
+
+    @RequestMapping(value = "addTest", method = RequestMethod.GET)
+    @ResponseBody
+    public String addTestBatch() throws ParseException {
+        int added = 0;
+        List<ElderPeople> elderPeoplelist = this.elderPeopleRepository.findAll();
+        List<BeadhouseInfo> beadhouseInfos = this.inRepository.findAll();
+        String[] type = {"SuddenIllness", "Fracture", "Scald", "Bumps", "Extra"};
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        long epoch = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").parse("01/01/2016 00:00:00").getTime();
+        for (int i = 0; i < 2500; i++) {
+            try {
+                BeadhouseElderAccident elderAccident = new BeadhouseElderAccident();
+                ElderPeople elder = elderPeoplelist.get((int) (Math.random() * elderPeoplelist.size()));
+                elderAccident.setBeadhouseId(beadhouseInfos.get((int) (Math.random() * beadhouseInfos.size())).getId());
+                elderAccident.setElderIdNumber(elder.getIdNumber());
+                elderAccident.setReason("意外");
+                long time = (long) (Math.random() * (new Date().getTime() - epoch)) + epoch;
+                elderAccident.setHappenTime(format.parse(format.format(new Date(time))));
+                elderAccident.setUpdateTime(format.parse(format.format(new Date())));
+                elderAccident.setAccidentType(type[(int) (Math.random() * 5)]);
+                this.accidentRepository.save(elderAccident);
+                added += 1;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return "added:" + added;
     }
 }

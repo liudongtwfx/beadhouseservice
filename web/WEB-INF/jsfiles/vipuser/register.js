@@ -132,6 +132,7 @@ function computePasswordStrongness(data) {
     }
     return "strong";
 }
+
 $("#repassword").focus(function () {
     if (document.getElementById("repassword_info")) {
         $("#repassword_info").remove();
@@ -236,11 +237,18 @@ function canBeRegister() {
                 password: $("#password").val(),
                 emailAddress: $("#emailAddress").val(),
                 telephoneNumber: $("#telephoneNumber").val()
+            },
+            function getData(data) {
+                if (data === "success") {
+                    alert("注册成功");
+                    window.location.href = "/";
+                } else {
+                    alert("注册失败");
+                    return false;
+                }
             }
         )
-        alert("注册成功");
-        window.location.href = "/";
-        return true;
+
     } else {
         alert("信息有误");
         return false;

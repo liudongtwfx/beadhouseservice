@@ -2,6 +2,7 @@ package com.liudong.controller.user;
 
 import com.liudong.DAO.Generiac.DefaultAuthenticationService;
 import com.liudong.DAO.User.VipUser.VipUserRepository;
+import com.liudong.business.filehandle.FileHandler;
 import com.liudong.model.User.VipUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +14,7 @@ import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.text.NumberFormat;
 import java.util.List;
 import java.util.Map;
 
@@ -50,18 +52,21 @@ public class VipUserController {
     }
 
     @RequestMapping(value = "/user/register", method = RequestMethod.POST)
+    @ResponseBody
     public String vipUserRegister(HttpServletRequest request, HttpServletResponse response) {
         VipUser user = new VipUser();
         user.setUserName(request.getParameter("userName"));
         user.setPassword(request.getParameter("password"));
         user.setTelephoneNumber(request.getParameter("telephoneNumber"));
         user.setEmailAddress(request.getParameter("emailAddress"));
-        if (this.vipUserManager.findOne(user.getId()) != null) {
+        try {
             this.authenticationService.saveUser(user, user.getPassword());
             request.getSession().setAttribute("userName", user.getUserName());
-            return "index";
+            return "success";
+        } catch (Exception e) {
+            System.out.println(e);
+            return "fail";
         }
-        return "loginFail";
     }
 
     @RequestMapping(value = "/user/register", method = RequestMethod.GET)

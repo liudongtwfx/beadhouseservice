@@ -90,5 +90,6 @@
     <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.2" level="project" />
     <orderEntry type="library" name="org.elasticsearch.client:transport:5.5.1" level="project" />
     <orderEntry type="library" name="org.apache.kafka:kafka-clients:0.10.0.1" level="project" />
+    <orderEntry type="library" name="mysql:mysql-connector-java:6.0.6" level="project" />
   </component>
 </module>

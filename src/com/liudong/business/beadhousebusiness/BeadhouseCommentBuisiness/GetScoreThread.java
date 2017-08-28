@@ -14,24 +14,28 @@ import java.net.URLEncoder;
 
 public class GetScoreThread implements Runnable {
     private final static Logger LOGGER = LogManager.getLogger("exception");
+    private final static Logger KAFKA_LOGGER = LogManager.getLogger("kafka");
     private static final String GET_SCORE = "http://127.0.0.1:8000/getcommentscore?sentence=";
     private BeadhouseComment comment;
-    private String content;
     BeadhouseCommentRepository commentRepository;
 
-    public GetScoreThread(BeadhouseComment comment, String content, BeadhouseCommentRepository commentRepository) {
+    public GetScoreThread(BeadhouseComment comment, BeadhouseCommentRepository commentRepository) {
         this.comment = comment;
-        this.content = content;
         this.commentRepository = commentRepository;
     }
 
     @Override
     public void run() {
-        BeadhouseCommentProducer producer = new BeadhouseCommentProducer();
-        producer.produceMessage(comment.getBeadhouseid(), comment.toString());
+        try {
+            KAFKA_LOGGER.info(String.valueOf(comment.getBeadhouseid()) + " " + comment);
+            BeadhouseCommentProducer producer = new BeadhouseCommentProducer();
+            producer.produceMessage("es||demo||comment", comment.toString());
+        } catch (Exception e) {
+            LOGGER.error(e.getMessage());
+        }
         float score = 0;
         try {
-            score = getCommentScore(content);
+            score = getCommentScore(comment.getContent());
         } catch (Exception e) {
             StackTraceElement[] stackTrace = e.getStackTrace();
             StringBuilder sb = new StringBuilder();
@@ -46,6 +50,7 @@ public class GetScoreThread implements Runnable {
         try {
             this.commentRepository.save(comment);
         } catch (Exception e) {
+            e.printStackTrace();
             LOGGER.error(e);
         }
     }

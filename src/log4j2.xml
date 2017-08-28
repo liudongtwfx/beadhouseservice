@@ -63,6 +63,27 @@
                 <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
             </Policies>
         </RollingRandomAccessFile>
+        <RollingRandomAccessFile name="kafka"
+                                 immediateFlush="true" fileName="${LOG_HOME}/kafka.log"
+                                 filePattern="${LOG_HOME}/exception.log.%d{yyyy-MM-dd}.log.gz">
+            <PatternLayout>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M -- %msg%xEx%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingRandomAccessFile>
+
+        <RollingRandomAccessFile name="es"
+                                 immediateFlush="true" fileName="${LOG_HOME}/es.log"
+                                 filePattern="${LOG_HOME}/exception.log.%d{yyyy-MM-dd}.log.gz">
+            <PatternLayout>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M -- %msg%xEx%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingRandomAccessFile>
 
 
         <!-- DEBUG日志格式 -->
@@ -124,6 +145,12 @@
 
         <logger name="exception" level="trace" includeLocation="true" additivity="false">
             <appender-ref ref="exception"/>
+        </logger>
+        <logger name="kafka" level="trace" includeLocation="true" additivity="false">
+            <appender-ref ref="kafka"/>
+        </logger>
+        <logger name="es" level="trace" includeLocation="true" additivity="false">
+            <appender-ref ref="es"/>
         </logger>
     </Loggers>
 

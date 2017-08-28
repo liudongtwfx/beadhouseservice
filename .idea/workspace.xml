@@ -12,59 +12,74 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91eeda8f-699d-45e3-b1b0-6a9d3821c79f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaconfig/KafkaConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaconfig/KafkaConsumerConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaconfig/KafkaProducerConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/liudong/test/KafkaTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/KafkaConfig.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/liudong/controller/beadhouse/BeadhouseCommentController.java" afterPath="$PROJECT_DIR$/src/com/liudong/controller/beadhouse/CommentController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/war/war.war" afterPath="$PROJECT_DIR$/out/artifacts/war/war.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/war.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Hibernate_5_2_3_5_2_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Hibernate_5_2_3_5_2_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Spring_4_3_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Spring_4_3_4_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Spring_MVC_4_3_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Spring_MVC_4_3_4_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/net_sf_ehcache_ehcache_core_2_6_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/net_sf_ehcache_ehcache_core_2_6_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/org_apache_kafka_kafka_clients_0_10_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_kafka_kafka_clients_0_10_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_6_0_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/liudong/System/LogType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/liudong/business/beadhousebusiness/BeadhouseCommentBuisiness/CommentReplyBusiness.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/liudong/business/databaseBusiness/SaveToDataBase.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/liudong/business/elasticsearchbusiness/BeadhouseCommentEs.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/liudong/business/elasticsearchbusiness/ElasticSearchBuider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/liudong/test/IdCardGenerator.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/war/war.war" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Spring_Security_3_2_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Spring_Security_3_2_5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/org_elasticsearch_client_transport_5_5_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/org_elasticsearch_client_transport_5_5_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FinalProject.iml" afterPath="$PROJECT_DIR$/FinalProject.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/exception.log" afterPath="$PROJECT_DIR$/logs/exception.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/functime.log" afterPath="$PROJECT_DIR$/logs/functime.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/service.log" afterPath="$PROJECT_DIR$/logs/service.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysqldump/demo_admininfo.sql" afterPath="$PROJECT_DIR$/mysqldump/demo_admininfo.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysqldump/demo_areas.sql" afterPath="$PROJECT_DIR$/mysqldump/demo_areas.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysqldump/demo_articleforelder.sql" afterPath="$PROJECT_DIR$/mysqldump/demo_articleforelder.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysqldump/demo_beadhouseadmininfo.sql" afterPath="$PROJECT_DIR$/mysqldump/demo_beadhouseadmininfo.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysqldump/demo_beadhouseelderaccident.sql" afterPath="$PROJECT_DIR$/mysqldump/demo_beadhouseelderaccident.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysqldump/demo_beadhouseeldercheckin.sql" afterPath="$PROJECT_DIR$/mysqldump/demo_beadhouseeldercheckin.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysqldump/demo_beadhouseeldergoout.sql" afterPath="$PROJECT_DIR$/mysqldump/demo_beadhouseeldergoout.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysqldump/demo_beadhouseelderhealth.sql" afterPath="$PROJECT_DIR$/mysqldump/demo_beadhouseelderhealth.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysqldump/demo_beadhouseimageinfo.sql" afterPath="$PROJECT_DIR$/mysqldump/demo_beadhouseimageinfo.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysqldump/demo_beadhouseinfo.sql" afterPath="$PROJECT_DIR$/mysqldump/demo_beadhouseinfo.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysqldump/demo_carousels.sql" afterPath="$PROJECT_DIR$/mysqldump/demo_carousels.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysqldump/demo_cities.sql" afterPath="$PROJECT_DIR$/mysqldump/demo_cities.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysqldump/demo_elderpeople.sql" afterPath="$PROJECT_DIR$/mysqldump/demo_elderpeople.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysqldump/demo_globlesequence.sql" afterPath="$PROJECT_DIR$/mysqldump/demo_globlesequence.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysqldump/demo_hibernate_sequence.sql" afterPath="$PROJECT_DIR$/mysqldump/demo_hibernate_sequence.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysqldump/demo_person.sql" afterPath="$PROJECT_DIR$/mysqldump/demo_person.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysqldump/demo_provinces.sql" afterPath="$PROJECT_DIR$/mysqldump/demo_provinces.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysqldump/demo_strategytype.sql" afterPath="$PROJECT_DIR$/mysqldump/demo_strategytype.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysqldump/demo_vipusers.sql" afterPath="$PROJECT_DIR$/mysqldump/demo_vipusers.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/DAO/Admin/BeadhouseCommentRepository.java" afterPath="$PROJECT_DIR$/src/com/liudong/DAO/Admin/BeadhouseCommentRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/DAO/Generiac/DefaultAuthenticationService.java" afterPath="$PROJECT_DIR$/src/com/liudong/DAO/Generiac/DefaultAuthenticationService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/business/beadhousebusiness/BeadhouseAdminBusiness.java" afterPath="$PROJECT_DIR$/src/com/liudong/business/beadhousebusiness/BeadhouseAdminBusiness.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/business/beadhousebusiness/BeadhouseCommentBuisiness/BeadhouseCommentBusiness.java" afterPath="$PROJECT_DIR$/src/com/liudong/business/beadhousebusiness/BeadhouseCommentBuisiness/BeadhouseCommentBusiness.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/business/beadhousebusiness/BeadhouseCommentBuisiness/GetScoreThread.java" afterPath="$PROJECT_DIR$/src/com/liudong/business/beadhousebusiness/BeadhouseCommentBuisiness/GetScoreThread.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/business/elasticsearchbusiness/BeadhouseSearch.java" afterPath="$PROJECT_DIR$/src/com/liudong/business/elasticsearchbusiness/BeadhouseSearch.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/business/elasticsearchbusiness/ElasticSearchInsert.java" afterPath="$PROJECT_DIR$/src/com/liudong/business/elasticsearchbusiness/ElasticSearchInsert.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/business/elasticsearchbusiness/ElasticsearchBase.java" afterPath="$PROJECT_DIR$/src/com/liudong/business/elasticsearchbusiness/ElasticsearchBase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/business/filehandle/FileHandler.java" afterPath="$PROJECT_DIR$/src/com/liudong/business/filehandle/FileHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaConsumer/BeadhouseConsumer.java" afterPath="$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaConsumer/BeadhouseConsumer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaProducer/BeadhouseCommentProducer.java" afterPath="$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaProducer/BeadhouseCommentProducer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaconfig/KafkaConsumerConfig.java" afterPath="$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaconfig/KafkaConsumerConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaconfig/KafkaProducerConfig.java" afterPath="$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaconfig/KafkaProducerConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/config/MyApplicationInitializer.java" afterPath="$PROJECT_DIR$/src/com/liudong/config/MyApplicationInitializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/controller/LocationController.java" afterPath="$PROJECT_DIR$/src/com/liudong/controller/LocationController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/controller/beadhouse/BeadhouseElderAccidentController.java" afterPath="$PROJECT_DIR$/src/com/liudong/controller/beadhouse/BeadhouseElderAccidentController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/controller/beadhouse/BeadhouseElderCheckinController.java" afterPath="$PROJECT_DIR$/src/com/liudong/controller/beadhouse/BeadhouseElderCheckinController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/controller/beadhouse/BeadhouseElderHealthController.java" afterPath="$PROJECT_DIR$/src/com/liudong/controller/beadhouse/BeadhouseElderHealthController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/controller/beadhouse/CommentController.java" afterPath="$PROJECT_DIR$/src/com/liudong/controller/beadhouse/CommentController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/controller/user/UserCenterController.java" afterPath="$PROJECT_DIR$/src/com/liudong/controller/user/UserCenterController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/controller/user/VipUserController.java" afterPath="$PROJECT_DIR$/src/com/liudong/controller/user/VipUserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/model/Location/Area.java" afterPath="$PROJECT_DIR$/src/com/liudong/model/Location/Area.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/model/admin/BeadhouseComment.java" afterPath="$PROJECT_DIR$/src/com/liudong/model/admin/BeadhouseComment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/test/ElasticsearchTest.java" afterPath="$PROJECT_DIR$/src/com/liudong/test/ElasticsearchTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/test/KafkaTest.java" afterPath="$PROJECT_DIR$/src/com/liudong/test/KafkaTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/test/Main.java" afterPath="$PROJECT_DIR$/src/com/liudong/test/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/liudong/test/TestDemo.java" afterPath="$PROJECT_DIR$/src/com/liudong/test/TestDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/admin/beadhouselist.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/admin/beadhouselist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/admin/beadhousesingle.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/admin/beadhousesingle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/admin/elderpeople.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/admin/elderpeople.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/admin/index.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/admin/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/admin/login.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/admin/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/admin/register.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/admin/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/admin/userhomepage.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/admin/userhomepage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/admin/vipuser.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/admin/vipuser.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/adminlogin.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/adminlogin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/adminregister.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/adminregister.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/log4j2.xml" afterPath="$PROJECT_DIR$/src/log4j2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/start.sh" afterPath="$PROJECT_DIR$/start.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsfiles/vipuser/register.js" afterPath="$PROJECT_DIR$/web/WEB-INF/jsfiles/vipuser/register.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/commonside.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/commonside.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/elder_accident.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/elder_accident.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/elder_checkin.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/elder_checkin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/elder_goout.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/elder_goout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/elder_health.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/elder_health.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/image_manage.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/image_manage.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/index.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/needauthority.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/needauthority.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/user/articles.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/user/articles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/user/beadhouselist.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/user/beadhouselist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/user/beadhousesingle.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/user/beadhousesingle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/user/commontop.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/user/commontop.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/user/singlearticle.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/user/singlearticle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/vipuser/login.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/vipuser/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/vipuser/register.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/vipuser/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/vipuser/usercenter.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/vipuser/usercenter.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -97,21 +112,87 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="KafkaProducerConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaconfig/KafkaProducerConfig.java">
+      <file leaf-file-name="UserCenterController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/liudong/controller/user/UserCenterController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="96" lean-forward="false" selection-start-line="10" selection-start-column="96" selection-end-line="10" selection-end-column="96" />
+            <state relative-caret-position="2898">
+              <caret line="140" column="24" lean-forward="false" selection-start-line="140" selection-start-column="24" selection-end-line="140" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BeadhouseCommentProducer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaProducer/BeadhouseCommentProducer.java">
+      <file leaf-file-name="BeadhouseElderCheckinController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/liudong/controller/beadhouse/BeadhouseElderCheckinController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+            <state relative-caret-position="274">
+              <caret line="133" column="43" lean-forward="false" selection-start-line="133" selection-start-column="43" selection-end-line="133" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BeadhouseElderGoOutController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/liudong/controller/beadhouse/BeadhouseElderGoOutController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-906">
+              <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BeadhouseElderHealthController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/liudong/controller/beadhouse/BeadhouseElderHealthController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-329">
+              <caret line="101" column="75" lean-forward="false" selection-start-line="101" selection-start-column="8" selection-end-line="101" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BeadhouseElderAccidentController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/liudong/controller/beadhouse/BeadhouseElderAccidentController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1596">
+              <caret line="29" column="48" lean-forward="false" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BeadhouseElderAccident.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/liudong/model/Beadhouse/BeadhouseElderAccident.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-17">
+              <caret line="43" column="16" lean-forward="false" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+              <folding>
+                <element signature="e#919#920#0" expanded="true" />
+                <element signature="e#959#960#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Date.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/local/java/jdk1.8.0_144/src.zip!/java/util/Date.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="176" column="11" lean-forward="false" selection-start-line="176" selection-start-column="11" selection-end-line="176" selection-end-column="11" />
+              <folding>
+                <element signature="e#6844#6845#0" expanded="true" />
+                <element signature="e#6875#6876#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IdCardGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/liudong/test/IdCardGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="3657" column="48" lean-forward="false" selection-start-line="3657" selection-start-column="48" selection-end-line="3657" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,35 +200,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KafkaConsumerConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaconfig/KafkaConsumerConfig.java">
+      <file leaf-file-name="LocationController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/liudong/controller/LocationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="42" lean-forward="false" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+            <state relative-caret-position="668">
+              <caret line="53" column="47" lean-forward="false" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KafkaConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaconfig/KafkaConfig.java">
+      <file leaf-file-name="BeadhouseInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/liudong/model/Beadhouse/BeadhouseInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="14" column="45" lean-forward="false" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KafkaTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/liudong/test/KafkaTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="37" column="42" lean-forward="false" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
+            <state relative-caret-position="328">
+              <caret line="44" column="16" lean-forward="false" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#518#519#0" expanded="true" />
-                <element signature="e#614#615#0" expanded="true" />
+                <element signature="e#943#944#0" expanded="true" />
+                <element signature="e#987#988#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -160,22 +230,18 @@
       <list>
         <option value="AnnotationType" />
         <option value="package_json" />
-        <option value="Enum" />
         <option value="spring-beans.schema" />
         <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="Interface" />
         <option value="HTML File" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>upload</find>
-      <find>service_log</find>
-      <find>fdfd</find>
-      <find>Aspe</find>
       <find>=====</find>
       <find>=========</find>
       <find>=</find>
@@ -202,6 +268,10 @@
       <find>GET</find>
       <find>POST</find>
       <find>groupId</find>
+      <find>coo</find>
+      <find>create</find>
+      <find>liudong</find>
+      <find>404</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -215,34 +285,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/liudong/business/elasticsearchbusiness/ArticleSearch.java" />
-        <option value="$PROJECT_DIR$/src/com/liudong/test/ElasticsearchTest.java" />
-        <option value="$PROJECT_DIR$/src/com/liudong/business/elasticsearchbusiness/BeadhouseSearch.java" />
-        <option value="$PROJECT_DIR$/src/com/liudong/business/elasticsearchbusiness/ElasticsearchBase.java" />
-        <option value="$PROJECT_DIR$/src/com/liudong/business/elasticsearchbusiness/ElasticSearchInsert.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/com/liudong/business/beadhousebusiness/kafkabusiness/KafkaProducer/DatabaseProducer.java" />
-        <option value="$PROJECT_DIR$/src/com/liudong/business/beadhousebusiness/kafkabusiness/KafkaProducer/BeadhouseCommentProducer.java" />
-        <option value="$PROJECT_DIR$/src/com/liudong/business/beadhousebusiness/kafkabusiness/BeadhouseCommentProducer.java" />
-        <option value="$PROJECT_DIR$/src/com/liudong/business/beadhousebusiness/kafkabusiness/kafkaProducer/DatabaseProducer.java" />
-        <option value="$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaConsumer/BeadhouseCommentConsumer.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/user/beadhouselist.html" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/user/articles.html" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/user/beadhousesingle.html" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/user/commontop.html" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/user/singlearticle.html" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/adminlogin.html" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/adminregister.html" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/commonside.html" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/elder_accident.html" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/elder_checkin.html" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/elder_goout.html" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/elder_health.html" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/image_manage.html" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/index.html" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/needauthority.html" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/admin/beadhouselist.html" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/admin/beadhousesingle.html" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/admin/elderpeople.html" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/admin/index.html" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/admin/login.html" />
@@ -253,21 +295,54 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/views/vipuser/register.html" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/vipuser/usercenter.html" />
         <option value="$PROJECT_DIR$/src/com/liudong/controller/beadhouse/BeadhouseCommentController.java" />
-        <option value="$PROJECT_DIR$/src/com/liudong/controller/beadhouse/CommentController.java" />
-        <option value="$PROJECT_DIR$/src/com/liudong/business/beadhousebusiness/BeadhouseCommentBuisiness/BeadhouseCommentBusiness.java" />
-        <option value="$PROJECT_DIR$/src/com/liudong/business/beadhousebusiness/BeadhouseCommentBuisiness/GetScoreThread.java" />
-        <option value="$PROJECT_DIR$/src/com/liudong/test/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/liudong/model/admin/BeadhouseComment.java" />
-        <option value="$PROJECT_DIR$/src/com/liudong/test/TestDemo.java" />
         <option value="$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/KafkaConfig.java" />
-        <option value="$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaConsumer/BeadhouseConsumer.java" />
-        <option value="$PROJECT_DIR$/src/com/liudong/test/KafkaTest.java" />
-        <option value="$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaconfig/KafkaConsumerConfig.java" />
         <option value="$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaconfig/KafkaConfig.java" />
         <option value="$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaconfig/KafkaProducerConfig.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaconfig/KafkaConsumerConfig.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/System/LogType.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/business/beadhousebusiness/BeadhouseCommentBuisiness/CommentReplyBusiness.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/DAO/Admin/BeadhouseCommentRepository.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/index.html" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/beadhouse/commonside.html" />
+        <option value="$PROJECT_DIR$/src/com/liudong/business/elasticsearchbusiness/BeadhouseSearch.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/business/beadhousebusiness/BeadhouseCommentBuisiness/BeadhouseCommentBusiness.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/controller/beadhouse/CommentController.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/model/admin/BeadhouseComment.java" />
         <option value="$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaProducer/BeadhouseCommentProducer.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/business/elasticsearchbusiness/ElasticSearchInsert.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/test/ElasticsearchTest.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/business/elasticsearchbusiness/ElasticSearchBuider.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/config/MyApplicationInitializer.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/business/elasticsearchbusiness/ElasticsearchBase.java" />
+        <option value="$PROJECT_DIR$/src/log4j2.xml" />
+        <option value="$PROJECT_DIR$/src/com/liudong/business/beadhousebusiness/BeadhouseCommentBuisiness/GetScoreThread.java" />
+        <option value="$PROJECT_DIR$/logs/kafka.log" />
+        <option value="$PROJECT_DIR$/src/com/liudong/business/elasticsearchbusiness/BeadhouseCommentEs.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaConsumer/BeadhouseConsumer.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/test/KafkaTest.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/business/databaseBusiness/DataBaseSaveRepository.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/business/filehandle/FileHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/test/TestDemo.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsfiles/vipuser/register.js" />
+        <option value="$PROJECT_DIR$/src/com/liudong/DAO/Generiac/DefaultAuthenticationService.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/test/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/controller/user/VipUserController.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/business/beadhousebusiness/BeadhouseAdminBusiness.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/model/Location/Area.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/test/GetID.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/controller/LocationController.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/test/IdCardGenerator.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/controller/user/UserCenterController.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/controller/beadhouse/BeadhouseElderCheckinController.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/controller/beadhouse/BeadhouseElderHealthController.java" />
+        <option value="$PROJECT_DIR$/src/com/liudong/controller/beadhouse/BeadhouseElderAccidentController.java" />
       </list>
     </option>
+  </component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="JUnit" name="ElasticsearchTest" />
+    </enabled-run-configurations>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -310,7 +385,7 @@
   <component name="MavenRunner">
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="y" value="34" />
     <option name="width" value="1920" />
     <option name="height" value="1046" />
@@ -685,10 +760,6 @@
       <foldersAlwaysOnTop value="false" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -714,16 +785,46 @@
               <item name="liudong" type="462c0819:PsiDirectoryNode" />
               <item name="business" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="beadhouseservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="beadhouseservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="liudong" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="beadhouseservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="beadhouseservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="liudong" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="beadhouse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="beadhouseservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="beadhouseservice" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="beadhouseservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="beadhouseservice" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.50344825" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -744,6 +845,7 @@
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="login" />
     <property name="ignore_missing_gitignore" value="true" />
+    <property name="last.edited.regexp" value="||" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -776,15 +878,40 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.KafkaTest.BeadhouseCommentTest">
-    <configuration name="ElasticsearchTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Tomcat Server.Tomcat">
+    <configuration name="ElasticsearchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.liudong.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <module name="FinalProject" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.liudong.test" />
       <option name="MAIN_CLASS_NAME" value="com.liudong.test.ElasticsearchTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="IdCardGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.liudong.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.liudong.test.IdCardGenerator" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -795,26 +922,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="FinalProject" />
       <envs />
-    </configuration>
-    <configuration name="Junit" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="login" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.liudong.test" />
-      <option name="MAIN_CLASS_NAME" value="com.liudong.test.VipUserControllerTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
     </configuration>
     <configuration name="KafkaTest.BeadhouseCommentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -860,7 +967,7 @@
       <module name="FinalProject" />
       <envs />
     </configuration>
-    <configuration name="TestDemo.getA" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDemo.funTimeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.liudong.test.*" />
@@ -872,7 +979,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.liudong.test" />
       <option name="MAIN_CLASS_NAME" value="com.liudong.test.TestDemo" />
-      <option name="METHOD_NAME" value="getA" />
+      <option name="METHOD_NAME" value="funTimeTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -986,31 +1093,6 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
-    </configuration>
-    <configuration name="VipUserControllerTest.homepagetest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.liudong.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="FinalProject" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.liudong.test" />
-      <option name="MAIN_CLASS_NAME" value="com.liudong.test.VipUserControllerTest" />
-      <option name="METHOD_NAME" value="homepagetest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
@@ -1399,37 +1481,21 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <configuration name="mainTest" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="com.liudong.test.MainTest" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="FinalProject" />
-      <envs />
-    </configuration>
-    <list size="8">
-      <item index="0" class="java.lang.String" itemvalue="Application.mainTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.Junit" />
-      <item index="2" class="java.lang.String" itemvalue="Tomcat Server.Tomcat" />
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ElasticsearchTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.KafkaTest.BeadhouseCommentTest" />
       <item index="3" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="4" class="java.lang.String" itemvalue="Application.ElasticsearchTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.VipUserControllerTest.homepagetest" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.TestDemo.getA" />
-      <item index="7" class="java.lang.String" itemvalue="JUnit.KafkaTest.BeadhouseCommentTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TestDemo.funTimeTest" />
+      <item index="5" class="java.lang.String" itemvalue="Application.IdCardGenerator" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.KafkaTest.BeadhouseCommentTest" />
+        <item index="0" class="java.lang.String" itemvalue="Application.IdCardGenerator" />
         <item index="1" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="2" class="java.lang.String" itemvalue="Application.ElasticsearchTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TestDemo.getA" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.VipUserControllerTest.homepagetest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestDemo.funTimeTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.KafkaTest.BeadhouseCommentTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ElasticsearchTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1692,43 +1758,64 @@
       <workItem from="1503587087108" duration="112000" />
       <workItem from="1503587416092" duration="2294000" />
       <workItem from="1503624473701" duration="341000" />
+      <workItem from="1503626939783" duration="16669000" />
+      <workItem from="1503650522977" duration="1039000" />
+      <workItem from="1503651910903" duration="675000" />
+      <workItem from="1503655356092" duration="2341000" />
+      <workItem from="1503660678845" duration="539000" />
+      <workItem from="1503668468529" duration="13000" />
+      <workItem from="1503669565455" duration="2809000" />
+      <workItem from="1503673916921" duration="2735000" />
+      <workItem from="1503710753421" duration="8965000" />
+      <workItem from="1503722239750" duration="5572000" />
+      <workItem from="1503736089380" duration="10115000" />
+      <workItem from="1503799099930" duration="411000" />
+      <workItem from="1503799661737" duration="107000" />
+      <workItem from="1503815861868" duration="620000" />
+      <workItem from="1503824747556" duration="5024000" />
+      <workItem from="1503832197841" duration="2145000" />
+      <workItem from="1503834440836" duration="1898000" />
+      <workItem from="1503836376319" duration="676000" />
+      <workItem from="1503837332329" duration="1968000" />
+      <workItem from="1503840361829" duration="3398000" />
+      <workItem from="1503884477098" duration="10946000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="KafkaTest_BeadhouseCommentTest - 2017.08.24 at 22h 27m 57s.xml">
+    <history-entry file="ElasticsearchTest - 2017.08.26 at 12h 09m 59s.xml">
+      <configuration name="ElasticsearchTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ElasticsearchTest - 2017.08.26 at 12h 11m 33s.xml">
+      <configuration name="ElasticsearchTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ElasticsearchTest - 2017.08.26 at 12h 23m 53s.xml">
+      <configuration name="ElasticsearchTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ElasticsearchTest_maintest - 2017.08.26 at 11h 20m 43s.xml">
+      <configuration name="ElasticsearchTest.maintest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KafkaTest_BeadhouseCommentTest - 2017.08.26 at 16h 35m 08s.xml">
       <configuration name="KafkaTest.BeadhouseCommentTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="KafkaTest_BeadhouseCommentTest - 2017.08.24 at 22h 32m 41s.xml">
+    <history-entry file="KafkaTest_BeadhouseCommentTest - 2017.08.26 at 16h 36m 48s.xml">
       <configuration name="KafkaTest.BeadhouseCommentTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="KafkaTest_BeadhouseCommentTest - 2017.08.24 at 22h 46m 13s.xml">
+    <history-entry file="KafkaTest_BeadhouseCommentTest - 2017.08.26 at 16h 38m 01s.xml">
       <configuration name="KafkaTest.BeadhouseCommentTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="KafkaTest_BeadhouseCommentTest - 2017.08.24 at 22h 47m 23s.xml">
+    <history-entry file="KafkaTest_BeadhouseCommentTest - 2017.08.26 at 16h 39m 22s.xml">
       <configuration name="KafkaTest.BeadhouseCommentTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="KafkaTest_BeadhouseCommentTest - 2017.08.24 at 23h 06m 30s.xml">
+    <history-entry file="KafkaTest_BeadhouseCommentTest - 2017.08.26 at 16h 40m 10s.xml">
       <configuration name="KafkaTest.BeadhouseCommentTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="KafkaTest_BeadhouseCommentTest - 2017.08.24 at 23h 11m 28s.xml">
-      <configuration name="KafkaTest.BeadhouseCommentTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="KafkaTest_BeadhouseCommentTest - 2017.08.24 at 23h 15m 43s.xml">
-      <configuration name="KafkaTest.BeadhouseCommentTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="KafkaTest_BeadhouseCommentTest - 2017.08.24 at 23h 30m 52s.xml">
-      <configuration name="KafkaTest.BeadhouseCommentTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="KafkaTest_BeadhouseCommentTest - 2017.08.24 at 23h 38m 15s.xml">
-      <configuration name="KafkaTest.BeadhouseCommentTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="KafkaTest_BeadhouseCommentTest - 2017.08.24 at 23h 38m 49s.xml">
-      <configuration name="KafkaTest.BeadhouseCommentTest" configurationId="JUnit" />
+    <history-entry file="TestDemo_funTimeTest - 2017.08.27 at 19h 25m 44s.xml">
+      <configuration name="TestDemo.funTimeTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1145796000" />
+    <option name="totallyTimeSpent" value="1224461000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1740,31 +1827,33 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="34" width="1920" height="1038" extended-state="6" />
+    <frame x="0" y="31" width="1920" height="1049" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38678223" sideWeight="0.5229167" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40044492" sideWeight="0.52510685" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1625" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16720085" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39872748" sideWeight="0.49583334" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39822024" sideWeight="0.49583334" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32369298" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3956044" sideWeight="0.47489315" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30985916" sideWeight="0.47708333" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17708333" sideWeight="0.4940978" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19871795" sideWeight="0.4940978" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23851775" sideWeight="0.5059022" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1776,11 +1865,10 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32502708" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867885" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1824,21 +1912,15 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/liudong/controller/beadhouse/BeadhouseElderCheckinController.java</url>
-          <line>40</line>
+          <line>44</line>
           <properties />
           <option name="timeStamp" value="71" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/liudong/controller/beadhouse/BeadhouseElderHealthController.java</url>
-          <line>86</line>
+          <line>91</line>
           <properties />
           <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/liudong/controller/beadhouse/BeadhouseElderAccidentController.java</url>
-          <line>86</line>
-          <properties />
-          <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/liudong/controller/beadhouse/BeadhouseImageController.java</url>
@@ -1859,7 +1941,7 @@
           <option name="timeStamp" value="91" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="92" />
+      <option name="time" value="98" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1868,372 +1950,279 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/beadhouse/commonside.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/beadhouse/elder_accident.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/beadhouse/elder_checkin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/beadhouse/elder_goout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/beadhouse/elder_health.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/beadhouse/image_manage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/beadhouse/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/beadhouse/needauthority.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/admin/beadhouselist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/admin/beadhousesingle.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/admin/elderpeople.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/admin/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/admin/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/admin/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/admin/vipuser.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/vipuser/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/vipuser/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/vipuser/usercenter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        <state relative-caret-position="1050">
+          <caret line="42" column="100" lean-forward="false" selection-start-line="42" selection-start-column="100" selection-end-line="42" selection-end-column="100" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/index.html">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsfiles/vipuser/register.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/users.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index_test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/admin/userhomepage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/user/commontop.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="77" lean-forward="false" selection-start-line="9" selection-start-column="77" selection-end-line="9" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liudong/business/beadhousebusiness/BeadhouseAdminBusiness.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liudong/business/beadhousebusiness/BeadhouseSinglePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liudong/controller/user/BeadhouseCommentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="56" lean-forward="false" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/service.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/controller.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaProducer/DatabaseProducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/functime.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-1854">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/exception.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/0.10.0.1/kafka-clients-0.10.0.1-sources.jar!/org/apache/kafka/clients/producer/Callback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        <state relative-caret-position="5800">
+          <caret line="232" column="11" lean-forward="false" selection-start-line="232" selection-start-column="11" selection-end-line="232" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/liudong/controller/beadhouse/CommentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+        <state relative-caret-position="475">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_144/src.zip!/java/lang/Object.java">
+    <entry file="file://$PROJECT_DIR$/src/com/liudong/controller/user/VipUserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="234" column="18" lean-forward="false" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
+        <state relative-caret-position="3225">
+          <caret line="129" column="46" lean-forward="false" selection-start-line="129" selection-start-column="46" selection-end-line="129" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_144/src.zip!/java/lang/Class.java">
+    <entry file="file://$PROJECT_DIR$/src/com/liudong/DAO/Generiac/DefaultAuthenticationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="1913" column="19" lean-forward="false" selection-start-line="1913" selection-start-column="19" selection-end-line="1913" selection-end-column="19" />
+        <state relative-caret-position="1800">
+          <caret line="72" column="29" lean-forward="true" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liudong/test/Main.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/vipuser/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="19" column="66" lean-forward="false" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
+        <state relative-caret-position="1050">
+          <caret line="42" column="100" lean-forward="false" selection-start-line="42" selection-start-column="100" selection-end-line="42" selection-end-column="100" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_144/src.zip!/java/lang/reflect/Field.java">
+    <entry file="file://$PROJECT_DIR$/src/com/liudong/controller/beadhouse/CommentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-527">
-          <caret line="62" column="6" lean-forward="false" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
+        <state relative-caret-position="475">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liudong/test/TestDemo.java">
+    <entry file="file://$PROJECT_DIR$/src/com/liudong/controller/user/VipUserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="1300">
+          <caret line="52" column="30" lean-forward="false" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liudong/test/ElasticsearchTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/liudong/DAO/Generiac/DefaultAuthenticationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="650">
+          <caret line="26" column="49" lean-forward="true" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liudong/model/admin/BeadhouseComment.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsfiles/vipuser/register.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="30" column="59" lean-forward="true" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liudong/business/beadhousebusiness/BeadhouseCommentBuisiness/GetScoreThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liudong/business/beadhousebusiness/BeadhouseCommentBuisiness/BeadhouseCommentBusiness.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="37" column="15" lean-forward="false" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/0.10.0.1/kafka-clients-0.10.0.1-sources.jar!/org/apache/kafka/clients/consumer/KafkaConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-975">
-          <caret line="568" column="0" lean-forward="false" selection-start-line="568" selection-start-column="0" selection-end-line="568" selection-end-column="0" />
+        <state relative-caret-position="5825">
+          <caret line="233" column="29" lean-forward="false" selection-start-line="233" selection-start-column="29" selection-end-line="233" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaConsumer/BeadhouseConsumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liudong/test/KafkaTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="37" column="42" lean-forward="false" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#518#519#0" expanded="true" />
-            <element signature="e#614#615#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaconfig/KafkaConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="45" lean-forward="false" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaconfig/KafkaProducerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="96" lean-forward="false" selection-start-line="10" selection-start-column="96" selection-end-line="10" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaProducer/BeadhouseCommentProducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liudong/business/kafkabusiness/kafkaconfig/KafkaConsumerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
-          <caret line="4" column="42" lean-forward="false" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+          <caret line="4" column="74" lean-forward="false" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/vipuser/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="42" column="100" lean-forward="false" selection-start-line="42" selection-start-column="100" selection-end-line="42" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsfiles/vipuser/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5800">
+          <caret line="232" column="11" lean-forward="false" selection-start-line="232" selection-start-column="11" selection-end-line="232" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liudong/controller/beadhouse/CommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liudong/DAO/Generiac/DefaultAuthenticationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="51" column="54" lean-forward="false" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liudong/test/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="70" column="65" lean-forward="false" selection-start-line="70" selection-start-column="65" selection-end-line="70" selection-end-column="65" />
+          <folding>
+            <marker date="1503885186527" expanded="true" signature="1689:1777" ph="INSERT INTO vipusers... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_144/src.zip!/java/text/DateFormat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="360" column="16" lean-forward="false" selection-start-line="360" selection-start-column="16" selection-end-line="360" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liudong/controller/user/VipUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="114" column="5" lean-forward="false" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liudong/business/beadhousebusiness/BeadhouseAdminBusiness.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="655">
+          <caret line="48" column="54" lean-forward="false" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
+          <folding>
+            <element signature="e#1482#1483#0" expanded="true" />
+            <element signature="e#1543#1544#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liudong/model/User/ElderPeople.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="70" column="16" lean-forward="false" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
+          <folding>
+            <element signature="e#1366#1367#0" expanded="false" />
+            <element signature="e#1410#1411#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liudong/model/Location/Area.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_144/src.zip!/java/util/Calendar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-340">
+          <caret line="436" column="28" lean-forward="false" selection-start-line="436" selection-start-column="28" selection-end-line="436" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liudong/model/Beadhouse/BeadhouseInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="44" column="16" lean-forward="false" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+          <folding>
+            <element signature="e#943#944#0" expanded="true" />
+            <element signature="e#987#988#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liudong/controller/LocationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="53" column="47" lean-forward="false" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liudong/test/IdCardGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="3657" column="48" lean-forward="false" selection-start-line="3657" selection-start-column="48" selection-end-line="3657" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liudong/controller/user/UserCenterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2898">
+          <caret line="140" column="24" lean-forward="false" selection-start-line="140" selection-start-column="24" selection-end-line="140" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_144/src.zip!/java/util/Date.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="176" column="11" lean-forward="false" selection-start-line="176" selection-start-column="11" selection-end-line="176" selection-end-column="11" />
+          <folding>
+            <element signature="e#6844#6845#0" expanded="true" />
+            <element signature="e#6875#6876#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liudong/controller/beadhouse/BeadhouseElderCheckinController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="133" column="43" lean-forward="false" selection-start-line="133" selection-start-column="43" selection-end-line="133" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liudong/model/Beadhouse/BeadhouseElderAccident.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="43" column="16" lean-forward="false" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+          <folding>
+            <element signature="e#919#920#0" expanded="true" />
+            <element signature="e#959#960#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liudong/controller/beadhouse/BeadhouseElderGoOutController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-906">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liudong/controller/beadhouse/BeadhouseElderHealthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-329">
+          <caret line="101" column="75" lean-forward="false" selection-start-line="101" selection-start-column="8" selection-end-line="101" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liudong/controller/beadhouse/BeadhouseElderAccidentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1596">
+          <caret line="29" column="48" lean-forward="false" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -2318,7 +2307,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>antlr-2.7.7</last-edited>
+          <last-edited>mysql:mysql-connector-java:6.0.6</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

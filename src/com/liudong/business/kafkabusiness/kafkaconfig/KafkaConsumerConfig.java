@@ -7,7 +7,7 @@ public class KafkaConsumerConfig extends KafkaConfig {
 
     private KafkaConsumerConfig() {
         super();
-        props.put("groupId", "test-consumer-group");
+        props.put("group.id", "test-consumer-group");
         props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
     }
@@ -24,7 +24,6 @@ public class KafkaConsumerConfig extends KafkaConfig {
     }
 
     public Properties getProperties() {
-        System.out.println("consumer:" + props.getProperty("groupId"));
         return props;
     }
 }

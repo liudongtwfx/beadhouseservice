@@ -1,18 +1,16 @@
 package com.liudong.business.beadhousebusiness.BeadhouseCommentBuisiness;
 
 import com.liudong.DAO.Admin.BeadhouseCommentRepository;
-import com.liudong.business.kafkabusiness.kafkaProducer.BeadhouseCommentProducer;
+import com.liudong.business.elasticsearchbusiness.BeadhouseCommentEs;
 import com.liudong.model.admin.BeadhouseComment;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.elasticsearch.search.SearchHits;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.inject.Inject;
-import javax.persistence.criteria.CriteriaBuilder;
 import javax.servlet.http.HttpServletRequest;
-import java.io.*;
-import java.net.*;
 import java.util.Date;
 
 /**
@@ -40,8 +38,20 @@ public class BeadhouseCommentBusiness {
         comment.setContent(commentContent);
         comment.setAnonymous(Boolean.valueOf(request.getParameter("anonymous")));
         comment.setAddtime(new Date());
-        Thread getScore = new Thread(new GetScoreThread(comment, commentContent, commentRepository));
+        Thread getScore = new Thread(new GetScoreThread(comment, commentRepository));
         getScore.start();
         return true;
+    }
+
+    @Transactional
+    public SearchHits getCommentNotReply(int beadhouseid) {
+        BeadhouseCommentEs es = new BeadhouseCommentEs();
+        try {
+            SearchHits hits = es.getCommentByBeadhouseId(beadhouseid);
+            return hits;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

@@ -49,7 +49,7 @@ public class DefaultAuthenticationService {
             log.warn("Authentication failed for non-existence user {}.", userName);
             return null;
         }
-        if (!BCrypt.checkpw(password, new String(vipUser.getPassword().getBytes(), StandardCharsets.UTF_8))) {
+        if (!password.equals(vipUser.getPassword()) && !BCrypt.checkpw(password, new String(vipUser.getPassword().getBytes(), StandardCharsets.UTF_8))) {
             log.warn("Authentication failed for user {}.", userName);
             return null;
         }
@@ -65,7 +65,7 @@ public class DefaultAuthenticationService {
             log.warn("Authentication failed for non-existence user {}.", userName);
             return null;
         }
-        if (!BCrypt.checkpw(password, new String(administrator.getPassword().getBytes(), StandardCharsets.UTF_8))) {
+        if (!password.equals(administrator.getPassword()) && !BCrypt.checkpw(password, new String(administrator.getPassword().getBytes(), StandardCharsets.UTF_8))) {
             log.warn("Authentication failed for user {}.", userName);
             return null;
         }
@@ -100,19 +100,21 @@ public class DefaultAuthenticationService {
 
     @Transactional
     public void savaBeadhouseAdmin(BeadhouseAdministrator admin, String newPassword) {
-        if (newPassword != null && newPassword.length() > 0) {
-            String salt = BCrypt.gensalt(HASHING_ROUNDS, RANDOM);
-            admin.setPassword(BCrypt.hashpw(newPassword, salt));
-        }
+        admin.setPassword(getBCryptPassword(newPassword));
         this.administratorRepository.saveAndFlush(admin);
     }
 
     @Transactional
     public boolean savaAdmin(AdminInfo admin, String newPassword) {
-        if (newPassword != null && newPassword.length() > 0) {
-            String salt = BCrypt.gensalt(HASHING_ROUNDS, RANDOM);
-            admin.setPassword(BCrypt.hashpw(newPassword, salt));
-        }
+        admin.setPassword(getBCryptPassword(newPassword));
         return this.admin.saveAndFlush(admin) != null;
+    }
+
+    public static String getBCryptPassword(String password) {
+        if (password != null && password.length() > 0) {
+            String salt = BCrypt.gensalt(HASHING_ROUNDS, RANDOM);
+            return BCrypt.hashpw(password, salt);
+        }
+        return "";
     }
 }

@@ -61,6 +61,8 @@
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/../maven dependencies/transport-5.5.1-sources.jar!/" />
       <root url="jar://$USER_HOME$/.ideaLibSources/elasticsearch-5.5.1-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/lang-mustache-client-5.5.1-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/netty-3.10.6.Final-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

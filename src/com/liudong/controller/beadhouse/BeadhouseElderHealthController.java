@@ -2,9 +2,12 @@ package com.liudong.controller.beadhouse;
 
 import com.liudong.DAO.BeadHouse.BeadhouseAdministratorRepository;
 import com.liudong.DAO.BeadHouse.BeadhouseElderHealthRepository;
+import com.liudong.DAO.BeadHouse.BeadhouseInfoRepository;
 import com.liudong.DAO.User.ElderPeople.ElderPeopleRepository;
 import com.liudong.model.Beadhouse.BeadhouseElderHealth;
+import com.liudong.model.Beadhouse.BeadhouseInfo;
 import com.liudong.model.User.ElderPeople;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -33,6 +36,8 @@ public class BeadhouseElderHealthController {
 
     @Inject
     ElderPeopleRepository elderPeopleRepository;
+    @Inject
+    BeadhouseInfoRepository beadhouseInfoRepository;
 
     @RequestMapping(value = "add", method = RequestMethod.POST)
     @ResponseBody
@@ -92,25 +97,43 @@ public class BeadhouseElderHealthController {
      * this function is used for adding elderhealth_in logs
      */
     @RequestMapping(value = "addlogs", method = RequestMethod.GET)
-    public void addLogs() throws ParseException {
+    @ResponseBody
+    public String addLogs() throws ParseException {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         long epoch = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").parse("01/01/2016 00:00:00").getTime();
         long examingTime = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").parse("01/01/2017 00:00:00").getTime();
         long now = new Date().getTime();
-        int[] ids = {2, 3, 7, 9, 10, 11};
-        for (int i = 0; i < 200; i++) {
-            ElderPeople elder = this.elderPeopleRepository.findByid(ids[(int) (Math.random() * 6)]);
-            BeadhouseElderHealth health = new BeadhouseElderHealth();
-            health.setElderIdNumber(elder.getIdNumber());
-            health.setLowBloodPressure((int) (Math.random() * 20 + 70));
-            health.setHighBloodPressure((int) (Math.random() * 70 + 110));
-            health.setHeartRate((int) (Math.random() * 40 + 60));
-            health.setHealthStatus("健康");
-            health.setNursingResult("健康");
-            health.setExamingTime(format.parse(format.format(new Date())));
-            health.setBeadhouseId(108);
-            health.setUpdateTime(format.parse(format.format(new Date())));
-            this.healthRepository.save(health);
+        List<ElderPeople> elderPeoplelist = this.elderPeopleRepository.findAll();
+        List<BeadhouseInfo> beadhouseInfos = this.beadhouseInfoRepository.findAll();
+        String[] healthStatus = {"健康", "健康", "健康", "健康", "健康", "发烧", "良好"};
+        int added = 0;
+        for (int i = 0; i < 10000; i++) {
+            try {
+                ElderPeople elder = elderPeoplelist.get((int) (Math.random() * elderPeoplelist.size()));
+                BeadhouseElderHealth health = new BeadhouseElderHealth();
+                health.setElderIdNumber(elder.getIdNumber());
+                health.setLowBloodPressure((int) (Math.random() * 20 + 70));
+                health.setHighBloodPressure((int) (Math.random() * 70 + 110));
+                health.setHeartRate((int) (Math.random() * 70 + 60));
+                if (health.getHighBloodPressure() > 140) {
+                    health.setHealthStatus("血压高");
+                } else if (health.getHeartRate() > 110) {
+                    health.setHealthStatus("心率高");
+                } else {
+                    health.setHealthStatus(healthStatus[(int) (Math.random() * 7)]);
+                }
+                health.setNursingResult("健康");
+                long time = (long) (Math.random() * (now - epoch)) + epoch;
+                health.setExamingTime(format.parse(format.format(new Date(time))));
+                health.setBeadhouseId(beadhouseInfos.get((int) (Math.random() * beadhouseInfos.size())).getId());
+                health.setUpdateTime(format.parse(format.format(new Date())));
+                this.healthRepository.save(health);
+                added++;
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+                e.printStackTrace();
+            }
         }
+        return "added: " + added;
     }
 }

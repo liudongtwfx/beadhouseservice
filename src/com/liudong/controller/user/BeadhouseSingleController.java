@@ -1,5 +1,6 @@
 package com.liudong.controller.user;
 
+import com.liudong.System.LogType;
 import com.liudong.business.beadhousebusiness.BeadhouseSinglePage;
 import com.liudong.model.Beadhouse.BeadhouseImageManage;
 import org.springframework.stereotype.Controller;
@@ -33,6 +34,16 @@ public class BeadhouseSingleController {
         res.put("baseinfo", this.singlePage.getBaseInfo(Integer.valueOf(beadhouseId)));
         res.put("imagesinfo", this.singlePage.getImageInfo(Integer.valueOf(beadhouseId)));
         res.put("imagePrefix", BeadhouseImageManage.imageUrl + "/" + String.valueOf(beadhouseId) + "/");
+        StringBuilder logContent = new StringBuilder();
+        String userName = (String) request.getSession().getAttribute("userName");
+        logContent.append(request.getSession().getId()).append(" ");
+        logContent.append(beadhouseId).append(" ");
+        if (userName != null) {
+            logContent.append(userName);
+        } else {
+            logContent.append("anonymous");
+        }
+        LogType.BEADHOUSEBROWSE.getLOGGER().info(logContent);
         return res;
     }
 }

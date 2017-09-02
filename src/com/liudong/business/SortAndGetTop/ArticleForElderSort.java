@@ -1,6 +1,7 @@
 package com.liudong.business.SortAndGetTop;
 
 import com.liudong.DAO.Admin.ArticleForElderRepository;
+import com.liudong.System.LogType;
 import com.liudong.model.admin.ArticleForElder;
 import lombok.Data;
 import org.springframework.data.domain.Page;
@@ -11,6 +12,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.*;
 
 /**
@@ -58,10 +61,15 @@ public class ArticleForElderSort {
     }
 
     @Transactional(readOnly = true)
-    public Object getSingleArticle(int id) {
+    public Object getSingleArticle(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        String articleId = (String) session.getAttribute("articleId");
+        if (articleId == null || articleId.length() == 0) {
+            return false;
+        }
         ArticleForElder article = null;
         try {
-            article = this.articleForElderRepository.findOne(id);
+            article = this.articleForElderRepository.findOne(Integer.valueOf(articleId));
         } catch (Exception e) {
             System.out.println();
         }
@@ -76,6 +84,16 @@ public class ArticleForElderSort {
         }
         res.put("title", article.getTitle());
         res.put("content", content);
+        StringBuilder builder = new StringBuilder();
+        String userName = (String) session.getAttribute("userName");
+        if (userName == null) {
+            userName = "anonymous";
+        }
+        builder.append(userName).append(" ").append(session.getId()).append(" ")
+                .append(article.getId()).append(" ")
+                .append(article.getTitle()).append(" ")
+                .append(article.getArticletag());
+        LogType.ARTICLEBROWSE.getLOGGER().info(builder.toString());
         return res;
     }
 }

@@ -1,8 +1,10 @@
 package com.liudong.business.elasticsearchbusiness;
 
+import com.liudong.business.CommonFunctions;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.elasticsearch.action.delete.DeleteResponse;
+import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.action.update.UpdateResponse;
 import org.elasticsearch.client.transport.TransportClient;
@@ -16,15 +18,16 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Map;
+import java.util.concurrent.ExecutionException;
 
-public abstract class ElasticsearchBase {
+public class ElasticsearchBase {
     private final static Logger ES_LOGGER = LogManager.getLogger("es");
     private Settings settings;
     protected TransportClient client;
     protected String index;
     protected String type;
 
-    ElasticsearchBase(String host, int port) {
+    public ElasticsearchBase(String host, int port) {
         this.client = new PreBuiltTransportClient(Settings.EMPTY);
         try {
             client.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName(host), port));
@@ -33,7 +36,7 @@ public abstract class ElasticsearchBase {
         }
     }
 
-    ElasticsearchBase(Settings settings, String host, int port) {
+    public ElasticsearchBase(Settings settings, String host, int port) {
         this.settings = settings;
         this.client = new PreBuiltTransportClient(settings);
         try {
@@ -43,24 +46,26 @@ public abstract class ElasticsearchBase {
         }
     }
 
-    ElasticsearchBase(String index, String type) {
+    public ElasticsearchBase(String index, String type) {
         this("127.0.0.1", 9300);
         this.index = index;
         this.type = type;
     }
 
+    ElasticsearchBase() {
+    }
+
     public IndexResponse insertToEs(String content) throws IOException {
         XContentBuilder builder = XContentFactory.jsonBuilder().startObject();
-        ES_LOGGER.info(content);
-        for (String field : content.split("\\|\\|")) {
-            String[] fv = field.split(":", 2);
-            builder.field(fv[0], fv[1]);
+        Map<String, String> kv = CommonFunctions.getFieldValue(content);
+        for (Map.Entry<String, String> entry : kv.entrySet()) {
+            builder.field(entry.getKey(), entry.getValue());
         }
         builder.endObject();
         try {
             IndexResponse response = client.prepareIndex(index, type).
                     setSource(builder).execute().get();
-            System.out.println(response.status());
+            ES_LOGGER.info(content);
             return response;
         } catch (Exception e) {
             e.printStackTrace();
@@ -93,5 +98,17 @@ public abstract class ElasticsearchBase {
             e.printStackTrace();
         }
         return 0;
+    }
+
+    public GetResponse getDocById(String docId) {
+        try {
+            GetResponse response = client.prepareGet().setIndex(index).setType(type).setId(docId).execute().get();
+            return response;
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

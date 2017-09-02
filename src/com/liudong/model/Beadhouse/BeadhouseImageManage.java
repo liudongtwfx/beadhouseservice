@@ -1,5 +1,7 @@
 package com.liudong.model.Beadhouse;
 
+import com.liudong.business.CommonFunctions;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -10,7 +12,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "beadhouseimageinfo")
 public class BeadhouseImageManage {
-    public static final String imageUrl = "http://localhost:8088/imagefiles/beadhouseimagefiles";
+    public static final String imageUrl = "http://" + CommonFunctions.getIpAddress() + ":8088/imagefiles/beadhouseimagefiles";
     public static final String realPath;
 
     static {

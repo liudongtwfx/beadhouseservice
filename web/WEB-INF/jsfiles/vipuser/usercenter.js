@@ -2,6 +2,7 @@
  * Created by liudong on 2017/1/11.
  */
 var idNumberCanbeUsed = false;
+
 function elderRegister() {
     if (!idNumberCanbeUsed) {
         alert("请输入正确身份证信息");
@@ -31,9 +32,55 @@ function elderRegister() {
             window.location.href = "usercenter";
             return true;
         }
-    })
+    });
     return false;
 };
+
+function displayRecommendBeadhouse(datas) {
+    var node = '<div id="beadhouse_recommond_area">';
+    for (var i = 0; i < datas.length; i++) {
+        var data = datas[i];
+        try {
+            var imageurl = "";
+            if ('imageUrl' in data) {
+                imageurl = data['imageUrl'];
+            }
+            var newNode = "<div class='col-lg-4' id='beadhouse" + data['id'] + "'>" +
+                "<img src='" + imageurl + "'>" +
+                "<div ><span>名称：</span><span>" + data['fullName'] + "</span></div>" +
+                "<div ><span>简介：</span><span>" + data['briefDescription'] + "</span></div></div>";
+            node += newNode;
+        } catch (e) {
+            console.log(e);
+            continue;
+        }
+    }
+    node += '</div>';
+    $("#main_content").append(node);
+}
+
+function getRecommendBeadhouse() {
+    $.get(
+        "/user/usercenter/getRecommendBeadhouse",
+        function getData(data) {
+            displayRecommendBeadhouse(data);
+        }
+    )
+}
+
+function displayRecommendArticle(data) {
+}
+
+function getRecommendArticle() {
+    $.get(
+        "/user/usercenter/getRecommendArticle",
+        function getData(data) {
+            displayRecommendArticle(data);
+        }
+    )
+}
+
+
 $(document).ready(
     function () {
         var start_year = 1900;
@@ -53,6 +100,8 @@ $(document).ready(
         }
         newnode = "<option value='1'>1日</option>";
         $("#birthdate_day").html(newnode);
+        getRecommendBeadhouse();
+        getRecommendArticle();
     }
 );
 $("#birthdate_day").focus(
@@ -67,6 +116,7 @@ $("#birthdate_day").focus(
         }
     }
 );
+
 function getDaysNumber() {
     var days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
     var year = $("#birthdate_year").val();
@@ -94,6 +144,7 @@ function displayElderRegister() {
         $("#elder_register").css("display", "none")
     }
 }
+
 function displayElderInformation() {
     if ($("#myApp").css("display") == "block") {
         $("#myApp").css("display", "none");

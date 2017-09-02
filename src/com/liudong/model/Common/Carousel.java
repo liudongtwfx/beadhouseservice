@@ -1,5 +1,6 @@
 package com.liudong.model.Common;
 
+import com.liudong.business.CommonFunctions;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -22,7 +23,7 @@ public class Carousel {
     private String description;
     private String location;
 
-    public static final String imageUrl = "http://localhost:8088/imagefiles/carousel";
+    public static final String imageUrl = "http://" + CommonFunctions.getIpAddress() + ":8088/imagefiles/carousel";
     public static final String realPath;
 
     static {

@@ -16,13 +16,10 @@ public interface BeadhouseInfoRepository extends JpaRepository<BeadhouseInfo, In
 
     List<BeadhouseInfo> findByLocationId(int id);
 
-
     Page<BeadhouseInfo> findByLocationIdStartingWith(String provinceId, Pageable pageable);
 
     @Query("select p from BeadhouseInfo p where p.locationId like %?1")
     List<BeadhouseInfo> findByLocationIdLike(int provinceId);
 
     Page<BeadhouseInfo> findByFullNameContains(String content, Pageable pageable);
-
-    Page<BeadhouseInfo> findAllByOrderByScoreDesc(Pageable pageable);
 }

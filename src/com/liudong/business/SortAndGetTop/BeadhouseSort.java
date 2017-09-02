@@ -34,10 +34,6 @@ public class BeadhouseSort {
         private String imageDescription;
     }
 
-    public BeadhouseSort() {
-        System.out.println("beadhousesort");
-    }
-
     @Inject
     BeadhouseInfoRepository beadhouseInfoRepository;
 

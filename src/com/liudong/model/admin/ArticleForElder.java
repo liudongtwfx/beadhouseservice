@@ -1,5 +1,7 @@
 package com.liudong.model.admin;
 
+import lombok.Data;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -11,7 +13,9 @@ import java.util.Date;
 
 @Entity
 @Table(name = "articleforelder")
+@Data
 public class ArticleForElder {
+    @Id
     private int id;
     private String title;
     private String content;
@@ -20,79 +24,16 @@ public class ArticleForElder {
     private Date addtime;
     private Date updatetime;
     private int operator;
-
-    public String getArticletag() {
-        return articletag;
-    }
-
-    public void setArticletag(String articletag) {
-        this.articletag = articletag;
-    }
-
     private String articletag;
 
-    @Id
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public String getSourceurl() {
-        return sourceurl;
-    }
-
-    public void setSourceurl(String sourceurl) {
-        this.sourceurl = sourceurl;
-    }
-
-    public int getStrategytype() {
-        return strategytype;
-    }
-
-    public void setStrategytype(int strategytype) {
-        this.strategytype = strategytype;
-    }
-
-    public Date getAddtime() {
-        return addtime;
-    }
-
-    public void setAddtime(Date addtime) {
-        this.addtime = addtime;
-    }
-
-    public Date getUpdatetime() {
-        return updatetime;
-    }
-
-    public void setUpdatetime(Date updatetime) {
-        this.updatetime = updatetime;
-    }
-
-    public int getOperator() {
-        return operator;
-    }
-
-    public void setOperator(int operator) {
-        this.operator = operator;
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("id").append(":").append(id).append("||")
+                .append("title").append(":").append(title).append("||")
+                .append("content").append(":").append(content).append("||")
+                .append("sourceurl").append(":").append(sourceurl).append("||")
+                .append("articletag").append(":").append(articletag);
+        return sb.toString();
     }
 }

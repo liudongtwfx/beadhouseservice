@@ -1,2 +1,16 @@
-2017-08-25 12:15:56.936 ERROR com.liudong.business.beadhousebusiness.BeadhouseCommentBuisiness.GetScoreThread 53 run -- org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
-2017-08-25 12:25:51.155 ERROR com.liudong.business.beadhousebusiness.BeadhouseCommentBuisiness.GetScoreThread 54 run -- org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2017-08-29 22:41:08.865 ERROR com.liudong.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
+2017-08-29 22:43:35.494 ERROR com.liudong.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
+2017-08-29 22:45:38.867 ERROR com.liudong.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
+2017-08-29 22:56:22.855 ERROR com.liudong.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
+2017-08-29 23:17:36.510 ERROR com.liudong.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
+2017-08-29 23:20:02.499 ERROR com.liudong.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
+2017-08-29 23:20:16.377 ERROR com.liudong.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
+2017-08-29 23:22:06.987 ERROR com.liudong.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
+2017-08-29 23:33:21.025 ERROR com.liudong.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
+2017-08-29 23:40:53.297 ERROR com.liudong.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
+2017-08-29 23:41:09.354 ERROR com.liudong.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
+2017-08-29 23:41:33.357 ERROR com.liudong.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
+2017-08-29 23:47:13.285 ERROR com.liudong.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
+2017-08-29 23:47:41.613 ERROR com.liudong.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
+2017-08-29 23:48:09.113 ERROR com.liudong.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
+2017-08-29 23:57:30.928 ERROR com.liudong.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null

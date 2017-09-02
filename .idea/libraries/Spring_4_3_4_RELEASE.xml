@@ -27,6 +27,7 @@
       <root url="jar://$USER_HOME$/.ideaLibSources/spring-aop-4.3.4.RELEASE-sources.jar!/" />
       <root url="jar://$USER_HOME$/.ideaLibSources/spring-tx-4.3.4.RELEASE-sources.jar!/" />
       <root url="jar://$USER_HOME$/.ideaLibSources/spring-orm-4.3.4.RELEASE-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/spring-test-4.3.4.RELEASE-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

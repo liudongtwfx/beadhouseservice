@@ -1,17 +1,18 @@
 package com.liudong.test;
 
+import com.liudong.business.elasticsearchbusiness.ArticleESBusiness;
 import com.liudong.business.elasticsearchbusiness.BeadhouseCommentEs;
 import com.liudong.model.admin.BeadhouseComment;
+import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.rest.RestStatus;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
 import org.junit.Assert;
-import org.junit.FixMethodOrder;
 import org.junit.Test;
-import org.junit.runners.MethodSorters;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -65,5 +66,22 @@ public class ElasticsearchTest {
     public void deleteCommentByDocid() throws IOException {
         int res = new BeadhouseCommentEs().deleteDocById(docid);
         Assert.assertEquals(RestStatus.OK.getStatus(), res);
+    }
+
+    @Test
+    public void getArticleByDocId() throws UnsupportedEncodingException {
+        ArticleESBusiness articleESBusiness = new ArticleESBusiness();
+        GetResponse response = articleESBusiness.getDocById("190");
+        Assert.assertTrue(response != null);
+        for (Map.Entry<String, Object> entry : response.getSource().entrySet()) {
+            Object value;
+            if (entry.getKey().equals("content")) {
+                byte[] bytes = ((String) entry.getValue()).getBytes("utf8");
+                value = new String(bytes, "gb2312");
+            } else {
+                value = entry.getValue();
+            }
+            System.out.println(entry.getKey() + " " + value);
+        }
     }
 }

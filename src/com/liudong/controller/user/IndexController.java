@@ -2,6 +2,7 @@ package com.liudong.controller.user;
 
 import com.liudong.DAO.BeadHouse.BeadhouseInfoRepository;
 import com.liudong.DAO.User.VipUser.VipUserRepository;
+import com.liudong.System.LogType;
 import com.liudong.business.SortAndGetTop.BeadhouseSort;
 import com.liudong.model.User.VipUser;
 import org.springframework.beans.factory.annotation.Autowired;

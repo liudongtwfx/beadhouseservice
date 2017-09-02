@@ -85,6 +85,28 @@
             </Policies>
         </RollingRandomAccessFile>
 
+        <RollingRandomAccessFile name="beadhousebrowse"
+                                 immediateFlush="true" fileName="${LOG_HOME}/beadhousebrowse.log"
+                                 filePattern="${LOG_HOME}/exception.log.%d{yyyy-MM-dd}.log.gz">
+            <PatternLayout>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}  %msg%xEx%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingRandomAccessFile>
+
+        <RollingRandomAccessFile name="articlebrowse"
+                                 immediateFlush="true" fileName="${LOG_HOME}/articlebrowse.log"
+                                 filePattern="${LOG_HOME}/exception.log.%d{yyyy-MM-dd}.log.gz">
+            <PatternLayout>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}  %msg%xEx%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingRandomAccessFile>
+
 
         <!-- DEBUG日志格式 -->
         <RollingRandomAccessFile name="service_debug_appender"
@@ -151,6 +173,12 @@
         </logger>
         <logger name="es" level="trace" includeLocation="true" additivity="false">
             <appender-ref ref="es"/>
+        </logger>
+        <logger name="beadhousebrowse" level="trace" includeLocation="true" additivity="false">
+            <appender-ref ref="beadhousebrowse"/>
+        </logger>
+        <logger name="articlebrowse" level="trace" includeLocation="true" additivity="false">
+            <appender-ref ref="articlebrowse"/>
         </logger>
     </Loggers>
 

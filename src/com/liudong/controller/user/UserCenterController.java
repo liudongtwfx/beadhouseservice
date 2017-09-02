@@ -2,8 +2,10 @@ package com.liudong.controller.user;
 
 import com.liudong.DAO.User.ElderPeople.ElderPeopleRepository;
 import com.liudong.DAO.User.VipUser.VipUserRepository;
+import com.liudong.business.beadhousebusiness.ArticleRecommend;
 import com.liudong.business.beadhousebusiness.BeadhouseAdminBusiness;
 import com.liudong.business.beadhousebusiness.BeadhouseElderInfoBusiness;
+import com.liudong.business.beadhousebusiness.BeadhouseRecommend;
 import com.liudong.model.Location.Area;
 import com.liudong.model.User.ElderPeople;
 import com.liudong.model.User.VipUser;
@@ -39,6 +41,12 @@ public class UserCenterController {
 
     @Inject
     BeadhouseElderInfoBusiness beadhouseElderInfoBusiness;
+
+    @Inject
+    BeadhouseRecommend beadhouseRecommend;
+
+    @Inject
+    ArticleRecommend articleRecommend;
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String userCenter() {
@@ -104,43 +112,55 @@ public class UserCenterController {
         return this.beadhouseElderInfoBusiness.getInfosBasedOnCheckinId(Integer.valueOf(checkinId));
     }
 
-    @RequestMapping(value = "elderRegisterTest", method = RequestMethod.GET)
+    @RequestMapping(value = "getRecommendBeadhouse", method = RequestMethod.GET)
     @ResponseBody
-    public String elderRegisterRandom(HttpServletRequest request, HttpServletResponse response) {
-        List<VipUser> vipUsers = this.vipUserManager.findAll();
-        List<Area> areas = this.business.getAllAreas();
-        String[] gender = {"男", "女"};
-        NumberFormat format = NumberFormat.getInstance();
-        format.setMinimumIntegerDigits(2);
-        int added = 0;
-        for (VipUser user : vipUsers) {
-            for (int i = 0; i < 2; i++) {
-                ElderPeople elderPeople = new ElderPeople();
-                elderPeople.setName(IdCardGenerator.getRandomChineseName());
-                elderPeople.setVipuserId(user.getId());
-                while (true) {
-                    try {
-                        Area a = areas.get((int) (Math.random() * areas.size()));
-                        elderPeople.setGender(gender[(int) (Math.random() * 2)]);
-                        String year = String.valueOf((int) (1930 + Math.random() * 35));
-                        String month = format.format((int) Math.random() * 11 + 1);
-                        String day = format.format((int) Math.random() * 29 + 1);
-                        elderPeople.setIdNumber(IdCardGenerator.generate(a.getArea(), year + month + day));
-                        elderPeople.setLocationId(a.getAreaId());
-                        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
-                        Date date;
-                        date = sdf.parse(year + "-" + month + "-" + day);
-                        elderPeople.setBirthDate(date);
-                        break;
-                    } catch (ParseException e) {
-                        e.printStackTrace();
-                    }
-                }
-                elderPeople.setVipuserId(user.getId());
-                this.elderPeopleRepository.save(elderPeople);
-                added++;
-            }
-        }
-        return "added:" + added;
+    public Object getRecommendBeadhouse(HttpServletRequest request) {
+        return this.beadhouseRecommend.getBeadhouseRecommend(request);
     }
+
+    @RequestMapping(value = "getRecommendArticle", method = RequestMethod.GET)
+    @ResponseBody
+    public Object getRecommendArticle(HttpServletRequest request) {
+        return this.articleRecommend.getArticleRecommend(request);
+    }
+
+//    @RequestMapping(value = "elderRegisterTest", method = RequestMethod.GET)
+//    @ResponseBody
+//    public String elderRegisterRandom(HttpServletRequest request, HttpServletResponse response) {
+//        List<VipUser> vipUsers = this.vipUserManager.findAll();
+//        List<Area> areas = this.business.getAllAreas();
+//        String[] gender = {"男", "女"};
+//        NumberFormat format = NumberFormat.getInstance();
+//        format.setMinimumIntegerDigits(2);
+//        int added = 0;
+//        for (VipUser user : vipUsers) {
+//            for (int i = 0; i < 2; i++) {
+//                ElderPeople elderPeople = new ElderPeople();
+//                elderPeople.setName(IdCardGenerator.getRandomChineseName());
+//                elderPeople.setVipuserId(user.getId());
+//                while (true) {
+//                    try {
+//                        Area a = areas.get((int) (Math.random() * areas.size()));
+//                        elderPeople.setGender(gender[(int) (Math.random() * 2)]);
+//                        String year = String.valueOf((int) (1930 + Math.random() * 35));
+//                        String month = format.format((int) Math.random() * 11 + 1);
+//                        String day = format.format((int) Math.random() * 29 + 1);
+//                        elderPeople.setIdNumber(IdCardGenerator.generate(a.getArea(), year + month + day));
+//                        elderPeople.setLocationId(a.getAreaId());
+//                        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
+//                        Date date;
+//                        date = sdf.parse(year + "-" + month + "-" + day);
+//                        elderPeople.setBirthDate(date);
+//                        break;
+//                    } catch (ParseException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//                elderPeople.setVipuserId(user.getId());
+//                this.elderPeopleRepository.save(elderPeople);
+//                added++;
+//            }
+//        }
+//        return "added:" + added;
+//    }
 }

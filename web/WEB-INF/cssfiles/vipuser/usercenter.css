@@ -49,12 +49,12 @@ div[id^=wrong] {
 }
 
 #sidebar {
-    left: 20%;
+    left: 300px;
 }
 
 .data_area {
     position: relative;
-    left: 35%;
+    left: 550px;
 }
 
 #elder_beadhouse_data_area {

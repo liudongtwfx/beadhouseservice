@@ -16,33 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `beadhouseimageinfo`
+-- Table structure for table `leisuregroup`
 --
 
-DROP TABLE IF EXISTS `beadhouseimageinfo`;
+DROP TABLE IF EXISTS `leisuregroup`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `beadhouseimageinfo` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `imagedescription` varchar(100) NOT NULL,
-  `imagepath` varchar(50) NOT NULL,
-  `imagepriority` tinyint(4) NOT NULL,
-  `updatetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `beadhouseid` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `beadhouseimagehouseno` (`beadhouseid`),
-  CONSTRAINT `beadhouseimageinfo_ibfk_1` FOREIGN KEY (`beadhouseid`) REFERENCES `beadhouseinfo` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+CREATE TABLE `leisuregroup` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `titie` varchar(255) NOT NULL,
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `details` blob NOT NULL,
+  `groupstatus` enum('NOTSTARTED','STARTED','RUNNING','ENDED') NOT NULL DEFAULT 'NOTSTARTED',
+  `numberofpeople` int(11) NOT NULL DEFAULT '0',
+  `updatetime` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `beadhouseimageinfo`
+-- Dumping data for table `leisuregroup`
 --
 
-LOCK TABLES `beadhouseimageinfo` WRITE;
-/*!40000 ALTER TABLE `beadhouseimageinfo` DISABLE KEYS */;
-INSERT INTO `beadhouseimageinfo` VALUES (12,'养老院图文','ovs843546f.jpg',1,'2017-09-03 02:10:01',108),(13,'烦烦烦方法','f2b7zc0n6x.jpg',8,'2017-09-03 02:10:18',108),(14,'额为','82g4crrr5p.jpg',10,'2017-09-03 02:10:29',108);
-/*!40000 ALTER TABLE `beadhouseimageinfo` ENABLE KEYS */;
+LOCK TABLES `leisuregroup` WRITE;
+/*!40000 ALTER TABLE `leisuregroup` DISABLE KEYS */;
+/*!40000 ALTER TABLE `leisuregroup` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

@@ -65,43 +65,11 @@
     </div>
 </section><!-- end of secondary bar -->
 
-<aside id="sidebar" class="column">
-    <form class="quick_search">
-        <input type="text" value="Quick Search" onfocus="if(!this._haschanged){this.value=''};this._haschanged=true;">
-    </form>
-    <hr/>
-    <h3>用户中心</h3>
-    <ul class="toggle">
-        <li class="icn_new_article"><a href="/admin/vipuser">会员中心</a></li>
-        <li class="icn_edit_article"><a href="/admin/elderpeople">老人中心</a></li>
-    </ul>
-    <h3>养老院中心</h3>
-    <ul class="toggle">
-        <li class="icn_add_user"><a href="#">养老院基本信息</a></li>
-        <li class="icn_view_users"><a href="#">养老院评论</a></li>
-    </ul>
-    <h3>度假村管理</h3>
-    <ul class="toggle">
-        <li class="icn_folder"><a href="#">添加度假村</a></li>
-        <li class="icn_photo"><a href="#">度假村列表</a></li>
-    </ul>
-    <h3>休闲团管理</h3>
-    <ul class="toggle">
-        <li class="icn_folder"><a href="#">增加休闲团</a></li>
-        <li class="icn_photo"><a href="#">休闲团列表</a></li>
-    </ul>
-    <h3>养老攻略中心</h3>
-    <ul class="toggle">
-        <li class="icn_folder"><a href="#">攻略管理</a></li>
-        <li class="icn_photo"><a href="#">攻略推荐</a></li>
-    </ul>
-    <h3>权限中心</h3>
-    <ul class="toggle">
-        <li class="icn_settings"><a href="/admin/homepage">首页管理</a></li>
-        <li class="icn_settings"><a href="#">权限管理</a></li>
-    </ul>
+<div id="side"></div>
+<script type="application/javascript">
+    $("#side").load("../../views/admin/commenside.html")
+</script>
 
-</aside><!-- end of sidebar -->
 <section id="main">
     <link rel="stylesheet" href="../../cssfiles/admin/contentcommon.css">
     <div class="header inner_content">

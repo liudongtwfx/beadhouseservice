@@ -2,8 +2,11 @@ package com.liudong.business.SortAndGetTop;
 
 import com.liudong.DAO.Admin.ArticleForElderRepository;
 import com.liudong.System.LogType;
+import com.liudong.business.elasticsearchbusiness.ArticleESBusiness;
 import com.liudong.model.admin.ArticleForElder;
 import lombok.Data;
+import org.elasticsearch.search.SearchHit;
+import org.elasticsearch.search.SearchHits;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -21,7 +24,7 @@ import java.util.*;
  */
 
 @Service
-public class ArticleForElderSort {
+public class ArticleForElderMainBuseness {
 
     @Inject
     ArticleForElderRepository articleForElderRepository;
@@ -84,16 +87,41 @@ public class ArticleForElderSort {
         }
         res.put("title", article.getTitle());
         res.put("content", content);
-        StringBuilder builder = new StringBuilder();
-        String userName = (String) session.getAttribute("userName");
-        if (userName == null) {
-            userName = "anonymous";
+        res.put("source", article.getSourceurl());
+        res.put("tag", article.getArticletag());
+        if (request.getSession().getAttribute("adminName") == null) {
+            StringBuilder builder = new StringBuilder();
+            String userName = (String) session.getAttribute("userName");
+            if (userName == null) {
+                userName = "anonymous";
+            }
+            builder.append(userName).append(" ").append(session.getId()).append(" ")
+                    .append(article.getId()).append(" ")
+                    .append(article.getTitle()).append(" ")
+                    .append(article.getArticletag());
+            LogType.ARTICLEBROWSE.getLOGGER().info(builder.toString());
         }
-        builder.append(userName).append(" ").append(session.getId()).append(" ")
-                .append(article.getId()).append(" ")
-                .append(article.getTitle()).append(" ")
-                .append(article.getArticletag());
-        LogType.ARTICLEBROWSE.getLOGGER().info(builder.toString());
+        return res;
+    }
+
+    public Object searchArticle(int page, int size, HttpServletRequest request) {
+        String content = request.getParameter("searchContent");
+        if (content == null || content.length() == 0) {
+            return articlePageSort(page, size);
+        }
+        ArticleESBusiness articleESBusiness = new ArticleESBusiness();
+        SearchHits hits = articleESBusiness.getArticleByDocId(content);
+        if (hits == null) {
+            return null;
+        }
+        List<Map<String, Object>> res = new ArrayList<>();
+        for (int i = page * size; i <= Math.min(hits.totalHits, page * (size + 1)); i++) {
+            Map<String, Object> map = new HashMap<>();
+            SearchHit hit = hits.getHits()[i];
+            for (Map.Entry<String, Object> entry : hit.getSource().entrySet()) {
+                map.put(entry.getKey(), entry.getValue());
+            }
+        }
         return res;
     }
 }

@@ -71,44 +71,40 @@
 </script>
 
 <section id="main">
-    <link rel="stylesheet" href="../../cssfiles/admin/contentcommon.css">
-    <link rel="stylesheet" href="../../cssfiles/admin/userhomepage.css">
-    <script type="application/javascript" src="../../jsfiles/admin/common.js"></script>
-    <script type="application/javascript" src="../../jsfiles/admin/userhomepage.js"></script>
+    <link rel="stylesheet" href="../../cssfiles/admin/articleforelderadd.css">
     <div class="header inner_content">
         <h1 class="page-title">养老服务中心后台管理</h1>
         <ul class="breadcrumb">
-            <li><a href="index.html">养老院中心</a></li>
-            <li class="active">养老院基本管理</li>
+            <li>养老攻略管理</li>
+            <li class="active">攻略列表</li>
         </ul>
     </div>
-    <div class="panel panel-primary inner_content">
-        <div class="panel-heading">
-            <h2 class="panel-title">用户首页轮播图管理</h2>
+    <div class="inner_content tab_content" id="content">
+        <div class="col-lg-5">
+            <input type="text" id="search_region">
+            <button class="btn-primary" onclick="searchArticles()">搜索</button>
         </div>
-        <div class="panel-body">
-            <div id="user_index_page_carousel">
-                <div class="col-lg-4" id="add_image_div">
-                    <form class="square_image" id="image_manage" enctype="multipart/form-data">
-                        <a href="#user_index_page_carousel" style="width: 100%;height: 100%" onclick="addNewCarousel()"
-                           id="add_new_carousel">
-                            <img src="../../jpgfiles/beadhouseback.jpg" alt="图片加载失败" id="add_image">
-                            <div class="plus">
-                            </div>
-                        </a>
-                        <input type="file" id="image_choose" name="upload" style="display: none"
-                               onchange="displayPic(this.id)">
-                        <input id="description" type="text" class="input-sm" style="width:60%">
-                        <button class="btn btn-default btn-success" onclick="submitNewCarousel(this)">提交</button>
-                    </form>
-                </div>
+        <div id="articles_list"></div>
+        <div id="page_turning">
+            <div class="vertical-align">每页显示<select id="page_size" onchange="changePage(1)">
+                <option value="15">15</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+            </select>文章
             </div>
+            <div id="page_extra" class="vertical-align">共<span id="log_number"></span>条记录， 共<span
+                    id="page_number"></span>页
+            </div>
+            <ul class="pagination" id="page_turning_list">
+            </ul>
         </div>
     </div>
 </section>
 </body>
 <script src="../../jsfiles/admin/common.js"></script>
 <script type="application/javascript">
-    adminAuthority()
+    adminAuthority();
 </script>
+<script src="../../jsfiles/pageturning.js" type="application/javascript"></script>
+<script src="../../jsfiles/admin/articleforelderlist.js" type="application/javascript"></script>
 </html>

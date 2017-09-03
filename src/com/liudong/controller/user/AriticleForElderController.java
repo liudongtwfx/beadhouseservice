@@ -1,7 +1,7 @@
 package com.liudong.controller.user;
 
 import com.liudong.DAO.Admin.ArticleForElderRepository;
-import com.liudong.business.SortAndGetTop.ArticleForElderSort;
+import com.liudong.business.SortAndGetTop.ArticleForElderMainBuseness;
 import com.liudong.business.elasticsearchbusiness.ElasticsearchBase;
 import com.liudong.model.admin.ArticleForElder;
 import org.springframework.stereotype.Controller;
@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
@@ -25,7 +24,7 @@ import java.util.List;
 @RequestMapping(value = "/articles")
 public class AriticleForElderController {
     @Inject
-    ArticleForElderSort articleForElderSort;
+    ArticleForElderMainBuseness articleForElderSort;
     @Inject
     ArticleForElderRepository articleForElderRepository;
 

@@ -16,33 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `beadhouseimageinfo`
+-- Table structure for table `leisuregrouppersonlist`
 --
 
-DROP TABLE IF EXISTS `beadhouseimageinfo`;
+DROP TABLE IF EXISTS `leisuregrouppersonlist`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `beadhouseimageinfo` (
+CREATE TABLE `leisuregrouppersonlist` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `imagedescription` varchar(100) NOT NULL,
-  `imagepath` varchar(50) NOT NULL,
-  `imagepriority` tinyint(4) NOT NULL,
-  `updatetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `beadhouseid` int(11) NOT NULL,
+  `groupId` int(11) NOT NULL,
+  `elderId` int(11) NOT NULL,
+  `elderName` int(11) NOT NULL,
+  `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
-  KEY `beadhouseimagehouseno` (`beadhouseid`),
-  CONSTRAINT `beadhouseimageinfo_ibfk_1` FOREIGN KEY (`beadhouseid`) REFERENCES `beadhouseinfo` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+  KEY `groupid_leisuregroup` (`groupId`),
+  KEY `elderId_elder` (`elderId`),
+  CONSTRAINT `elderId_elder` FOREIGN KEY (`elderId`) REFERENCES `elderpeople` (`id`),
+  CONSTRAINT `groupid_leisuregroup` FOREIGN KEY (`groupId`) REFERENCES `leisuregroup` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `beadhouseimageinfo`
+-- Dumping data for table `leisuregrouppersonlist`
 --
 
-LOCK TABLES `beadhouseimageinfo` WRITE;
-/*!40000 ALTER TABLE `beadhouseimageinfo` DISABLE KEYS */;
-INSERT INTO `beadhouseimageinfo` VALUES (12,'养老院图文','ovs843546f.jpg',1,'2017-09-03 02:10:01',108),(13,'烦烦烦方法','f2b7zc0n6x.jpg',8,'2017-09-03 02:10:18',108),(14,'额为','82g4crrr5p.jpg',10,'2017-09-03 02:10:29',108);
-/*!40000 ALTER TABLE `beadhouseimageinfo` ENABLE KEYS */;
+LOCK TABLES `leisuregrouppersonlist` WRITE;
+/*!40000 ALTER TABLE `leisuregrouppersonlist` DISABLE KEYS */;
+/*!40000 ALTER TABLE `leisuregrouppersonlist` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-03 11:07:08
+-- Dump completed on 2017-09-03 11:07:07

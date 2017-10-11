@@ -17,6 +17,7 @@ function getCarouseList() {
         }
     )
 }
+
 function displayImageList(data) {
     var node = "";
     for (var i = 0; i < data.length; i++) {
@@ -50,6 +51,7 @@ function getFileUrl(sourceId) {
     }
     return url;
 }
+
 function displayPic(id) {
     var path = getFileUrl(id);
     $("#add_image").attr("src", path);

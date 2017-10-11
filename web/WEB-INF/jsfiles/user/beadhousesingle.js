@@ -2,6 +2,7 @@
  * Created by liudong on 17-7-2.
  */
 var imageurlPrefix;
+
 function fillAlldata(datas) {
     imageurlPrefix = datas['imagePrefix'];
     fillbaseinfo(datas['baseinfo']);
@@ -9,11 +10,22 @@ function fillAlldata(datas) {
 }
 
 function fillbaseinfo(baseinfo) {
+    console.log(baseinfo);
     $("#mypos_name").text(baseinfo['fullName']);
     $("#beadhouse_name").text(baseinfo['fullName']);
     $("#beadhouse_location").text(baseinfo['fullLocation']);
     $("#input-21e").attr('value', baseinfo['score']);
     $("#beadhouse_brief").text(baseinfo['description']);
+    $("#beadhouse_totalrooms").text(baseinfo['totalRooms']);
+    if (baseinfo['currentBeds'] != null) {
+        $("#beadhouse_currentbeds").text(baseinfo['currentBeds']);
+    }
+    if (baseinfo['totalBeds'] != null) {
+        $("#beadhouse_totalbeds").text(baseinfo['totalBeds']);
+    }
+    $("#beadhouse_contact").text(baseinfo['contactInfo']);
+    var node = "<a href='" + baseinfo['linksite'] + "'>" + baseinfo['linksite'] + "</a>";
+    $("#beadhouse_linksite").html(node);
     mapFunction(baseinfo['lng'], baseinfo['lat']);
 }
 
@@ -43,6 +55,7 @@ function getBeadhouseSingleData() {
         }
     )
 }
+
 $(document).ready(
     function () {
         getBeadhouseSingleData();
@@ -55,6 +68,7 @@ function imagesScroll() {
     var demo1 = $("#demo1");
     var demo2 = $("#demo2");
     demo2.html(demo1.html());
+
     function Marquee() {
         if (demo.scrollLeft() >= demo1.width())
             demo.scrollLeft(0);

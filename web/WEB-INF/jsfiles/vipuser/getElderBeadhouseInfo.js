@@ -4,6 +4,7 @@
 
 var currentElderId;
 var elderinfoLoadedMap = {};
+
 function changeElder(t) {
 
 }
@@ -108,7 +109,8 @@ function getEldersData() {
 }
 
 function displayEldersBeadhouseInfo() {
-    $("#elder_beadhouseinfo_area").css('display', 'block')
+    $("#beadhouse_recommend_area").css('display', 'none');
+    $("#elder_beadhouseinfo_area").css('display', 'block');
     getEldersData();
 }
 

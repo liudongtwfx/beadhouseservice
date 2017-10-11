@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>养老服务网站会员中心</title>
+    <link rel="stylesheet" href="../../cssfiles/vipuser/usercenter.css" type="text/css">
+    <link rel="stylesheet" href="../../cssfiles/vipuser/elderinfo.css" type="text/css">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../cssfiles/user/common.css">
+    <link rel="stylesheet" type="text/css" href="../../cssfiles/fileinput/theme.css">
+    <link rel="stylesheet" type="text/css" href="../../cssfiles/premium.css">
+    <link rel="stylesheet" href="../../cssfiles/font-awesome/css/font-awesome.css">
+    <script src="../../jsfiles/jquery-3.1.1.js"></script>
+    <script src="../../bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+<div id="page1"></div>
+<script>
+    $("#page1").load("../../views/user/commontop.html");
+</script>
+<div class="sidebar-nav" id="sidebar">
+    <ul>
+        <li><a href="#" data-target=".premium-menu" class="nav-header"><i class="fa fa-fw fa-male"></i>用户中心</a></li>
+        <li>
+            <ul class="premium-menu nav nav-list collapse in">
+                <li><a href="index"><span class="fa"></span>修改用户信息</a></li>
+                <li><a href="#"><span class="fa"></span>修改密码</a></li>
+            </ul>
+        </li>
+        <li><a href="#" data-target=".premium-menu" class="nav-header"><i class="fa fa-fw fa-building"></i>
+
+            老人中心</a></li>
+        <li>
+            <ul class="premium-menu nav nav-list">
+                <li><a href="#elder_registerdiv" role="button" data-toggle="modal"><span
+                        class="fa"></span> 添加老人</a>
+                </li>
+                <li><a href="#"><span class="fa"></span>修改老人信息</a></li>
+                <li><a href="#"><span class="fa"></span>查看老人信息</a>
+                <li><a href="#" onclick="displayEldersBeadhouseInfo()"><span class="fa"></span>查看老人养老院信息</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="data_area" style="display: none">
+    <ul class="nav nav-tabs" id="elder_user_list">
+    </ul>
+</div>
+<div class="data_area">
+    <div class="panel-group" id="main_content">
+    </div>
+</div>
+</body>
+<script src="../../jsfiles/location.js" type="application/javascript"></script>
+<script src="../../jsfiles/user/common.js"></script>
+<script src="../../jsfiles/vipuser/elderinfo.js" type="application/javascript"></script>
+<script src="../../jsfiles/vipuser/getElderBeadhouseInfo.js" type="application/javascript"></script>
+<script src="../../jsfiles/jquery.tablesorter.min.js" type="text/javascript"></script>
+<script type="application/javascript">
+    getUserName(true);
+</script>
+</html>

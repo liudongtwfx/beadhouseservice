@@ -37,7 +37,7 @@ function elderRegister() {
 };
 
 function displayRecommendBeadhouse(datas) {
-    var node = '<div id="beadhouse_recommond_area">';
+    var node = '<div id="beadhouse_recommend_area">';
     for (var i = 0; i < datas.length; i++) {
         var data = datas[i];
         try {

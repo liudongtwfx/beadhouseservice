@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../../cssfiles/vipuser/usercenter.css" type="text/css">
     <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../../cssfiles/user/common.css">
-    <link rel="stylesheet" type="text/css" href="../../cssfiles/theme.css">
+    <link rel="stylesheet" type="text/css" href="../../cssfiles/fileinput/theme.css">
     <link rel="stylesheet" type="text/css" href="../../cssfiles/premium.css">
     <link rel="stylesheet" href="../../cssfiles/font-awesome/css/font-awesome.css">
     <script src="../../jsfiles/jquery-3.1.1.js"></script>
@@ -22,7 +22,7 @@
 <script src="../../jsfiles/user/beadhousesingle.js" type="application/javascript"></script>
 <div id="mypos" class="container">
     <span>我的位置:</span>
-    <span><a href="/index">首页</a>>><a href="/beadhouselist/list">养老院列表</a></span>>><a href="#"><span
+    <span><a href="/">首页</a>>><a href="/beadhouselist">养老院列表</a></span>>><a href="#"><span
         id="mypos_name"></span></a>
 </div>
 <div class="container" id="base_content">
@@ -45,8 +45,13 @@
                 }
             </script>
         </div>
+        <div class="base_line"><span class="base_title">房间数：</span><span id="beadhouse_totalrooms"></span></div>
+        <div class="base_line"><span class="base_title">床铺数：</span><span id="beadhouse_currentbeds"></span>/<span id="beadhouse_totalbeds"></span></div>
+        <div class="base_line"><span class="base_title">联系我们：</span><span id="beadhouse_contact"></span></div>
+        <div class="base_line"><span class="base_title">网址：</span><span id="beadhouse_linksite"></span></div>
     </div>
     <div class="base_line"><span class="base_title">简介：</span><span id="beadhouse_brief"></span></div>
+
 </div>
 </div>
 <div class="container">

@@ -21,6 +21,7 @@ function uploadImage() {
         contentType: false,
         processData: false,
         success: function (returndata) {
+            console.log(returndata);
             if (returndata === true) {
                 alert("添加成功")
                 window.location.reload();
@@ -37,6 +38,7 @@ function uploadImage() {
         }
     });
 }
+
 function getFileUrl(sourceId) {
     var url;
     if (navigator.userAgent.indexOf("MSIE") >= 1) { // IE
@@ -48,6 +50,7 @@ function getFileUrl(sourceId) {
     }
     return url;
 }
+
 function displayPic(id) {
     var path = getFileUrl(id);
     var node = "<img src='" + path + "' height=180px width=180px>";
@@ -70,6 +73,7 @@ function getList() {
         }
     )
 }
+
 $(document).ready(
     getList()
 );
@@ -94,6 +98,7 @@ function displayImage(pageIndex) {
     }
     $("#beadhouse_images").append(totalNode);
 }
+
 function displayexist(e) {
     var node = e.parentNode.parentNode;
     var childrenNode = node.children;
@@ -113,6 +118,7 @@ function deleteLog() {
         }
     )
 }
+
 function updateImage() {
     var formData = new FormData($("#update_image_manage")[0]);
     formData.append("priority", $("#update_image_priority option:selected").val());
@@ -141,6 +147,7 @@ function updateImage() {
         }
     });
 }
+
 function changeLog(e) {
     var node = e.parentNode.parentNode;
     line = String($(node).attr("id")).substr(3);
@@ -149,6 +156,7 @@ function changeLog(e) {
 function removeWarning() {
     $("#add_warning").remove();
 }
+
 function changePage(expectPage) {
     var id = "page" + currPage;
     $("#" + id).removeClass();
@@ -217,6 +225,7 @@ function nextPage() {
 }
 
 var idNumberOrdertype = true;
+
 function sortLogs(type) {
     var order;
     logs.sort(

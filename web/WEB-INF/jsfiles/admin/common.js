@@ -1,5 +1,5 @@
 /**
- * Created by liudong on 2017/5/27.
+ * Created by beadhouse on 2017/5/27.
  */
 
 function adminAuthority() {

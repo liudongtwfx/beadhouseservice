@@ -150,10 +150,10 @@
             <appender-ref ref="service_controller_log"/>
         </logger>
 
-        <logger name="com.liudong.System.SystemLogAspect" level="trace" includeLocation="true" additivity="false">
+        <logger name="com.beadhouse.System.SystemLogAspect" level="trace" includeLocation="true" additivity="false">
             <appender-ref ref="service_appender"/>
         </logger>
-        <logger name="com.liudong.test" level="trace" includeLocation="true" additivity="false">
+        <logger name="com.beadhouse.test" level="trace" includeLocation="true" additivity="false">
             <appender-ref ref="service_appender"/>
         </logger>
         <logger name="org.springframework.web.context.ContextLoader" level="trace" includeLocation="true"

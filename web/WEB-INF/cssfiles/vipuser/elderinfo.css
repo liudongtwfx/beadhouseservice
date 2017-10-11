@@ -1,0 +1,19 @@
+.elderArea {
+    width: 500px;
+    border-radius: 5px;
+    border: #0db48a solid 2px;
+    margin: 20px;
+}
+
+.lineinfo {
+    width: 100%;
+    padding: 10px;
+}
+
+.labelinfo {
+    width: 40%;
+}
+
+.detailInfo {
+    width: 60%;
+}

@@ -1,5 +1,5 @@
 /**
- * Created by liudong on 17-7-1.
+ * Created by beadhouse on 17-7-1.
  */
 function displayCarouseldatas() {
 
@@ -28,7 +28,7 @@ function displayBeadhouseInfo(datas) {
             var newNode = "<div class='col-lg-4' id='beadhouse" + data['id'] + "'>" +
                 "<img src='" + data['imageUrl'] + "'>" +
                 "<div ><span>名称：</span><span>" + data['fullName'] + "</span></div>" +
-                "<div ><span>简介：</span><span>" + data['briefDescription'] + "</span></div></div>";
+                "<div ><span>简介：</span><span class='descripitionoverflow'>" + data['briefDescription'] + "</span></div></div>";
             node += newNode;
         } catch (e) {
             console.log(e);

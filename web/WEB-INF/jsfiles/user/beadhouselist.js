@@ -1,5 +1,5 @@
 /**
- * Created by liudong on 17-7-2.
+ * Created by beadhouse on 17-7-2.
  */
 function displayBeadhouseInfo(datas) {
     var node = "";

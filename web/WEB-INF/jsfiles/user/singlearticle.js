@@ -1,5 +1,5 @@
 /**
- * Created by liudong on 17-7-9.
+ * Created by beadhouse on 17-7-9.
  */
 function displayArticle(article) {
     $("#article_title").html("<h1>" + article['title'] + "</h1>");

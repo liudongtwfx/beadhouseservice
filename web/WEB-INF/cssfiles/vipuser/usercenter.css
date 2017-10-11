@@ -49,7 +49,7 @@ div[id^=wrong] {
 }
 
 #sidebar {
-    left: 300px;
+    left: 200px;
 }
 
 .data_area {
@@ -63,4 +63,13 @@ div[id^=wrong] {
 
 .table_area {
     width: 55%;
+}
+
+#beadhouse_recommend_area {
+    width: 600px;
+}
+
+#beadhouse_recommend_area img {
+    width: 150px;
+    height: 120px;
 }

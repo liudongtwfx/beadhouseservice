@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <title>养老服务中心首页</title>
+    <link rel="stylesheet" href="../../cssfiles/admin/layout.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../cssfiles/premium.css">
+    <link rel="stylesheet" href="../../cssfiles/fileinput/theme.css">
+    <link rel="stylesheet" href="../../cssfiles/font-awesome/css/font-awesome.css">
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen"/>
+    <![endif]-->
+    <script src="../../jsfiles/jquery-3.1.1.js" type="text/javascript"></script>
+    <script src="../../bootstrap/js/bootstrap.js" type="text/javascript"></script>
+    <script src="../../jsfiles/admin/hideshow.js" type="text/javascript"></script>
+    <link href="../../cssfiles/fileinput/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="../../cssfiles/fileinput/theme.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="../../jsfiles/admin/common.js"></script>
+    <script type="application/javascript">
+        adminAuthority();
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //When page loads...
+            $(".tab_content").hide(); //Hide all content
+            $("ul.tabs li:first").addClass("active").show(); //Activate first tab
+            $(".tab_content:first").show(); //Show first tab content
+
+            //On Click Event
+            $("ul.tabs li").click(function () {
+
+                $("ul.tabs li").removeClass("active"); //Remove any "active" class
+                $(this).addClass("active"); //Add "active" class to selected tab
+                $(".tab_content").hide(); //Hide all tab content
+
+                var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+                $(activeTab).fadeIn(); //Fade in the active ID content
+                return false;
+            });
+
+        });
+    </script>
+</head>
+
+
+<body class="theme-green">
+
+<header id="header">
+    <hgroup>
+        <h1 class="site_title"><a href="index.html">养老服务中心管理平台</a></h1>
+        <h2 class="section_title">首页</h2>
+    </hgroup>
+</header> <!-- end of header bar -->
+
+<section id="secondary_bar">
+    <div class="user">
+        <p id="user_name"></p>
+        <!-- <a class="logout_user" href="#" title="Logout">Logout</a> -->
+    </div>
+</section><!-- end of secondary bar -->
+
+<div id="side"></div>
+<script type="application/javascript">
+    $("#side").load("../../views/admin/commenside.html")
+</script>
+
+<section id="main">
+    <link rel="stylesheet" href="../../cssfiles/admin/addleisuregroup.css">
+    <link rel="stylesheet" href="../../cssfiles/admin/articleforelderadd.css">
+    <div class="header inner_content">
+        <h1 class="page-title">养老服务中心后台管理</h1>
+        <ul class="breadcrumb">
+            <li>休闲团管理</li>
+            <li class="active">添加休闲团</li>
+        </ul>
+    </div>
+    <div class="inner_content tab_content" id="content">
+        <div class="main-group">
+            <label for="leisuregroup_title">标题：</label>
+            <input type="text" id="leisuregroup_title">
+        </div>
+        <div class="main-group">
+            <label for="leisuregroup_details">详情介绍：</label>
+            <textarea id="leisuregroup_details"></textarea>
+        </div>
+        <div id="leisure_group_area">
+            <div style="text-align: center;">
+                <!-- 图片选择框 -->
+                <form enctype="multipart/form-data">
+                    <input id="kv-explorer" type="file" multiple><br>
+                    <button type="submit" class="btn btn-primary">提交图片</button>
+                    <button type="reset" class="btn btn-default">重置</button>
+                </form>
+            </div>
+        </div>
+        <div class="main-group">
+            <button value="提交" onclick="addLeisureGroup()" class="btn btn-success" id="submit">提交</button>
+        </div>
+    </div>
+</section>
+</body>
+<script src="../../bootstrap/js/bootstrap.js" type="text/javascript"></script>
+<script src="../../jsfiles/fileinput/js/plugins/sortable.js" type="text/javascript"></script>
+<script src="../../jsfiles/fileinput/js/fileinput.js" type="text/javascript"></script>
+<script src="../../jsfiles/fileinput/js/locales/zh.js" type="text/javascript"></script>
+<script src="../../jsfiles/fileinput/theme.js" type="text/javascript"></script>
+<script src="../../jsfiles/admin/leisuregroupadd.js" type="application/javascript"></script>
+</html>

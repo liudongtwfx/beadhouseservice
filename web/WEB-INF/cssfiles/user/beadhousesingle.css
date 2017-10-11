@@ -22,6 +22,8 @@
 .base_line {
     margin: 5px;
     font-kerning: auto;
+    text-wrap: normal;
+    width: 70%;
 }
 
 #map_area {

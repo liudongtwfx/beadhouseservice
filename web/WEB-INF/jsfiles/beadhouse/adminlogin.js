@@ -1,5 +1,5 @@
 /**
- * Created by liudong on 2017/1/18.
+ * Created by beadhouse on 2017/1/18.
  */
 function authenticLogin(url) {
     var username = new String($('#userName').val());

@@ -1,6 +1,6 @@
 package com.beadhouse.DAO.BeadHouse;
 
-import com.beadhouse.model.Beadhouse.BeadhouseElderCheckin;
+import com.beadhouse.model.beadhouse.BeadhouseElderCheckin;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

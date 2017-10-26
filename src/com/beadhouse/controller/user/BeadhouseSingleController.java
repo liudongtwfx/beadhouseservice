@@ -2,7 +2,7 @@ package com.beadhouse.controller.user;
 
 import com.beadhouse.System.LogType;
 import com.beadhouse.business.beadhousebusiness.BeadhouseSinglePage;
-import com.beadhouse.model.Beadhouse.BeadhouseImageManage;
+import com.beadhouse.model.beadhouse.BeadhouseImageManage;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

@@ -1,6 +1,6 @@
 package com.beadhouse.DAO.BeadHouse;
 
-import com.beadhouse.model.Beadhouse.BeadhouseInfo;
+import com.beadhouse.model.beadhouse.BeadhouseInfo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

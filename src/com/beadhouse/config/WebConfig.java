@@ -31,7 +31,6 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     }
 
     public WebConfig() {
-        System.out.println("======webconfig initialing=======" + System.currentTimeMillis());
     }
 
     @Bean

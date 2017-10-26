@@ -65,7 +65,7 @@
         </RollingRandomAccessFile>
         <RollingRandomAccessFile name="kafka"
                                  immediateFlush="true" fileName="${LOG_HOME}/kafka.log"
-                                 filePattern="${LOG_HOME}/exception.log.%d{yyyy-MM-dd}.log.gz">
+                                 filePattern="${LOG_HOME}/kafka.log.%d{yyyy-MM-dd}.log.gz">
             <PatternLayout>
                 <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M -- %msg%xEx%n</pattern>
             </PatternLayout>
@@ -76,7 +76,7 @@
 
         <RollingRandomAccessFile name="es"
                                  immediateFlush="true" fileName="${LOG_HOME}/es.log"
-                                 filePattern="${LOG_HOME}/exception.log.%d{yyyy-MM-dd}.log.gz">
+                                 filePattern="${LOG_HOME}/es.log.%d{yyyy-MM-dd}.log.gz">
             <PatternLayout>
                 <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M -- %msg%xEx%n</pattern>
             </PatternLayout>
@@ -87,7 +87,7 @@
 
         <RollingRandomAccessFile name="beadhousebrowse"
                                  immediateFlush="true" fileName="${LOG_HOME}/beadhousebrowse.log"
-                                 filePattern="${LOG_HOME}/exception.log.%d{yyyy-MM-dd}.log.gz">
+                                 filePattern="${LOG_HOME}/beadhousebrowse.log.%d{yyyy-MM-dd}.log.gz">
             <PatternLayout>
                 <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}  %msg%xEx%n</pattern>
             </PatternLayout>
@@ -98,7 +98,18 @@
 
         <RollingRandomAccessFile name="articlebrowse"
                                  immediateFlush="true" fileName="${LOG_HOME}/articlebrowse.log"
-                                 filePattern="${LOG_HOME}/exception.log.%d{yyyy-MM-dd}.log.gz">
+                                 filePattern="${LOG_HOME}/articlebrowse.log.%d{yyyy-MM-dd}.log.gz">
+            <PatternLayout>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}  %msg%xEx%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingRandomAccessFile>
+
+        <RollingRandomAccessFile name="debuginfo"
+                                 immediateFlush="true" fileName="${LOG_HOME}/debug.log"
+                                 filePattern="${LOG_HOME}/debuginfo.log.%d{yyyy-MM-dd}.log.gz">
             <PatternLayout>
                 <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}  %msg%xEx%n</pattern>
             </PatternLayout>
@@ -179,6 +190,9 @@
         </logger>
         <logger name="articlebrowse" level="trace" includeLocation="true" additivity="false">
             <appender-ref ref="articlebrowse"/>
+        </logger>
+        <logger name="debuginfo" level="trace" includeLocation="true" additivity="false">
+            <appender-ref ref="debuginfo"/>
         </logger>
     </Loggers>
 

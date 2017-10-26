@@ -3,8 +3,8 @@ package com.beadhouse.DAO.Generiac;
 import com.beadhouse.DAO.Admin.AdminInfoRepostory;
 import com.beadhouse.DAO.BeadHouse.BeadhouseAdministratorRepository;
 import com.beadhouse.DAO.User.VipUser.VipUserRepository;
-import com.beadhouse.model.Beadhouse.BeadhouseAdministrator;
-import com.beadhouse.model.User.VipUser;
+import com.beadhouse.model.beadhouse.BeadhouseAdministrator;
+import com.beadhouse.model.user.VipUser;
 import com.beadhouse.model.admin.AdminInfo;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -53,7 +53,7 @@ public class DefaultAuthenticationService {
             log.warn("Authentication failed for user {}.", userName);
             return null;
         }
-        log.debug("User {} successfully authenticated.", userName);
+        log.debug("user {} successfully authenticated.", userName);
         return vipUser;
     }
 
@@ -69,7 +69,7 @@ public class DefaultAuthenticationService {
             log.warn("Authentication failed for user {}.", userName);
             return null;
         }
-        log.debug("User {} successfully authenticated.", userName);
+        log.debug("user {} successfully authenticated.", userName);
         return administrator;
     }
 
@@ -85,7 +85,7 @@ public class DefaultAuthenticationService {
             log.warn("Authentication failed for user {}.", userName);
             return null;
         }
-        log.debug("User {} successfully authenticated.", userName);
+        log.debug("user {} successfully authenticated.", userName);
         return admin;
     }
 

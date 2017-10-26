@@ -1,7 +1,7 @@
 //package com.liudong.DAO.User.VipUser;
 //
 //import com.beadhouse.exception.sqlexception.NotOnlyOneResultException;
-//import com.beadhouse.model.User.VipUser;
+//import com.beadhouse.model.user.VipUser;
 //import org.springframework.stereotype.Repository;
 //
 //import javax.persistence.EntityManager;

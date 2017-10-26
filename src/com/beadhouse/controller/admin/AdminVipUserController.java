@@ -1,7 +1,7 @@
 package com.beadhouse.controller.admin;
 
 import com.beadhouse.DAO.User.VipUser.VipUserRepository;
-import com.beadhouse.model.User.VipUser;
+import com.beadhouse.model.user.VipUser;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

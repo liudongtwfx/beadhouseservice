@@ -39,7 +39,7 @@ public class FunctionTimeAspect {
         } finally {
             long end = System.currentTimeMillis();
             System.out.println(object);
-            logger.info(jp.getTarget() + " " + jp.getSignature().getName() + " " + String.valueOf(end - start));
+            logger.info(jp.getTarget().getClass().getName() + " " + jp.getSignature().getName() + " " + String.valueOf(end - start));
         }
         return null;
     }

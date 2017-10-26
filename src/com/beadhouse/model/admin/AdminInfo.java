@@ -19,6 +19,7 @@ public class AdminInfo {
     private String username;
     private String password;
     private Date addTime;
+    private String department;
 
     @Id
     public int getId() {
@@ -83,5 +84,12 @@ public class AdminInfo {
 
     public void setAddTime(Date addTime) {
         this.addTime = addTime;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+    public void setDepartment(String department) {
+        this.department = department;
     }
 }

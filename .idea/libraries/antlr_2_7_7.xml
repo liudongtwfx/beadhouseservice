@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="antlr-2.7.7">
-    <CLASSES />
-    <JAVADOC />
-    <SOURCES>
-      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-data-commons-1.12.5.RELEASE.jar!/" />
-    </SOURCES>
-  </library>
-</component>

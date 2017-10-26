@@ -1,8 +1,8 @@
 package com.beadhouse.model.admin;
 
-import com.beadhouse.System.LeisureGroupStatus;
 import lombok.Data;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -14,10 +14,14 @@ import java.util.Date;
 public class LeisureGroup {
     @Id
     private int id;
+    @Column(name = "maxpeoplecount")
+    private int maxPeopleCount;
     private String title;
     private String details;
     private Date addtime;
-    private LeisureGroupStatus groupstatus;
-    private int numberofpeople;
+    @Column(name = "groupstatus")
+    private String groupStatus;
+    @Column(name = "numberofpeople")
+    private int numberOfPeople;
     private Date updatetime;
 }

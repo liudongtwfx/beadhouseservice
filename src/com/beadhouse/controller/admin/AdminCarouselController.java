@@ -2,7 +2,7 @@ package com.beadhouse.controller.admin;
 
 import com.beadhouse.DAO.Common.CarouselRepository;
 import com.beadhouse.business.filehandle.FileHandler;
-import com.beadhouse.model.Common.Carousel;
+import com.beadhouse.model.common.Carousel;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Controller;

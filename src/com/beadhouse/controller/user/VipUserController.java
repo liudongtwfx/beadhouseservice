@@ -2,7 +2,7 @@ package com.beadhouse.controller.user;
 
 import com.beadhouse.DAO.Generiac.DefaultAuthenticationService;
 import com.beadhouse.DAO.User.VipUser.VipUserRepository;
-import com.beadhouse.model.User.VipUser;
+import com.beadhouse.model.user.VipUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

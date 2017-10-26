@@ -1,6 +1,6 @@
 package com.beadhouse.DAO.User.ElderPeople;
 
-import com.beadhouse.model.User.ElderPeople;
+import com.beadhouse.model.user.ElderPeople;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;

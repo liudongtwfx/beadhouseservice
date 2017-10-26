@@ -2,7 +2,7 @@ package com.beadhouse.controller.beadhouse;
 
 import com.beadhouse.DAO.BeadHouse.BeadhouseImageManageRepository;
 import com.beadhouse.business.filehandle.FileHandler;
-import com.beadhouse.model.Beadhouse.BeadhouseImageManage;
+import com.beadhouse.model.beadhouse.BeadhouseImageManage;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

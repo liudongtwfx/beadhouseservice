@@ -135,5 +135,6 @@ public class AdminIndexPage {
         admin.setChineseName(request.getParameter("realName"));
         admin.setEmployeeId(request.getParameter("employeeId"));
         admin.setEmailAddress(request.getParameter("emailAddress"));
+        admin.setDepartment(request.getParameter("department"));
     }
 }

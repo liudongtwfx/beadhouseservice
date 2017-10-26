@@ -1,6 +1,6 @@
 package com.beadhouse.DAO.User.ElderPeople;
 
-import com.beadhouse.model.User.ElderPeople;
+import com.beadhouse.model.user.ElderPeople;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

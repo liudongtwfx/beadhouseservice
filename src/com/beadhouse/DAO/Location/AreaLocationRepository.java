@@ -1,6 +1,6 @@
 package com.beadhouse.DAO.Location;
 
-import com.beadhouse.model.Location.Area;
+import com.beadhouse.model.location.Area;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

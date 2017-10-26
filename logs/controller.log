@@ -1,5 +1,1 @@
-2017-09-04 20:12:41.049 DEBUG com.beadhouse.controller.admin.AdminCarouselController 60 getUserIndexCarousel -- /admin/carousel/userIndexPage/list
-2017-09-04 20:12:46.675 DEBUG com.beadhouse.controller.admin.AdminCarouselController 36 userIndexCarousel -- http://localhost:8080/admin/carousel/userIndexPage/upload
-2017-09-04 20:12:46.700 DEBUG com.beadhouse.controller.admin.AdminCarouselController 76 handleImageRequest -- /home/liudong/ideaProject/beadhouseservice/web/WEB-INF/imagefiles/carousel/userIndexPage
-2017-09-04 20:12:46.777 DEBUG com.beadhouse.controller.admin.AdminCarouselController 47 userIndexCarousel -- Carousel(id=0, path=oj33etze9d.jpg, description=, location=userIndexPage)
-2017-09-04 20:12:48.909 DEBUG com.beadhouse.controller.admin.AdminCarouselController 60 getUserIndexCarousel -- /admin/carousel/userIndexPage/list
+2017-10-11 15:41:43.544 DEBUG com.beadhouse.controller.admin.AdminCarouselController 60 getUserIndexCarousel -- /admin/carousel/userIndexPage/list

@@ -43,19 +43,19 @@ Date.prototype.format = function (format) {
 };
 
 //resize of div
-(function($, h, c) {
+(function ($, h, c) {
     var a = $([]),
-    e = $.resize = $.extend($.resize, {}),
-    i,
-    k = "setTimeout",
-    j = "resize",
-    d = j + "-special-event",
-    b = "delay",
-    f = "throttleWindow";
+        e = $.resize = $.extend($.resize, {}),
+        i,
+        k = "setTimeout",
+        j = "resize",
+        d = j + "-special-event",
+        b = "delay",
+        f = "throttleWindow";
     e[b] = 250;
     e[f] = true;
     $.event.special[j] = {
-        setup: function() {
+        setup: function () {
             if (!e[f] && this[k]) {
                 return false;
             }
@@ -69,7 +69,7 @@ Date.prototype.format = function (format) {
                 g();
             }
         },
-        teardown: function() {
+        teardown: function () {
             if (!e[f] && this[k]) {
                 return false;
             }
@@ -80,18 +80,20 @@ Date.prototype.format = function (format) {
                 clearTimeout(i);
             }
         },
-        add: function(l) {
+        add: function (l) {
             if (!e[f] && this[k]) {
                 return false;
             }
             var n;
+
             function m(s, o, p) {
                 var q = $(this),
-                r = $.data(this, d);
-                r.w = o !== c ? o: q.width();
-                r.h = p !== c ? p: q.height();
+                    r = $.data(this, d);
+                r.w = o !== c ? o : q.width();
+                r.h = p !== c ? p : q.height();
                 n.apply(this, arguments);
             }
+
             if ($.isFunction(l)) {
                 n = l;
                 return m;
@@ -101,19 +103,36 @@ Date.prototype.format = function (format) {
             }
         }
     };
+
     function g() {
-        i = h[k](function() {
-            a.each(function() {
-                var n = $(this),
-                m = n.width(),
-                l = n.height(),
-                o = $.data(this, d);
-                if (m !== o.w || l !== o.h) {
-                    n.trigger(j, [o.w = m, o.h = l]);
-                }
-            });
-            g();
-        },
-        e[b]);
+        i = h[k](function () {
+                a.each(function () {
+                    var n = $(this),
+                        m = n.width(),
+                        l = n.height(),
+                        o = $.data(this, d);
+                    if (m !== o.w || l !== o.h) {
+                        n.trigger(j, [o.w = m, o.h = l]);
+                    }
+                });
+                g();
+            },
+            e[b]);
     }
 })(jQuery, this);
+
+
+var getNotification = {
+    url: "/admin/personal/getnotification",
+    dataType: 'json',
+    type: 'get',
+    success: function (res) {
+        console.log(res)
+        handleNotifications(res);
+    }
+};
+
+function handleNotifications(res) {
+    var node = '(<span style="color: red">' + res.length + '</span>)';
+    $(".notification_nums").html(node);
+}

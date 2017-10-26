@@ -2,7 +2,7 @@ package com.beadhouse.controller.admin;
 
 import com.beadhouse.DAO.User.ElderPeople.ElderPeopleRepository;
 import com.beadhouse.business.beadhousebusiness.BeadhouseAdminBusiness;
-import com.beadhouse.model.User.ElderPeople;
+import com.beadhouse.model.user.ElderPeople;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

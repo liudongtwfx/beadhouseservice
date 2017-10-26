@@ -128,6 +128,7 @@ function computePasswordStrongness(data) {
     }
     return "strong";
 }
+
 $("#repassword").focus(function () {
     $('#repassword').text("请再次输入密码");
 });
@@ -206,6 +207,7 @@ $('#telephoneNumber').blur(function () {
         }
     );
 });
+
 function canBeRegister() {
     if (usernameCanBeUsed && passwordCanBeUsed && emailAddressCanBeUsed && telephoneNumberCanBeUsed) {
         if (!$("#cb").is(':checked')) {
@@ -220,7 +222,8 @@ function canBeRegister() {
                 userName: $("#adminUserName").val(),
                 password: $("#password").val(),
                 emailAddress: $("#emailAddress").val(),
-                telephoneNumber: $("#telephoneNumber").val()
+                telephoneNumber: $("#telephoneNumber").val(),
+                department: $("#adminDepartment").val()
             },
             function (data) {
                 if (data == true) {

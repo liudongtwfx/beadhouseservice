@@ -2,8 +2,8 @@ package com.beadhouse.business.SortAndGetTop;
 
 import com.beadhouse.DAO.BeadHouse.BeadhouseImageManageRepository;
 import com.beadhouse.DAO.BeadHouse.BeadhouseInfoRepository;
-import com.beadhouse.model.Beadhouse.BeadhouseImageManage;
-import com.beadhouse.model.Beadhouse.BeadhouseInfo;
+import com.beadhouse.model.beadhouse.BeadhouseImageManage;
+import com.beadhouse.model.beadhouse.BeadhouseInfo;
 import lombok.Data;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

@@ -5,7 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 public enum LogType {
     KAFKA("kafka"), ES("es"), BEADHOUSEBROWSE("beadhousebrowse"), ARTICLEBROWSE("articlebrowse"),
-    EXCETPION("exception");
+    EXCETPION("exception"), DEBUGINFO("debuginfo");
     private Logger LOGGER;
 
     LogType(String type) {

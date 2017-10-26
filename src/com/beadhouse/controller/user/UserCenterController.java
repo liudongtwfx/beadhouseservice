@@ -6,8 +6,8 @@ import com.beadhouse.business.beadhousebusiness.ArticleForElderBusiness.ArticleR
 import com.beadhouse.business.beadhousebusiness.BeadhouseAdminBusiness;
 import com.beadhouse.business.beadhousebusiness.BeadhouseElderInfoBusiness;
 import com.beadhouse.business.beadhousebusiness.BeadhouseRecommend;
-import com.beadhouse.model.User.ElderPeople;
-import com.beadhouse.model.User.VipUser;
+import com.beadhouse.model.user.ElderPeople;
+import com.beadhouse.model.user.VipUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

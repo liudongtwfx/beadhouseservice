@@ -1,6 +1,6 @@
 //package com.liudong.DAO.User.VipUser;
 //
-//import com.beadhouse.model.User.VipUser;
+//import com.beadhouse.model.user.VipUser;
 //import org.springframework.stereotype.Service;
 //import org.springframework.transaction.annotation.Transactional;
 //

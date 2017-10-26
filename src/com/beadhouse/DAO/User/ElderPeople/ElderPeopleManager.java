@@ -1,6 +1,6 @@
 //package com.liudong.DAO.User.ElderPeople;
 //
-//import com.beadhouse.model.User.ElderPeople;
+//import com.beadhouse.model.user.ElderPeople;
 //import org.springframework.stereotype.Service;
 //import org.springframework.transaction.annotation.Transactional;
 //

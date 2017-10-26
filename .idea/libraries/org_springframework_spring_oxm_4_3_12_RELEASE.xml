@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="org.springframework:spring-oxm:4.3.12.RELEASE" type="repository">
+    <properties maven-id="org.springframework:spring-oxm:4.3.12.RELEASE" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-oxm-4.3.12.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-beans-4.3.12.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-core-4.3.12.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/commons-logging-1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-oxm-4.3.12.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-beans-4.3.12.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-core-4.3.12.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/commons-logging-1.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-oxm-4.3.12.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-beans-4.3.12.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-core-4.3.12.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/commons-logging-1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

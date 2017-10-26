@@ -2,8 +2,9 @@ package com.beadhouse.controller.admin;
 
 import com.beadhouse.DAO.BeadHouse.BeadhouseImageManageRepository;
 import com.beadhouse.DAO.BeadHouse.BeadhouseInfoRepository;
-import com.beadhouse.model.Beadhouse.BeadhouseImageManage;
-import com.beadhouse.model.Beadhouse.BeadhouseInfo;
+import com.beadhouse.model.beadhouse.BeadhouseImageManage;
+import com.beadhouse.model.beadhouse.BeadhouseInfo;
+import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -26,6 +27,7 @@ import java.util.Map;
 
 @Controller
 @RequestMapping(value = "/admin/beadhouse")
+@RequiresAuthentication
 public class AdminBeadhouseController {
     @Inject
     BeadhouseInfoRepository baseinfo;

@@ -4,9 +4,9 @@ import com.beadhouse.DAO.Location.AreaLocationRepository;
 import com.beadhouse.DAO.Location.CityLocationRepository;
 import com.beadhouse.DAO.Location.ProvinceRepository;
 import com.beadhouse.DAO.User.VipUser.VipUserRepository;
-import com.beadhouse.model.Location.Area;
-import com.beadhouse.model.Location.City;
-import com.beadhouse.model.Location.Province;
+import com.beadhouse.model.location.Area;
+import com.beadhouse.model.location.City;
+import com.beadhouse.model.location.Province;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

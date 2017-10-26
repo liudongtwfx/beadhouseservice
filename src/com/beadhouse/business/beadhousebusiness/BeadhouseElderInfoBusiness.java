@@ -2,8 +2,8 @@ package com.beadhouse.business.beadhousebusiness;
 
 import com.beadhouse.DAO.BeadHouse.*;
 import com.beadhouse.DAO.User.ElderPeople.ElderPeopleRepository;
-import com.beadhouse.model.Beadhouse.BeadhouseElderCheckin;
-import com.beadhouse.model.User.ElderPeople;
+import com.beadhouse.model.beadhouse.BeadhouseElderCheckin;
+import com.beadhouse.model.user.ElderPeople;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

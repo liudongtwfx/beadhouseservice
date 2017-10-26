@@ -1,6 +1,6 @@
 package com.beadhouse.DAO.User.VipUser;
 
-import com.beadhouse.model.User.VipUser;
+import com.beadhouse.model.user.VipUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

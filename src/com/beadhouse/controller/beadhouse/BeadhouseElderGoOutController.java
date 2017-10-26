@@ -3,7 +3,7 @@ package com.beadhouse.controller.beadhouse;
 import com.beadhouse.DAO.BeadHouse.BeadhouseAdministratorRepository;
 import com.beadhouse.DAO.BeadHouse.BeadhouseElderGoOutRepository;
 import com.beadhouse.DAO.User.ElderPeople.ElderPeopleRepository;
-import com.beadhouse.model.Beadhouse.BeadhouseElderGoOut;
+import com.beadhouse.model.beadhouse.BeadhouseElderGoOut;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

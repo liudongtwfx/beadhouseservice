@@ -1,26 +1,2 @@
-2017-09-07 19:19:42.066 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 19:20:13.650 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 19:34:34.969 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 19:34:51.421 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 19:34:59.699 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 19:41:05.540 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 19:41:20.784 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 19:41:27.398 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 19:42:15.553 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 19:44:33.450 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 20:32:11.007 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 20:32:28.853 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 20:32:38.172 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 20:32:49.824 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 20:32:54.255 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 20:35:01.423 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 20:35:16.303 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 20:35:22.516 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 22:13:29.494 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 22:16:10.965 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 22:19:17.351 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 22:21:22.176 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 22:21:49.122 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 22:24:03.553 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 22:26:01.192 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
-2017-09-07 22:28:04.218 ERROR com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
+2017-10-11 15:42:16.909 ERROR com.beadhouse.business.beadhousebusiness.LeisuregroupBusiness.LeisuregroupBusiness 56 addLeisureGroup -- org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2017-10-11 15:45:01.117 ERROR com.beadhouse.business.beadhousebusiness.LeisuregroupBusiness.LeisuregroupBusiness 56 addLeisureGroup -- org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet

@@ -1,6 +1,6 @@
 package com.beadhouse.DAO.Location;
 
-import com.beadhouse.model.Location.Province;
+import com.beadhouse.model.location.Province;
 import org.springframework.data.repository.CrudRepository;
 
 /**

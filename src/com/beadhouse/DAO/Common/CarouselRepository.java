@@ -1,6 +1,6 @@
 package com.beadhouse.DAO.Common;
 
-import com.beadhouse.model.Common.Carousel;
+import com.beadhouse.model.common.Carousel;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

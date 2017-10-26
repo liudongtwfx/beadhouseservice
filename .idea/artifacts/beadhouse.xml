@@ -1,0 +1,51 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="beadhouse">
+    <output-path>$PROJECT_DIR$/out/artifacts/beadhouse</output-path>
+    <root id="archive" name="beadhouse.war">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="FinalProject" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Hibernate 5.2.3-5.2.3" />
+          <element id="library" level="project" name="JAX-WS-Glassfish / JAX-WS 2.2 RI / Metro 1.X / JWSDP 2.2" />
+          <element id="library" level="project" name="validation-api-1.1.0.Final" />
+          <element id="library" level="project" name="jackson-databind-2.8.5" />
+          <element id="library" level="project" name="jackson-core-2.8.5" />
+          <element id="library" level="project" name="net.sf.ehcache:ehcache-core:2.6.6" />
+          <element id="library" level="project" name="redis.clients:jedis:2.9.0" />
+          <element id="library" level="project" name="slf4j-api-1.7.24" />
+          <element id="library" level="project" name="slf4j-log4j12-1.7.24" />
+          <element id="library" level="project" name="com.springsource.org.apache.log4j-1.2.15" />
+          <element id="library" level="project" name="commons-fileupload-1.3.2" />
+          <element id="library" level="project" name="org.apache.commons:commons-io:1.3.2" />
+          <element id="library" level="project" name="junit-4.12" />
+          <element id="library" level="project" name="org.hibernate:hibernate-validator:5.4.1.Final" />
+          <element id="library" level="project" name="jackson-annotations-2.8.0" />
+          <element id="library" level="project" name="org.projectlombok:lombok:1.16.4" />
+          <element id="library" level="project" name="org.hamcrest:hamcrest-core:1.3" />
+          <element id="library" level="project" name="org.aspectj:aspectjweaver:1.8.10" />
+          <element id="library" level="project" name="javax.servlet:javax.servlet-api:4.0.0-b07" />
+          <element id="library" level="project" name="javax.security.auth.message:javax.security.auth.message-api:1.1" />
+          <element id="library" level="project" name="org.elasticsearch.client:transport:5.5.1" />
+          <element id="library" level="project" name="org.apache.kafka:kafka-clients:0.10.0.1" />
+          <element id="library" level="project" name="mysql:mysql-connector-java:6.0.6" />
+          <element id="library" level="project" name="org.apache.shiro:shiro-spring:1.3.1" />
+          <element id="library" level="project" name="org.apache.shiro:shiro-ehcache:1.3.1" />
+          <element id="library" level="project" name="org.apache.shiro:shiro-quartz:1.3.1" />
+          <element id="library" level="project" name="org.springframework.data:spring-data-jpa:1.3.4.RELEASE" />
+          <element id="library" level="project" name="Spring MVC-4.3.12.RELEASE" />
+          <element id="library" level="project" name="org.springframework:spring-context:4.3.12.RELEASE" />
+          <element id="library" level="project" name="org.springframework:spring-tx:4.3.12.RELEASE" />
+          <element id="library" level="project" name="org.springframework:spring-orm:4.3.12.RELEASE" />
+          <element id="library" level="project" name="org.springframework:spring-oxm:4.3.12.RELEASE" />
+          <element id="library" level="project" name="Spring Security-3.2.5" />
+          <element id="library" level="project" name="org.springframework:spring-test:4.3.12.RELEASE" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.8.2" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.8.2" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="FinalProject/web/Web" />
+    </root>
+  </artifact>
+</component>

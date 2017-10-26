@@ -1,6 +1,6 @@
 package com.beadhouse.DAO.BeadHouse;
 
-import com.beadhouse.model.Beadhouse.BeadhouseAdministrator;
+import com.beadhouse.model.beadhouse.BeadhouseAdministrator;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

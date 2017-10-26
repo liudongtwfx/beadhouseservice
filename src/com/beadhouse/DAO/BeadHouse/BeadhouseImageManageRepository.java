@@ -1,6 +1,6 @@
 package com.beadhouse.DAO.BeadHouse;
 
-import com.beadhouse.model.Beadhouse.BeadhouseImageManage;
+import com.beadhouse.model.beadhouse.BeadhouseImageManage;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

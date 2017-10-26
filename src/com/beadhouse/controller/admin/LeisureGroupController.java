@@ -1,6 +1,7 @@
 package com.beadhouse.controller.admin;
 
 import com.beadhouse.business.beadhousebusiness.LeisuregroupBusiness.LeisuregroupBusiness;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @Controller
 @RequestMapping(value = "/admin/leisuregroup")
+@RequiresRoles({"admin_leisuregroup", "admin_root"})
 public class LeisureGroupController {
     @Inject
     LeisuregroupBusiness leisuregroupBusiness;
@@ -18,12 +20,12 @@ public class LeisureGroupController {
     @RequestMapping(value = "add", method = RequestMethod.POST)
     @ResponseBody
     public Object addLeisureGroup(HttpServletRequest request) {
-        return null;
+        return this.leisuregroupBusiness.addLeisureGroup(request);
     }
 
     @RequestMapping(value = "add", method = RequestMethod.GET)
     public String addLeisureGroupPage(HttpServletRequest request) {
-        return "admin/addleisuregroup";
+        return "admin/leisuregroupadd";
     }
 
     @RequestMapping(value = "imagesupload", method = RequestMethod.POST)

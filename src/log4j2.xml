@@ -89,7 +89,7 @@
                                  immediateFlush="true" fileName="${LOG_HOME}/beadhousebrowse.log"
                                  filePattern="${LOG_HOME}/beadhousebrowse.log.%d{yyyy-MM-dd}.log.gz">
             <PatternLayout>
-                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}  %msg%xEx%n</pattern>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %msg%xEx%n</pattern>
             </PatternLayout>
             <Policies>
                 <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
@@ -100,7 +100,7 @@
                                  immediateFlush="true" fileName="${LOG_HOME}/articlebrowse.log"
                                  filePattern="${LOG_HOME}/articlebrowse.log.%d{yyyy-MM-dd}.log.gz">
             <PatternLayout>
-                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}  %msg%xEx%n</pattern>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %msg%xEx%n</pattern>
             </PatternLayout>
             <Policies>
                 <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
@@ -111,7 +111,7 @@
                                  immediateFlush="true" fileName="${LOG_HOME}/debug.log"
                                  filePattern="${LOG_HOME}/debuginfo.log.%d{yyyy-MM-dd}.log.gz">
             <PatternLayout>
-                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}  %msg%xEx%n</pattern>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %msg%xEx%n</pattern>
             </PatternLayout>
             <Policies>
                 <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
@@ -161,7 +161,8 @@
             <appender-ref ref="service_controller_log"/>
         </logger>
 
-        <logger name="com.beadhouse.System.SystemLogAspect" level="trace" includeLocation="true" additivity="false">
+        <logger name="main.java.com.beadhouse.System.SystemLogAspect" level="trace" includeLocation="true"
+                additivity="false">
             <appender-ref ref="service_appender"/>
         </logger>
         <logger name="com.beadhouse.test" level="trace" includeLocation="true" additivity="false">

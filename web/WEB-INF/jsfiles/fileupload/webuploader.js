@@ -7320,7 +7320,7 @@
     
         /**
          * Releases memory used by the incremental buffer and other aditional
-         * resources. If you plan to use the instance again, use reset instead.
+         * main.resources. If you plan to use the instance again, use reset instead.
          */
         SparkMD5.prototype.destroy = function () {
             delete this._state;
@@ -7446,7 +7446,7 @@
     
         /**
          * Releases memory used by the incremental buffer and other aditional
-         * resources. If you plan to use the instance again, use reset instead.
+         * main.resources. If you plan to use the instance again, use reset instead.
          */
         SparkMD5.ArrayBuffer.prototype.destroy = SparkMD5.prototype.destroy;
     

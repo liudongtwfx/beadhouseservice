@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+</head>
+<body>
+<p th:text="'hello!'+${name}">1111</p>
+<input type="text" name="userName" value="James Carrot" th:value="${vipuser.userName}"/>
+<img src="../jpgfiles/beadhouseback.jpg" th:src="@{${path}}" alt="二维码"/>
+<div th:object="${vipuser}">
+    <p>Phonenumber: <span th:text="*{telephoneNumber}">Saturn</span>.</p>
+</div>
+<label for="body">Message body:</label>
+<textarea id="body" name="body" th:inline="text">
+Dear [[${customerName}]],
+
+it is our sincere pleasure to congratulate your in your birthday:
+    Happy birthday [[${customerName}]]!!!
+
+See you soon, [[${customerName}]].
+
+Regards,
+    The Thymeleaf team
+</textarea>
+</body>
+</html>

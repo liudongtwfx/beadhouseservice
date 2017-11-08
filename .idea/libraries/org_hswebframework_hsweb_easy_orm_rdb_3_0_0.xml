@@ -1,0 +1,47 @@
+<component name="libraryTable">
+  <library name="org.hswebframework:hsweb-easy-orm-rdb:3.0.0" type="repository">
+    <properties maven-id="org.hswebframework:hsweb-easy-orm-rdb:3.0.0" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/hsweb-easy-orm-rdb-3.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/hsweb-easy-orm-core-3.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/hsweb-utils-3.0.0-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/joda-time-2.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/hsweb-expands-script-3.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/hsweb-expands-security-3.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/commons-codec-1.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/slf4j-api-1.7.21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/commons-beanutils-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/commons-collections-3.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/fastjson-1.2.28.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/hsweb-easy-orm-rdb-3.0.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/hsweb-easy-orm-core-3.0.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/hsweb-utils-3.0.0-SNAPSHOT-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/joda-time-2.7-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/hsweb-expands-script-3.0.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/hsweb-expands-security-3.0.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/commons-codec-1.10-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/slf4j-api-1.7.21-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/commons-beanutils-1.9.2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/commons-logging-1.1.1-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/commons-collections-3.2.1-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/fastjson-1.2.28-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/hsweb-easy-orm-rdb-3.0.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/hsweb-easy-orm-core-3.0.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/hsweb-utils-3.0.0-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/joda-time-2.7-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/hsweb-expands-script-3.0.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/hsweb-expands-security-3.0.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/commons-codec-1.10-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/slf4j-api-1.7.21-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/commons-beanutils-1.9.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/commons-logging-1.1.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/commons-collections-3.2.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/fastjson-1.2.28-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

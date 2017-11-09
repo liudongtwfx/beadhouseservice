@@ -6,21 +6,23 @@ import org.hswebframework.ezorm.rdb.executor.AbstractJdbcSqlExecutor;
 import org.hswebframework.ezorm.rdb.executor.SqlExecutor;
 import org.hswebframework.ezorm.rdb.meta.RDBColumnMetaData;
 import org.hswebframework.ezorm.rdb.meta.RDBDatabaseMetaData;
+import org.hswebframework.ezorm.rdb.meta.builder.ColumnBuilder;
 import org.hswebframework.ezorm.rdb.meta.builder.TableBuilder;
 import org.hswebframework.ezorm.rdb.render.dialect.MysqlRDBDatabaseMetaData;
 import org.hswebframework.ezorm.rdb.simple.SimpleDatabase;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.JDBCType;
 import java.sql.SQLException;
-import java.util.List;
+import java.util.HashSet;
 import java.util.Properties;
+import java.util.Set;
 
 public final class CreateTableImpl {
-    private RDBDatabaseMetaData metaData;
-    private RDBDatabase database;
+    private final RDBDatabaseMetaData metaData;
+    private final RDBDatabase database;
     private SqlExecutor executor;
-    private Table table;
 
     public CreateTableImpl() {
         try {
@@ -30,7 +32,6 @@ public final class CreateTableImpl {
         }
         metaData = new MysqlRDBDatabaseMetaData();
         database = new SimpleDatabase(metaData, executor);
-        table = new Table();
     }
 
     private void setup() throws Exception {
@@ -38,7 +39,7 @@ public final class CreateTableImpl {
         Properties properties = new Properties();
         properties.setProperty("user", "root");
         properties.setProperty("password", "6820138");
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo?serverTimezone=UTC", properties);
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/test?serverTimezone=UTC", properties);
         executor = new AbstractJdbcSqlExecutor() {
             @Override
             public Connection getConnection() {
@@ -52,32 +53,83 @@ public final class CreateTableImpl {
         };
     }
 
-    public boolean createTableByTable() {
+    public String createTableByTable(Table table) {
+        String messeage = validate(table);
+        if (!"true".equals(messeage)) {
+            return messeage;
+        }
         try {
             TableBuilder builder = database.createOrAlter(table.getTableName());
             for (RDBColumnMetaData column : table.getColumns()) {
-                builder.addColumn().name(column.getName());
+                ColumnBuilder cb = builder.addColumn().name(column.getName());
+                cb = buildType(cb, column);
+                if (table.getPrimaryKeyName().equals(column.getName())) {
+                    cb = cb.primaryKey();
+                }
+                if (column.isNotNull()) {
+                    cb = cb.notNull();
+                }
+                if (inArray(hasLengthType, column.getJdbcType().getName())) {
+                    cb = cb.length(column.getLength());
+                }
+                builder = cb.comment(column.getComment()).commit();
             }
-            return true;
+            builder.commit();
+            return "success";
         } catch (Exception e) {
             LogType.EXCETPION.getLOGGER().error(e);
-            return false;
+            return e.toString();
         }
     }
 
-    public Table getTable() {
-        return table;
+    private String validate(Table table) {
+        Set<String> columnNames = new HashSet<>();
+        for (RDBColumnMetaData metaData : table.getColumns()) {
+            String name = metaData.getName();
+            if (columnNames.contains(name)) {
+                return "有重复字段: " + name;
+            }
+            if (inArray(hasLengthType, metaData.getJdbcType().toString()) && metaData.getLength() <= 0) {
+                return name + ": 请输入有效的长度";
+            }
+            columnNames.add(name);
+        }
+        if (!columnNames.contains(table.getPrimaryKeyName())) {
+            return "请指定主键";
+        }
+        return "true";
     }
 
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        String tableName = table.getTableName();
-        sb.append("table name is: ").append(tableName != null ? tableName : "null").append("\n");
-        sb.append("column size: ").append(table.getColumns().size()).append("\n");
-        for (RDBColumnMetaData column : table.getColumns()) {
-            sb.append("name").append(column.getFullName()).append(", type:").append(column.getJdbcType());
+    private ColumnBuilder buildType(ColumnBuilder cb, RDBColumnMetaData column) {
+        switch (column.getJdbcType()) {
+            case INTEGER:
+                return cb.integer();
+            case VARCHAR:
+                return cb.varchar(column.getLength());
+            case CHAR:
+                return cb.varchar(column.getLength());
+            case TIMESTAMP:
+                return cb.datetime();
+            case TINYINT:
+                return cb.tinyint();
+            case CLOB:
+                return cb.clob();
+            case NUMERIC:
+                return cb.number(column.getLength(), column.getPrecision());
+            default:
+                return cb;
         }
-        return sb.toString();
+    }
+
+    private static String[] hasLengthType = {"VARCHAR", "CHAR"};
+    private static String[] hasPreciseType = {"Double"};
+
+    private boolean inArray(String[] arrays, String s) {
+        for (String ss : arrays) {
+            if (s.equals(ss)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

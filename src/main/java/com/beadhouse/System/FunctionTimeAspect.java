@@ -38,7 +38,6 @@ public class FunctionTimeAspect {
             throwable.printStackTrace();
         } finally {
             long end = System.currentTimeMillis();
-            System.out.println(object);
             logger.info(jp.getTarget().getClass().getName() + " " + jp.getSignature().getName() + " " + String.valueOf(end - start));
         }
         return null;
@@ -53,7 +52,6 @@ public class FunctionTimeAspect {
     public String beforeFuncTime(JoinPoint jp) {
         Object[] objects = jp.getArgs();
         for (Object o : objects) {
-            LogType.DEBUGINFO.getLOGGER().debug(o.getClass().getName());
             if (o instanceof HttpServletRequest) {
                 HttpServletRequest request = (HttpServletRequest) o;
                 if (request.getRequestURL().indexOf("/admin/") != -1) {

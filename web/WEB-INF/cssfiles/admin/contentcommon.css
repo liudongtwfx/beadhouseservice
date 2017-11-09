@@ -1,10 +1,15 @@
-#main {
-    left: 2%;
+#main_div {
+    width: 1200px;
+}
+
+body {
+    min-width: 1400px;
+    background: url("../../jpgfiles/beadhouseback.jpg") repeat-y;
 }
 
 .inner_content {
-    width: 75%;
-    margin: 20px 3% 20px 3%;
+    width: 100%;
+    margin: 20px 20px 20px 5%;
 }
 
 .square_image {
@@ -36,4 +41,48 @@
 .plus:after {
     height: 1em;
     width: 2px;
+}
+
+.tablecolumn div {
+    padding: 3px;
+}
+
+.tablecolumn div span {
+    width: 30%;
+    padding: 4px;
+}
+
+.tablecolumn div input {
+    border-radius: 2px;
+}
+
+#columns > div > span {
+    width: 120px;
+    padding: 5px 5px 2px 2px;
+}
+
+#columns > div > select {
+    width: 100px;
+}
+
+.shortlength {
+    width: 40px;
+}
+
+.callbacksuccess {
+    font-size: 20px;
+    color: green;
+}
+
+.callbackfailure {
+    font-size: 20px;
+    color: red;
+}
+
+.callback {
+    min-width: 500px;
+}
+
+.wronginput {
+    border-color: red;
 }

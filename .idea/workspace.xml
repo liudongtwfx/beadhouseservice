@@ -7,190 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91eeda8f-699d-45e3-b1b0-6a9d3821c79f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Spring_Webflow_2_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/dynamic/database/databasemetadata/ColumnType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_hswebframework_hsweb_easy_orm_rdb_3_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/resourceBundles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/addtable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/template/TemplateDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/dynamic/database/databasemetadata/Column.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/dynamic/database/DatabaseMetaData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/dynamic/database/DatabaseConnection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring4_3_0_8_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/dynamic/database/databasemetadata/Table.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/config/MyThymeleafViewResolver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/template/databasecontroller/TableAddController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/dynamic/database/databasemetadata/CreateTableImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_8_RELEASE.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/service.log.2017-07-30.log.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/functime.log.2017-08-23.log.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/service.log.2017-08-21.log.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/functime.log.2017-07-30.log.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/exception.log.2017-07-16.log.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/functime.log.2017-07-17.log.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/service.log.2017-07-17.log.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/service.log.2017-08-23.log.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/functime.log.2017-08-21.log.gz" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsfiles/fileupload/webuploader.js" afterPath="$PROJECT_DIR$/web/WEB-INF/jsfiles/fileupload/webuploader.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/Admin/AdminInfoRepostory.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/Admin/AdminInfoRepostory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/config/WebConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/config/WebConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/controller/user/AriticleForElderController.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/user/AriticleForElderController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/functime.log" afterPath="$PROJECT_DIR$/logs/functime.log" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/model/admin/LeisureGroupPersonList.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/model/admin/LeisureGroupPersonList.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/model/beadhouse/BeadhouseElderAccident.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/model/beadhouse/BeadhouseElderAccident.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/kafkabusiness/kafkaConsumer/BeadhouseConsumer.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/kafkabusiness/kafkaConsumer/BeadhouseConsumer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/Location/AreaLocationRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/Location/AreaLocationRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/BeadHouse/BeadhouseElderAccidentRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/BeadHouse/BeadhouseElderAccidentRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/test/ShiroTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/test/ShiroTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/User/VipUser/VipUserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/User/VipUser/VipUserRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/System/AuthApplyStatus.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/System/AuthApplyStatus.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/config/MyApplicationInitializer.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/config/MyApplicationInitializer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/beadhousebusiness/ArticleForElderBusiness/ArticleRecommend.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/beadhousebusiness/ArticleForElderBusiness/ArticleRecommend.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/elasticsearchbusiness/BeadhouseRecomendES.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/elasticsearchbusiness/BeadhouseRecomendES.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/databaseBusiness/SaveToDataBase.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/databaseBusiness/SaveToDataBase.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/model/user/VipUser.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/model/user/VipUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/cssfiles/admin/layout.css" afterPath="$PROJECT_DIR$/web/WEB-INF/cssfiles/admin/layout.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/User/ElderPeople/ElderPeopleRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/User/ElderPeople/ElderPeopleRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/model/admin/BeadhouseComment.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/model/admin/BeadhouseComment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/controller/admin/LeisureGroupController.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/admin/LeisureGroupController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/model/authoritycontroll/Permission.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/model/authoritycontroll/Permission.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/admin/userhomepage.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/admin/userhomepage.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/model/beadhouse/BeadhouseInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/model/beadhouse/BeadhouseInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/admin/beadhouseadd.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/admin/beadhouseadd.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/controller/admin/AdminElderController.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/admin/AdminElderController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/config/SecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/config/SecurityConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/test/TestDemo.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/test/TestDemo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/kafkabusiness/kafkaProducer/BeadhouseCommentProducer.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/kafkabusiness/kafkaProducer/BeadhouseCommentProducer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/admin/elderpeople.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/admin/elderpeople.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/Generiac/DefaultAuthenticationService.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/Generiac/DefaultAuthenticationService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/BeadHouse/BeadhouseAdministratorRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/BeadHouse/BeadhouseAdministratorRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/elasticsearchbusiness/BeadhouseCommentEs.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/elasticsearchbusiness/BeadhouseCommentEs.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/admin/authorizationcenter.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/admin/authorizationcenter.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/beadhousebusiness/BeadhouseRecommend.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/beadhousebusiness/BeadhouseRecommend.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/filehandle/FileHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/filehandle/FileHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/admin/login.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/admin/login.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/User/ElderPeople/ElderPeopleManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/User/ElderPeople/ElderPeopleManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/admin/leisuregroupadd.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/admin/leisuregroupadd.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/beadhouse.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/beadhouse.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/kafkabusiness/kafkaconfig/KafkaConsumerConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/kafkabusiness/kafkaconfig/KafkaConsumerConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/controller/admin/AdminBeadhouseController.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/admin/AdminBeadhouseController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/System/LeisureGroupStatus.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/System/LeisureGroupStatus.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/beadhousebusiness/BeadhouseCommentBuisiness/BeadhouseCommentBusiness.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/beadhousebusiness/BeadhouseCommentBuisiness/BeadhouseCommentBusiness.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/admin/beadhouselist.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/admin/beadhouselist.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/beadhousebusiness/BeadhouseCommentBuisiness/CommentReplyBusiness.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/beadhousebusiness/BeadhouseCommentBuisiness/CommentReplyBusiness.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/controller/admin/AdminVipUserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/admin/AdminVipUserController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/model/location/Province.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/model/location/Province.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/controller/user/IndexController.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/user/IndexController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/admin/articleforelderlist.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/admin/articleforelderlist.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/controller/beadhouse/BeadhouseElderCheckinController.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/beadhouse/BeadhouseElderCheckinController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Spring_MVC_4_3_12_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Spring_MVC_4_3_12_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/controller/user/BeadhouseSingleController.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/user/BeadhouseSingleController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/test/ElasticsearchTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/test/ElasticsearchTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/test/IdCardGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/test/IdCardGenerator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/controller/beadhouse/BeadhouseImageController.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/beadhouse/BeadhouseImageController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/BeadHouse/BeadhouseElderCheckinRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/BeadHouse/BeadhouseElderCheckinRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/System/SystemLogAspect.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/System/SystemLogAspect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/admin/articlesinglepage.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/admin/articlesinglepage.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/test/RedisTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/test/RedisTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/kafkabusiness/kafkaconfig/KafkaProducerConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/kafkabusiness/kafkaconfig/KafkaProducerConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/kafkabusiness/kafkaProducer/DatabaseProducer.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/kafkabusiness/kafkaProducer/DatabaseProducer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/model/admin/LeisureGroup.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/model/admin/LeisureGroup.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/config/JpaConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/config/JpaConfiguration.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/controller/user/UserCenterController.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/user/UserCenterController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/model/location/Area.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/model/location/Area.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/model/admin/ArticleForElder.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/model/admin/ArticleForElder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/exception.log" afterPath="$PROJECT_DIR$/logs/exception.log" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/config/ShiroConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/config/ShiroConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/controller/admin/ArticleContoller.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/admin/ArticleContoller.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/beadhousebusiness/BeadhouseAdminBusiness.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/beadhousebusiness/BeadhouseAdminBusiness.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/BeadHouse/BeadhouseElderGoOutRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/BeadHouse/BeadhouseElderGoOutRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/admin/articleforelderadd.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/admin/articleforelderadd.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/config/CachingConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/config/CachingConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/controller/admin/AdminPersonalCenterController.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/admin/AdminPersonalCenterController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/elasticsearchbusiness/ElasticsearchBase.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/elasticsearchbusiness/ElasticsearchBase.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/Cache/ehcache.xml" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/Cache/ehcache.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/User/VipUser/VipUserManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/User/VipUser/VipUserManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/beadhousebusiness/AdminNotifacation/NotificationCenter.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/beadhousebusiness/AdminNotifacation/NotificationCenter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/System/FunctionTimeAspect.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/System/FunctionTimeAspect.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/Admin/AuthApplyInfoRepostory.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/Admin/AuthApplyInfoRepostory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/CommonFunctions.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/CommonFunctions.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/test/KafkaTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/test/KafkaTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/model/user/ElderPeople.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/model/user/ElderPeople.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/Location/CityLocationRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/Location/CityLocationRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/model/beadhouse/BeadhouseImageManage.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/model/beadhouse/BeadhouseImageManage.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/System/Roles.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/System/Roles.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/beadhousebusiness/AuthorizationCenter/AuthApplyNotification.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/beadhousebusiness/AuthorizationCenter/AuthApplyNotification.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/test/VipusrTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/test/VipusrTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/model/authoritycontroll/Role.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/model/authoritycontroll/Role.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/model/admin/LeisureGroupImageList.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/model/admin/LeisureGroupImageList.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/model/common/Carousel.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/model/common/Carousel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/controller/user/BeadhouseCommentController.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/user/BeadhouseCommentController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/controller/admin/AdminIndexPage.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/admin/AdminIndexPage.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/Admin/BeadhouseCommentRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/Admin/BeadhouseCommentRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/admin/beadhousesingle.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/admin/beadhousesingle.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/controller/beadhouse/BeadhouseElderHealthController.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/beadhouse/BeadhouseElderHealthController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/controller/user/VipUserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/user/VipUserController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/beadhousebusiness/LeisuregroupBusiness/LeisuregroupBusiness.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/beadhousebusiness/LeisuregroupBusiness/LeisuregroupBusiness.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/controller/LocationController.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/LocationController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/elasticsearchbusiness/BeadhouseSearch.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/elasticsearchbusiness/BeadhouseSearch.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/SortAndGetTop/ArticleForElderMainBuseness.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/SortAndGetTop/ArticleForElderMainBuseness.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/User/VipUser/DefaultVipUserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/User/VipUser/DefaultVipUserRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/Generiac/GenericRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/Generiac/GenericRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/beadhousebusiness/BeadhouseSinglePage.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/beadhousebusiness/BeadhouseSinglePage.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/controller/beadhouse/BeadhouseElderAccidentController.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/beadhouse/BeadhouseElderAccidentController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/controller/admin/AdminCarouselController.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/admin/AdminCarouselController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/config/ShiroFilterConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/config/ShiroFilterConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/model/beadhouse/BeadhouseAdministrator.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/model/beadhouse/BeadhouseAdministrator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/BeadHouse/BeadhouseElderHealthRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/BeadHouse/BeadhouseElderHealthRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/Admin/ArticleForElderRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/Admin/ArticleForElderRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/BeadHouse/BeadhouseInfoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/BeadHouse/BeadhouseInfoRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/System/LogType.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/System/LogType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/log4j.properties" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/BeadHouse/BeadhouseImageManageRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/BeadHouse/BeadhouseImageManageRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/Location/ProvinceRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/Location/ProvinceRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/kafkabusiness/kafkaconfig/KafkaConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/kafkabusiness/kafkaconfig/KafkaConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/Admin/LeisureGroupRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/Admin/LeisureGroupRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/model/beadhouse/BeadhouseElderCheckin.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/model/beadhouse/BeadhouseElderCheckin.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/beadhousebusiness/AuthorizationCenter/AddNewApply.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/beadhousebusiness/AuthorizationCenter/AddNewApply.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/redisclient/RedisClientConnector.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/redisclient/RedisClientConnector.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/beadhousebusiness/BeadhouseCommentBuisiness/GetScoreThread.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/beadhousebusiness/BeadhouseCommentBuisiness/GetScoreThread.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/model/authoritycontroll/UserRole.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/model/authoritycontroll/UserRole.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/model/location/City.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/model/location/City.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/admin/index.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/admin/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/controller/beadhouse/CommentController.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/beadhouse/CommentController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/security/authentication/BeadhouseShiroRealm.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/security/authentication/BeadhouseShiroRealm.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/controller/beadhouse/BeadhouseAdminController.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/beadhouse/BeadhouseAdminController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/model/admin/AuthApplyInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/model/admin/AuthApplyInfo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/beadhousebusiness/BeadhouseElderInfoBusiness.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/beadhousebusiness/BeadhouseElderInfoBusiness.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/test/PersonServiceBean.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/test/PersonServiceBean.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/User/ElderPeople/DefaultElderPeopleRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/User/ElderPeople/DefaultElderPeopleRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/elasticsearchbusiness/ElasticSearchBuider.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/elasticsearchbusiness/ElasticSearchBuider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/config/RootConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/config/RootConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/test/VipUserControllerTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/test/VipUserControllerTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/WEB-INF/views/admin/commenside.html" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/commonside.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/model/beadhouse/BeadhouseElderGoOut.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/model/beadhouse/BeadhouseElderGoOut.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/log4j2.xml" afterPath="$PROJECT_DIR$/src/log4j2.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/model/beadhouse/BeadhouseElderHealth.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/model/beadhouse/BeadhouseElderHealth.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/model/admin/AdminInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/model/admin/AdminInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/controller.log" afterPath="$PROJECT_DIR$/logs/controller.log" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/controller/beadhouse/BeadhouseElderGoOutController.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/beadhouse/BeadhouseElderGoOutController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/exception.log" afterPath="$PROJECT_DIR$/logs/exception.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/functime.log" afterPath="$PROJECT_DIR$/logs/functime.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/service.log" afterPath="$PROJECT_DIR$/logs/service.log" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/exception/sqlexception/NotOnlyOneResultException.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/exception/sqlexception/NotOnlyOneResultException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/elasticsearchbusiness/ArticleESBusiness.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/elasticsearchbusiness/ArticleESBusiness.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/beadhousebusiness/ArticleForElderBusiness/ArticleForElderBusiness.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/beadhousebusiness/ArticleForElderBusiness/ArticleForElderBusiness.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/DAO/Common/CarouselRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/DAO/Common/CarouselRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/beadhouse/business/SortAndGetTop/BeadhouseSort.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/business/SortAndGetTop/BeadhouseSort.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FinalProject.iml" afterPath="$PROJECT_DIR$/FinalProject.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/admin/vipuser.html" afterPath="$PROJECT_DIR$/web/WEB-INF/views/admin/vipuser.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/log4j2.xml" afterPath="$PROJECT_DIR$/src/log4j2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/beadhouse/System/FunctionTimeAspect.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/System/FunctionTimeAspect.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/beadhouse/config/WebConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/config/WebConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/template/databasecontroller/TableAddController.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/template/databasecontroller/TableAddController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/beadhouse/dynamic/database/databasemetadata/CreateTableImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/dynamic/database/databasemetadata/CreateTableImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/beadhouse/dynamic/database/databasemetadata/Table.java" afterPath="$PROJECT_DIR$/src/main/java/com/beadhouse/dynamic/database/databasemetadata/Table.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/start.sh" afterPath="$PROJECT_DIR$/start.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/cssfiles/admin/contentcommon.css" afterPath="$PROJECT_DIR$/web/WEB-INF/cssfiles/admin/contentcommon.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/cssfiles/admin/layout.css" afterPath="$PROJECT_DIR$/web/WEB-INF/cssfiles/admin/layout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/templates/addtable.html" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/addtable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -224,6 +57,94 @@
   <component name="FavoritesManager">
     <favorites_list name="beadhouseservice" />
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="TableAddController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/beadhouse/controller/template/databasecontroller/TableAddController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="45" column="56" lean-forward="false" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addtable.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/addtable.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="63" column="89" lean-forward="false" selection-start-line="63" selection-start-column="89" selection-end-line="63" selection-end-column="89" />
+              <folding>
+                <marker date="1510241808388" expanded="true" signature="1921:1947" ph="数据库管理中心" />
+                <marker date="1510241808388" expanded="true" signature="2008:2035" ph="新增数据表" />
+                <marker date="1510241808388" expanded="true" signature="2686:2711" ph="/admin/database/table/add" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParsingElementMarkupUtil.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/attoparser/attoparser/2.0.4.RELEASE/attoparser-2.0.4.RELEASE-sources.jar!/org/attoparser/ParsingElementMarkupUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-360">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/log4j.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log4j2.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/log4j2.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="146" column="53" lean-forward="false" selection-start-line="146" selection-start-column="53" selection-end-line="146" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/cssfiles/admin/layout.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="382" column="58" lean-forward="false" selection-start-line="382" selection-start-column="58" selection-end-line="382" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contentcommon.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/cssfiles/admin/contentcommon.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1028">
+              <caret line="85" column="13" lean-forward="false" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateTableImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/beadhouse/dynamic/database/databasemetadata/CreateTableImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="97" column="27" lean-forward="false" selection-start-line="97" selection-start-column="27" selection-end-line="97" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -242,8 +163,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>GET</find>
-      <find>POST</find>
       <find>groupId</find>
       <find>coo</find>
       <find>create</find>
@@ -272,6 +191,8 @@
       <find>proper</find>
       <find>properties</find>
       <find>me</find>
+      <find>body</find>
+      <find>#si</find>
     </findStrings>
     <replaceStrings>
       <replace>http://127.0.0.1:8088/</replace>
@@ -288,18 +209,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/beadhouse/config/WebConfig.java" />
-        <option value="$PROJECT_DIR$/src/com/beadhouse/config/MyThymeleafViewResolver.java" />
-        <option value="$PROJECT_DIR$/src/resource/application.properties" />
-        <option value="$PROJECT_DIR$/src/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/beadhouse/business/beadhousebusiness/BeadhouseElderInfoBusiness.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beadhouse/config/JpaConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/beadhouse/config/MyThymeleafViewResolver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/beadhouse/System/FunctionTimeAspect.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/templates/commonside.html" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/cssfiles/admin/layout.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/beadhouse/dynamic/database/ColumnType.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beadhouse/dynamic/database/DatabaseMetadata/Table.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beadhouse/dynamic/database/databasemetadata/ColumnType.java" />
@@ -321,24 +236,30 @@
         <option value="$PROJECT_DIR$/src/main/java/com/beadhouse/rdb/meta/RDBColumnMetaData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beadhouse/core/meta/AbstractTableMetaData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beadhouse/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/beadhouse/dynamic/database/databasemetadata/Table.java" />
-        <option value="$PROJECT_DIR$/logs/debug.log" />
         <option value="$PROJECT_DIR$/src/main/spring-mvc.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" />
         <option value="$PROJECT_DIR$/src/messages.properties" />
         <option value="$PROJECT_DIR$/src/spring-mvc.xml" />
-        <option value="$PROJECT_DIR$/src/log4j2.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/templates/addtable.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/template/TemplateDemo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beadhouse/config/RootConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/messages_CN.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/messages_en.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/beadhouse/test/TestDemo.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/messages.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/messages_zh.properties" />
+        <option value="$PROJECT_DIR$/logs/functime.log" />
+        <option value="$PROJECT_DIR$/logs/debug.log" />
+        <option value="$PROJECT_DIR$/src/main/java/com/beadhouse/System/FunctionTimeAspect.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/messages.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/beadhouse/config/WebConfig.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/beadhouse/dynamic/database/databasemetadata/Table.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beadhouse/controller/template/databasecontroller/TableAddController.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/cssfiles/admin/layout.css" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/cssfiles/admin/contentcommon.css" />
+        <option value="$PROJECT_DIR$/src/log4j.properties" />
+        <option value="$PROJECT_DIR$/src/log4j2.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/beadhouse/dynamic/database/databasemetadata/CreateTableImpl.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/templates/addtable.html" />
       </list>
     </option>
   </component>
@@ -399,7 +320,7 @@
   <component name="MavenRunner">
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="119" />
     <option name="y" value="89" />
     <option name="width" value="1211" />
@@ -778,10 +699,8 @@
       <foldersAlwaysOnTop value="false" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -793,12 +712,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.4727992" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -806,7 +727,7 @@
     <property name="SearchEverywhereHistoryKey" value="controllerAs&#9;PSI&#9;JAVA://com.liudong.System.SystemLogAspect#controllerAspect&#10;/beadhouse/getAdminUserName&#9;null&#9;null&#10;admin/index&#9;null&#9;null&#10;/index&#9;null&#9;null&#10;BeadHouse&#9;FILE&#9;file://E:/Users/liudong/IdeaProjects/login/src/com/liudong/model/BeadHouse/BeadHouseInfo.java&#10;min&#9;FILE&#9;file://E:/Users/liudong/IdeaProjects/login/src/com/liudong/config/MyApplicationInitializer.java&#10;i&#9;PSI&#9;JAVA://com.liudong.controller.IndexController&#10;dispatcher&#9;PSI&#9;JAVA://org.springframework.integration.amqp.channel.AbstractSubscribableAmqpChannel#dispatcher" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.JavaDocs" value="true" />
     <property name="Repository.Attach.Sources" value="true" />
@@ -1906,6 +1827,10 @@
       <workItem from="1510027883417" duration="27677000" />
       <workItem from="1510117061171" duration="1265000" />
       <workItem from="1510118357489" duration="405000" />
+      <workItem from="1510119012261" duration="22062000" />
+      <workItem from="1510192733831" duration="14186000" />
+      <workItem from="1510229208197" duration="4338000" />
+      <workItem from="1510234522327" duration="6592000" />
     </task>
     <servers />
   </component>
@@ -1942,7 +1867,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1644884000" />
+    <option name="totallyTimeSpent" value="1692062000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1954,47 +1879,47 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="119" y="89" width="1366" height="692" extended-state="6" />
+    <frame x="119" y="89" width="1920" height="1004" extended-state="7" />
     <layout>
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21742424" sideWeight="0.5130719" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20136778" sideWeight="0.51296294" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40497336" sideWeight="0.4689394" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6802842" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40497336" sideWeight="0.5310606" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3268206" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994652" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994652" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1684492" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973261" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6802842" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285968" sideWeight="0.4969697" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3179396" sideWeight="0.4909091" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3250444" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3268206" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902735" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4045714" sideWeight="0.4689394" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3250444" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3250444" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22272727" sideWeight="0.4869281" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21742424" sideWeight="0.5130719" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16755603" sideWeight="0.4869281" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32149202" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20136778" sideWeight="0.51296294" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902735" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32149202" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -2109,7 +2034,7 @@
           <option name="timeStamp" value="101" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="115" />
+      <option name="time" value="117" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2117,16 +2042,374 @@
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beadhouse/controller/template/databasecontroller/TableAddController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="56" column="9" lean-forward="false" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/addtable.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="36" column="29" lean-forward="true" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+          <folding>
+            <marker date="1510241808388" expanded="true" signature="1921:1947" ph="数据库管理中心" />
+            <marker date="1510241808388" expanded="true" signature="2008:2035" ph="新增数据表" />
+            <marker date="1510241808388" expanded="true" signature="2686:2711" ph="/admin/database/table/add" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/cssfiles/admin/layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8404">
+          <caret line="382" column="58" lean-forward="false" selection-start-line="382" selection-start-column="58" selection-end-line="382" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beadhouse/dynamic/database/databasemetadata/CreateTableImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2002">
+          <caret line="91" column="105" lean-forward="true" selection-start-line="91" selection-start-column="105" selection-end-line="91" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beadhouse/controller/template/databasecontroller/TableAddController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="29" column="48" lean-forward="false" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beadhouse/dynamic/database/databasemetadata/Table.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="29" column="83" lean-forward="false" selection-start-line="29" selection-start-column="83" selection-end-line="29" selection-end-column="83" />
+          <folding>
+            <element signature="e#396#397#0" expanded="false" />
+            <element signature="e#439#440#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beadhouse/dynamic/database/databasemetadata/CreateTableImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="38" column="93" lean-forward="false" selection-start-line="38" selection-start-column="93" selection-end-line="38" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/debug.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/addtable.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="36" column="41" lean-forward="false" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
+          <folding>
+            <marker date="1510241808388" expanded="true" signature="1921:1947" ph="数据库管理中心" />
+            <marker date="1510241808388" expanded="true" signature="2008:2035" ph="新增数据表" />
+            <marker date="1510241808388" expanded="true" signature="2686:2711" ph="/admin/database/table/add" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beadhouse/controller/LocationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/exception.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/functime.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="-292">
+          <caret line="25" column="120" lean-forward="false" selection-start-line="25" selection-start-column="120" selection-end-line="25" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beadhouse/System/FunctionTimeAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../maven dependencies/hsweb-easy-orm-rdb-3.0.0-sources.jar!/org/hswebframework/ezorm/rdb/meta/RDBColumnMetaData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/messages.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/meta.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="48" column="16" lean-forward="false" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/cssfiles/images/icn_security.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/cssfiles/images/icn_video.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/cssfiles/images/icn_new_article.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/cssfiles/images/sidebar.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/commonside.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-431">
+          <caret line="7" column="78" lean-forward="false" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/bootstrap/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="6862" column="1" lean-forward="false" selection-start-line="6862" selection-start-column="1" selection-end-line="6862" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/thymeleaf/thymeleaf/3.0.8.RELEASE/thymeleaf-3.0.8.RELEASE-sources.jar!/org/thymeleaf/templateresolver/AbstractConfigurableTemplateResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="801">
+          <caret line="87" column="33" lean-forward="true" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../maven dependencies/hsweb-easy-orm-core-3.0.0-sources.jar!/org/hswebframework/ezorm/core/meta/ColumnMetaData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/thymeleaf/thymeleaf-spring4/3.0.8.RELEASE/thymeleaf-spring4-3.0.8.RELEASE-sources.jar!/org/thymeleaf/spring4/view/ThymeleafViewResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="105" column="19" lean-forward="false" selection-start-line="105" selection-start-column="19" selection-end-line="105" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/thymeleaf/thymeleaf-spring4/3.0.8.RELEASE/thymeleaf-spring4-3.0.8.RELEASE-sources.jar!/org/thymeleaf/spring4/templateresolver/SpringResourceTemplateResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="59" column="16" lean-forward="false" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beadhouse/controller/beadhouse/BeadhouseElderCheckinController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="84" column="17" lean-forward="false" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beadhouse/config/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-249">
+          <caret line="92" column="38" lean-forward="false" selection-start-line="92" selection-start-column="38" selection-end-line="92" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/beadhouse/elder_checkin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_144/src.zip!/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="609" column="13" lean-forward="false" selection-start-line="609" selection-start-column="13" selection-end-line="609" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../maven dependencies/spring-context-4.3.12.RELEASE-sources.jar!/org/springframework/ui/ModelMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="76" column="10" lean-forward="false" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beadhouse/dynamic/database/databasemetadata/Table.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="e#396#397#0" expanded="false" />
+            <element signature="e#439#440#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/thymeleaf/thymeleaf-spring4/3.0.8.RELEASE/thymeleaf-spring4-3.0.8.RELEASE-sources.jar!/org/thymeleaf/spring4/util/FieldUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-460">
+          <caret line="230" column="29" lean-forward="false" selection-start-line="230" selection-start-column="29" selection-end-line="230" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/cssfiles/admin/layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="382" column="58" lean-forward="false" selection-start-line="382" selection-start-column="58" selection-end-line="382" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/log4j2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="146" column="53" lean-forward="false" selection-start-line="146" selection-start-column="53" selection-end-line="146" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/cssfiles/admin/contentcommon.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1028">
+          <caret line="85" column="13" lean-forward="false" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beadhouse/dynamic/database/databasemetadata/CreateTableImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="97" column="27" lean-forward="false" selection-start-line="97" selection-start-column="27" selection-end-line="97" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beadhouse/controller/template/databasecontroller/TableAddController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="45" column="56" lean-forward="false" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/debug.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="-6881">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/thymeleaf/thymeleaf-spring4/3.0.8.RELEASE/thymeleaf-spring4-3.0.8.RELEASE-sources.jar!/org/thymeleaf/spring4/expression/Fields.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="73" column="24" lean-forward="false" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+          <folding>
+            <element signature="e#2134#2135#0" expanded="false" />
+            <element signature="e#2195#2196#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/attoparser/attoparser/2.0.4.RELEASE/attoparser-2.0.4.RELEASE.jar!/org/attoparser/ParsingElementMarkupUtil.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/attoparser/attoparser/2.0.4.RELEASE/attoparser-2.0.4.RELEASE-sources.jar!/org/attoparser/ParsingElementMarkupUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/addtable.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="63" column="89" lean-forward="false" selection-start-line="63" selection-start-column="89" selection-end-line="63" selection-end-column="89" />
+          <folding>
+            <marker date="1510241808388" expanded="true" signature="1921:1947" ph="数据库管理中心" />
+            <marker date="1510241808388" expanded="true" signature="2008:2035" ph="新增数据表" />
+            <marker date="1510241808388" expanded="true" signature="2686:2711" ph="/admin/database/table/add" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
   <component name="masterDetails">
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor>
             <show-content>
-              <type id="artifact" />
+              <type id="javaee-facet-resources" />
               <type id="jpa-descriptors" />
               <type id="library" />
-              <type id="javaee-facet-resources" />
+              <type id="artifact" />
             </show-content>
           </artifact-editor>
           <last-edited>beadhouse</last-edited>

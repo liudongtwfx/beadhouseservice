@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="http://127.0.0.1:8088/cssfiles/admin/layout.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="http://127.0.0.1:8088/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="http://127.0.0.1:8088/cssfiles/premium.css">
@@ -23,8 +23,7 @@
 <link rel="stylesheet" href="http://127.0.0.1:8088/cssfiles/admin/contentcommon.css" type="text/css" media="screen"/>
 <div th:replace="commonside::#secondary_bar"></div>
 <div th:replace="commonside::#sidebar"></div>
-<div>
-    <link rel="stylesheet" href="http://127.0.0.1:8088/cssfiles/admin/articleforelderadd.css">
+<div id="main_div">
     <section id="main">
         <div class="header inner_content">
             <h1 class="page-title">养老服务中心后台管理</h1>
@@ -33,21 +32,60 @@
                 <li class="active" th:text="#{admin.table.add.secondtitle}">添加攻略</li>
             </ul>
         </div>
-        <!--/*@thymesVar id="createTableImpl" type="main.java.com.beadhouse.dynamic.database.databasemetadata.CreateTableImpl"*/-->
-        <div class="inner_content real-content" th:object="${createTableImpl}">
-            <form action="#" th:action="#{admin.table.add.actionurl}" method="post">
+        <!--/*@thymesVar id="table" type="main.java.com.beadhouse.dynamic.database.databasemetadata.Table"*/-->
+        <div class="inner_content real-content" th:object="${table}">
+            <div class="row">
+                <div class="text-center" th:classappend="'callback'+${callbackinfo}" th:text="${callback}">返回信息
+                </div>
+            </div>
+            <ul th:if="${#fields.hasErrors('*')}" class="errorlist">
+                <li th:each="err : ${#fields.errors('*')}" th:text="${err}">输入不合法</li>
+            </ul>
+            <form accept-charset="UTF-8" action="#" th:action="#{admin.table.add.actionurl}" method="post">
                 <div class="row">
                     <label for="tableName">数据表名</label>
-                    <input th:value="*{table.tableName}" type="text" id="tableName">
+                    <input th:field="*{tableName}" type="text" id="tableName">
                     <button type="submit" name="addColumnRow">新增表列</button>
                 </div>
-                <div class="row" th:each="column:*{table.columns}">
-                    <span>字段名字</span>
-                    <input th:text="${column.getName()}">
-                    <select id="select" th:selected="${column.getJdbcType()}">
-                        <option th:each="attr:${ColumnTypes}" th:value="type+${ColumnTypes.indexOf(attr)}"
-                                th:text="${attr}"></option>
-                    </select>
+                <div th:each="column,columnStat:*{columns}" id="columns">
+                    <div class="row">
+                        <span>字段名字:</span>
+                        <input th:field="*{columns[__${columnStat.index}__].name}"
+                               type="text">
+                        <span class="">字段类型:</span>
+                        <select id="select"
+                                th:field="*{columns[__${columnStat.index}__].jdbcType}">
+                            <option th:each="attr:${ColumnTypes}" th:value="${attr}"
+                                    th:text="${attr}"></option>
+                        </select>
+                        <span class="">长度:</span>
+                        <input class="shortlength" th:field="*{columns[__${columnStat.index}__].length}"
+                               type="text"
+                               th:unless="(*{columns[__${columnStat.index}__].length}) == ''"
+                               th:placeholder="0"
+                               th:errorclass="wronginput">
+                        <span class="">精度:</span>
+                        <input class="shortlength" th:field="*{columns[__${columnStat.index}__].precision}"
+                               th:unless="(*{columns[__${columnStat.index}__].precision}) == ''"
+                               th:placeholder="0"
+                               type="text" th:errorclass="wronginput">
+                        <span class="">不为空:</span>
+                        <input type="checkbox" th:field="*{columns[__${columnStat.index}__].notNull}">
+                        <span>注释(汉语字段):</span>
+                        <input th:field="*{columns[__${columnStat.index}__].comment}" type="text">
+                        <button type="submit" th:value="${columnStat.index}" name="removeColumn"
+                                class="btn btn-danger">
+                            删除该行
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="tableprimarykey">主关键字段名:</label>
+                    <input th:field="*{primaryKeyName}" type="text" id="tableprimarykey">
+                    <span class="warning">选择上述的某个字段作为主键</span>
+                </div>
+                <div class="row">
+                    <button type="submit" name="addTable" class="center-block btn btn-success">添加数据表</button>
                 </div>
             </form>
         </div>

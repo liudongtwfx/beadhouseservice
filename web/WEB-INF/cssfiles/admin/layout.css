@@ -195,7 +195,7 @@ article.breadcrumbs {
 /* Sidebar */
 
 aside#sidebar {
-    width: 23%;
+    min-width: 200px;
     background: #E0E0E3 url(../images/sidebar.png) repeat;
     float: left;
     min-height: 500px;
@@ -378,8 +378,8 @@ aside#sidebar {
 /* Main Content */
 
 section#main {
-    width: 77%;
-    min-height: 500px;
+    min-width: 1000px;
+    left: 3%;
     background: url(../images/sidebar_shadow.png) repeat-y left top;
     float: left;
     margin-top: -2px;

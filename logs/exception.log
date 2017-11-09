@@ -1,2 +1,21 @@
-2017-10-11 15:42:16.909 ERROR LeisuregroupBusiness 56 addLeisureGroup -- org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-2017-10-11 15:45:01.117 ERROR LeisuregroupBusiness 56 addLeisureGroup -- org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2017-11-08 13:35:36.646 ERROR main.java.com.beadhouse.dynamic.database.databasemetadata.CreateTableImpl 29 <init> -- com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2017-11-08 13:35:40.563 ERROR main.java.com.beadhouse.dynamic.database.databasemetadata.CreateTableImpl 29 <init> -- com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2017-11-08 13:35:56.934 ERROR main.java.com.beadhouse.dynamic.database.databasemetadata.CreateTableImpl 29 <init> -- com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2017-11-08 13:39:19.347 ERROR main.java.com.beadhouse.dynamic.database.databasemetadata.CreateTableImpl 29 <init> -- com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2017-11-08 13:39:23.817 ERROR main.java.com.beadhouse.dynamic.database.databasemetadata.CreateTableImpl 29 <init> -- com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2017-11-08 13:39:25.072 ERROR main.java.com.beadhouse.dynamic.database.databasemetadata.CreateTableImpl 29 <init> -- com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2017-11-08 13:39:25.899 ERROR main.java.com.beadhouse.dynamic.database.databasemetadata.CreateTableImpl 29 <init> -- com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.

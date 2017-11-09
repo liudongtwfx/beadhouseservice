@@ -1,9 +1,78 @@
-2017-11-08 13:04:19.525 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
-2017-11-08 13:04:19.577 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@3f29b261.
-2017-11-08 13:04:28.102 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@3f29b261.
-2017-11-08 13:09:40.492 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
-2017-11-08 13:09:40.557 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@67be431.
-2017-11-08 13:09:49.137 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@67be431.
-2017-11-08 13:15:22.110 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
-2017-11-08 13:15:22.154 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@7cf5d75.
-2017-11-08 13:15:29.128 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@7cf5d75.
+2017-11-09 10:07:02.217 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 10:07:02.272 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@4c64dd3e.
+2017-11-09 10:07:11.159 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@4c64dd3e.
+2017-11-09 10:23:20.031 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 10:23:20.072 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@221ec70b.
+2017-11-09 10:23:27.176 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@221ec70b.
+2017-11-09 10:35:22.183 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 10:35:22.226 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@20879330.
+2017-11-09 10:35:29.126 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@20879330.
+2017-11-09 10:47:00.637 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 10:47:00.688 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@1cba4a74.
+2017-11-09 10:47:07.013 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@1cba4a74.
+2017-11-09 10:56:19.559 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 10:56:19.602 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@79699155.
+2017-11-09 10:56:26.272 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@79699155.
+2017-11-09 11:03:51.000 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 11:03:51.044 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@6dda3f03.
+2017-11-09 11:03:58.886 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@6dda3f03.
+2017-11-09 12:01:47.251 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 12:01:47.282 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@3698b885.
+2017-11-09 12:01:54.250 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@3698b885.
+2017-11-09 15:17:09.880 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 15:17:09.913 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@6b9a82d2.
+2017-11-09 15:17:16.116 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@6b9a82d2.
+2017-11-09 15:34:53.137 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 15:34:53.172 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@1eb3ccd2.
+2017-11-09 15:34:59.551 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@1eb3ccd2.
+2017-11-09 15:39:18.779 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 15:39:18.821 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@655a5213.
+2017-11-09 15:39:25.124 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@655a5213.
+2017-11-09 15:47:18.772 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 15:47:18.821 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@3130740d.
+2017-11-09 15:47:25.287 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@3130740d.
+2017-11-09 16:18:42.885 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 16:18:42.928 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@5161d74a.
+2017-11-09 16:18:49.972 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@5161d74a.
+2017-11-09 20:12:33.364 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 20:12:33.399 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@1be06349.
+2017-11-09 20:12:42.282 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@1be06349.
+2017-11-09 20:25:49.544 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 20:25:49.573 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@5cbd2a7a.
+2017-11-09 20:25:56.726 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@5cbd2a7a.
+2017-11-09 20:46:46.548 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 20:46:46.595 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@21ce71ec.
+2017-11-09 20:46:53.602 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@21ce71ec.
+2017-11-09 20:54:35.582 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 20:54:35.614 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@16699560.
+2017-11-09 20:54:43.171 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@16699560.
+2017-11-09 21:15:05.811 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 21:15:05.872 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@175dda84.
+2017-11-09 21:15:11.202 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@175dda84.
+2017-11-09 22:00:27.984 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 22:00:28.022 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@5d2a5590.
+2017-11-09 22:00:33.022 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@5d2a5590.
+2017-11-09 22:06:25.106 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 22:06:25.145 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@3ab31f82.
+2017-11-09 22:06:30.003 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@3ab31f82.
+2017-11-09 22:13:00.412 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 22:13:00.451 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@ae4d21f.
+2017-11-09 22:13:05.380 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@ae4d21f.
+2017-11-09 22:16:11.434 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 22:16:11.481 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@382b9c55.
+2017-11-09 22:16:16.449 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@382b9c55.
+2017-11-09 22:42:50.578 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 22:42:50.617 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@2175575c.
+2017-11-09 22:42:55.934 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@2175575c.
+2017-11-09 23:03:12.678 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 23:03:12.709 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@1e15f7cf.
+2017-11-09 23:03:17.580 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@1e15f7cf.
+2017-11-09 23:15:59.924 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 23:15:59.960 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@25159924.
+2017-11-09 23:16:04.771 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@25159924.
+2017-11-09 23:19:19.153 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 23:19:19.210 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@1519a1e.
+2017-11-09 23:19:24.239 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@1519a1e.
+2017-11-09 23:31:20.247 INFO  main.java.com.beadhouse.config.RootConfig 108 threadPoolTaskScheduler -- Setting up thread pool task scheduler with 20 threads.
+2017-11-09 23:31:20.283 INFO  main.java.com.beadhouse.config.RootConfig 137 getAsyncExecutor -- Configuring asynchronous method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@9f48050.
+2017-11-09 23:31:25.371 INFO  main.java.com.beadhouse.config.RootConfig 149 configureTasks -- Configuring scheduled method executor org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler@9f48050.

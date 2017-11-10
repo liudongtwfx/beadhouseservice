@@ -1,21 +1,3 @@
-2017-11-08 13:35:36.646 ERROR main.java.com.beadhouse.dynamic.database.databasemetadata.CreateTableImpl 29 <init> -- com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-2017-11-08 13:35:40.563 ERROR main.java.com.beadhouse.dynamic.database.databasemetadata.CreateTableImpl 29 <init> -- com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-2017-11-08 13:35:56.934 ERROR main.java.com.beadhouse.dynamic.database.databasemetadata.CreateTableImpl 29 <init> -- com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-2017-11-08 13:39:19.347 ERROR main.java.com.beadhouse.dynamic.database.databasemetadata.CreateTableImpl 29 <init> -- com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-2017-11-08 13:39:23.817 ERROR main.java.com.beadhouse.dynamic.database.databasemetadata.CreateTableImpl 29 <init> -- com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-2017-11-08 13:39:25.072 ERROR main.java.com.beadhouse.dynamic.database.databasemetadata.CreateTableImpl 29 <init> -- com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-2017-11-08 13:39:25.899 ERROR main.java.com.beadhouse.dynamic.database.databasemetadata.CreateTableImpl 29 <init> -- com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2017-11-09 23:57:50.920 ERROR main.java.com.beadhouse.dynamic.database.operate.CreateTableImpl 80 createTableByTable -- java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(
+	`id` int not null primary key COMMENT '主键',
+	`name` null not null COMMENT' at line 1

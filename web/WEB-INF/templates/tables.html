@@ -29,19 +29,44 @@
             <h1 class="page-title">养老服务中心后台管理</h1>
             <ul class="breadcrumb">
                 <li th:text="#{admin.tables.firsttitle}">养老攻略管理</li>
-                <li class="active" th:text="#{admin.tables.add.secondtitle}">添加攻略</li>
+                <li class="active" th:text="#{admin.tables.list.secondtitle}">添加攻略</li>
             </ul>
         </div>
         <!--/*@thymesVar id="table" type="main.java.com.beadhouse.dynamic.database.databasemetadata.Table"*/-->
-        <div class="inner_content real-content" th:object="${table}">
+        <div class="inner_content real-content">
             <div class="row">
                 <div class="text-center" th:classappend="'callback'+${callbackinfo}" th:text="${callback}">返回信息
                 </div>
             </div>
-            <ul th:if="${#fields.hasErrors('*')}" class="errorlist">
+            <ul th:if="${table} != null and ${#fields.hasErrors('*')}" class="errorlist">
                 <li th:each="err : ${#fields.errors('*')}" th:text="${err}">输入不合法</li>
             </ul>
-            <form accept-charset="UTF-8" action="#" th:action="#{admin.tables.add.actionurl}" method="post">
+            <div class="col-lg-2">
+                <span class="">数据库:</span>
+                <select id="select_schema" th:field="${schemaselected}">
+                    <option th:each="attr:${databases}" th:value="${attr}"
+                            th:text="${attr}"></option>
+                </select>
+                <script type="text/javascript">
+                    $("#select_schema").select(
+                        $.get(
+                            "/admin/database/table/list",
+                            {
+                                schema: $("#select_schema").find("option:selected").text()
+                            }
+                        )
+                    )
+                </script>
+            </div>
+            <div class="col-lg-2" th:if="${schemaselected}!=''">
+                <span class="">数据表:</span>
+                <select th:selected="${tablename}">
+                    <option th:each="attr:${tablelist}" th:value="${attr}"
+                            th:text="${attr}"></option>
+                </select>
+            </div>
+            <form th:object="${table}" th:if="${table} != null" accept-charset="UTF-8" action="#"
+                  th:action="#{admin.tables.list.actionurl}" method="post">
                 <div class="row">
                     <label for="tableName">数据表名</label>
                     <input th:field="*{tableName}" type="text" id="tableName">

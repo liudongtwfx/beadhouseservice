@@ -2,20 +2,14 @@ package main.java.com.beadhouse.controller.template.databasecontroller;
 
 
 import main.java.com.beadhouse.System.LogType;
-import main.java.com.beadhouse.dynamic.database.databasemetadata.CreateTableImpl;
+import main.java.com.beadhouse.dynamic.database.operate.CreateTableImpl;
 import main.java.com.beadhouse.dynamic.database.databasemetadata.Table;
-import org.hibernate.validator.constraints.pl.REGON;
 import org.hswebframework.ezorm.rdb.meta.RDBColumnMetaData;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import sun.rmi.runtime.Log;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.JDBCType;

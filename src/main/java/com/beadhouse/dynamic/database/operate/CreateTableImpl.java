@@ -1,6 +1,7 @@
-package main.java.com.beadhouse.dynamic.database.databasemetadata;
+package main.java.com.beadhouse.dynamic.database.operate;
 
 import main.java.com.beadhouse.System.LogType;
+import main.java.com.beadhouse.dynamic.database.databasemetadata.Table;
 import org.hswebframework.ezorm.rdb.RDBDatabase;
 import org.hswebframework.ezorm.rdb.executor.AbstractJdbcSqlExecutor;
 import org.hswebframework.ezorm.rdb.executor.SqlExecutor;
@@ -20,37 +21,14 @@ import java.util.Properties;
 import java.util.Set;
 
 public final class CreateTableImpl {
-    private final RDBDatabaseMetaData metaData;
-    private final RDBDatabase database;
-    private SqlExecutor executor;
+    private String schema;
 
     public CreateTableImpl() {
-        try {
-            setup();
-        } catch (Exception e) {
-            LogType.EXCETPION.getLOGGER().error(e);
-        }
-        metaData = new MysqlRDBDatabaseMetaData();
-        database = new SimpleDatabase(metaData, executor);
+        schema = "test";
     }
 
-    private void setup() throws Exception {
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        Properties properties = new Properties();
-        properties.setProperty("user", "root");
-        properties.setProperty("password", "6820138");
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/test?serverTimezone=UTC", properties);
-        executor = new AbstractJdbcSqlExecutor() {
-            @Override
-            public Connection getConnection() {
-                return connection;
-            }
-
-            @Override
-            public void releaseConnection(Connection connection) throws SQLException {
-
-            }
-        };
+    public CreateTableImpl(String schema) {
+        this.schema = schema;
     }
 
     public String createTableByTable(Table table) {
@@ -58,8 +36,9 @@ public final class CreateTableImpl {
         if (!"true".equals(messeage)) {
             return messeage;
         }
+        DatabaseOperation operation = new DatabaseOperation(schema);
         try {
-            TableBuilder builder = database.createOrAlter(table.getTableName());
+            TableBuilder builder = operation.getDatabase().createOrAlter(table.getTableName());
             for (RDBColumnMetaData column : table.getColumns()) {
                 ColumnBuilder cb = builder.addColumn().name(column.getName());
                 cb = buildType(cb, column);
@@ -79,6 +58,8 @@ public final class CreateTableImpl {
         } catch (Exception e) {
             LogType.EXCETPION.getLOGGER().error(e);
             return e.toString();
+        } finally {
+            operation.close();
         }
     }
 

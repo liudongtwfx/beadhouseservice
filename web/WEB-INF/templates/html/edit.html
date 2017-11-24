@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>编辑网页</title>
+    <link rel="stylesheet" href="http://127.0.0.1:8088/cssfiles/admin/layout.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="http://127.0.0.1:8088/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8088/cssfiles/premium.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8088/cssfiles/fileinput/theme.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8088/cssfiles/admin/commonside.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8088/cssfiles/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8088/cssfiles/admin/layout.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../cssfiles/premium.css">
+    <link rel="stylesheet" href="../../cssfiles/fileinput/theme.css">
+    <link rel="stylesheet" href="../../cssfiles/admin/commonside.css">
+    <link rel="stylesheet" href="../../cssfiles/font-awesome/css/font-awesome.css">
+    <script src="http://127.0.0.1:8088/jsfiles/jquery-3.1.1.js" type="text/javascript"></script>
+    <title>新增数据表</title>
+</head>
+<body>
+<link rel="stylesheet" href="http://127.0.0.1:8088/cssfiles/admin/layout.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="../../cssfiles/admin/layout.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="../../cssfiles/admin/contentcommon.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="http://127.0.0.1:8088/cssfiles/admin/contentcommon.css" type="text/css" media="screen"/>
+<div th:replace="commonside::#secondary_bar"></div>
+<div th:replace="commonside::#sidebar"></div>
+<div id="main_div">
+    <section id="main">
+        <link rel="stylesheet" href="http://127.0.0.1:8088/cssfiles/template/htmledit.css" type="text/css">
+        <link href="../../cssfiles/template/htmledit.css">
+        <div class="header inner_content">
+            <h1 class="page-title">养老服务中心后台管理</h1>
+            <ul class="breadcrumb">
+                <li th:text="#{admin.views.add.firsttitle}">养老攻略管理</li>
+                <li class="active" th:text="#{admin.views.edit.secondtitle}">添加攻略</li>
+            </ul>
+        </div>
+        <div class="inner_content">
+            <div class="row text-center container-fluid">
+                <span th:class="${callbackclass}" th:text="${callbackinfo}"></span>
+            </div>
+            <script src="http://127.0.0.1:8088/jsfiles/templates/htmledit.js" type="text/javascript"></script>
+            <!--<script src="../../jsfiles/templates/htmledit.js" type="text/javascript"></script>-->
+            <button class="btn-success btn" onclick="changetoEditmode()">编辑模式</button>
+            <button class="btn-success btn" onclick="changetoHTMLmode()">预览模式</button>
+            <button class="btn-success btn" onclick="submitChanges()">确认修改</button>
+        </div>
+        <div class="inner_content" id="mainhtmlstructure">
+        </div>
+        <div class="modal fade" id="selectnodetype" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            新添加节点类型
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label for="struct_type" class="col-lg-5">请选择节点类型:</label>
+                                <select class="structtype_select" id="struct_type">
+                                    <option th:each="area,i:${areatype}"
+                                            th:value="${area}" th:text="${area}"></option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="inputtagname" class="col-lg-5">请输入标签名:</label>
+                                <input type="text" id="inputtagname">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label for="inputwidth" class="col-lg-5">请输入长度:</label>
+                                <input type="text" id="inputwidth">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="inputheight" class="col-lg-5">请输入高度:</label>
+                                <input type="text" id="inputheight">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-4 text-center textarealabel" for="inputattr">属性值:</label>
+                            <textarea class="col-sm-7" id="inputattr"></textarea>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-4 text-center textarealabel" for="inputtext">文本值:</label>
+                            <textarea class="col-sm-7" id="inputtext"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                        </button>
+                        <button type="button" class="btn btn-primary" onclick="addNewChildOrUpdateNode()">
+                            提交更改
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>

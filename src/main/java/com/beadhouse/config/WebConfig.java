@@ -20,7 +20,10 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
+import org.thymeleaf.spring4.view.ThymeleafView;
 import org.thymeleaf.spring4.view.ThymeleafViewResolver;
+import org.thymeleaf.spring4.webflow.view.AjaxThymeleafViewResolver;
+import org.thymeleaf.spring4.webflow.view.FlowAjaxThymeleafView;
 import org.thymeleaf.templatemode.TemplateMode;
 import org.thymeleaf.templateresolver.ITemplateResolver;
 
@@ -102,7 +105,7 @@ public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationCon
         //resolver.setApplicationContext(context);
         resolver.setPrefix("/WEB-INF/templates/");
         resolver.setSuffix(".html");
-        resolver.setOrder(0);
+        resolver.setOrder(1);
         resolver.setCharacterEncoding("UTF-8");
         resolver.setTemplateMode(TemplateMode.HTML);
         resolver.setCacheable(false);
@@ -114,8 +117,19 @@ public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationCon
         ThymeleafViewResolver resolver = new MyThymeleafViewResolver();
         resolver.setTemplateEngine(templateEngine());
         resolver.setCharacterEncoding("UTF-8");
-        resolver.setOrder(1);
+        resolver.setOrder(0);
+        resolver.setViewClass(ThymeleafView.class);
         return resolver;
+    }
+
+    @Bean
+    public ThymeleafViewResolver AjaxThemeleafViewResolver() {
+        AjaxThymeleafViewResolver viewResolver = new AjaxThymeleafViewResolver();
+        viewResolver.setViewClass(FlowAjaxThymeleafView.class);
+        viewResolver.setOrder(2);
+        viewResolver.setCharacterEncoding("UTF-8");
+        viewResolver.setTemplateEngine(templateEngine());
+        return viewResolver;
     }
 
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {

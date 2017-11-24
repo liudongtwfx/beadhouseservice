@@ -12,11 +12,9 @@ import org.hswebframework.ezorm.rdb.meta.builder.TableBuilder;
 import org.hswebframework.ezorm.rdb.render.dialect.MysqlRDBDatabaseMetaData;
 import org.hswebframework.ezorm.rdb.simple.SimpleDatabase;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.JDBCType;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
@@ -112,5 +110,34 @@ public final class CreateTableImpl {
             }
         }
         return false;
+    }
+
+    public static void fillTableInfo(String schema, String tableName, Table table) throws SQLException {
+        if (table == null) {
+            table = new Table();
+        }
+        table.setTableName(tableName);
+        Map<String, ResultSet> result = new DatabaseStructureQuery(schema).getColumnInfo(tableName);
+        if (result == null) {
+            return;
+        }
+        if (result.containsKey("primarykey")) {
+            ResultSet resultSet = result.get("primarykey");
+            while (resultSet.next()) {
+                table.setPrimaryKeyName(resultSet.getString("COLUMN_NAME"));
+            }
+        }
+        if (result.containsKey("columns")) {
+            ResultSet resultSet = result.get("columns");
+            while (resultSet.next()) {
+                RDBColumnMetaData metaData = new RDBColumnMetaData();
+                metaData.setName(resultSet.getString("COLUMN_NAME"));
+                metaData.setJdbcType(JDBCType.valueOf(Integer.valueOf(resultSet.getString("DATA_TYPE"))));
+                metaData.setNotNull(resultSet.getString("IS_NULLABLE").equals("NO"));
+                metaData.setLength(Integer.parseInt(resultSet.getString("COLUMN_SIZE")));
+                metaData.setComment(resultSet.getString("REMARKS"));
+                table.getColumns().add(metaData);
+            }
+        }
     }
 }

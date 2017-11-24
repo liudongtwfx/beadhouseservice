@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>新增业务</title>
+</head>
+<body>
+<link rel="stylesheet" href="http://127.0.0.1:8088/cssfiles/admin/layout.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="../../cssfiles/admin/layout.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="../../cssfiles/admin/contentcommon.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="http://127.0.0.1:8088/cssfiles/admin/contentcommon.css" type="text/css" media="screen"/>
+<div th:replace="commonside::#secondary_bar"></div>
+<div th:replace="commonside::#sidebar"></div>
+<div id="main_div">
+    <section id="main">
+        <link rel="stylesheet" href="http://127.0.0.1:8088/cssfiles/template/htmledit.css" type="text/css">
+        <link href="../../cssfiles/template/htmledit.css">
+        <div class="header inner_content">
+            <h1 class="page-title">养老服务中心后台管理</h1>
+            <ul class="breadcrumb">
+                <li th:text="#{admin.business.add.baseinfopage.firsttitle}">养老攻略管理</li>
+                <li class="active" th:text="#{admin.business.add.baseinfopage.secondtitle}">添加攻略</li>
+            </ul>
+        </div>
+        <div class="inner_content" id="mainhtmlstructure">
+            <form accept-charset="UTF-8" action="/admin/business/add" method="post">
+                <div class="row">
+                    <label for="businesscnname">业务名称(中文):</label>
+                    <input type="text" id="businesscnname" name='chinesename' required="required">
+                </div>
+                <div class="row">
+                    <label for="businessenname">业务名称(英文):</label>
+                    <input type="text" id="businessenname" name="englishname" required="required">
+                </div>
+                <div class="row">
+                    <label for="businessenname">URL相对路径:</label>
+                    <input type="text" id="baseURL" name="urlpath" required="required">
+                </div>
+                <div class="row">
+                    <button class="center-block btn btn-success" name="submit">提交</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+</body>
+</html>

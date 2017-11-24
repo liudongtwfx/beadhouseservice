@@ -1,0 +1,33 @@
+.element-row {
+    margin-bottom: 5px;
+    min-width: 1000px;
+}
+
+#mainhtmlstructure {
+    left: 30px;
+    position: relative;
+
+}
+
+.elementlebal {
+    margin-left: 10px;
+}
+
+#mainhtmlstructure input {
+    min-width: 100px;
+}
+
+.mybtn {
+    margin-left: 20px;
+    width: 110px;
+}
+
+#inputtext, #inputattr {
+    min-height: 150px;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.textarealabel {
+    padding: 30px;
+}

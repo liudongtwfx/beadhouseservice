@@ -89,4 +89,12 @@ public class RedisTest {
         }
         //pipeline.exec();
     }
+
+    @Test
+    public void splitTest() {
+        String s = "I               am a man";
+        for (String word : s.split("\\s+")) {
+            System.out.println(word);
+        }
+    }
 }

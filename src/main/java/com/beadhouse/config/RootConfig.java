@@ -78,7 +78,7 @@ public class RootConfig implements AsyncConfigurer, SchedulingConfigurer {
     @Bean
     public Jaxb2Marshaller jaxb2Marshaller() {
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
-        marshaller.setPackagesToScan(new String[]{"com.beadhouse.site"});
+        marshaller.setPackagesToScan("com.beadhouse.site");
         return marshaller;
     }
 

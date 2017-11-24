@@ -13,7 +13,7 @@ public class Table {
     private String tableName;
     private String primaryKeyName;
 
-    Table() {
+    public Table() {
         columns = new ArrayList<>();
     }
 

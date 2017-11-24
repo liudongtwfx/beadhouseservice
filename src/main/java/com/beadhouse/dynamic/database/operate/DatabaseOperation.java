@@ -19,7 +19,7 @@ public class DatabaseOperation {
     private SqlExecutor executor;
     private Connection connection;
 
-    DatabaseOperation(String schema) {
+    public DatabaseOperation(String schema) {
         try {
             setup(schema);
         } catch (Exception e) {
@@ -51,7 +51,9 @@ public class DatabaseOperation {
 
     public final void close() {
         try {
-            connection.close();
+            if (connection != null) {
+                connection.close();
+            }
         } catch (SQLException e) {
             LogType.EXCETPION.getLOGGER().error("can't close connection");
             e.printStackTrace();

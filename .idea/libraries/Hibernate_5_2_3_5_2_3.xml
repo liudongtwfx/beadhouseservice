@@ -24,6 +24,7 @@
       <root url="jar://$USER_HOME$/.ideaLibSources/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar!/" />
       <root url="jar://$USER_HOME$/.ideaLibSources/cdi-api-1.1-sources.jar!/" />
       <root url="jar://$USER_HOME$/.ideaLibSources/hibernate-core-5.2.3.Final-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/dom4j-1.6.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

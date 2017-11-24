@@ -33,15 +33,15 @@
             </ul>
         </div>
         <!--/*@thymesVar id="table" type="main.java.com.beadhouse.dynamic.database.databasemetadata.Table"*/-->
-        <div class="inner_content real-content" th:object="${table}">
+        <div id="addTableForm" class="inner_content real-content" >
             <div class="row">
                 <div class="text-center" th:classappend="'callback'+${callbackinfo}" th:text="${callback}">返回信息
                 </div>
             </div>
-            <ul th:if="${#fields.hasErrors('*')}" class="errorlist">
-                <li th:each="err : ${#fields.errors('*')}" th:text="${err}">输入不合法</li>
+            <ul th:if="${#fields.hasErrors('${table}')}" class="errorlist">
+                <li th:each="err : ${#fields.errors('${table}')}" th:text="${err}">输入不合法</li>
             </ul>
-            <form accept-charset="UTF-8" action="#" th:action="#{admin.tables.add.actionurl}" method="post">
+            <form accept-charset="UTF-8" action="#" th:object="${table}" th:action="#{admin.tables.add.actionurl}" method="post">
                 <div class="row">
                     <label for="tableName">数据表名</label>
                     <input th:field="*{tableName}" type="text" id="tableName">

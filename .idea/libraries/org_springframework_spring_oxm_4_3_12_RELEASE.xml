@@ -18,6 +18,7 @@
       <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-beans-4.3.12.RELEASE-sources.jar!/" />
       <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-core-4.3.12.RELEASE-sources.jar!/" />
       <root url="jar://$PROJECT_DIR$/../maven dependencies/commons-logging-1.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../maven dependencies/spring-context-4.3.12.RELEASE.jar!/" />
     </SOURCES>
   </library>
 </component>

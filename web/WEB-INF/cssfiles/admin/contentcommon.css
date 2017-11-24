@@ -1,14 +1,9 @@
-#main_div {
-    width: 1200px;
-}
 
 body {
-    min-width: 1400px;
-    background: url("../../jpgfiles/beadhouseback.jpg") repeat-y;
+
 }
 
 .inner_content {
-    width: 100%;
     margin: 20px 20px 20px 5%;
 }
 
@@ -85,4 +80,8 @@ body {
 
 .wronginput {
     border-color: red;
+}
+
+#addviewform {
+    padding-top: 200px;
 }

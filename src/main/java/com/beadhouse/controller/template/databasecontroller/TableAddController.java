@@ -1,6 +1,7 @@
 package main.java.com.beadhouse.controller.template.databasecontroller;
 
 
+import main.java.com.beadhouse.System.CommonFinalVariable;
 import main.java.com.beadhouse.System.LogType;
 import main.java.com.beadhouse.dynamic.database.operate.CreateTableImpl;
 import main.java.com.beadhouse.dynamic.database.databasemetadata.Table;
@@ -19,7 +20,7 @@ import java.util.List;
 @Controller
 @RequestMapping(value = "/admin/database/table")
 public class TableAddController {
-    @RequestMapping(value = "add")
+    @RequestMapping(value = {"add", "addtable"})
     public String addTablePage(Table table) {
         LogType.DEBUGINFO.getLOGGER().debug(table.toString());
         return "addtable";
@@ -27,11 +28,7 @@ public class TableAddController {
 
     @ModelAttribute("ColumnTypes")
     public List<String> getColumnTypes() {
-        List<String> attrbutes = new ArrayList<>();
-        for (JDBCType type : JDBCType.values()) {
-            attrbutes.add(type.getName());
-        }
-        return attrbutes;
+        return CommonFinalVariable.getJdbcTypes();
     }
 
     @RequestMapping(value = "add", params = {"addColumnRow"})

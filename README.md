@@ -22,7 +22,19 @@ business: personal settings, apply for authorise
 
 ###中间层
 业务的action如何生成?封装常见的增删改查操作,
-
+增加:
+删除:
+修改:
+查询:数据库查询操作?es查询
 
 ###表示层
 前端页面的展示,模板化
+
+###缓存
+URL和视图的对应关系mapping
+REST ful api和事件的对应关系
+
+###前端和后台的联系
+设计一套良好的RESTful API接口
+数据源:增删改查数据,填充数据到视图中去;
+事件源:通过eventid创建事件,接受前端的ajax请求;

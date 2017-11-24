@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../cssfiles/fileinput/theme.css">
     <link rel="stylesheet" href="../cssfiles/admin/commonside.css">
     <link rel="stylesheet" href="../cssfiles/font-awesome/css/font-awesome.css">
+    <script src="http://127.0.0.1:8088/jsfiles/jquery-3.1.1.js" type="text/javascript"></script>
     <title>新增数据表</title>
 </head>
 <body>
@@ -35,84 +36,64 @@
         <!--/*@thymesVar id="table" type="main.java.com.beadhouse.dynamic.database.databasemetadata.Table"*/-->
         <div class="inner_content real-content">
             <div class="row">
-                <div class="text-center" th:classappend="'callback'+${callbackinfo}" th:text="${callback}">返回信息
+                <div class="text-center" th:classappend="'callback'+${callbackinfo}" th:text="${error}">返回信息
                 </div>
             </div>
-            <ul th:if="${table} != null and ${#fields.hasErrors('*')}" class="errorlist">
+            <ul th:if="${table} != null and ${#fields.hasErrors('${table}')}" class="errorlist">
                 <li th:each="err : ${#fields.errors('*')}" th:text="${err}">输入不合法</li>
             </ul>
             <div class="col-lg-2">
                 <span class="">数据库:</span>
-                <select id="select_schema" th:field="${schemaselected}">
-                    <option th:each="attr:${databases}" th:value="${attr}"
-                            th:text="${attr}"></option>
-                </select>
-                <script type="text/javascript">
-                    $("#select_schema").select(
-                        $.get(
-                            "/admin/database/table/list",
-                            {
-                                schema: $("#select_schema").find("option:selected").text()
-                            }
-                        )
-                    )
-                </script>
-            </div>
-            <div class="col-lg-2" th:if="${schemaselected}!=''">
-                <span class="">数据表:</span>
-                <select th:selected="${tablename}">
-                    <option th:each="attr:${tablelist}" th:value="${attr}"
+                <select id="select_schema">
+                    <option th:each="attr:${databases}" th:value="${attr}" th:selected="${schema}"
                             th:text="${attr}"></option>
                 </select>
             </div>
-            <form th:object="${table}" th:if="${table} != null" accept-charset="UTF-8" action="#"
-                  th:action="#{admin.tables.list.actionurl}" method="post">
-                <div class="row">
-                    <label for="tableName">数据表名</label>
-                    <input th:field="*{tableName}" type="text" id="tableName">
-                    <button type="submit" name="addColumnRow">新增表列</button>
+            <div th:fragment="tablespart" id="tablepart">
+                <div class="col-lg-4">
+                    <span class="">数据表:</span>
+                    <span th:text="${#lists.size(schemaname)}">-1</span>
+                    <select id="tables" onchange="getTableInfo()">
+                        <option th:each="attr:${schemaname}" th:value="${attr}" th:selected="${tablename}"
+                                th:text="${attr}"></option>
+                    </select>
                 </div>
-                <div th:each="column,columnStat:*{columns}" id="columns">
-                    <div class="row">
-                        <span>字段名字:</span>
-                        <input th:field="*{columns[__${columnStat.index}__].name}"
-                               type="text">
-                        <span class="">字段类型:</span>
-                        <select id="select"
-                                th:field="*{columns[__${columnStat.index}__].jdbcType}">
-                            <option th:each="attr:${ColumnTypes}" th:value="${attr}"
-                                    th:text="${attr}"></option>
-                        </select>
-                        <span class="">长度:</span>
-                        <input class="shortlength" th:field="*{columns[__${columnStat.index}__].length}"
-                               type="text"
-                               th:value="0"
-                               th:errorclass="wronginput">
-                        <span class="">精度:</span>
-                        <input class="shortlength" th:field="*{columns[__${columnStat.index}__].precision}"
-                               th:value="0"
-                               type="text" th:errorclass="wronginput">
-                        <span class="">不为空:</span>
-                        <input type="checkbox" th:field="*{columns[__${columnStat.index}__].notNull}">
-                        <span>注释(汉语字段):</span>
-                        <input th:field="*{columns[__${columnStat.index}__].comment}" type="text">
-                        <button type="submit" th:value="${columnStat.index}" name="removeColumn"
-                                class="btn btn-danger">
-                            删除该行
-                        </button>
-                    </div>
-                </div>
-                <div class="row">
-                    <label for="tableprimarykey">主关键字段名:</label>
-                    <input th:field="*{primaryKeyName}" type="text" id="tableprimarykey">
-                    <span class="warning">选择上述的某个字段作为主键</span>
-                </div>
-                <div class="row">
-                    <button type="submit" name="addTable" class="center-block btn btn-success">添加数据表</button>
-                </div>
-            </form>
+            </div>
+            <div id="tableinfo">
+                <div th:replace="addtable::#addTableForm"></div>
+            </div>
         </div>
     </section>
 </div>
 </body>
+<script type="text/javascript">
+    $(document).ready(
+        function () {
+            $("#select_schema").change(
+                function () {
+                    $.get(
+                        "/admin/database/table/list",
+                        {
+                            schema: $("#select_schema").find("option:selected").text()
+                        },
+                        function (data) {
+                            $("#tablepart").html(data);
+                        })
+                }
+            );
+        }
+    );
+
+    function getTableInfo() {
+        $.get(
+            "/admin/database/table/list",
+            {
+                schema: $("#select_schema").find("option:selected").text(),
+                tablename: $("#tables").find("option:selected").text()
+            },
+            function (data) {
+                $("#tableinfo").html(data);
+            })
+    }
+</script>
 </html>

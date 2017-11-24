@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="war" name="beadhouse">
-    <output-path>$PROJECT_DIR$/out/artifacts/beadhouse</output-path>
+    <output-path>$PROJECT_DIR$/out</output-path>
     <root id="archive" name="beadhouse.war">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -50,6 +50,11 @@
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.25" />
           <element id="library" level="project" name="org.hswebframework:hsweb-easy-orm-rdb:3.0.0" />
           <element id="library" level="project" name="Spring Webflow-2.4.0" />
+          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf-spring4:3.0.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf:3.0.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.javassist:javassist:3.20.0-GA" />
+          <element id="library" level="project" name="Maven: ognl:ognl:3.1.12" />
+          <element id="library" level="project" name="org.jsoup:jsoup:1.11.1" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="FinalProject/web/Web" />

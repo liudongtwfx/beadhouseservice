@@ -24,14 +24,15 @@ DROP TABLE IF EXISTS `leisuregroup`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `leisuregroup` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `titie` varchar(255) NOT NULL,
+  `title` varchar(255) NOT NULL,
   `addtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `details` blob NOT NULL,
   `groupstatus` enum('NOTSTARTED','STARTED','RUNNING','ENDED') NOT NULL DEFAULT 'NOTSTARTED',
   `numberofpeople` int(11) NOT NULL DEFAULT '0',
   `updatetime` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `maxpeoplecount` tinyint(4) NOT NULL DEFAULT '100',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,6 +41,7 @@ CREATE TABLE `leisuregroup` (
 
 LOCK TABLES `leisuregroup` WRITE;
 /*!40000 ALTER TABLE `leisuregroup` DISABLE KEYS */;
+INSERT INTO `leisuregroup` VALUES (1,'你好吗','2017-10-11 00:08:17','','NOTSTARTED',0,NULL,100);
 /*!40000 ALTER TABLE `leisuregroup` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-03 11:07:08
+-- Dump completed on 2017-11-26 13:25:05

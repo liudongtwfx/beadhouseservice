@@ -5,16 +5,16 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import main.java.com.beadhouse.System.LogType;
 import main.java.com.beadhouse.business.redisclient.RedisClientConnector;
+import main.java.com.beadhouse.dynamic.dataencapsulation.StructAnalysis;
+import main.java.com.beadhouse.dynamic.dataencapsulation.StructAreaData;
+import main.java.com.beadhouse.dynamic.dataencapsulation.TableAreaData;
 import main.java.com.beadhouse.dynamic.html.areatemplate.AreaType;
 import main.java.com.beadhouse.exception.sqlexception.NeedElementIdExcetpion;
 import org.jsoup.nodes.Attribute;
 import org.jsoup.nodes.Element;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
-import java.io.Serializable;
+import java.io.*;
 import java.util.*;
 
 public class DomInfo extends AbstractDomInfo implements Serializable {
@@ -70,7 +70,7 @@ public class DomInfo extends AbstractDomInfo implements Serializable {
         childList.put(parentid, list);
     }
 
-    public String createHTMLTree(HttpServletRequest request) {
+    public String createHTMLTree(HttpServletRequest request) throws UnsupportedEncodingException {
         try {
             JSONObject childlist = JSON.parseObject(request.getParameter("childlist"));
             JSONObject nodesinfo = JSON.parseObject(request.getParameter("nodesinfo"));
@@ -89,7 +89,7 @@ public class DomInfo extends AbstractDomInfo implements Serializable {
             RedisClientConnector.getRedis().hmset(absoluteFilePath, needDataInputMap);
             return "success";
         } catch (NeedElementIdExcetpion e) {
-            return e.toString();
+            return new String(e.toString().getBytes(), "UTF-8");
         } catch (Exception e) {
             e.printStackTrace();
             LogType.EXCETPION.getLOGGER().error(e);
@@ -132,7 +132,9 @@ public class DomInfo extends AbstractDomInfo implements Serializable {
                 if (!nodeInfo.getJSONObject("attr").containsKey("id")) {
                     throw new NeedElementIdExcetpion(areaType + "需要有一个id属性");
                 }
-                needDataInputMap.put(String.valueOf(nodeInfo.getJSONObject("attr").get("id")), String.valueOf(areaType));
+                //todo add builder patterns for structdata;
+                needDataInputMap.put(String.valueOf(nodeInfo.getJSONObject("attr").get("id")),
+                        StructAnalysis.getStruct(areaType).toString());
             }
             element.attr("th:include", getFragement(areaType));
         }

@@ -23,7 +23,7 @@ public class AddHtmlViewBusiness {
     HtmlViewRepository viewRepository;
 
     @Transactional
-    public void addnewHtml(HtmlView view) throws Exception {
+    public void addnewHtml(HtmlView view) throws IOException {
         view.setUpdateTime(new Date());
         String englishName = view.getEnglishName();
         String url = englishName.replaceAll("\\s+", "/");
@@ -35,8 +35,8 @@ public class AddHtmlViewBusiness {
         if (htmlFile.exists()) {
             throw new FileAlreadyExistsException(htmlFile.getName());
         }
-        createFile(view, htmlFile);
         this.viewRepository.save(view);
+        createFile(view, htmlFile);
     }
 
     private void createFile(HtmlView view, File htmlFile) throws IOException {

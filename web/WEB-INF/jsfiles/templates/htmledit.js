@@ -192,11 +192,10 @@ function analysis() {
     if (typeof(attrtext) === 'undefined') {
         return attr;
     }
-    for (var line in attrtext.split("\n")) {
-        if (typeof(attrtext[line] === 'undefined')) {
-            continue;
-        }
-        var kv = attrtext[line].split("=");
+    var lines = attrtext.split("\n");
+    for (var line in lines) {
+        var kv = lines[line].split("=");
+        console.log(kv);
         attr[kv[0]] = kv[1];
     }
     console.log(attr);
@@ -221,7 +220,19 @@ function submitChanges() {
             removed: JSON.stringify(deleted)
         },
         function callback(data) {
-            console.log(data);
+            var node = '';
+            if (data === 'success') {
+                node = "<span class='text-suceess'>成功更改视图文件</span>";
+                $("#callbackinfo").html(node);
+                setTimeout(gotoAddDataSourcePage(), 3 * 1000);
+            } else {
+                node = "<span class='text-warning'>" + data + "</span>";
+            }
+            $("#callbackinfo").html(node);
         }
     )
+}
+
+function gotoAddDataSourcePage() {
+    location.href = "/admin/views/adddatasource";
 }

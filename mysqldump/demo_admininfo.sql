@@ -31,9 +31,10 @@ CREATE TABLE `admininfo` (
   `username` varchar(20) NOT NULL,
   `password` varchar(100) NOT NULL,
   `addtime` date NOT NULL,
+  `department` varchar(20) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   UNIQUE KEY `employeeid` (`employeeid`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +43,7 @@ CREATE TABLE `admininfo` (
 
 LOCK TABLES `admininfo` WRITE;
 /*!40000 ALTER TABLE `admininfo` DISABLE KEYS */;
-INSERT INTO `admininfo` VALUES (1,'CR12536','刘东','13121931651','619529419@qq.com','liu6891333','$2a$10$s7GqqYX84hrAYG7VubPiVu4uRA0Cnx2/CFSdtbX/sK9KIS0Awea7q','2017-05-26');
+INSERT INTO `admininfo` VALUES (1,'CR12536','刘东','13121931651','619529419@qq.com','liu6891333','$2a$10$s7GqqYX84hrAYG7VubPiVu4uRA0Cnx2/CFSdtbX/sK9KIS0Awea7q','2017-05-26',''),(2,'HY0000','陈锋','13121981765','liudong@qq.com','root','$2a$10$HJvTwsEwdWiovrN/3O9D/eW3wOe3ADyuOvrkjCMjyulRq34hmu31m','2017-10-25',''),(3,'HY0001','胡东方','13121981721','hudongfang@126.com','useradmin','$2a$10$1FSPewW.KpFYJSe3R28Tvu8F.awYMc2w5o5l4NufqL0UB8pPoA5NC','2017-10-25',''),(4,'HY0002','李暮达','13121981789','limuda@126.com','beadhouseadmin','$2a$10$o/M18dVSxJMtwIwMh/Uh/.nWh5AxKoNAnrK1./1YZt8UpfnwYSuR2','2017-10-25',''),(5,'HY0003','林晶晶','13121931543','linjingjing@126.com','articleadmin','$2a$10$bpWbNT5WpOMn/ykldDfUUulCpIhxxgrXr5whjQKE.h9Pejj.B8XVG','2017-10-25',''),(6,'HY0004','何家达','13121931787','hejiada@126.com','leisuregroupadmin','$2a$10$CM5VxKWAaoSbfDt9YazQ9e6BIXAMOY8lzVlwjc9hBaaATM60a98He','2017-10-25',''),(7,'HY0005','张延','13121896464','zhangyan@126.com','sysadmin','$2a$10$B45upYdMAMikUfdZSazqyu9ggXyiPKhvbAMjYFjbo7WO6v3K3PVjO','2017-10-25',''),(8,'HY1001','杨结实','13129876451','987623212@qq.com','yangjieshi','$2a$10$AJlHZ.U1Rtuq2fWxgOFppuqMn5wWjzsvLSC9gs3hy27qa.VlJnssy','2017-10-25','useradmin');
 /*!40000 ALTER TABLE `admininfo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-03 11:07:08
+-- Dump completed on 2017-11-26 13:25:05

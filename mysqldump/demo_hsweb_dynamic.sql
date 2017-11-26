@@ -16,27 +16,27 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `person`
+-- Table structure for table `hsweb_dynamic`
 --
 
-DROP TABLE IF EXISTS `person`;
+DROP TABLE IF EXISTS `hsweb_dynamic`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `person` (
-  `id` int(11) NOT NULL,
-  `name` varchar(12) DEFAULT NULL,
-  `time` time DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `hsweb_dynamic` (
+  `age` tinyint(4) NOT NULL COMMENT '年龄',
+  `id` varchar(32) NOT NULL COMMENT 'id',
+  `name` varchar(256) NOT NULL COMMENT '姓名',
+  `create_date` datetime DEFAULT NULL COMMENT '创建时间'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='动态数据表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `person`
+-- Dumping data for table `hsweb_dynamic`
 --
 
-LOCK TABLES `person` WRITE;
-/*!40000 ALTER TABLE `person` DISABLE KEYS */;
-/*!40000 ALTER TABLE `person` ENABLE KEYS */;
+LOCK TABLES `hsweb_dynamic` WRITE;
+/*!40000 ALTER TABLE `hsweb_dynamic` DISABLE KEYS */;
+/*!40000 ALTER TABLE `hsweb_dynamic` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -48,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-26 13:25:05
+-- Dump completed on 2017-11-26 13:25:04

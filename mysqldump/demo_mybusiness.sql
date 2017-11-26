@@ -16,27 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `person`
+-- Table structure for table `mybusiness`
 --
 
-DROP TABLE IF EXISTS `person`;
+DROP TABLE IF EXISTS `mybusiness`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `person` (
-  `id` int(11) NOT NULL,
-  `name` varchar(12) DEFAULT NULL,
-  `time` time DEFAULT NULL,
+CREATE TABLE `mybusiness` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `chinesename` varchar(30) NOT NULL,
+  `englishname` varchar(30) NOT NULL,
+  `urlpath` varchar(30) NOT NULL,
+  `viewpath` varchar(30) NOT NULL,
+  `mybusinesscomment` varchar(256) DEFAULT NULL,
+  `updatetime` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `level` enum('1','2','3','4') NOT NULL,
+  `parentbusinessid` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `person`
+-- Dumping data for table `mybusiness`
 --
 
-LOCK TABLES `person` WRITE;
-/*!40000 ALTER TABLE `person` DISABLE KEYS */;
-/*!40000 ALTER TABLE `person` ENABLE KEYS */;
+LOCK TABLES `mybusiness` WRITE;
+/*!40000 ALTER TABLE `mybusiness` DISABLE KEYS */;
+/*!40000 ALTER TABLE `mybusiness` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -48,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-26 13:25:05
+-- Dump completed on 2017-11-26 13:25:04

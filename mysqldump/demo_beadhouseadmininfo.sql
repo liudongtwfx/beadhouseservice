@@ -42,7 +42,7 @@ CREATE TABLE `beadhouseadmininfo` (
 
 LOCK TABLES `beadhouseadmininfo` WRITE;
 /*!40000 ALTER TABLE `beadhouseadmininfo` DISABLE KEYS */;
-INSERT INTO `beadhouseadmininfo` VALUES (1,'liu6891333','刘东',108,'2017-02-28 05:37:29','$2a$10$58aMH0KwpIf9kOubyUcPIuym7D3AetiHCK32wUz0OHu8oqYCAn48y','13121931651','619529419@qq.com'),(2,'liudongtwfx','陈云',184,'2017-03-27 03:08:47','$2a$10$EDKPKqrC0MI1YpqiMr94buUnn5A2p8UhlYasEtnd.VRNEkzPxgz9S','13121931541','612121212@qq.com');
+INSERT INTO `beadhouseadmininfo` VALUES (0,'liudong','房建明',121,'2017-09-07 11:00:13','$2a$10$gz1YK.mbU8Jjb8iy01iRxOIM22v9MqrnljTjq4SD0wp865.1lxTuG','13121981765','liudongtt@126.com'),(1,'liu6891333','刘东',108,'2017-02-28 05:37:29','$2a$10$58aMH0KwpIf9kOubyUcPIuym7D3AetiHCK32wUz0OHu8oqYCAn48y','13121931651','619529419@qq.com'),(2,'liudongtwfx','陈云',184,'2017-03-27 03:08:47','$2a$10$EDKPKqrC0MI1YpqiMr94buUnn5A2p8UhlYasEtnd.VRNEkzPxgz9S','13121931541','612121212@qq.com');
 /*!40000 ALTER TABLE `beadhouseadmininfo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-03 11:07:06
+-- Dump completed on 2017-11-26 13:25:03

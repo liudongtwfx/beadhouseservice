@@ -16,33 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `beadhouseimageinfo`
+-- Table structure for table `views`
 --
 
-DROP TABLE IF EXISTS `beadhouseimageinfo`;
+DROP TABLE IF EXISTS `views`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `beadhouseimageinfo` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `imagedescription` varchar(100) NOT NULL,
-  `imagepath` varchar(50) NOT NULL,
-  `imagepriority` tinyint(4) NOT NULL,
-  `updatetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `beadhouseid` int(11) NOT NULL,
+CREATE TABLE `views` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `chinesetitle` varchar(100) NOT NULL DEFAULT '',
+  `url` varchar(50) NOT NULL DEFAULT '',
+  `filepath` varchar(50) NOT NULL DEFAULT '',
+  `viewcomment` varchar(30) NOT NULL DEFAULT '',
+  `updatetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `englishname` varchar(40) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
-  KEY `beadhouseimagehouseno` (`beadhouseid`),
-  CONSTRAINT `beadhouseimageinfo_ibfk_1` FOREIGN KEY (`beadhouseid`) REFERENCES `beadhouseinfo` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+  UNIQUE KEY `englishname` (`englishname`),
+  UNIQUE KEY `filepath` (`filepath`),
+  UNIQUE KEY `chinesetitle` (`chinesetitle`)
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `beadhouseimageinfo`
+-- Dumping data for table `views`
 --
 
-LOCK TABLES `beadhouseimageinfo` WRITE;
-/*!40000 ALTER TABLE `beadhouseimageinfo` DISABLE KEYS */;
-INSERT INTO `beadhouseimageinfo` VALUES (12,'养老院图文','ovs843546f.jpg',1,'2017-09-03 02:10:01',108),(13,'养老院风景','jdmbf4o8l1.jpg',2,'2017-09-04 11:28:49',108),(14,'额为','82g4crrr5p.jpg',10,'2017-09-03 02:10:29',108),(15,'内部结构','b6a9g5q8vp.jpg',10,'2017-09-07 09:40:16',184),(16,'健身设施','lwt0i4ucpl.jpg',3,'2017-09-07 09:39:16',184),(17,'外面风景','w4tpqdgl1x.jpg',1,'2017-09-07 09:39:42',184),(18,'屋内设施','52bo8sfpt1.jpg',1,'2017-09-07 11:11:24',121),(19,'门外风景','n2pa03qwth.jpg',3,'2017-09-07 11:12:14',121),(20,'俯瞰图','t1309fvrf6.jpg',3,'2017-09-07 11:13:08',121);
-/*!40000 ALTER TABLE `beadhouseimageinfo` ENABLE KEYS */;
+LOCK TABLES `views` WRITE;
+/*!40000 ALTER TABLE `views` DISABLE KEYS */;
+/*!40000 ALTER TABLE `views` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

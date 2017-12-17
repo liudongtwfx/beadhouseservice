@@ -5,8 +5,7 @@
 }
 
 .content_title {
-    display: inline;
-    position: relative;
+    display: block;
     left: 3%;
     font-family: 微软雅黑;
     font-size: 18px;

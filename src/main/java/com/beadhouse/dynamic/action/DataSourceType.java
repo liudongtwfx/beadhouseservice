@@ -1,4 +1,4 @@
-package main.java.com.beadhouse.dynamic.action.insertaction;
+package main.java.com.beadhouse.dynamic.action;
 
 public enum DataSourceType {
     DADA_BASE, REDIS, MYSQL, ELASTICSEARCH

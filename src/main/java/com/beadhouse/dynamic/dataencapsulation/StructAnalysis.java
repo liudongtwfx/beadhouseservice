@@ -1,5 +1,6 @@
 package main.java.com.beadhouse.dynamic.dataencapsulation;
 
+import main.java.com.beadhouse.System.LogType;
 import main.java.com.beadhouse.business.redisclient.RedisClientConnector;
 import main.java.com.beadhouse.dynamic.html.areatemplate.AreaType;
 
@@ -13,7 +14,7 @@ public class StructAnalysis {
         String[] params = structdatas.split("\\|\\|");
         StructAreaData areaData = null;
         for (String param : params) {
-            String[] kv = param.split("=");
+            String[] kv = param.split(":");
             if (kv[0].equals("areatype")) {
                 areaData = getStruct(AreaType.valueOf(kv[1]));
             } else if (areaData == null) {
@@ -21,9 +22,9 @@ public class StructAnalysis {
             }
             if (kv[0].equals("schema")) {
                 areaData.setSchema(kv[1]);
-            } else if (kv[1].equals("table")) {
+            } else if (kv[0].equals("table")) {
                 areaData.setTable(kv[1]);
-            } else if (kv[1].equals("columns")) {
+            } else if (kv[0].equals("columns") && kv.length > 1) {
                 areaData.setColumns(getColumns(kv[1]));
             }
         }
@@ -44,19 +45,25 @@ public class StructAnalysis {
         switch (type) {
             case TABLE:
                 return new TableAreaData();
+            case FORM:
+                return new FormAreaData();
             default:
                 return null;
         }
     }
 
-    public List<StructAreaData> getStructAreaDatas(String view) {
+    public static List<StructAreaData> getStructAreaDatas(String view) {
         Map<String, String> viewDatas = RedisClientConnector.getRedis().hgetAll(view);
         if (viewDatas == null || viewDatas.size() == 0) {
             return new ArrayList<>();
         }
         List<StructAreaData> structAnalyses = new ArrayList<>();
         for (Map.Entry<String, String> entry : viewDatas.entrySet()) {
-            structAnalyses.add(analysis(entry.getKey(), entry.getValue()));
+            StructAreaData data = analysis(entry.getKey(), entry.getValue());
+            LogType.DEBUGINFO.getLOGGER().debug(data);
+            if (data != null) {
+                structAnalyses.add(data);
+            }
         }
         return structAnalyses;
     }

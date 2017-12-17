@@ -120,45 +120,11 @@
 </div>
 
 
-<div class="sidebar-nav">
-    <ul>
-        <li data-popover="true"
-            rel="popover" data-placement="right"><a href="#" data-target=".premium-menu" class="nav-header collapsed"
-                                                    data-toggle="collapse"><i class="fa fa-fw fa-calendar"></i>养老院信息管理<i
-                class="fa fa-collapse"></i></a></li>
-        <li>
-            <ul class="premium-menu nav nav-list collapse">
-                <li><a href="index"><span class="fa fa-caret-right"></span> 基本信息管理</a></li>
-                <li><a href="imagemanage"><span class="fa fa-caret-right"></span> 养老院图片管理</a></li>
-            </ul>
-        </li>
-        <li rel="popover" data-placement="right"><a href="#" data-target=".premium-menu" class="nav-header collapsed"
-                                                    data-toggle="collapse"><i class="fa fa-fw fa-fighter-jet"></i>
-            老人信息管理<i class="fa fa-collapse"></i></a></li>
-        <li>
-            <ul class="premium-menu nav nav-list collapse in">
-                <li class="active"><a href="#"><span class="fa fa-caret-right"></span> 老人入住信息管理</a></li>
-                <li><a href="elderhealth"><span class="fa fa-caret-right"></span> 老人护理记录管理</a></li>
-                <li><a href="eldergoout"><span class="fa fa-caret-right"></span> 老人请假/外出管理</a></li>
-                <li><a href="elderaccident"><span class="fa fa-caret-right"></span> 老人事故管理</a></li>
-                <!--<li><a href="premium-blog.html"><span class="fa fa-caret-right"></span> Blog</a></li>
-                <li><a href="premium-blog-item.html"><span class="fa fa-caret-right"></span> Blog Page</a></li>
-                <li><a href="premium-pricing-tables.html"><span class="fa fa-caret-right"></span> Pricing Tables</a>
-                </li>
-                <li><a href="premium-upgrade-account.html"><span class="fa fa-caret-right"></span> Upgrade Account</a>
-                </li>
-                <li><a href="premium-widgets.html"><span class="fa fa-caret-right"></span> Widgets</a></li>
-                <li><a href="premium-timeline.html"><span class="fa fa-caret-right"></span> Activity Timeline</a></li>
-                <li><a href="premium-users.html"><span class="fa fa-caret-right"></span> Enhanced Users List</a></li>
-                <li><a href="premium-media.html"><span class="fa fa-caret-right"></span> Enhanced Media</a></li>
-                <li><a href="premium-invoice.html"><span class="fa fa-caret-right"></span> Invoice</a></li>
-                <li><a href="premium-build.html"><span class="fa fa-caret-right"></span> Advanced Tools</a></li>
-                <li><a href="premium-colors.html"><span class="fa fa-caret-right"></span> Additional Color Themes</a>
-                </li>-->
-            </ul>
-        </li>
-    </ul>
-</div>
+<div id="sidebar-nav"></div>
+<script>
+    $("#sidebar-nav").load("../../views/beadhouse/commonside.html")
+</script>
+
 <div class="main_content" id="content">
     <script src="../../jsfiles/bootstrap-datetimepicker.js"></script>
     <script src="../../jsfiles/beadhouse/common.js"></script>

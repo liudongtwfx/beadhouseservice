@@ -13,7 +13,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class DatabaseOperation {
+public class DatabaseOperation implements AutoCloseable {
     private final RDBDatabaseMetaData metaData;
     private final RDBDatabase database;
     private SqlExecutor executor;
@@ -49,6 +49,7 @@ public class DatabaseOperation {
         };
     }
 
+    @Override
     public final void close() {
         try {
             if (connection != null) {

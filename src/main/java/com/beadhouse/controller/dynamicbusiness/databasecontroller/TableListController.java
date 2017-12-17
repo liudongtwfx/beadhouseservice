@@ -73,7 +73,6 @@ public class TableListController {
     public String getTable(Table table, HttpServletRequest request, Model model) {
         String schema = request.getParameter("schema");
         String tablename = request.getParameter("tablename");
-
         try {
             CreateTableImpl.fillTableInfo(schema, tablename, table);
         } catch (SQLException e) {

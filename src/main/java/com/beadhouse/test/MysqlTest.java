@@ -1,21 +1,21 @@
 package main.java.com.beadhouse.test;
 
 import main.java.com.beadhouse.business.redisclient.RedisClientConnector;
-import main.java.com.beadhouse.dynamic.action.insertaction.DatabaseInsertAction;
+import main.java.com.beadhouse.dynamic.action.Action;
+import main.java.com.beadhouse.dynamic.actionthandler.insertactionhandler.DatabaseInsertAction;
+import main.java.com.beadhouse.dynamic.action.queryaction.DatabaseQueryAction;
+import main.java.com.beadhouse.dynamic.datawrapper.Data;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
 import org.junit.Test;
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.sql.*;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Properties;
+import java.util.*;
 
 public class MysqlTest {
     @Test
@@ -24,7 +24,7 @@ public class MysqlTest {
         Properties properties = new Properties();
         properties.setProperty("user", "root");
         properties.setProperty("password", "6820138");
-        String url = "jdbc:mysql://localhost:3306/test?serverTimezone=UTC";
+        String url = "jdbc:mysql://localhost:3306/demo?serverTimezone=UTC";
         Connection connection = DriverManager.getConnection(url, properties);
         DatabaseMetaData data = connection.getMetaData();
 
@@ -37,7 +37,7 @@ public class MysqlTest {
                 String column_name = columnData.getString("COLUMN_NAME");
                 String column_type = JDBCType.valueOf(Integer.valueOf(columnData.getString("DATA_TYPE"))).toString();
                 System.out.println(column_name + " " + column_type + " ");
-                RedisClientConnector.getRedis().lpush("test|" + tableName + "|columns", column_name);
+                RedisClientConnector.getRedis().lpush("demo|" + tableName + "|columns", column_name);
             }
             ResultSet primaryKeyResultSet = data.getPrimaryKeys("", "test", tableName);
             while (primaryKeyResultSet.next()) {
@@ -73,7 +73,7 @@ public class MysqlTest {
         map.put("studentname", "liudon");
         map.put("studentid", "2015140432");
         DatabaseInsertAction action = new DatabaseInsertAction("test", "student", map);
-        String callinfo = action.process(() -> System.out.println("callback function"));
+        Data callinfo = action.handle();
         System.out.println(callinfo);
     }
 
@@ -94,5 +94,9 @@ public class MysqlTest {
         System.out.println(doc.toString());
         OutputStream stream = new FileOutputStream(input);
         stream.write(doc.toString().getBytes());
+    }
+
+    @Test
+    public void queryTest() {
     }
 }

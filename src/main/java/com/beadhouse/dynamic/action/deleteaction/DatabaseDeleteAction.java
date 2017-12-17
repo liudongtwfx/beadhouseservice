@@ -1,13 +1,12 @@
 package main.java.com.beadhouse.dynamic.action.deleteaction;
 
 import main.java.com.beadhouse.System.LogType;
-import main.java.com.beadhouse.dynamic.action.Callback;
 import main.java.com.beadhouse.dynamic.database.operate.DatabaseOperation;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class DatabaseDeleteAction extends DeleteAction {
+public class DatabaseDeleteAction {
     private String schema;
     private String tablenName;
     private int id;
@@ -16,11 +15,6 @@ public class DatabaseDeleteAction extends DeleteAction {
         this.schema = schema;
         this.tablenName = tableName;
         this.id = id;
-    }
-
-    @Override
-    public String process(Callback callback) {
-        return null;
     }
 
     private boolean deleteFromTableId() {

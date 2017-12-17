@@ -28,7 +28,7 @@ public class AddHtmlViewBusiness {
         String englishName = view.getEnglishName();
         String url = englishName.replaceAll("\\s+", "/");
         String filename = englishName.replaceAll("\\s+", "_");
-        view.setUrl("/dynamic/" + url);
+        view.setUrl(url);
         view.setFilepath(filename);
         String absolute = CommonFinalVariable.ABSOLUTE_FILE_PATH + view.getFilepath() + ".html";
         File htmlFile = new File(absolute);
@@ -54,6 +54,13 @@ public class AddHtmlViewBusiness {
         Element head = new Element("head");
         head.appendChild(meta);
         head.appendChild(title);
+        head.append(" <link rel=\"stylesheet\" href=\"http://127.0.0.1:8088/cssfiles/admin/layout.css\" type=\"text/css\" media=\"screen\"/>\n" +
+                "    <link rel=\"stylesheet\" href=\"http://127.0.0.1:8088/bootstrap/css/bootstrap.css\">\n" +
+                "    <link rel=\"stylesheet\" href=\"http://127.0.0.1:8088/cssfiles/premium.css\">\n" +
+                "    <link rel=\"stylesheet\" href=\"http://127.0.0.1:8088/cssfiles/fileinput/theme.css\">\n" +
+                "    <link rel=\"stylesheet\" href=\"http://127.0.0.1:8088/cssfiles/font-awesome/css/font-awesome.css\">\n" +
+                "    <link rel=\"stylesheet\" href=\"http://127.0.0.1:8088/cssfiles/admin/layout.css\" type=\"text/css\" media=\"screen\"/>" +
+                "<script src=\"http://127.0.0.1:8088/jsfiles/jquery-3.1.1.js\" type=\"text/javascript\"></script>");
         Element body = new Element("body");
         Element html = new Element("html");
         html.attr("xmlns:th", "http://www.thymeleaf.org");

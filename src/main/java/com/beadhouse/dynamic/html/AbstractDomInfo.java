@@ -1,5 +1,6 @@
 package main.java.com.beadhouse.dynamic.html;
 
+import main.java.com.beadhouse.System.CommonFinalVariable;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -18,11 +19,13 @@ public abstract class AbstractDomInfo {
     protected Map<Integer, List<Integer>> childList;
     protected int id;
     protected int rootid;
+    protected String reletivepath;
     protected String absoluteFilePath;
 
-    public AbstractDomInfo(String absoluteFilePath) {
+    public AbstractDomInfo(String reletivepath) {
         id = 0;
-        this.absoluteFilePath = absoluteFilePath;
+        this.reletivepath = reletivepath;
+        this.absoluteFilePath = CommonFinalVariable.ABSOLUTE_FILE_PATH + reletivepath + ".html";
         setDocument();
         elements = new HashMap<>();
         nodeInfoMap = new HashMap<>();

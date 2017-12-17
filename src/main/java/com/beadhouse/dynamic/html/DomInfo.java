@@ -3,6 +3,7 @@ package main.java.com.beadhouse.dynamic.html;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import main.java.com.beadhouse.System.CommonFinalVariable;
 import main.java.com.beadhouse.System.LogType;
 import main.java.com.beadhouse.business.redisclient.RedisClientConnector;
 import main.java.com.beadhouse.dynamic.dataencapsulation.StructAnalysis;
@@ -12,6 +13,7 @@ import main.java.com.beadhouse.dynamic.html.areatemplate.AreaType;
 import main.java.com.beadhouse.exception.sqlexception.NeedElementIdExcetpion;
 import org.jsoup.nodes.Attribute;
 import org.jsoup.nodes.Element;
+import org.omg.CORBA.INTERNAL;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
@@ -31,7 +33,11 @@ public class DomInfo extends AbstractDomInfo implements Serializable {
 
     public DomInfo(String absoluteFilePath) {
         super(absoluteFilePath);
-        needDataInputMap = new HashMap<>();
+        if (RedisClientConnector.getRedis().keys(absoluteFilePath).size() == 0) {
+            needDataInputMap = new HashMap<>();
+        } else {
+            needDataInputMap = RedisClientConnector.getRedis().hgetAll(absoluteFilePath);
+        }
     }
 
     public void createNodesInfo() {
@@ -82,11 +88,21 @@ public class DomInfo extends AbstractDomInfo implements Serializable {
                 LogType.DEBUGINFO.getLOGGER().debug(alteredId);
                 updateElements(childlist, nodesinfo, alteredId);
             }
-            removed.forEach(removedId -> elements.get(removedId).remove());
+            removed.forEach(removedId -> {
+                Element element = elements.get(Integer.valueOf((String) removedId));
+                element.remove();
+                if (needDataInputMap.containsKey(element.id())) {
+                    needDataInputMap.remove(element.id());
+                }
+            });
             LogType.DEBUGINFO.getLOGGER().debug(document.toString());
             OutputStream stream = new FileOutputStream(new File(absoluteFilePath));
             stream.write(document.toString().getBytes());
-            RedisClientConnector.getRedis().hmset(absoluteFilePath, needDataInputMap);
+            OutputStream tomcatStream = new FileOutputStream(new File(CommonFinalVariable.TOMCAT_FILE_PATH + reletivepath + ".html"));
+            tomcatStream.write(document.toString().getBytes());
+            if (needDataInputMap.size() != 0) {
+                RedisClientConnector.getRedis().hmset(absoluteFilePath, needDataInputMap);
+            }
             return "success";
         } catch (NeedElementIdExcetpion e) {
             return new String(e.toString().getBytes(), "UTF-8");
@@ -98,7 +114,7 @@ public class DomInfo extends AbstractDomInfo implements Serializable {
     }
 
     private void updateElements(JSONObject childlist, JSONObject nodesinfo, Object alteredId) throws NeedElementIdExcetpion {
-        int id = (int) alteredId;
+        int id = Integer.valueOf(String.valueOf(alteredId));
         if (!nodesinfo.containsKey(String.valueOf(id))) {
             return;
         }
@@ -110,9 +126,22 @@ public class DomInfo extends AbstractDomInfo implements Serializable {
     }
 
     private void updateElement(Element element, JSONObject nodeInfo) {
+        String id = "";
+        String originId = element.id();
         for (Map.Entry<String, Object> kv : nodeInfo.getJSONObject("attr").entrySet()) {
+            if (kv.getKey().equals("id")) {
+                id = (String) kv.getValue();
+            }
             element.attr(kv.getKey(), (String) kv.getValue());
         }
+
+        if (!id.equals(originId) && needDataInputMap.containsKey(originId)) {
+            if (needDataRender.contains(AreaType.valueOf((String) nodeInfo.get("areaType")))) {
+                needDataInputMap.putIfAbsent(id, needDataInputMap.get(originId));
+                needDataInputMap.remove(originId);
+            }
+        }
+
         element.text((String) nodeInfo.get("text"));
     }
 
@@ -136,7 +165,9 @@ public class DomInfo extends AbstractDomInfo implements Serializable {
                 needDataInputMap.put(String.valueOf(nodeInfo.getJSONObject("attr").get("id")),
                         StructAnalysis.getStruct(areaType).toString());
             }
-            element.attr("th:include", getFragement(areaType));
+            if (areaType != AreaType.NULL && areaType != AreaType.HTML) {
+                element.attr("th:include", getFragement(areaType));
+            }
         }
         if (element == null) {
             element = new Element((String) nodeInfo.get("tagName"));

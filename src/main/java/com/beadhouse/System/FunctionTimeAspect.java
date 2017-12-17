@@ -6,7 +6,6 @@ import org.apache.logging.log4j.Logger;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
@@ -54,6 +53,8 @@ public class FunctionTimeAspect {
         for (Object o : objects) {
             if (o instanceof HttpServletRequest) {
                 HttpServletRequest request = (HttpServletRequest) o;
+                LogType.DEBUGINFO.getLOGGER().debug(request.getRequestURL());
+                request.getParameterMap().forEach((k, v) -> LogType.DEBUGINFO.getLOGGER().debug(k.toString() + v.toString()));
                 if (request.getRequestURL().indexOf("/admin/") != -1) {
                     if (request.getSession().getAttribute("adminName") == null) {
                         return "redirect:/admin/login";

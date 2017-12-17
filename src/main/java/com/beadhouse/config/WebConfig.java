@@ -44,7 +44,7 @@ public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationCon
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setPrefix("/WEB-INF/views/");
         resolver.setSuffix(".html");
-        resolver.setOrder(2);
+        resolver.setOrder(3);
         resolver.setExposeContextBeansAsAttributes(true);
         return resolver;
     }
@@ -102,7 +102,7 @@ public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationCon
     @Bean
     public ITemplateResolver templateResolver() {
         SpringResourceTemplateResolver resolver = new SpringResourceTemplateResolver();
-        //resolver.setApplicationContext(context);
+        resolver.setApplicationContext(context);
         resolver.setPrefix("/WEB-INF/templates/");
         resolver.setSuffix(".html");
         resolver.setOrder(1);
@@ -118,6 +118,7 @@ public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationCon
         resolver.setTemplateEngine(templateEngine());
         resolver.setCharacterEncoding("UTF-8");
         resolver.setOrder(0);
+        resolver.setCache(false);
         resolver.setViewClass(ThymeleafView.class);
         return resolver;
     }
@@ -128,6 +129,7 @@ public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationCon
         viewResolver.setViewClass(FlowAjaxThymeleafView.class);
         viewResolver.setOrder(2);
         viewResolver.setCharacterEncoding("UTF-8");
+        viewResolver.setCache(false);
         viewResolver.setTemplateEngine(templateEngine());
         return viewResolver;
     }

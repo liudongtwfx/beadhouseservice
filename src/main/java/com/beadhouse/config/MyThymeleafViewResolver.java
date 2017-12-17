@@ -2,10 +2,11 @@ package main.java.com.beadhouse.config;
 
 import org.springframework.web.servlet.View;
 import org.thymeleaf.spring4.view.ThymeleafViewResolver;
+import org.thymeleaf.spring4.webflow.view.AjaxThymeleafViewResolver;
 
 import java.util.Locale;
 
-public class MyThymeleafViewResolver extends ThymeleafViewResolver {
+public class MyThymeleafViewResolver extends AjaxThymeleafViewResolver {
 
     private static final String prefix = "/WEB-INF/templates/";
     private static final String suffix = ".html";

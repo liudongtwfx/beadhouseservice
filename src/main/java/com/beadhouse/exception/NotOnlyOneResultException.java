@@ -1,4 +1,4 @@
-package main.java.com.beadhouse.exception.sqlexception;
+package main.java.com.beadhouse.exception;
 
 /**
  * Created by beadhouse on 2016/12/22.

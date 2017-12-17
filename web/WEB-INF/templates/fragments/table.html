@@ -22,16 +22,21 @@
 <link rel="stylesheet" href="../cssfiles/admin/layout.css" type="text/css" media="screen"/>
 <link rel="stylesheet" href="../cssfiles/admin/contentcommon.css" type="text/css" media="screen"/>
 <link rel="stylesheet" href="http://127.0.0.1:8088/cssfiles/admin/contentcommon.css" type="text/css" media="screen"/>
-<div th:replace="commonside::#secondary_bar"></div>
-<div th:replace="commonside::#sidebar"></div>
-<div id="pageturning">
-    <div class="row">
-        共<span th:text="${currPage}" th:with="currpage=${currPage}">1</span>页,当前第<span th:text="${totalPage}">1</span>页
-        <ul th:each="i:${#numbers.sequence(${currpage}-2,${currpage}+2)}" class="pagination">
-            <li><a href="#">&laquo;</a></li>
-            <li><a th:href="@{${mainurl}+'?id='+${i}}" target="_blank" th:text="${i}"></a></li>
-            <li><a href="#">&raquo;</a></li>
-        </ul>
+<div th:fragment="table">
+    <!--/*@thymesVar id="tableareadata" type="main.java.com.beadhouse.dynamic.datawrapper.SQLResultData"*/-->
+    <div class="row" th:object="${tableareadata}">
+        <table class="table table-condensed">
+            <thead>
+            <tr>
+                <th th:each="column,i:*{columns}" th:text="${column}"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="row:*{resultValues}">
+                <td th:each="value,i:${row}" th:if="${i}!=*{getIdIndex()}" th:text="${value}"></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 </div>

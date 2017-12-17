@@ -58,13 +58,13 @@
                         <td th:text="${element.elementId}"></td>
                         <td th:text="${element.areaType}"></td>
                         <td>
-                            <button class='btn btn-primary mybtn' data-toggle='modal' data-target='#adddata'
-                                    onclick='getParentId(this)'>添加数据来源
+                            <button class='btn btn-primary mybtn' data-toggle='modal' data-target='#adddatasource'
+                                    onclick="changeElementId(this)" th:value="${element.elementId}">添加数据来源
                             </button>
                         </td>
                         <td>
                             <button class='btn btn-primary mybtn' data-toggle='modal' data-target='#adddata'
-                                    onclick='getParentId(this)'>更变数据来源
+                                    onclick="changeElementId(this)" th:value="${element.elementId}">更变数据来源
                             </button>
                         </td>
                     </tr>
@@ -73,7 +73,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="selectnodetype" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    <div class="modal fade" id="adddatasource" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
          aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -86,17 +86,23 @@
                     </h4>
                 </div>
                 <div class="modal-body">
-                    <div class="row">
-                        <label for="tableselect">请选择数据库:</label>
-                        <select id="schmeselect" onchange="getTables()">
-                            <option value="demo">demo</option>
-                            <option value="test">test</option>
-                        </select>
-                    </div>
-                    <div class="row">
-                        <label for="tableselect">请选择数据表</label>
-                        <select id="tableselect" onchange="getColumns()"></select>
-                    </div>
+                    <form role="form">
+                        <div class="row form-group">
+                            <label for="tableselect">请选择数据库:</label>
+                            <select id="schmeselect" onchange="getTables()">
+                                <option value="demo">demo</option>
+                                <option value="test">test</option>
+                            </select>
+                        </div>
+                        <div class="row form-group">
+                            <label for="tableselect">请选择数据表</label>
+                            <select id="tableselect" onchange="getColumns()"></select>
+                        </div>
+                        <div class="row form-group">
+                            <label for="tableselect">请选择数字段:</label>
+                            <div id="columnsselect"></div>
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭

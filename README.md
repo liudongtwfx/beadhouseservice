@@ -32,9 +32,27 @@ business: personal settings, apply for authorise
 
 ###缓存
 URL和视图的对应关系mapping
-REST ful api和事件的对应关系
+RESTful api和事件的对应关系
 
 ###前端和后台的联系
 设计一套良好的RESTful API接口
 数据源:增删改查数据,填充数据到视图中去;
+<font color=#DC143C size=4 face="黑体">怎么封装数据？
+除了增删改查，其他的还能写成什么？
+复杂一点的粒度事务性或多线程等？
+英文论文，文献？
+</font>
 事件源:通过eventid创建事件,接受前端的ajax请求;
+
+###事件的事务性（重点内容）
+==重点内容==
+一致性：
+隔离性：
+持久性：
+原子性：
+
+
+###论文的注意事项
+    忌口语化
+    养老院那块如何写？
+    体现深度、难度和创新点。。。

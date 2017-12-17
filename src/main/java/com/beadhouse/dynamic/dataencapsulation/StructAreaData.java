@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.Set;
 
 public abstract class StructAreaData {
+    protected String url;
     protected String elementId;
     protected AreaType areaType;
     protected String schema;
@@ -16,9 +17,11 @@ public abstract class StructAreaData {
 
     public StructAreaData(String elementId) {
         this.elementId = elementId;
+        setAreaType();
     }
 
     public StructAreaData() {
+        setAreaType();
     }
 
     public void setElementId(String elementId) {
@@ -47,8 +50,10 @@ public abstract class StructAreaData {
                 append("schema:").append(schema).append("||").
                 append("table:").append(table).append("||").
                 append("columns:");
-        columns.forEach(column -> sb.append(column).append("#%@"));
-        sb.delete(sb.length() - 4, sb.length() - 1);
+        if (columns != null) {
+            columns.forEach(column -> sb.append(column).append("#%@"));
+            sb.delete(sb.length() - 3, sb.length());
+        }
         return sb.toString();
     }
 
@@ -66,5 +71,31 @@ public abstract class StructAreaData {
 
     public String getElementId() {
         return elementId;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public abstract void setAreaType();
+
+    public String getSchema() {
+        return schema;
+    }
+
+    public String getTable() {
+        return table;
+    }
+
+    public List<String> getColumns() {
+        return columns;
+    }
+
+    public void setDatas(List<Map<String, String>> datas) {
+        this.datas = datas;
     }
 }

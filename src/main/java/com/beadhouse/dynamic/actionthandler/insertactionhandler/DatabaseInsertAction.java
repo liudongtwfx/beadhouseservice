@@ -30,7 +30,7 @@ public class DatabaseInsertAction implements ActionHandler {
     }
 
     @Override
-    public Data handle() {
+    public Data handle(Data in) {
         DatabaseOperation operation = new DatabaseOperation(schema);
         try {
             setSQL();
@@ -59,7 +59,7 @@ public class DatabaseInsertAction implements ActionHandler {
      **/
     private void setSQL() {
         StringBuilder sb = new StringBuilder();
-        List<String> colums = RedisClientConnector.getRedis().lrange(schema + "|" + tableName + "|columns", 0, -1);
+        List<String> colums = RedisClientConnector.getLocalRedis().lrange(schema + "|" + tableName + "|columns", 0, -1);
         columsOrder = new ArrayList<>();
         values = new ArrayList<>();
         sb.append("insert into ").append(tableName).append("(");

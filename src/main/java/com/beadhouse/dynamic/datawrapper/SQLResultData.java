@@ -14,6 +14,7 @@ public class SQLResultData implements Data {
     private List<String> columns;
     private List<List<String>> resultValues;
     private int idIndex = -1;
+    private boolean singleResult = false;
 
     public SQLResultData(String schema, String tableName) {
         this.schema = schema;
@@ -55,6 +56,7 @@ public class SQLResultData implements Data {
                 }
                 resultValues.add(row);
             }
+            singleResult = resultValues.size() == 1;
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -79,5 +81,9 @@ public class SQLResultData implements Data {
 
     public int getIdIndex() {
         return idIndex;
+    }
+
+    public boolean isSingleResult() {
+        return singleResult;
     }
 }

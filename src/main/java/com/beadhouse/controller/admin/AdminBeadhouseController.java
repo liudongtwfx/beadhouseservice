@@ -78,6 +78,7 @@ public class AdminBeadhouseController {
     @RequestMapping(value = "beadhousename", method = RequestMethod.GET)
     @ResponseBody
     public Page<BeadhouseInfo> getByNameLike(HttpServletRequest request) {
+        request.getRequestURI();
         String content = request.getParameter("searchContent");
         if (content == null || content.length() == 0) {
             return null;

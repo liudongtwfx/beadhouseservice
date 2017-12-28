@@ -125,8 +125,8 @@ public abstract class ActionImpl implements Action {
         stringBuilder.append("{ ");
         values.forEach((k, v) -> {
             stringBuilder.append(k).append(":");
-            if (v instanceof Collection || v instanceof Map) {
-                stringBuilder.append("\"").append(gson.toJson(v)).append("\"");
+            if (v instanceof Collection) {
+                stringBuilder.append("\"").append(gson.toJson(v).replaceAll("\"", "__")).append("\"");
             } else {
                 stringBuilder.append(gson.toJson(v));
             }

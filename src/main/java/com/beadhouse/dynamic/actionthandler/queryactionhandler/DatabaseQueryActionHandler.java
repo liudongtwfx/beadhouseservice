@@ -4,6 +4,7 @@ import main.java.com.beadhouse.System.LogType;
 import main.java.com.beadhouse.business.redisclient.RedisClientConnector;
 import main.java.com.beadhouse.dynamic.actionthandler.ActionHandler;
 import main.java.com.beadhouse.dynamic.database.operate.DatabaseOperation;
+import main.java.com.beadhouse.dynamic.datawrapper.Data;
 import main.java.com.beadhouse.dynamic.datawrapper.SQLResultData;
 
 import java.sql.PreparedStatement;
@@ -41,7 +42,7 @@ public class DatabaseQueryActionHandler implements ActionHandler {
     }
 
     @Override
-    public SQLResultData handle() {
+    public SQLResultData handle(Data in) {
         SQLResultData data = new SQLResultData(schema, tableName);
         data.wrapData(getQueryResult(), selectFields);
         return data;

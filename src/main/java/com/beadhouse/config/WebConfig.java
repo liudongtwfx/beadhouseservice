@@ -78,7 +78,6 @@ public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationCon
                 .addResourceLocations("/WEB-INF/bootstrap/");
         registry.addResourceHandler("/imagefiles/**")
                 .addResourceLocations("/WEB-INF/imagefiles/");
-
     }
 
     @Bean
@@ -125,7 +124,7 @@ public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationCon
 
     @Bean
     public ThymeleafViewResolver AjaxThemeleafViewResolver() {
-        AjaxThymeleafViewResolver viewResolver = new AjaxThymeleafViewResolver();
+        AjaxThymeleafViewResolver viewResolver = new MyAjaxViewResolver();
         viewResolver.setViewClass(FlowAjaxThymeleafView.class);
         viewResolver.setOrder(2);
         viewResolver.setCharacterEncoding("UTF-8");

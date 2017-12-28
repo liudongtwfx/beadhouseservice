@@ -1,10 +1,9 @@
 package main.java.com.beadhouse.test;
 
 import main.java.com.beadhouse.business.redisclient.RedisClientConnector;
-import main.java.com.beadhouse.dynamic.action.Action;
 import main.java.com.beadhouse.dynamic.actionthandler.insertactionhandler.DatabaseInsertAction;
-import main.java.com.beadhouse.dynamic.action.queryaction.DatabaseQueryAction;
 import main.java.com.beadhouse.dynamic.datawrapper.Data;
+import main.java.com.beadhouse.dynamic.datawrapper.SuccessData;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -15,7 +14,9 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.sql.*;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
 
 public class MysqlTest {
     @Test
@@ -37,7 +38,7 @@ public class MysqlTest {
                 String column_name = columnData.getString("COLUMN_NAME");
                 String column_type = JDBCType.valueOf(Integer.valueOf(columnData.getString("DATA_TYPE"))).toString();
                 System.out.println(column_name + " " + column_type + " ");
-                RedisClientConnector.getRedis().lpush("demo|" + tableName + "|columns", column_name);
+                RedisClientConnector.getLocalRedis().lpush("demo|" + tableName + "|columns", column_name);
             }
             ResultSet primaryKeyResultSet = data.getPrimaryKeys("", "test", tableName);
             while (primaryKeyResultSet.next()) {
@@ -73,7 +74,7 @@ public class MysqlTest {
         map.put("studentname", "liudon");
         map.put("studentid", "2015140432");
         DatabaseInsertAction action = new DatabaseInsertAction("test", "student", map);
-        Data callinfo = action.handle();
+        Data callinfo = action.handle(new SuccessData("success"));
         System.out.println(callinfo);
     }
 
@@ -98,5 +99,7 @@ public class MysqlTest {
 
     @Test
     public void queryTest() {
+        System.out.println(System.currentTimeMillis());
+        System.out.println(RedisClientConnector.getLocalRedis().info("Memory"));
     }
 }

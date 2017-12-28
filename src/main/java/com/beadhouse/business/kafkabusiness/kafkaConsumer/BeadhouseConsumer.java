@@ -26,7 +26,8 @@ public class BeadhouseConsumer implements Runnable {
     public void run() {
         try {
             while (true) {
-                records = consumer.poll(1000);
+                records = consumer.poll(2000);
+                //consumer.commitAsync();
                 for (ConsumerRecord record : records) {
                     String key = (String) record.key();
                     String value = (String) record.value();

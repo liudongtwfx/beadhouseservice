@@ -6,6 +6,7 @@ import main.java.com.beadhouse.DAO.Generiac.DefaultAuthenticationService;
 import main.java.com.beadhouse.DAO.User.ElderPeople.ElderPeopleRepository;
 import main.java.com.beadhouse.DAO.User.VipUser.VipUserRepository;
 import main.java.com.beadhouse.business.beadhousebusiness.BeadhouseAdminBusiness;
+import main.java.com.beadhouse.cache.addcachebusiness.BeadhouseManageCacheThread;
 import main.java.com.beadhouse.model.beadhouse.BeadhouseAdministrator;
 import main.java.com.beadhouse.model.beadhouse.BeadhouseInfo;
 import main.java.com.beadhouse.model.user.ElderPeople;
@@ -47,6 +48,12 @@ public class BeadhouseAdminController {
 
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String adminHomepage(HttpServletRequest request) {
+        String beadhouseId = (String) request.getSession().getAttribute("beadhouseId");
+        if (beadhouseId != null && beadhouseId.length() != 0) {
+            Thread beadhouseManageCacheThread = new Thread(
+                    new BeadhouseManageCacheThread(Integer.valueOf(beadhouseId)));
+            beadhouseManageCacheThread.start();
+        }
         return "beadhouse/index";
     }
 

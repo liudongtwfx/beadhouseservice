@@ -5,24 +5,28 @@ import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
 public class RedisClientConnector {
-    private static final Jedis redis = new Jedis("localhost");
+    private static final JedisPool localhostpool;
 
-    public static Jedis getRedis() {
-
-        return redis;
+    public static Jedis getLocalRedis() {
+        return localhostpool.getResource();
     }
 
-    private static final JedisPool pool;
+    private static final JedisPool labpcpool;
 
     static {
         JedisPoolConfig config = new JedisPoolConfig();
         config.setMaxTotal(100);
         config.setMinIdle(20);
         config.setMaxWaitMillis(10000);
-        pool = new JedisPool(config, "39.106.165.69", 6379);
+        labpcpool = new JedisPool(config, "10.103.249.28", 6379);
+        localhostpool = new JedisPool(config, "localhost", 6379);
     }
 
-    public static Jedis getAliyunRedis() {
-        return pool.getResource();
+    public static Jedis getLabPCRedis() {
+        return labpcpool.getResource();
+    }
+
+    public static Jedis getRedis() {
+        return localhostpool.getResource();
     }
 }

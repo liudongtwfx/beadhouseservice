@@ -7,6 +7,6 @@ import main.java.com.beadhouse.dynamic.action.ActionType;
 public class ActionHandlerDispatcher {
     public void register(ActionType action,
                          ActionHandler handler) {
-        RedisClientConnector.getRedis().set(action.name(), handler.getClass().getName());
+        RedisClientConnector.getLocalRedis().set(action.name(), handler.getClass().getName());
     }
 }

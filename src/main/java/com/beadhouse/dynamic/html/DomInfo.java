@@ -33,10 +33,10 @@ public class DomInfo extends AbstractDomInfo implements Serializable {
 
     public DomInfo(String absoluteFilePath) {
         super(absoluteFilePath);
-        if (RedisClientConnector.getRedis().keys(absoluteFilePath).size() == 0) {
+        if (RedisClientConnector.getLocalRedis().keys(absoluteFilePath).size() == 0) {
             needDataInputMap = new HashMap<>();
         } else {
-            needDataInputMap = RedisClientConnector.getRedis().hgetAll(absoluteFilePath);
+            needDataInputMap = RedisClientConnector.getLocalRedis().hgetAll(absoluteFilePath);
         }
     }
 
@@ -101,7 +101,7 @@ public class DomInfo extends AbstractDomInfo implements Serializable {
             OutputStream tomcatStream = new FileOutputStream(new File(CommonFinalVariable.TOMCAT_FILE_PATH + reletivepath + ".html"));
             tomcatStream.write(document.toString().getBytes());
             if (needDataInputMap.size() != 0) {
-                RedisClientConnector.getRedis().hmset(absoluteFilePath, needDataInputMap);
+                RedisClientConnector.getLocalRedis().hmset(absoluteFilePath, needDataInputMap);
             }
             return "success";
         } catch (NeedElementIdExcetpion e) {

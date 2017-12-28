@@ -20,7 +20,7 @@ public class InsertDataController {
                                            @PathVariable(value = "table") String table,
                                            HttpServletRequest request) {
         DatabaseInsertAction action = new DatabaseInsertAction(schema, table, request.getParameterMap());
-        Data callback = action.handle();
+        Data callback = action.handle(null);
         ModelAndView mv = new ModelAndView("forward:/dynamic/" + url);
         String color, info;
         if (callback.toString().equals("success")) {

@@ -6,6 +6,6 @@ import main.java.com.beadhouse.dynamic.action.validateaction.ValidateType;
 
 public class EventBuilder {
     public static Action build(Action prevAction, ConnecterActivity connecter) {
-        return new ValidateAction(ValidateType.EQUAL);
+        return null;
     }
 }

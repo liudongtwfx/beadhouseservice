@@ -35,7 +35,9 @@ public class KafkaTest {
         BeadhouseComment comment1 = null;
         ConsumerRecords<String, String> res = consumer.getRecords();
         if (res != null) {
+            System.out.println(res.isEmpty());
             for (ConsumerRecord record : res) {
+                System.out.println(record);
                 comment1 = DeserialBeadhouseComment((String) record.value());
             }
         }

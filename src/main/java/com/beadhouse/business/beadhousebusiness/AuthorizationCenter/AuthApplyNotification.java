@@ -26,7 +26,7 @@ public class AuthApplyNotification extends Thread {
                 .append("applyReason:").append(authApplyInfo.getApplyReason()).append("||")
                 .append("adminApplyDp:").append(dp);
         LogType.DEBUGINFO.getLOGGER().info(sb.toString());
-        Jedis redis = RedisClientConnector.getRedis();
+        Jedis redis = RedisClientConnector.getLocalRedis();
         String dpLeaderName = redis.hget("leaders", adminDp);
         LogType.DEBUGINFO.getLOGGER().info(dpLeaderName);
         Pipeline pipe = redis.pipelined();

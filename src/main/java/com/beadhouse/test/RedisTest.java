@@ -1,15 +1,16 @@
 package main.java.com.beadhouse.test;
 
+import com.google.gson.Gson;
+import main.java.com.beadhouse.cache.CacheManager;
+import main.java.com.beadhouse.cache.CacheStruct;
 import org.junit.Test;
+import org.springframework.cache.Cache;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.Pipeline;
 import redis.clients.jedis.Response;
 import redis.clients.jedis.Tuple;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by beadhouse on 2017/4/26.
@@ -91,10 +92,25 @@ public class RedisTest {
     }
 
     @Test
-    public void splitTest() {
-        String s = "I               am a man";
-        for (String word : s.split("\\s+")) {
-            System.out.println(word);
+    public void cacheTest() {
+        CacheStruct cacheStruct = new CacheStruct();
+        cacheStruct.setKey("cache:my");
+        cacheStruct.setValue("sb");
+        cacheStruct.setLastVisitedTimeStamp(System.currentTimeMillis() / 1000);
+        cacheStruct.setScore(0);
+        CacheManager manager = new CacheManager();
+        manager.addCache(cacheStruct);
+    }
+
+    @Test
+    public void visitCacheTest() {
+        List<String> strings = Arrays.asList("I", "am", "sb");
+        Gson gson = new Gson();
+        String s = gson.toJson(strings);
+        System.out.println(s);
+        List<String> past = gson.fromJson(s, List.class);
+        for (String ss : past) {
+            System.out.println(ss);
         }
     }
 }

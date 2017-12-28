@@ -30,6 +30,6 @@ public class DataBaseStaticMethods {
     }
 
     public static List<String> getColumns(String schema, String table) {
-        return RedisClientConnector.getRedis().lrange(schema + "|" + table + "|columns", 0, -1);
+        return RedisClientConnector.getLocalRedis().lrange(schema + "|" + table + "|columns", 0, -1);
     }
 }

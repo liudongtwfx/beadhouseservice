@@ -5,15 +5,15 @@ import org.apache.kafka.clients.producer.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class BeadhouseCommentProducer {
+public class CommonProducer {
     private final static Logger LOGGER = LogManager.getLogger("exception");
     private final static Logger KAFKA_LOGGER = LogManager.getLogger("kafka");
 
-    class BeadhouseCommentCallback implements Callback {
+    class CommonCallback implements Callback {
         private String value;
         private long start;
 
-        BeadhouseCommentCallback(String value) {
+        CommonCallback(String value) {
             this.value = value;
             this.start = System.currentTimeMillis();
         }
@@ -38,12 +38,15 @@ public class BeadhouseCommentProducer {
     private final Producer<String, String> producer = new KafkaProducer<>(KafkaProducerConfig.getInstance().getProperties());
     private static final String topic = "beadhousecomment";
 
-    public BeadhouseCommentProducer() {
+    public CommonProducer() {
 
     }
 
-    public void produceMessage(String key, String value) {
+    public void produceMessage(String topic, String key, String value) {
+        if (topic == null || topic.length() == 0) {
+            throw new IllegalArgumentException("Kafka producer can not be null");
+        }
         this.producer.send(new ProducerRecord<>(topic, key, value),
-                new BeadhouseCommentCallback(value));
+                new CommonCallback(value));
     }
 }

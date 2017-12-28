@@ -1,6 +1,8 @@
 package main.java.com.beadhouse.dynamic.actionthandler.validateactionhandler;
 
-public interface ValidateActionHandler {
+import main.java.com.beadhouse.dynamic.actionthandler.ActionHandler;
+
+public interface ValidateActionHandler extends ActionHandler {
 
     boolean equals();
 
@@ -10,7 +12,11 @@ public interface ValidateActionHandler {
 
     boolean greaterThan();
 
-    boolean notGreaterThan();
+    default boolean notGreaterThan() {
+        return lessThan() || equals();
+    }
 
-    boolean notLessThan();
+    default boolean notLessThan() {
+        return greaterThan() || equals();
+    }
 }

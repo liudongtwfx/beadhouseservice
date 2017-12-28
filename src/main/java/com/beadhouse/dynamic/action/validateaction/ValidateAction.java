@@ -9,39 +9,37 @@ import java.util.Map;
 
 public class ValidateAction extends ActionImpl {
     private final ValidateType validateType;
-    private String comparingType; //type
-    private String exactValue; //left
-    private String expectedValue; //right
-    private ValidateDataType dataType;
+    private ValidateDataType validateDataType;
+    private ValidateData validateData;
 
-    public ValidateAction(ValidateType type) {
+    public ValidateAction(ValidateType type, ValidateData data) {
         this.validateType = type;
         setActionType(ActionType.VALIDATE);
         switchActions = new HashMap<>();
         connectionType = ConnectionType.SWITCH;
-    }
-
-    public void setComparingType(String comparingType) {
-        this.comparingType = comparingType;
-    }
-
-    public void setExactValue(String exactValue) {
-        this.exactValue = exactValue;
-    }
-
-    public void setExpectedType(String expectedValue) {
-        this.expectedValue = expectedValue;
+        this.validateData = data;
     }
 
     public void setDataType(ValidateDataType dataType) {
-        this.dataType = dataType;
+        this.validateDataType = dataType;
     }
 
     @Override
     protected void getSavingValue(Map<String, Object> value) {
         value.put("validateType", validateType.toString());
-        value.put("comparingType", comparingType);
-        value.put("expectedValue", expectedValue);
-        value.put("validateDataType", dataType);
+        value.put("validateDataType", validateDataType);
+        value.putAll(validateData.getDataMap());
+    }
+
+    public ValidateData getValidateData() {
+        return validateData;
+    }
+
+    public ValidateType getValidateType() {
+        return validateType;
+    }
+
+    public ValidateDataType getValidateDataType() {
+        return validateDataType;
     }
 }

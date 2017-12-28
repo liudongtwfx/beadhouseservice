@@ -22,7 +22,7 @@ public class TableAreaData extends StructAreaData {
 
     @Override
     public void fillInDatas() {
-        this.sqlResultData = new DatabaseQueryActionHandler(schema, table, paramsMap).handle();
+        this.sqlResultData = new DatabaseQueryActionHandler(schema, table, paramsMap).handle(null);
     }
 
     @Override

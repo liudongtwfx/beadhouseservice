@@ -1,9 +1,10 @@
 package main.java.com.beadhouse.dynamic.action;
 
 
+import java.io.Serializable;
 import java.util.Map;
 
-public interface Action {
+public interface Action extends Serializable {
 
     boolean isStart();
 

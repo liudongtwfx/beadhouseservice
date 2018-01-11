@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <head>
+        <meta charset="utf-8"/>
+        <title>养老服务中心首页</title>
+        <link rel="stylesheet" href="http://127.0.0.1:8088/cssfiles/admin/layout.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="http://127.0.0.1:8088/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="http://127.0.0.1:8088/cssfiles/premium.css">
+        <link rel="stylesheet" href="http://127.0.0.1:8088/cssfiles/fileinput/theme.css">
+        <link rel="stylesheet" href="http://127.0.0.1:8088/cssfiles/admin/commonside.css">
+        <link rel="stylesheet" href="http://127.0.0.1:8088/cssfiles/font-awesome/css/font-awesome.css">
+        <!--[if lt IE 9]>
+        <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen"/>
+        <![endif]-->
+        <title>Title</title>
+        <script src="http://127.0.0.1:8088/jsfiles/jquery-3.1.1.js" type="text/javascript"></script>
+        <script src="http://127.0.0.1:8088/jsfiles/admin/common.js" type="text/javascript"></script>
+        <script type="application/javascript">
+            adminAuthority();
+        </script>
+    </head>
+<body>
+
+<section id="secondary_bar" class="con">
+    <div class="user">
+        <p id="user_name">
+            <span style="font-size:16px">欢迎你,liu6891333!</span>
+        </p>
+
+        <!-- <a class="logout_user" href="#" title="Logout">Logout</a> -->
+    </div>
+
+    <div class="navbar navbar-nav navbar-right">
+        <div class="dropdown myright">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="glyphicon glyphicon-pencil" style="margin-right: 5px"></span>个人中心
+                <span class="notification_nums"></span>
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="/admin/personal/notificationcenter/">
+                    通知中心<span class="notification_nums"></span></a></li>
+                <li><a href="/admin/personal/authorizationcenter">权限中心</a></li>
+                <li><a href="/admin/personal/modifypersonalinfo">修改个人信息</a></li>
+                <li><a href="/admin/personal/personalsettings">个人设置中心</a></li>
+            </ul>
+            <script src="http://127.0.0.1:8088/jsfiles/admin/hideshow.js" type="text/javascript"></script>
+            <script src="http://127.0.0.1:8088/jsfiles/jquery.tablesorter.min.js" type="text/javascript"></script>
+            <script src="http://127.0.0.1:8088/jsfiles/jquery.equalHeight.js" type="text/javascript"></script>
+            <script src="http://127.0.0.1:8088/bootstrap/js/bootstrap.min.js"></script>
+            <script type="text/javascript">
+                $.ajax(getNotification);
+                window.setInterval(function () {
+                    $.ajax(getNotification)
+                }, 1000 * 60 * 30);
+            </script>
+        </div>
+    </div>
+</section><!-- end of secondary bar -->
+<aside id="sidebar" class="column col-sm-2">
+    <form class="quick_search">
+        <input type="text" value="Quick Search" onfocus="if(!this._haschanged){this.value=''};this._haschanged=true;">
+    </form>
+    <hr/>
+    <h3>用户中心</h3>
+    <ul class="toggle">
+        <li class="icn_new_article"><a href="/admin/vipuser">会员中心</a></li>
+        <li class="icn_edit_article"><a href="/admin/elderpeople">老人中心</a></li>
+    </ul>
+    <h3>养老院中心</h3>
+    <ul class="toggle">
+        <li class="icn_add_user"><a href="/admin/beadhouse/add">添加养老院</a></li>
+        <li class="icn_add_user"><a href="/admin/beadhouse">养老院基本信息</a></li>
+        <li class="icn_view_users"><a href="#">养老院评论</a></li>
+    </ul>
+    <h3>度假村管理</h3>
+    <ul class="toggle">
+        <li class="icn_folder"><a href="#">添加度假村</a></li>
+        <li class="icn_photo"><a href="#">度假村列表</a></li>
+    </ul>
+    <h3>休闲团管理</h3>
+    <ul class="toggle">
+        <li class="icn_folder"><a href="/admin/leisuregroup/add">增加休闲团</a></li>
+        <li class="icn_photo"><a href="#">休闲团列表</a></li>
+    </ul>
+    <h3>养老攻略中心</h3>
+    <ul class="toggle">
+        <li class="icn_folder"><a href="/admin/articleforelder/add">添加攻略</a></li>
+        <li class="icn_photo"><a href="/admin/articleforelder/lists">攻略列表</a></li>
+    </ul>
+    <h3>权限中心</h3>
+    <ul class="toggle">
+        <li class="icn_settings"><a href="/admin/homepage">首页管理</a></li>
+        <li class="icn_settings"><a href="#">权限管理</a></li>
+    </ul>
+    <h3>数据库管理中心</h3>
+    <ul class="toggle">
+        <li class="icn_settings"><a href="/admin/database/table/add">新增数据表</a></li>
+        <li class="icn_settings"><a href="/admin/database/table/list">查看数据表</a></li>
+    </ul>
+
+    <h3>视图页面管理</h3>
+    <ul class="toggle">
+        <li class="icn_settings"><a href="/admin/views/add">新增页面</a></li>
+        <li class="icn_settings"><a href="/admin/views/list">页面列表</a></li>
+    </ul>
+
+    <h3>业务管理中心</h3>
+    <ul class="toggle">
+        <li class="icn_settings"><a href="/admin/homepage">新增业务</a></li>
+        <li class="icn_settings"><a href="#">权限管理</a></li>
+    </ul>
+    <h3>系统管理</h3>
+    <ul class="toggle">
+        <li class="icn_settings"><a href="/admin/homepage">新增业务</a></li>
+        <li class="icn_settings"><a href="#">权限管理</a></li>
+    </ul>
+
+</aside><!-- end of sidebar -->
+</body>
+</html>

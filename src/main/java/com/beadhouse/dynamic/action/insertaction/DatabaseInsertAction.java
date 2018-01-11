@@ -6,7 +6,7 @@ public class DatabaseInsertAction extends InsertAction {
     private String schema;
     private String table;
 
-    DatabaseInsertAction(String schema, String table) {
+    public DatabaseInsertAction(String schema, String table) {
         this.schema = schema;
         this.table = table;
     }

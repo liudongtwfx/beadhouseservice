@@ -7,13 +7,13 @@ import java.util.Map;
 
 @Data
 public class NodeInfo {
-    private int elementId;
-    private String classes;
-    private int parentId;
-    private Map<String, String> attr;
-    private int depth;
-    private String tagName;
-    private String preId;
-    private String text;
-    private AreaType areaType;
+    private int elementId;//前序遍历时的id
+    private String classes;//类名
+    private int parentId;//父结点的id
+    private Map<String, String> attr;//属性列表
+    private int depth;//结点的深度
+    private String tagName;//标签名
+    private String preId;//原来的id属性
+    private String text;//文本
+    private AreaType areaType;//区域类型
 }

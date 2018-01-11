@@ -82,7 +82,7 @@
 
 <!--<![endif]-->
 
-<div class="navbar navbar-default" id="navbar" ,role="navigation">
+<div class="navbar navbar-default" id="navbar" role="navigation">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -156,6 +156,9 @@
                 <th>#</th>
                 <th><a href="javascript:void(0)" onClick="sortLogs('elderIdNumber')">老人身份证号</a></th>
                 <th><a href="javascript:void(0)" onClick="sortLogs('checkinTime')">入住时间</a></th>
+                <th>入住形式</th>
+                <th>是否付款</th>
+                <th>付款金额</th>
                 <th><a href="javascript:void(0)" onClick="sortLogs('leaveTime')">离开时间</a></th>
                 <th>离开原因</th>
                 <th>备注</th>
@@ -252,8 +255,21 @@
                                     <span class="add-on glyphicon glyphicon-calendar"><i
                                             class="icon-calendar"></i></span></div>
                             </div>
+                            <div class="row">
+                                <div class="form-group col-sm-6">
+                                    <label for="livein_type">入住形式</label>
+                                    <select id="livein_type" class="form-control">
+                                        <option value="网上预定">网上预定</option>
+                                        <option value="到院入住">到院入住</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label for="livein_money">入住金额</label>
+                                    <input class="form-control" type="text" id="livein_money">
+                                </div>
+                            </div>
                             <div class="form-group">
-                                <label for="leave_reason">原因</label>
+                                <label for="leave_reason">离开原因</label>
                                 <input type="text" class="form-control" id="leave_reason">
                             </div>
 

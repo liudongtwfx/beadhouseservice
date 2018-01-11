@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../../cssfiles/premium.css">
     <link rel="stylesheet" href="../../cssfiles/fileinput/theme.css">
+    <link rel="stylesheet" href="../../cssfiles/bootstrap-datetimepicker.css">
     <link rel="stylesheet" href="../../cssfiles/font-awesome/css/font-awesome.css">
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen"/>
@@ -47,7 +48,6 @@
 
 
 <body class="theme-green">
-
 <header id="header">
     <hgroup>
         <h1 class="site_title"><a href="index.html">养老服务中心管理平台</a></h1>
@@ -57,33 +57,115 @@
 
 <div id="side"></div>
 <script type="application/javascript">
-    $("#side").load("../templates/commonside.html")
+    $("#side").load("../../views/admin/commonside.html")
 </script>
 
-<section id="main">
+<section class="row" style="position: absolute;top: 100px;">
     <link rel="stylesheet" href="../../cssfiles/admin/addleisuregroup.css">
     <link rel="stylesheet" href="../../cssfiles/admin/articleforelderadd.css">
-    <div class="header inner_content">
-        <h1 class="page-title">养老服务中心后台管理</h1>
-        <ul class="breadcrumb">
-            <li>休闲团管理</li>
-            <li class="active">添加休闲团</li>
-        </ul>
-    </div>
-    <div class="inner_content tab_content" id="content">
-        <div class="main-group">
-            <label for="leisuregroup_title">标题：</label>
-            <input type="text" id="leisuregroup_title">
+    <div class="col-sm-9 col-sm-offset-2">
+        <script src="../../jsfiles/bootstrap-datetimepicker.js"></script>
+        <div class="header inner_content">
+            <h1 class="page-title">养老服务中心后台管理</h1>
+            <ul class="breadcrumb">
+                <li>休闲团管理</li>
+                <li class="active">添加休闲团</li>
+            </ul>
         </div>
-        <div class="main-group">
-            <label for="leisuregroup_maxpeoplecount">人数限制：</label>
-            <input type="text" id="leisuregroup_maxpeoplecount">
-        </div>
-        <div class="main-group">
-            <label for="leisuregroup_details">详情介绍：</label>
-            <textarea id="leisuregroup_details"></textarea>
-        </div>
-        <div id="leisure_group_area">
+        <div class="container-fluid">
+            <form role="form" class="form-horizontal">
+                <div class="row">
+                    <div class=" form-group col-sm-6">
+                        <label for="leisuregroup_title" class="control-label col-sm-4">标题：</label>
+                        <div class="col-sm-8">
+                            <input type="text" id="leisuregroup_title" class="form-control" placeholder="标题">
+                        </div>
+                    </div>
+
+                    <div class="form-group col-sm-6">
+                        <label for="leisuregroup_maxpeoplecount" class="control-label col-sm-4">人数限制：</label>
+                        <div class="col-sm-8">
+                            <input type="text" id="leisuregroup_maxpeoplecount" class="form-control" placeholder="人数限制">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-6 ">
+                        <label for="fee_account" class="control-label col-sm-4">费用估计(/人)：</label>
+                        <div class="col-sm-8 ">
+                            <input type="text" id="fee_account" class="form-control" placeholder="费用估计">
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="group_status" class="control-label col-sm-4">团状态：</label>
+                        <div class="col-sm-8">
+                            <select type="text" id="group_status" class="form-control bg-primary">
+                                <option value="未开始">未开始</option>
+                                <option value="报名中">报名中</option>
+                                <option value="进行中">进行中</option>
+                                <option value="已结束">已结束</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-6 input-append date form_datetime">
+                        <label for="group_start_time" class="control-label col-sm-4">团开始时间：</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" value=""
+                                   id="group_start_time"
+                                   readonly placeholder="团开始时间">
+                            <span class="add-on "><i
+                                    class="icon-th"></i></span>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-6 input-append date form_datetime">
+                        <label for="group_end_time" class="control-label col-sm-4">团截止时间：</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control " value="" id="group_end_time"
+                                   readonly placeholder="团截止时间">
+                            <span class="add-on"><i class="icon-th"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-6 input-append date form_datetime">
+                        <label for="enroll_end_time" class="control-label col-sm-4">报名截止时间：</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" value="" id="enroll_end_time"
+                                   readonly placeholder="报名截止时间">
+                            <span class="add-on"><i
+                                    class="icon-th"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-11">
+                        <label for="leisuregroup_details" class="control-label col-sm-2">详细介绍:</label>
+                        <div class="col-sm-10">
+                            <textarea id="leisuregroup_details" class="form-control">请输入团详细介绍信息...</textarea>
+                            <script src="http://tinymce.cachefly.net/4.0/tinymce.min.js"></script>
+                            <script type="application/x-javascript">
+                                tinymce.init({selector: '#leisuregroup_details'});
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $(".form_datetime").datetimepicker({
+                        format: "yyyy-mm-dd",
+                        autoclose: true,
+                        todayBtn: true,
+                        pickerPosition: "bottom-left",
+                        language: "zh-CN"
+                    });
+                </script>
+                <div class="form-group center-block">
+                    <button type="button" value="提交" onclick="addLeisureGroup()" class="btn btn-success"
+                            id="submit">提交
+                    </button>
+                </div>
+            </form>
             <div style="text-align: center;">
                 <!-- 图片选择框 -->
                 <form enctype="multipart/form-data">
@@ -92,9 +174,6 @@
                     <button type="reset" class="btn btn-default">重置</button>
                 </form>
             </div>
-        </div>
-        <div class="main-group">
-            <button value="提交" onclick="addLeisureGroup()" class="btn btn-success" id="submit">提交</button>
         </div>
     </div>
 </section>

@@ -41,6 +41,14 @@ public class AriticleForElderController {
         return this.articleForElderSort.articlePageSort(page, size);
     }
 
+    @RequestMapping(value = "search", method = RequestMethod.GET)
+    @ResponseBody
+    public Object searchArticlePageInfo(@RequestParam(value = "page", defaultValue = "0") Integer page,
+                                        @RequestParam(value = "size", defaultValue = "15") Integer size,
+                                        HttpServletRequest request) {
+        return this.articleForElderSort.searchArticlePageSort(page, size, request);
+    }
+
     @RequestMapping(value = "singlearticle", method = RequestMethod.GET)
     @ResponseBody
     public Object getSingleArticleContent(HttpServletRequest request) {

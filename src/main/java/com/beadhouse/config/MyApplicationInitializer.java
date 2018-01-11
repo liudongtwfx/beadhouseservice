@@ -1,6 +1,6 @@
 package main.java.com.beadhouse.config;
 
-import main.java.com.beadhouse.business.kafkabusiness.kafkaConsumer.BeadhouseConsumer;
+import main.java.com.beadhouse.business.kafkabusiness.kafkaConsumer.BeadhouseInfoConsumer;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**
@@ -14,7 +14,7 @@ public class MyApplicationInitializer extends AbstractAnnotationConfigDispatcher
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        BeadhouseConsumer consumer = new BeadhouseConsumer("beadhousecomment");
+        BeadhouseInfoConsumer consumer = new BeadhouseInfoConsumer();
         Thread thread = new Thread(consumer);
         thread.start();
         return new Class<?>[]{WebConfig.class, SecurityConfig.class};

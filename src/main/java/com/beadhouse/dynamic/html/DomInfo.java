@@ -31,8 +31,8 @@ public class DomInfo extends AbstractDomInfo implements Serializable {
 
     private final Map<String, String> needDataInputMap;
 
-    public DomInfo(String absoluteFilePath) {
-        super(absoluteFilePath);
+    public DomInfo(String viewname) {
+        super(viewname);
         if (RedisClientConnector.getLocalRedis().keys(absoluteFilePath).size() == 0) {
             needDataInputMap = new HashMap<>();
         } else {
@@ -205,5 +205,16 @@ public class DomInfo extends AbstractDomInfo implements Serializable {
             default:
                 return "";
         }
+    }
+
+    public List<NodeInfo> filterButtonAndInput() {
+        List<NodeInfo> nodeInfos = new ArrayList<>();
+        nodeInfoMap.forEach((k, v) -> {
+            String tagName = v.getTagName();
+            if (tagName.equals("button") || tagName.equals("input")) {
+                nodeInfos.add(v);
+            }
+        });
+        return nodeInfos;
     }
 }

@@ -61,7 +61,7 @@ public class AddDataSourceController {
         try {
             String viewname = htmlViewRepository.findOne(Integer.valueOf(request.getParameter("viewid"))).getFilepath();
             request.getSession().setAttribute("viewname", viewname);
-            return "redirect:/admin/views/adddatasource";
+            return "forward:/admin/views/adddatasource";
         } catch (Exception e) {
             e.printStackTrace();
             LogType.EXCETPION.getLOGGER().error(e);
@@ -88,5 +88,18 @@ public class AddDataSourceController {
                 .setColumns(columns).setSchema(schema).setTable(table).toString();
         RedisClientConnector.getRedis().hset(absolute, elementId, value);
         return "success";
+    }
+
+    @RequestMapping(value = "addevent", params = "viewid")
+    public String addEventPageviewId(HttpServletRequest request) {
+        try {
+            String viewname = htmlViewRepository.findOne(Integer.valueOf(request.getParameter("viewid"))).getFilepath();
+            request.getSession().setAttribute("viewname", viewname);
+            return "forward:/admin/views/addeventnodelist";
+        } catch (Exception e) {
+            e.printStackTrace();
+            LogType.EXCETPION.getLOGGER().error(e);
+            return "";
+        }
     }
 }

@@ -73,52 +73,47 @@
     </style>
 </head>
 <body>
-<div class="container">
-    <div class="main">
-        <div th:replace="commonside::#secondary_bar"></div>
-        <div th:replace="commonside::#sidebar"></div>
-    </div>
-    <div id="events_area">
-    </div>
-    <div class="sidebar row">
-        <div class="col-sm-3" style="height: 100%">
-            <span class="sidebar-info">添加事件</span>
+<div class="container-fluid">
+    <div th:replace="commonside::#secondary_bar"></div>
+    <div th:replace="commonside::#sidebar"></div>
+    <div class="col-sm-10">
+        <div class="container">
+            <div class="header">
+                <h1 class="page-title">养老服务中心后台管理</h1>
+                <ul class="breadcrumb">
+                    <li th:text="#{admin.views.add.firsttitle}">视图管理</li>
+                    <li class="active" th:text="#{admin.views.add.secondtitle}">添加事件</li>
+                </ul>
+            </div>
+
+            <form role="form" class="form-inline" th:object="${actionAndRelations}">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <label>视图名称：</label><span th:text="${viewname}"></span>
+                    </div>
+                    <div class="col-sm-6">
+                        <label>结点类型:</label><span th:text="${nodetype}"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label>事件类型:</label>
+                        <select id="selectEventType" class="form-control">
+                            <option th:each="attr:${frontEventType}" th:value="${attr}" th:selected="${tablename}"
+                                    th:text="${attr}"></option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn btn-success" name="addevent">添加事件</button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn btn-success" name="addrelationship">添加关系</button>
+                    </div>
+                </div>
+            </form>
         </div>
-        <ul class="col-sm-9 center-block">
-            <li>
-                <div id="insert_drag" onclick="createInsertArea()">增加</div>
-            </li>
-            <li>
-                <div id="update_drag">修改</div>
-            </li>
-            <li>
-                <div id="delete_drag">删除</div>
-            </li>
-            <li>
-                <div id="query_drag">查找</div>
-            </li>
-            <li>
-                <div id="validate_drag" onclick="createValidateArea()">验证</div>
-            </li>
-            <li>
-                <div id="return_drag" onclick="createReturnArea()">返回</div>
-            </li>
-        </ul>
     </div>
 </div>
-
-<script type="application/javascript">
-    $(".sidebar").mouseover(
-        function showSideBar() {
-            $(".sidebar").css("right", "0");
-        }
-    );
-    $(".sidebar").mouseleave(
-        function hideSideBar() {
-            $(".sidebar").css("right", "-160px")
-        }
-    )
-</script>
 <script type="application/javascript" src="../../jsfiles/dragability/draggabilly.pkgd.js"></script>
 <script type="application/javascript" src="../../jsfiles/templates/addevent.js"></script>
 </body>

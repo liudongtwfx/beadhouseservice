@@ -2,14 +2,11 @@ package main.java.com.beadhouse.cache;
 
 import com.google.gson.Gson;
 import main.java.com.beadhouse.business.redisclient.RedisClientConnector;
-import org.springframework.cache.Cache;
 import redis.clients.jedis.Jedis;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Set;
 
-public class CacheManager {
+public class CacheManager implements AutoCloseable {
     private Jedis jedis;
 
     public CacheManager() {
@@ -27,18 +24,20 @@ public class CacheManager {
             if (expiredsSeconds != 0) {
                 jedis.expire(cache.getKey(), expiredsSeconds);
             }
+            close();
         } catch (Exception e) {
 
         }
     }
 
-    public String visitCache(String key) {
+    public CacheStruct visitCache(String key) {
         Set<String> v = jedis.zrange(key, 0, -1);
+        close();
         Gson gson = new Gson();
         for (String s : v) {
-            return gson.fromJson(s, CacheStruct.class).getValue();
+            return gson.fromJson(s, CacheStruct.class);
         }
-        return "";
+        return null;
     }
 
     public static long getUsedMemory(CacheSource source) {
@@ -51,20 +50,27 @@ public class CacheManager {
         if (getUsedMemeryRedis == null) {
             throw new IllegalStateException("get used memory exception");
         }
+        getUsedMemeryRedis.close();
         return getMemory(getUsedMemeryRedis);
     }
 
     private static long getMemory(Jedis getUsedMemeryRedis) {
         String memoryInfos = getUsedMemeryRedis.info("Memory");
-        for (String line : memoryInfos.split("\n")) {
-            if (line.startsWith("used_memory")) {
+        for (String line : memoryInfos.split("[\r\n]")) {
+            if (line.startsWith("used_memory:")) {
                 return Long.valueOf(line.split(":")[1]);
             }
         }
         return 10 * 1024 * 1024;
     }
 
-    public static CacheStruct getCache(String key) {
-        return null;
+    public static boolean cacheExist(String key) {
+        Set<String> v = RedisClientConnector.getLocalRedis().zrange(key, 0, -1);
+        return v != null && !v.isEmpty();
+    }
+
+    @Override
+    public void close() {
+        jedis.close();
     }
 }

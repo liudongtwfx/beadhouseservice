@@ -10,6 +10,7 @@ import main.java.com.beadhouse.cache.addcachebusiness.BeadhouseManageCacheThread
 import main.java.com.beadhouse.model.beadhouse.BeadhouseAdministrator;
 import main.java.com.beadhouse.model.beadhouse.BeadhouseInfo;
 import main.java.com.beadhouse.model.user.ElderPeople;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -46,14 +47,11 @@ public class BeadhouseAdminController {
     @Inject
     BeadhouseAdminBusiness business;
 
-    @RequestMapping(value = "/index", method = RequestMethod.GET)
-    public String adminHomepage(HttpServletRequest request) {
-        String beadhouseId = (String) request.getSession().getAttribute("beadhouseId");
-        if (beadhouseId != null && beadhouseId.length() != 0) {
-            Thread beadhouseManageCacheThread = new Thread(
-                    new BeadhouseManageCacheThread(Integer.valueOf(beadhouseId)));
-            beadhouseManageCacheThread.start();
-        }
+    @Autowired
+    BeadhouseManageCacheThread thread;
+
+    @RequestMapping(value = {"/index", "/"}, method = RequestMethod.GET)
+    public String adminHomepage() {
         return "beadhouse/index";
     }
 
@@ -85,6 +83,10 @@ public class BeadhouseAdminController {
         if (this.authenticationService.authenticateBeadhouseAdmin(administrator.getUserName(), pwd) != null) {
             request.getSession().setAttribute("adminUserName", administrator.getUserName());
             request.getSession().setAttribute("beadhouseId", administrator.getBeadHouseId());
+            thread.setBeadhouseId(administrator.getBeadHouseId());
+            if (thread.getState() == Thread.State.NEW) {
+                thread.start();
+            }
             return true;
         }
         return false;
@@ -237,5 +239,10 @@ public class BeadhouseAdminController {
     @RequestMapping(value = "/imagemanage", method = RequestMethod.GET)
     public String uploadImage() {
         return "beadhouse/image_manage";
+    }
+
+    @RequestMapping(value = "needreply", method = RequestMethod.GET)
+    public String needreply() {
+        return "beadhouse/beadhouseneedreply";
     }
 }

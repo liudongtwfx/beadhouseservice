@@ -16,6 +16,4 @@ public interface BeadhouseElderCheckinRepository extends JpaRepository<Beadhouse
     List<BeadhouseElderCheckin> findByBeadhouseId(int beadhouseid);
 
     List<BeadhouseElderCheckin> findByElderIdNumberOrderByCheckinTimeDesc(String elderId);
-
-    Page<BeadhouseElderCheckin> findByBeadhouseId(int beadhouseid, Sort sort);
 }

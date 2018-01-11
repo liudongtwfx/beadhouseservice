@@ -14,24 +14,25 @@ import main.java.com.beadhouse.model.beadhouse.BeadhouseElderAccident;
 import main.java.com.beadhouse.model.beadhouse.BeadhouseElderCheckin;
 import main.java.com.beadhouse.model.beadhouse.BeadhouseElderGoOut;
 import main.java.com.beadhouse.model.beadhouse.BeadhouseElderHealth;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.inject.Inject;
 import java.util.List;
 
-public class BeadhouseManageCacheThread implements Runnable {
+@Service
+public class BeadhouseManageCacheThread extends Thread {
     private int beadhouseId;
     private static long MAX_MEMORY = 10 * 1024 * 1024;
-    @Inject
-    BeadhouseElderCheckinRepository elderCheckinRepository;
-    @Inject
-    BeadhouseElderAccidentRepository accidentRepository;
-    @Inject
-    BeadhouseElderGoOutRepository goOutRepository;
-    @Inject
-    BeadhouseElderHealthRepository healthRepository;
 
-    @Inject
-    public BeadhouseManageCacheThread(int beadhouseId) {
+    @Autowired
+    FetchDataFromMySQL fetchDataFromMySQL;
+
+    public BeadhouseManageCacheThread() {
+    }
+
+    public void setBeadhouseId(int beadhouseId) {
         this.beadhouseId = beadhouseId;
     }
 
@@ -50,15 +51,15 @@ public class BeadhouseManageCacheThread implements Runnable {
     private void replacement() {
     }
 
-    private void addElderCheckinCache() {
+    public void addElderCheckinCache() {
         try {
             String cacheKey = "cache:beadhouseeldercheckin:" + beadhouseId;
-            if (CacheManager.getCache(cacheKey) != null) {
+            if (CacheManager.cacheExist(cacheKey)) {
                 return;
             }
             CacheStruct cacheStruct = new CacheStruct();
             cacheStruct.setKey(cacheKey);
-            List<BeadhouseElderCheckin> elderCheckinList = elderCheckinRepository.findByBeadhouseId(beadhouseId);
+            List<BeadhouseElderCheckin> elderCheckinList = fetchDataFromMySQL.getElderCheckinList(beadhouseId);
             Gson gson = new Gson();
             cacheStruct.setValue(gson.toJson(elderCheckinList));
             cacheStruct.setScore(-1);
@@ -70,6 +71,7 @@ public class BeadhouseManageCacheThread implements Runnable {
             }
         } catch (Exception e) {
             LogType.EXCETPION.getLOGGER().error(e);
+            e.printStackTrace();
             LogType.EXCETPION.getLOGGER().info("add beahdouseeldercheckin cache error");
         }
     }
@@ -77,12 +79,12 @@ public class BeadhouseManageCacheThread implements Runnable {
     private void addElderAccidentCache() {
         try {
             String cacheKey = "cache:beadhouseelderaccident:" + beadhouseId;
-            if (CacheManager.getCache(cacheKey) != null) {
+            if (CacheManager.cacheExist(cacheKey)) {
                 return;
             }
             CacheStruct cacheStruct = new CacheStruct();
             cacheStruct.setKey(cacheKey);
-            List<BeadhouseElderAccident> elderAccidentList = accidentRepository.findByBeadhouseId(beadhouseId);
+            List<BeadhouseElderAccident> elderAccidentList = fetchDataFromMySQL.getElderAccidentList(beadhouseId);
             Gson gson = new Gson();
             cacheStruct.setValue(gson.toJson(elderAccidentList));
             cacheStruct.setScore(-1);
@@ -101,12 +103,12 @@ public class BeadhouseManageCacheThread implements Runnable {
     private void addElderGooutCache() {
         try {
             String cacheKey = "cache:beadhouseeldergoout:" + beadhouseId;
-            if (CacheManager.getCache(cacheKey) != null) {
+            if (CacheManager.cacheExist(cacheKey)) {
                 return;
             }
             CacheStruct cacheStruct = new CacheStruct();
             cacheStruct.setKey(cacheKey);
-            List<BeadhouseElderGoOut> goOutList = goOutRepository.findByBeadhouseId(beadhouseId);
+            List<BeadhouseElderGoOut> goOutList = fetchDataFromMySQL.getElderGooutList(beadhouseId);
             Gson gson = new Gson();
             cacheStruct.setValue(gson.toJson(goOutList));
             cacheStruct.setScore(-1);
@@ -125,12 +127,12 @@ public class BeadhouseManageCacheThread implements Runnable {
     private void addElderHealthCache() {
         try {
             String cacheKey = "cache:beadhouseelderhealth:" + beadhouseId;
-            if (CacheManager.getCache(cacheKey) != null) {
+            if (CacheManager.cacheExist(cacheKey)) {
                 return;
             }
             CacheStruct cacheStruct = new CacheStruct();
             cacheStruct.setKey(cacheKey);
-            List<BeadhouseElderHealth> health = healthRepository.findByBeadhouseId(beadhouseId);
+            List<BeadhouseElderHealth> health = fetchDataFromMySQL.getElderHealthList(beadhouseId);
             Gson gson = new Gson();
             cacheStruct.setValue(gson.toJson(health));
             cacheStruct.setScore(-1);

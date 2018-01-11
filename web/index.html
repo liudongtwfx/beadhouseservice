@@ -1,6 +1,6 @@
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-9">
     <title>欢迎光临养老服务中心</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="cssfiles/user/common.css">
@@ -9,13 +9,8 @@
     <link rel="stylesheet" href="cssfiles/font-awesome/css/font-awesome.css">
     <script src="jsfiles/jquery-3.1.1.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
-    <style>
-        #beadhouse_area {
-            padding-top: 150px;
-        }
-    </style>
 </head>
-<body>
+<body style="background-color: #feffe9">
 <div id="pagetop"></div>
 <script>
     $("#pagetop").load("../../views/user/commontop.html");
@@ -28,46 +23,158 @@
 </script>
 <script type="application/javascript" src="jsfiles/user/indexpage.js"></script>
 <link rel="stylesheet" href="cssfiles/user/indexpage.css">
-<div class="container area" id="beadhouse_area">
-    <div class="row_content">
-        <div class="title_row">
-            <div class="content_title">养老院中心</div>
-            <div id="beadhouse_more"><a href="beadhouselist"><u>查看更多>></u></a></div>
+<div class="container">
+    <div id="myCarousel" class="carousel slide">
+        <!-- 轮播（Carousel）指标 -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- 轮播（Carousel）项目 -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img class="myCarousel-img"
+                     src="http://localhost:8088/imagefiles/carousel/userIndexPage/beadhouse3.jpg"
+                     alt="First slide">
+            </div>
+            <div class="item">
+                <img class="myCarousel-img"
+                     src="http://localhost:8088/imagefiles/carousel/userIndexPage/oj33etze9d.jpg"
+                     alt="Second slide">
+            </div>
+            <div class="item">
+                <img class="myCarousel-img" src="http://localhost:8088/imagefiles/carousel/userIndexPage/timg.jpeg"
+                     alt="Third slide">
+            </div>
         </div>
-        <div id="beadhouse_content">
-        </div>
+        <!-- 轮播（Carousel）导航 -->
+        <a class="carousel-control left" href="#myCarousel"
+           data-slide="prev">&lsaquo;
+        </a>
+        <a class="carousel-control right" href="#myCarousel"
+           data-slide="next">&rsaquo;
+        </a>
     </div>
-</div>
-<div class="container area" id="article_area">
-    <div class="row_content">
-        <div class="title_row">
-            <div class="content_title">养老攻略中心</div>
-            <div id="article_more"><a href="/articles"><u>查看更多>></u></a></div>
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-sm-10"><h5 class="panel-title">养老院中心</h5></div>
+                        <div class="col-sm-2"><a href="beadhouselist">查看更多>></a></div>
+                    </div>
+                </div>
+                <div class="panel-body">
+
+                    <div id="beadhouse_content">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="article_content">
-            <div id="articles_list">
-                <div class="article_line"><a class="col-lg-8" href="/articles/single?articleId=256">老人耳鸣饮食应注意哪些
-                    这样食物可以改善</a><span class="col-lg-4">2017-08-24</span></div>
-                <div class="article_line"><a class="col-lg-8" href="/articles/single?articleId=257">老人想要长寿怎么办
-                    九种食物让老人延年益寿</a><span class="col-lg-4">2017-08-24</span></div>
-                <div class="article_line"><a class="col-lg-8" href="/articles/single?articleId=258">消化不良怎么办
-                    老人如何护理消化道</a><span class="col-lg-4">2017-08-24</span></div>
-                <div class="article_line"><a class="col-lg-8"
-                                             href="/articles/single?articleId=259">为你支招：老人保护膝关节注意五个方面</a><span
-                        class="col-lg-4">2017-08-24</span></div>
-                <div class="article_line"><a class="col-lg-8" href="/articles/single?articleId=260">预防老年痴呆
-                    日常生活注意五个细节</a><span class="col-lg-4">2017-08-24</span></div>
-                <div class="article_line"><a class="col-lg-8" href="/articles/single?articleId=261">老人患有脑萎缩吃什么好
-                    多吃这三种食物</a><span class="col-lg-4">2017-08-24</span></div>
-                <div class="article_line"><a class="col-lg-8" href="/articles/single?articleId=262">老人吃什么保健品好
-                    吃什么保健品可养老</a><span class="col-lg-4">2017-08-24</span></div>
-                <div class="article_line"><a class="col-lg-8" href="/articles/single?articleId=263">老人血管堵塞怎么吃
-                    八种果蔬能疏通</a><span class="col-lg-4">2017-08-24</span></div>
+        <div class="col-sm-5">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-sm-9"><h5 class="panel-title">养老攻略中心</h5></div>
+                        <div class="col-sm-3"><a href="/articles">查看更多>></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="panel-body">
+
+                    <div id="articles_list">
+                        <div class="indexrowline row"><a class="col-sm-9"
+                                                         href="/articles/single?articleId=256">老人耳鸣饮食应注意哪些
+                            这样食物可以改善</a><span class="col-sm-3">2017-12-01</span></div>
+                        <div class="indexrowline row"><a class="col-sm-9"
+                                                         href="/articles/single?articleId=257">老人想要长寿怎么办
+                            九种食物让老人延年益寿</a><span class="col-sm-3">2017-11-27</span></div>
+                        <div class="indexrowline row"><a class="col-sm-9"
+                                                         href="/articles/single?articleId=259">消化不良怎么办
+                            老人如何护理消化道</a><span class="col-sm-3">2017-11-23</span></div>
+                        <div class="indexrowline row"><a class="col-sm-9"
+                                                         href="/articles/single?articleId=259">为你支招：老人保护膝关节注意五个方面</a><span
+                                class="col-sm-3">2017-11-13</span></div>
+                        <!--<div class="indexrowline"><a class="col-sm-9" href="/articles/single?articleId=260">预防老年痴呆-->
+                        <!--日常生活注意五个细节</a><span class="col-sm-3">2017-09-23</span></div>-->
+                        <!--<div class="indexrowline"><a class="col-sm-9" href="/articles/single?articleId=261">老人患有脑萎缩吃什么好-->
+                        <!--多吃这三种食物</a><span class="col-sm-3">2017-09-23</span></div>-->
+                        <!--<div class="indexrowline"><a class="col-sm-9" href="/articles/single?articleId=262">老人吃什么保健品好-->
+                        <!--吃什么保健品可养老</a><span class="col-sm-3">2017-09-23</span></div>-->
+                        <!--<div class="indexrowline"><a class="col-sm-9" href="/articles/single?articleId=263">老人血管堵塞怎么吃-->
+                        <!--八种果蔬能疏通</a><span class="col-sm-3">2017-09-23</span></div>-->
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-sm-9"><h5 class="panel-title">休闲团中心</h5></div>
+                        <div class="col-sm-3"><a href="/articles">查看更多>></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+
+                    <div id="leisuregrouplist">
+                        <div class="row leisuregrouprowline">
+                            <div class="col-sm-6">
+                                <img class="img-rounded"
+                                     src="http://localhost:8088/imagefiles/leisuregroupimagefiles/leisuregroup1.png"
+                                     width="200px" height="150px">
+                            </div>
+                            <div class="col-sm-6">
+                                <h4>原始海南 天堂七日</h4>
+                                <div class="leisuregroupcontentline">
+                                    <span>费用估计:</span>
+                                    <span>2200/人</span>
+                                </div>
+                                <div class="leisuregroupcontentline">
+                                    <span>团开始时间:</span>
+                                    <span>2017-11-23</span>
+                                </div>
+                                <div class="leisuregroupcontentline">
+                                    <span>团截止时间:</span>
+                                    <span>2017-11-30</span>
+                                </div>
+                                <div class="leisuregroupcontentline"><a href="/leisuregoup?id=1">详情介绍</a></div>
+                            </div>
+                        </div>
+                        <div class="row leisuregrouprowline">
+                            <div class="col-sm-6">
+                                <img class="img-rounded"
+                                     src="http://localhost:8088/imagefiles/leisuregroupimagefiles/leisuregroup2.png"
+                                     width="200px" height="150px">
+                            </div>
+                            <div class="col-sm-6">
+                                <h4>多彩贵州 千户苗寨</h4>
+                                <div>
+                                    <div class="leisuregroupcontentline">
+                                        <span>费用估计:</span>
+                                        <span>2880/人</span>
+                                    </div>
+                                    <div class="leisuregroupcontentline">
+                                        <span>团开始时间:</span>
+                                        <span>2017-11-15</span>
+                                    </div>
+                                    <div class="leisuregroupcontentline">
+                                        <span>团截止时间:</span>
+                                        <span>2017-11-20</span>
+                                    </div>
+                                    <div class="leisuregroupcontentline">
+                                        <a href="/leisuregoup?id=1">详情介绍</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div class="foot" id="foot">
+    <div class="foot" id="foot">
+    </div>
 </div>
 <script type="application/javascript">
     $("#foot").load("views/user/commondown.html");

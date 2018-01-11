@@ -7,11 +7,13 @@ var pageNumber;
 var logsPerPage;
 var logs;
 var currPage;
-
+var livein_type = ['网上预定', '到院入住'];
+var has_paid = ['是', '否'];
 $(".update_info").click(function (e) {
     console.log("123");
     console.log(e);
 });
+
 function addNewCheckin() {
     var elderId = $("#id_number").val();
     var eldercheckin = $("#checkin_time").val();
@@ -80,6 +82,7 @@ function deleteLog() {
         }
     )
 }
+
 function updateCheckin() {
     var elderId = $("#update_id_number").val();
     var eldercheckin = $("#update_checkin_time").val();
@@ -112,6 +115,7 @@ function updateCheckin() {
         }
     )
 }
+
 function changeLog(e) {
     var node = e.parentNode.parentNode;
     line = String($(node).attr("id")).substr(3);
@@ -120,6 +124,7 @@ function changeLog(e) {
 function removeWarning() {
     $("#add_warning").remove();
 }
+
 Date.prototype.format = function (format) {
     var date = {
         "M+": this.getMonth() + 1,
@@ -142,6 +147,10 @@ Date.prototype.format = function (format) {
     return format;
 };
 
+var getPaidMoney = function () {
+    return 500 + Math.ceil(Math.random() * 50) * 10;
+};
+
 function displaypage(pageIndex) {
     var startIndex = (pageIndex - 1) * logsPerPage;
     var endIndex = Math.min((pageIndex) * logsPerPage, logs.length);
@@ -152,11 +161,24 @@ function displaypage(pageIndex) {
         var leavetime = log["leaveTime"] !== null ? new Date(log["leaveTime"]).format("yyyy-MM-dd  hh:mm") : "";
         var leaveReason = log["leaveReason"] !== null ? log["leaveReason"] : "";
         var extraContent = log["extraContent"] !== null ? log["extraContent"] : "";
+        var liveinType = livein_type[Math.round(Math.random())];
+        var hasPaid = has_paid[Math.round(Math.random())];
+        var paidMoney = '';
+        var trclass = 'success';
+        if (hasPaid === '是') {
+            paidMoney = getPaidMoney();
+        } else {
+            leavetime = '';
+            trclass = 'danger';
+        }
         var principleMan = log["principleMan"] !== null ? log["principleMan"] : "";
-        var node = '<tr id="log' + log["id"] + '">' +
+        var node = '<tr class="' + trclass + '" id="log' + log["id"] + '">' +
             '<td>' + (i + 1) + '</td>' +
             '<td><a href="#elder_info" data-toggle="modal" onclick="getElderInfo(this)">' + log["elderIdNumber"] + '</a></td>' +
             '<td>' + checkintime + '</td>' +
+            '<td>' + liveinType + '</td>' +
+            '<td>' + hasPaid + '</td>' +
+            '<td>' + paidMoney + '</td>' +
             '<td>' + leavetime + '</td>' +
             '<td>' + leaveReason + '</td>' +
             '<td>' + extraContent + '</td>' +
@@ -168,6 +190,7 @@ function displaypage(pageIndex) {
         $("#checkin_log").append(node);
     }
 }
+
 function changePage(expectPage) {
     var id = "page" + currPage;
     $("#" + id).removeClass();
@@ -238,6 +261,7 @@ function nextPage() {
 var idNumberOrdertype = true;
 var checkinTimeOrderType = true;
 var leaveTimeOrderType = true;
+
 function sortLogs(type) {
     var order;
     if (type === "elderIdNumber") {

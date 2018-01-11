@@ -5,7 +5,7 @@ body {
 #content {
     display: block;
     position: absolute;
-    left: 30%;
+    left: 250px;
     top: 10%;
     flex-wrap: wrap;
 }
@@ -28,36 +28,8 @@ body {
     padding: 5px;
 }
 
-label {
-    width: 150px;
-    height: 60px;
-    font-feature-settings: normal;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.longinput {
-    height: 30px;
-    width: 400px;
-    flex-wrap: nowrap;
-    border-radius: 3px;
-}
-
-.shortinput {
-    height: 30px;
-    width: 120px;
-    flex-wrap: nowrap;
-    border-radius: 2px;
-}
-
 input[type="file"] {
     width: 200px;
-}
-
-textarea {
-    width: 400px;
-    height: 100px;
-    border-radius: 5px;
 }
 
 #submit {

@@ -60,7 +60,7 @@
 
 <div id="side"></div>
 <script type="application/javascript">
-    $("#side").load("../templates/commonside.html")
+    $("#side").load("../../views/admin/commonside.html")
 </script>
 
 <section id="main">
@@ -90,7 +90,7 @@
         </div>
         <div class="col-lg-5">
             <input type="text" id="search_region">
-            <button class="btn-primary" onclick="searchByName()">搜索</button>
+            <button class="btn btn-primary" onclick="searchByName()"><i class="glyphicon glyphicon-search">搜索</i></button>
         </div>
     </div>
     <div class="inner_content tab_content">
@@ -100,9 +100,6 @@
                 <th>#</th>
                 <th>养老院名称</th>
                 <th>地理位置</th>
-                <th>房间数</th>
-                <th>床位数</th>
-                <th>添加日期</th>
             </tr>
             </thead>
             <tbody id="beadhouselist">

@@ -7,15 +7,13 @@
 #top {
     display: block;
     width: 100%;
-    height: 350px;
     flex-wrap: wrap;
 }
 
 #register_login {
     display: block;
     position: absolute;
-    height: 20px;
-    left: 80%;
+    margin-right: 40px;
     float: right;
 }
 
@@ -25,7 +23,7 @@
 }
 
 #register_login {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 #register_login a:link {
@@ -38,10 +36,8 @@
 
 #myCarousel {
     display: block;
-    position: relative;
-    left: 10%;
-    width: 800px;
-    height: 300px;
+    width: 100%;
+    height: 400px;
     margin-bottom: 20px;
 }
 
@@ -71,7 +67,7 @@
 }
 
 nav {
-    background: grey;
+    background: #f5f5f5;
 }
 
 .navbar-header a {
@@ -84,4 +80,8 @@ nav {
 
 #cy_tp_ul ul {
     padding: 15px;
+}
+
+.ritfoot {
+    text-align: center;
 }

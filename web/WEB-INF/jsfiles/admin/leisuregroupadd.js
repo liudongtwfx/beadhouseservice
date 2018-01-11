@@ -3,7 +3,7 @@ function addLeisureGroup() {
         "/admin/leisuregroup/add",
         {
             title: $("#leisuregroup_title").val(),
-            details: $("#leisuregroup_details").val()
+            details: $("#tinymce").innerHTML
         },
         function (data) {
             if (data === true) {

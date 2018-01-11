@@ -124,4 +124,29 @@ public class ArticleForElderMainBuseness {
         }
         return res;
     }
+
+    @Transactional(readOnly = true)
+    public Object searchArticlePageSort(int page, int size, HttpServletRequest request) {
+        Sort sort = new Sort(Sort.Direction.DESC, "addtime");
+        Pageable pageable = new PageRequest(page, size, sort);
+        String searchContent = request.getParameter("content");
+        if (searchContent == null) {
+            return null;
+        }
+        LogType.DEBUGINFO.getLOGGER().debug(searchContent);
+        Page<ArticleForElder> articles = this.articleForElderRepository.findAllByTitleContains(searchContent, pageable);
+        Map<String, Object> res = new HashMap<>();
+        List<BriefArticleInfo> resList = new ArrayList<>();
+        for (ArticleForElder article : articles) {
+            BriefArticleInfo info = new BriefArticleInfo();
+            info.setId(article.getId());
+            info.setAddtime(article.getAddtime());
+            info.setTitle(article.getTitle());
+            resList.add(info);
+        }
+        res.put("list", resList);
+        res.put("pageNumber", articles.getTotalPages());
+        res.put("articleNumber", articles.getTotalElements());
+        return res;
+    }
 }

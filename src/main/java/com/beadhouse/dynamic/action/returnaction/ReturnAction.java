@@ -1,12 +1,12 @@
 package main.java.com.beadhouse.dynamic.action.returnaction;
 
-import main.java.com.beadhouse.dynamic.action.ActionImpl;
+import main.java.com.beadhouse.dynamic.action.AbstractActionImpl;
 import main.java.com.beadhouse.dynamic.action.ActionType;
 import main.java.com.beadhouse.dynamic.datawrapper.Data;
 
 import java.util.Map;
 
-public class ReturnAction extends ActionImpl {
+public class ReturnAction extends AbstractActionImpl {
     private Data data;
 
     public ReturnAction(Data data) {

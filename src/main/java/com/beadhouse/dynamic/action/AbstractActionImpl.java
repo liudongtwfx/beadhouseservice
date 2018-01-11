@@ -6,7 +6,7 @@ import main.java.com.beadhouse.business.redisclient.RedisClientConnector;
 
 import java.util.*;
 
-public abstract class ActionImpl implements Action {
+public abstract class AbstractActionImpl implements Action {
     protected boolean start = false;
     protected boolean end = false;
     protected String uuid;
@@ -79,6 +79,7 @@ public abstract class ActionImpl implements Action {
     private final Map<String, Object> getCommonValue() {
         Map<String, Object> valueMap = new HashMap<>();
         valueMap.put("actionId", getUUID());
+        valueMap.put("name", actionType.getChineseName());
         valueMap.put("actionType", actionType.toString());
         valueMap.put("isStart", String.valueOf(start));
         valueMap.put("isEnd", String.valueOf(end));

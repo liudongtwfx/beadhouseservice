@@ -5,10 +5,10 @@ import main.java.com.beadhouse.dynamic.action.Action;
 import org.neo4j.driver.v1.Session;
 
 public class AddActionToNeo4j {
-    private Neo4jConnector neo4jConnector;
+    private static Neo4jConnector neo4jConnector = new Neo4jConnector();
 
     public AddActionToNeo4j() {
-        neo4jConnector = new Neo4jConnector();
+
     }
 
     public boolean addAction(Action action, String json) {
@@ -32,7 +32,7 @@ public class AddActionToNeo4j {
         return actionCypher.toString();
     }
 
-    public boolean addTwoActionsRelationShip(Action left, Action right, String relationShip) {
+    public static boolean addTwoActionsRelationShip(Action left, Action right, String relationShip) {
         try {
             Session session = neo4jConnector.getDriver().session();
             session.writeTransaction(tx -> tx.run(getCreateRelationShipCypher(left, right, relationShip)));
@@ -45,7 +45,7 @@ public class AddActionToNeo4j {
         return false;
     }
 
-    private String getCreateRelationShipCypher(Action left, Action right, String relationShip) {
+    private static String getCreateRelationShipCypher(Action left, Action right, String relationShip) {
         StringBuilder sb = new StringBuilder();
         sb.append("MATCH ").append("(action1:").append(left.getActionType())
                 .append("),(action2:").append(right.getActionType()).append(")");

@@ -5,6 +5,7 @@
 var pageNumber;
 var totalArticleNumber;
 var currPage;
+
 function displayArticleList(articleList) {
     var node = "";
     for (var i = 0; i < articleList.length; i++) {
@@ -34,11 +35,27 @@ function getArticleData(currpage) {
         }
     )
 }
+
+function searchArticleData(currpage) {
+    $.get(
+        "/articles/search",
+        {
+            page: currpage,
+            content: $("#search_content").val()
+        },
+        function getData(datas) {
+            displayArticleList(datas['list']);
+            displayPageTurning(currpage, datas['pageNumber'], datas['articleNumber']);
+        }
+    )
+}
+
 $(document).ready(
     function () {
         getArticleData(0);
     }
 );
+
 function changePage(expectPage) {
     $("#articles_list").html("");
     var id = "page" + currPage;
@@ -58,6 +75,7 @@ function nextPage() {
         changePage(currPage + 1);
     }
 }
+
 Date.prototype.format = function (format) {
     var date = {
         "M+": this.getMonth() + 1,

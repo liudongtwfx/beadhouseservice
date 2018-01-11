@@ -4,6 +4,7 @@
 function displayCarouseldatas() {
 
 }
+
 function getCarousel() {
     $.get(
         "/index/carouseltop",
@@ -25,10 +26,12 @@ function displayBeadhouseInfo(datas) {
     for (var i = 0; i < datas.length; i++) {
         var data = datas[i];
         try {
-            var newNode = "<div class='col-lg-4' id='beadhouse" + data['id'] + "'>" +
-                "<img src='" + data['imageUrl'] + "'>" +
-                "<div ><span>名称：</span><span>" + data['fullName'] + "</span></div>" +
-                "<div ><span>简介：</span><span class='descripitionoverflow'>" + data['briefDescription'] + "</span></div></div>";
+            var beadhouseurl = "/beadhousesingle?beadhouseid=" + data['id'];
+            var newNode = "<div class='row indexrowline' id='beadhouse" + data['id'] + "'>" +
+                "<div class='col-sm-5'><img src='" + data['imageUrl'] + "'></div>" +
+                "<div class='col-sm-6 col-sm-offset-1 contentouter'><div><span>名称：</span><span>" + data['fullName'] + "</span></div>" +
+                "<div ><span>简介：</span><span class='descripitionoverflow'>" + data['briefDescription'] + "</span>" +
+                "<div><a href='" + beadhouseurl + "'>详情介绍</a></div></div></div></div>";
             node += newNode;
         } catch (e) {
             console.log(e);
@@ -37,6 +40,7 @@ function displayBeadhouseInfo(datas) {
     }
     $("#beadhouse_content").html(node);
 }
+
 function getBeadhouseInfo() {
     $.get(
         "/index/beadhouseinfo",

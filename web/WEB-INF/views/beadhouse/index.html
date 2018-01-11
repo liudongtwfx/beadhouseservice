@@ -82,39 +82,40 @@
 
 <!--<![endif]-->
 
-<div class="navbar navbar-default" id="navbar" ,role="navigation">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="" href="index.html"><span class="navbar-brand">养老院后台管理平台</span></a>
-    </div>
-    <script type="application/javascript" src="../../jsfiles/jquery.cookie.js"></script>
-    <script type="application/javascript" src="../../jsfiles/beadhouse/index.js"></script>
-    <div class="navbar-collapse collapse" style="height: 1px;" id="navbar-collapse">
-        <ul id="main-menu" class="nav navbar-nav navbar-right">
-            <li class="dropdown hidden-xs">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+<div class="navbar navbar-default navbar-fixed-top" id="navbar" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="" href="index.html"><span class="navbar-brand">养老院后台管理平台</span></a>
+        </div>
+        <script type="application/javascript" src="../../jsfiles/jquery.cookie.js"></script>
+        <script type="application/javascript" src="../../jsfiles/beadhouse/index.js"></script>
+        <div class="navbar-collapse collapse" style="height: 1px;" id="navbar-collapse">
+            <ul id="main-menu" class="nav navbar-nav navbar-right">
+                <li class="dropdown hidden-xs">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <span class="glyphicon glyphicon-user padding-right-small"
                           style="position:relative;top: 3px;"></span>
-                    <span id="user-name"></span>
-                    <i class="fa fa-caret-down"></i>
-                </a>
+                        <span id="user-name"></span>
+                        <i class="fa fa-caret-down"></i>
+                    </a>
 
-                <ul class="dropdown-menu">
-                    <li><a href="./">我的账户</a></li>
-                    <li class="divider"></li>
-                    <li><a href="./">修改资料</a></li>
-                    <li><a href="./">安全</a></li>
-                    <li class="divider"></li>
-                    <li><a tabindex="-1" href="#" onclick="logout();">退出</a></li>
-                </ul>
-            </li>
-        </ul>
-
+                    <ul class="dropdown-menu">
+                        <li><a href="./">我的账户</a></li>
+                        <li class="divider"></li>
+                        <li><a href="./">修改资料</a></li>
+                        <li><a href="./">安全</a></li>
+                        <li class="divider"></li>
+                        <li><a tabindex="-1" href="#" onclick="logout();">退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 </div>
@@ -124,58 +125,109 @@
 <script>
     $("#sidebar-nav").load("../../views/beadhouse/commonside.html")
 </script>
+<link rel="stylesheet" href="../../cssfiles/beadhouse/index_maininfo.css">
+<div class="main_content container">
+    <div class="col-sm-10 col-sm-offset-2">
+        <div class="header inner_content" style="margin-top: 80px">
+            <h1 class="page-title">养老院后台管理</h1>
+            <ul class="breadcrumb">
+                <li><a href="index.html">养老院管理</a></li>
+                <li class="active">养老院基本信息管理</li>
+            </ul>
+        </div>
+        <div class="panel panel-primary" style="margin-top: 10px">
+            <div class="panel-heading">
+                <h5>养老院基本信息表</h5>
+            </div>
+            <div class="panel-body">
+                <form id="main_info" class="form-horizontal" role="form">
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="beadhouse_name" class="control-label col-sm-4">养老院名称:<span
+                                    style="color: red">*</span></label>
+                            <div class="col-sm-8">
+                                <input id="beadhouse_name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="beadhouse_rooms" class="control-label col-sm-4">房间数:</label>
+                            <div class="col-sm-8">
+                                <input id="beadhouse_rooms" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="beadhouse_totalbeds" class="control-label col-sm-4">总床铺数:</label>
+                            <div class="col-sm-8">
+                                <input id="beadhouse_totalbeds" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="beadhouse_currenbeds" class="col-sm-4 control-label">当前床铺数:</label>
+                            <div class="col-sm-8">
+                                <input id="beadhouse_currenbeds" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="beadhouse_contact" class="control-label col-sm-4">联系方式:</label>
+                            <div class="col-sm-8">
+                                <input id="beadhouse_contact" class=" form-control">
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="beadhouse_linksite" class="col-sm-4 control-label">养老院网站:</label>
+                            <div class="col-sm-8">
+                                <input id="beadhouse_linksite" class=" form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <label for="beadhouse_brief" class="control-label col-sm-2">养老院简介:</label>
+                            <div class="col-sm-10">
+                                <textarea id="beadhouse_brief" class="form-control" rows="5"></textarea>
+                                <span style="color: red">*</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <label for="beadhouse_otherinfo" class="col-sm-2 control-label">其他信息:</label>
+                            <div class="col-sm-10">
+                                <textarea id="beadhouse_otherinfo" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <script type="text/javascript"
+                                    src="https://api.map.baidu.com/api?v=2.0&ak=MzhXZRHdq4bg6CdQP9VmYxNQhbhdd6ho"></script>
+                            <label for="beadhouse_position" class=" control-label col-sm-2">养老院位置:</label>
+                            <div class="col-sm-10">
+                                <input id="beadhouse_position" class="form-control">
+                                <span style="color: red">*</span>
+                            </div>
+                            <span class="coordinates" id="lng"></span>
+                            <span class="coordinates" id="lat"></span>
+                        </div>
+                    </div>
+                    <div id="row">
+                        <div id="allmap" class="center-block"></div>
+                    </div>
 
-<div class="main_content" id="content">
-    <link rel="stylesheet" href="../../cssfiles/beadhouse/index_maininfo.css">
-    <form id="main_info" class="form-horizontal" role="form">
-        <div id="main_name_row" class="main-group">
-            <label for="beadhouse_name">养老院名称</label>
-            <input id="beadhouse_name" class="longinput">
-            <span style="color: red">*</span>
+                </form>
+            </div>
+            <div class="panel-footer">
+                <div class="main-group">
+                    <button value="提交" type="button" onclick="submitInfo()" class="btn btn-success center-block" id="submit">提交
+                    </button>
+                </div>
+            </div>
         </div>
-        <div id="main-rooms_row" class="main-group">
-            <label for="beadhouse_rooms">房间数</label>
-            <input id="beadhouse_rooms" class="shortinput">
-        </div>
-        <div id="main-totalbeds_row" class="main-group">
-            <label for="beadhouse_totalbeds">总床铺数</label>
-            <input id="beadhouse_totalbeds" class="shortinput">
-        </div>
-        <div id="main-image_row" class="main-group">
-            <label for="beadhouse_currenbeds">当前床铺数</label>
-            <input id="beadhouse_currenbeds" class="shortinput">
-        </div>
-        <div id="main-brief_row" class="main-group">
-            <label for="beadhouse_brief">养老院简介</label>
-            <textarea id="beadhouse_brief"></textarea>
-            <span style="color: red">*</span>
-        </div>
-        <div id="main-contact_row" class="main-group">
-            <label for="beadhouse_contact">联系方式</label>
-            <input id="beadhouse_contact" class="longinput">
-        </div>
-        <div id="main-linksite_row" class="main-group">
-            <label for="beadhouse_linksite">养老院网站</label>
-            <input id="beadhouse_linksite" class="longinput">
-        </div>
-        <div id="main-otherinfo_row" class="main-group">
-            <label for="beadhouse_otherinfo">其他信息</label>
-            <textarea id="beadhouse_otherinfo"></textarea>
-        </div>
-        <div id="position" class="main-group">
-            <script type="text/javascript"
-                    src="https://api.map.baidu.com/api?v=2.0&ak=MzhXZRHdq4bg6CdQP9VmYxNQhbhdd6ho"></script>
-            <label for="beadhouse_position">养老院位置</label>
-            <input id="beadhouse_position" class="longinput">
-            <span style="color: red">*</span>
-            <span class="coordinates" id="lng"></span>
-            <span class="coordinates" id="lat"></span>
-        </div>
-        <div id="allmap"></div>
-        <div class="main-group">
-            <button value="提交" onclick="submitInfo()" class="btn btn-success" id="submit">提交</button>
-        </div>
-    </form>
+    </div>
 </div>
 <script src="../../bootstrap/js/bootstrap.js"></script>
 <script type="text/javascript">

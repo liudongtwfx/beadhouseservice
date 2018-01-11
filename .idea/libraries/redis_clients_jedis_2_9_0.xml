@@ -10,6 +10,7 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/../maven dependencies/jedis-2.9.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/commons-pool2-2.4.2-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

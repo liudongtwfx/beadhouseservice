@@ -1,2 +1,6 @@
-2017-12-21 20:59:02.824 ERROR main.java.com.beadhouse.business.kafkabusiness.kafkaProducer.BeadhouseCommentProducer$BeadhouseCommentCallback 29 onCompletion -- Failed to update metadata after 60000 ms.
-2017-12-21 21:00:31.373 ERROR main.java.com.beadhouse.business.kafkabusiness.kafkaProducer.BeadhouseCommentProducer$BeadhouseCommentCallback 29 onCompletion -- Failed to update metadata after 60000 ms.
+2018-01-07 12:50:52.752 ERROR main.java.com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
+2018-01-07 12:56:35.676 ERROR main.java.com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
+2018-01-07 12:56:46.886 ERROR main.java.com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
+2018-01-07 12:56:57.525 ERROR main.java.com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
+2018-01-07 13:02:16.750 ERROR main.java.com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null
+2018-01-07 13:02:22.209 ERROR main.java.com.beadhouse.business.elasticsearchbusiness.BeadhouseRecomendES 22 getBeadhouseByVIPUser -- null

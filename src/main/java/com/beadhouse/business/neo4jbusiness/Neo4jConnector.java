@@ -29,7 +29,8 @@ public class Neo4jConnector implements AutoCloseable {
 
     public Driver getDriver() throws IllegalAccessException {
         if (hasClosed) {
-            throw new IllegalAccessException("Neo4j driver has been closed");
+            connect();
+            //throw new IllegalAccessException("Neo4j driver has been closed");
         }
         return driver;
     }

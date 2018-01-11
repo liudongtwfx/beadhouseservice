@@ -10,4 +10,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 public interface ArticleForElderRepository extends JpaRepository<ArticleForElder, Integer> {
     Page<ArticleForElder> findAll(Pageable pageable);
+
+    Page<ArticleForElder> findAllByTitleContains(String content, Pageable pageable);
 }

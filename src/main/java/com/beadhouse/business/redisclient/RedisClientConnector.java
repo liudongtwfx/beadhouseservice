@@ -11,14 +11,14 @@ public class RedisClientConnector {
         return localhostpool.getResource();
     }
 
-    private static final JedisPool labpcpool;
+    private static final JedisPool labpcpool = null;
 
     static {
         JedisPoolConfig config = new JedisPoolConfig();
-        config.setMaxTotal(100);
+        config.setMaxTotal(300);
         config.setMinIdle(20);
         config.setMaxWaitMillis(10000);
-        labpcpool = new JedisPool(config, "10.103.249.28", 6379);
+        //labpcpool = new JedisPool(config, "10.103.249.28", 6379);
         localhostpool = new JedisPool(config, "localhost", 6379);
     }
 

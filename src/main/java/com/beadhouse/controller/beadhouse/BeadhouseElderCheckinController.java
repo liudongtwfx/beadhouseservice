@@ -1,9 +1,12 @@
 package main.java.com.beadhouse.controller.beadhouse;
 
+import com.google.gson.Gson;
 import main.java.com.beadhouse.DAO.BeadHouse.BeadhouseAdministratorRepository;
 import main.java.com.beadhouse.DAO.BeadHouse.BeadhouseElderCheckinRepository;
 import main.java.com.beadhouse.DAO.BeadHouse.BeadhouseInfoRepository;
 import main.java.com.beadhouse.DAO.User.ElderPeople.ElderPeopleRepository;
+import main.java.com.beadhouse.cache.CacheManager;
+import main.java.com.beadhouse.cache.CacheStruct;
 import main.java.com.beadhouse.model.beadhouse.BeadhouseElderCheckin;
 import main.java.com.beadhouse.model.beadhouse.BeadhouseInfo;
 import main.java.com.beadhouse.model.user.ElderPeople;
@@ -73,11 +76,17 @@ public class BeadhouseElderCheckinController {
         return true;
     }
 
+    @SuppressWarnings("unchecked")
     @RequestMapping(value = "list", method = RequestMethod.GET)
     @ResponseBody
     public List<BeadhouseElderCheckin> elderCheckinList(HttpServletRequest request, HttpServletResponse response) throws ParseException {
-        int beadhouseId = (int) request.getSession().getAttribute("beadhouseId");
-        List<BeadhouseElderCheckin> list = this.beadhouseElderCheckinRepository.findByBeadhouseId(beadhouseId);
+        String beadhouseId = String.valueOf(request.getSession().getAttribute("beadhouseId"));
+        String cacheKey = "cache:beadhouseeldercheckin:" + beadhouseId;
+        CacheStruct cacheStruct = new CacheManager().visitCache(cacheKey);
+        if (cacheStruct != null) {
+            return new Gson().fromJson(cacheStruct.getValue(), List.class);
+        }
+        List<BeadhouseElderCheckin> list = this.beadhouseElderCheckinRepository.findByBeadhouseId(Integer.parseInt(beadhouseId));
         list.sort(Comparator.comparing(BeadhouseElderCheckin::getCheckinTime));
         return list;
     }

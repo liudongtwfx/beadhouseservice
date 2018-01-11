@@ -1,12 +1,12 @@
 package main.java.com.beadhouse.dynamic.action.queryaction;
 
-import main.java.com.beadhouse.dynamic.action.ActionImpl;
+import main.java.com.beadhouse.dynamic.action.AbstractActionImpl;
 import main.java.com.beadhouse.dynamic.action.ActionType;
 
 import java.util.List;
 import java.util.Map;
 
-public class DatabaseQueryAction extends ActionImpl {
+public class DatabaseQueryAction extends AbstractActionImpl {
     private String schema;
     private String tableName;
     private List<String> selectFields;
@@ -34,5 +34,17 @@ public class DatabaseQueryAction extends ActionImpl {
         value.put("schema", schema);
         value.put("table", tableName);
         value.put("selectFields", selectFields);
+    }
+
+    public String getSchema() {
+        return schema;
+    }
+
+    public String getTableName() {
+        return tableName;
+    }
+
+    public List<String> getSelectFields() {
+        return selectFields;
     }
 }

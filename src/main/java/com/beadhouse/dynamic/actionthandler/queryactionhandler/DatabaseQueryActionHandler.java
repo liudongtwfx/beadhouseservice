@@ -2,6 +2,8 @@ package main.java.com.beadhouse.dynamic.actionthandler.queryactionhandler;
 
 import main.java.com.beadhouse.System.LogType;
 import main.java.com.beadhouse.business.redisclient.RedisClientConnector;
+import main.java.com.beadhouse.dynamic.action.Action;
+import main.java.com.beadhouse.dynamic.action.queryaction.DatabaseQueryAction;
 import main.java.com.beadhouse.dynamic.actionthandler.ActionHandler;
 import main.java.com.beadhouse.dynamic.database.operate.DatabaseOperation;
 import main.java.com.beadhouse.dynamic.datawrapper.Data;
@@ -39,6 +41,18 @@ public class DatabaseQueryActionHandler implements ActionHandler {
         this.tableName = tableName;
         this.queryParam = queryParam;
         this.selectFields = columns;
+    }
+
+    public DatabaseQueryActionHandler(Action action, Map<String, String> queryParam) {
+        if (action instanceof DatabaseQueryAction) {
+            DatabaseQueryAction instanse = (DatabaseQueryAction) action;
+            this.schema = instanse.getSchema();
+            this.tableName = instanse.getTableName();
+            this.selectFields = instanse.getSelectFields();
+            this.queryParam = queryParam;
+        } else {
+            throw new IllegalStateException("Query Action类型转换错误");
+        }
     }
 
     @Override

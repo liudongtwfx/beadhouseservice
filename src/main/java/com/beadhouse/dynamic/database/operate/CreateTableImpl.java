@@ -2,20 +2,15 @@ package main.java.com.beadhouse.dynamic.database.operate;
 
 import main.java.com.beadhouse.System.LogType;
 import main.java.com.beadhouse.dynamic.database.databasemetadata.Table;
-import org.hswebframework.ezorm.rdb.RDBDatabase;
-import org.hswebframework.ezorm.rdb.executor.AbstractJdbcSqlExecutor;
-import org.hswebframework.ezorm.rdb.executor.SqlExecutor;
 import org.hswebframework.ezorm.rdb.meta.RDBColumnMetaData;
-import org.hswebframework.ezorm.rdb.meta.RDBDatabaseMetaData;
 import org.hswebframework.ezorm.rdb.meta.builder.ColumnBuilder;
 import org.hswebframework.ezorm.rdb.meta.builder.TableBuilder;
-import org.hswebframework.ezorm.rdb.render.dialect.MysqlRDBDatabaseMetaData;
-import org.hswebframework.ezorm.rdb.simple.SimpleDatabase;
 
-import java.sql.*;
+import java.sql.JDBCType;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.Map;
-import java.util.Properties;
 import java.util.Set;
 
 public final class CreateTableImpl {

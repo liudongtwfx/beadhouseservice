@@ -1,9 +1,11 @@
 package main.java.com.beadhouse.test;
 
 import com.google.gson.Gson;
+import main.java.com.beadhouse.business.redisclient.RedisClientConnector;
 import main.java.com.beadhouse.cache.CacheManager;
 import main.java.com.beadhouse.cache.CacheStruct;
 import org.junit.Test;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 import org.springframework.cache.Cache;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.Pipeline;
@@ -111,6 +113,28 @@ public class RedisTest {
         List<String> past = gson.fromJson(s, List.class);
         for (String ss : past) {
             System.out.println(ss);
+        }
+    }
+
+    @Test
+    public void getMemory() {
+        Jedis redis = RedisClientConnector.getLocalRedis();
+        String memoryInfos = redis.info("Memory");
+        String a = "2395592";
+        long num = Long.valueOf(a);
+        System.out.println(num);
+        for (String line : memoryInfos.split("[\n\r]")) {
+            System.out.println(line);
+            if (line.startsWith("used_memory:")) {
+                String[] strs = line.split(":");
+                for (int i = 0; i < strs.length; i++) {
+                    System.out.println(i + ":" + strs[i]);
+                }
+                System.out.println(strs[1]);
+                long ll = Long.parseLong(strs[1]);
+                System.out.println(ll);
+                //System.out.println(Integer.valueOf(strs[1]));
+            }
         }
     }
 }

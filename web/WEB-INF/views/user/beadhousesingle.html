@@ -46,7 +46,8 @@
             </script>
         </div>
         <div class="base_line"><span class="base_title">房间数：</span><span id="beadhouse_totalrooms"></span></div>
-        <div class="base_line"><span class="base_title">床铺数：</span><span id="beadhouse_currentbeds"></span>/<span id="beadhouse_totalbeds"></span></div>
+        <div class="base_line"><span class="base_title">床铺数：</span><span id="beadhouse_currentbeds"></span>/<span
+                id="beadhouse_totalbeds"></span></div>
         <div class="base_line"><span class="base_title">联系我们：</span><span id="beadhouse_contact"></span></div>
         <div class="base_line"><span class="base_title">网址：</span><span id="beadhouse_linksite"></span></div>
     </div>
@@ -108,6 +109,12 @@
         <div class="col-lg-2"><span><button class="btn-success" onclick="addComment()">发表</button></span></div>
     </div>
 </div>
+<div class="container-fluid">
+    <div class="foot center-block" id="foot"></div>
+</div>
+<script type="application/javascript">
+    $("#foot").load("views/user/commondown.html");
+</script>
 </body>
 <script src="../../jsfiles/user/common.js" type="application/javascript"></script>
 <script type="application/javascript">

@@ -11,6 +11,7 @@ $(document).ready(
         changePage(1);
     }
 );
+
 function getList(page, args, endIndex) {
     $("#beadhouselist").html("");
     var postData = {};
@@ -35,8 +36,9 @@ function getList(page, args, endIndex) {
         }
     )
 }
+
 function display(originaldatas) {
-    var nodes;
+    var nodes = '';
     var datas = originaldatas['content'];
     for (var i = 0; i < datas.length; i++) {
         var log = datas[i];

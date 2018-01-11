@@ -1,14 +1,14 @@
 package main.java.com.beadhouse.dynamic.action.pubsubaction;
 
 import main.java.com.beadhouse.business.kafkabusiness.kafkaconfig.KafkaProducerConfig;
-import main.java.com.beadhouse.dynamic.action.ActionImpl;
+import main.java.com.beadhouse.dynamic.action.AbstractActionImpl;
 import main.java.com.beadhouse.dynamic.datawrapper.ProducerData;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 
 import java.util.Map;
 
-public class PublisherAction extends ActionImpl {
+public class PublisherAction extends AbstractActionImpl {
     private ProducerData publisher;
     private final Producer<String, String> producer = new KafkaProducer<>(KafkaProducerConfig.getInstance().getProperties());
 

@@ -44,7 +44,10 @@
             $('.column').equalHeight();
         });
     </script>
-
+    <script src="../../jsfiles/admin/common.js"></script>
+    <script type="application/javascript">
+        adminAuthority();
+    </script>
 </head>
 
 
@@ -56,16 +59,9 @@
         <h2 class="section_title">首页</h2>
     </hgroup>
 </header> <!-- end of header bar -->
-
 <div id="side"></div>
 <script type="application/javascript">
-    $("#side").load("../templates/commonside.html")
+    $("#side").load("../../views/admin/commonside.html")
 </script>
-
-
 </body>
-<script src="../../jsfiles/admin/common.js"></script>
-<script type="application/javascript">
-    adminAuthority();
-</script>
 </html>
